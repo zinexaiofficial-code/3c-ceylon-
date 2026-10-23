@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-neon: #0BFF01;
+  --color-blue: #0023DD;
+  --color-dark: #000000;
+  --color-surface: #050811;
+  --color-card: rgba(255, 255, 255, 0.04);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FAF8F2;
+  color: #172334;
+}
+
+body {
+  background-color: #FAF8F2;
+  color: #172334;
+  font-family: var(--font-jakarta), var(--font-manrope), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Luxury Scrollbar (Vertical only, subtle) */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 0px;
+}
+
+::-webkit-scrollbar:horizontal {
+  display: none !important;
+  height: 0px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #050E1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(24, 230, 0, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #18E600;
+}
+
+/* Utility to completely hide scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* AI Expo Glassmorphic Card Styling */
+.ai-card {
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ai-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(24, 240, 0, 0.45);
+  box-shadow: 0 10px 30px rgba(24, 240, 0, 0.18);
+}
+
+/* High-Tech Glowing Borders */
+.glow-border {
+  border: 1px solid rgba(24, 240, 0, 0.35);
+  box-shadow: 0 0 15px rgba(24, 240, 0, 0.18);
+}
+
+/* =========================================================================
+   AI EXPO-INSPIRED DYNAMIC CONTINUOUS GRADIENT SYSTEM (DARK LUXURY PROFILE)
+   Colors:
+   - Main Black: #020407
+   - Midnight Navy: #03091C
+   - Dark Blue Glow: #071A35
+   - Dark Forest Green: #052819
+   - Deep Emerald Glow: #07502A
+   Controlled Opacity:
+   - Green gradient opacity: 0.12 - 0.20
+   - Blue gradient opacity: 0.15 - 0.28
+   ========================================================================= */
+
+.dynamic-orb {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  mix-blend-mode: screen;
+  filter: blur(100px);
+  -webkit-filter: blur(100px);
+}
+
+@media (max-width: 768px) {
+  .dynamic-orb {
+    filter: blur(65px);
+    -webkit-filter: blur(65px);
+  }
+}
+
+/* Layer 1: Elegant Deep Emerald Glow (Visible, smooth, non-blinding) */
+.dynamic-orb-emerald {
+  background: radial-gradient(
+    circle,
+    rgba(16, 185, 80, 0.38) 0%,
+    rgba(10, 130, 55, 0.24) 35%,
+    rgba(5, 70, 30, 0.12) 60%,
+    transparent 80%
+  );
+  animation: bg-orb-emerald-motion 30s cubic-bezier(0.42, 0, 0.58, 1) infinite alternate;
+}
+
+/* Layer 2: Deep Ocean Blue Ambient Orb */
+.dynamic-orb-blue {
+  background: radial-gradient(
+    circle,
+    rgba(20, 80, 240, 0.40) 0%,
+    rgba(10, 45, 160, 0.25) 40%,
+    rgba(5, 20, 80, 0.12) 65%,
+    transparent 80%
+  );
+  animation: bg-orb-blue-motion 34s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+}
+
+/* Layer 3: Dark Forest Green Subtle Glow */
+.dynamic-orb-forest {
+  background: radial-gradient(
+    circle,
+    rgba(10, 140, 60, 0.30) 0%,
+    rgba(5, 75, 35, 0.18) 45%,
+    transparent 75%
+  );
+  animation: bg-orb-forest-motion 26s ease-in-out infinite alternate;
+}
+
+/* Layer 4: Midnight Navy Deep Atmosphere */
+.dynamic-orb-navy {
+  background: radial-gradient(
+    circle,
+    rgba(10, 35, 120, 0.38) 0%,
+    rgba(5, 20, 70, 0.20) 50%,
+    transparent 80%
+  );
+  animation: bg-orb-navy-motion 38s ease-in-out infinite alternate;
+}
+
+/* The 3 Continuous Cycle States (Dark, smooth, elegant motion):
+   State A: Deep black-navy foundation, gentle blue drift left, muted emerald center
+   State B: Deep-blue glow lower center, forest-green whisper to the right
+   State C: Subtle emerald lower left, dark navy drift upper right
+*/
+
+@keyframes bg-orb-emerald-motion {
+  0% {
+    transform: translate3d(0%, 0%, 0) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate3d(18%, -12%, 0) scale(1.08);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate3d(-15%, 15%, 0) scale(0.95);
+    opacity: 0.40;
+  }
+}
+
+@keyframes bg-orb-blue-motion {
+  0% {
+    transform: translate3d(-18%, -8%, 0) scale(1.05);
+    opacity: 0.48;
+  }
+  50% {
+    transform: translate3d(8%, 18%, 0) scale(1.12);
+    opacity: 0.58;
+  }
+  100% {
+    transform: translate3d(20%, -15%, 0) scale(0.95);
+    opacity: 0.42;
+  }
+}
+
+@keyframes bg-orb-forest-motion {
+  0% {
+    transform: translate3d(10%, 12%, 0) scale(0.95);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate3d(-15%, -14%, 0) scale(1.08);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate3d(10%, 12%, 0) scale(0.95);
+    opacity: 0.35;
+  }
+}
+
+@keyframes bg-orb-navy-motion {
+  0% {
+    transform: translate3d(16%, -14%, 0) scale(1.02);
+    opacity: 0.42;
+  }
+  50% {
+    transform: translate3d(-14%, 12%, 0) scale(1.10);
+    opacity: 0.50;
+  }
+  100% {
+    transform: translate3d(16%, -14%, 0) scale(1.02);
+    opacity: 0.42;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .dynamic-orb-emerald,
+  .dynamic-orb-blue,
+  .dynamic-orb-forest,
+  .dynamic-orb-navy {
+    animation: none !important;
+    transform: translate3d(0, 0, 0) scale(1) !important;
+  }
+}
+
+/* Continuous Infinite Marquee Loop for Journey Categories */
+@keyframes journey-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-journey-marquee {
+  display: flex;
+  width: max-content;
+  animation: journey-marquee 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-journey-marquee:hover {
+  animation-play-state: paused;
+}
