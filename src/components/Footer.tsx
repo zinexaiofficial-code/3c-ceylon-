@@ -200,17 +200,20 @@ export const Footer: React.FC = () => {
 
           {/* Column 4, 5, 6: Destinations Multi-Column Showcase (lg:col-span-5) */}
           <div className="lg:col-span-5 space-y-4">
-            <h3 className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#D4AF37]">
-              DESTINATIONS
-            </h3>
+            <Link href="/destinations" className="inline-block group/dest-title">
+              <h3 className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#D4AF37] group-hover/dest-title:text-[#18E600] transition-colors flex items-center space-x-1.5">
+                <span>DESTINATIONS</span>
+              </h3>
+            </Link>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2 text-xs sm:text-[13px] text-gray-300/80">
               {DESTINATION_COLUMNS.map((col, colIdx) => (
                 <ul key={colIdx} className="space-y-2">
                   {col.map((item) => (
                     <li key={item.name}>
                       <Link 
-                        href={`/destinations/${item.slug}`} 
-                        className="hover:text-white transition-colors block truncate"
+                        href="/destinations" 
+                        className="hover:text-[#18E600] transition-colors block truncate"
+                        title={`Explore ${item.name} in Sri Lanka Destinations`}
                       >
                         {item.name}
                       </Link>

@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { ReadyToPlanSection } from "@/components/common/ReadyToPlanSection";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { DynamicBackground } from "@/components/DynamicBackground";
+import { PageLoader } from "@/components/PageLoader";
 import { COMPANY_INFO } from "@/data/company";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -116,12 +117,19 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jakarta.variable} ${manrope.variable} font-sans`}>
       <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero/triumphant-overlook-above-misty-valley.png"
+          fetchPriority="high"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }}
         />
       </head>
       <body className="font-sans flex flex-col min-h-screen bg-[#FAF8F2] text-[#172334] antialiased selection:bg-[#18F000] selection:text-black">
+        <PageLoader />
         <LanguageProvider>
           <Header />
           <main className="flex-grow relative z-10">{children}</main>
