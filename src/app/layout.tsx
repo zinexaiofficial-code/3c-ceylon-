@@ -34,9 +34,28 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://3cceylontours.com"),
   title: {
-    default: "3C CEYLON TOURS | Luxury Private Tours & Holidays in Sri Lanka",
-    template: "%s | 3C Ceylon Tours Sri Lanka",
+    default: "3C Ceylon Tours | Luxury Sri Lanka Tours",
+    template: "%s | 3C Ceylon Tours",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "apple-touch-icon-precomposed",
+        url: "/apple-touch-icon-precomposed.png",
+      },
+    ],
+  },
+  manifest: "/site.webmanifest",
   description:
     "Award-quality bespoke travel agency in Sri Lanka. Tailor-made luxury tour packages, cultural heritage, private wildlife safaris, tea hills, and beach holidays with dedicated chauffeur-guides.",
   keywords: [
@@ -59,7 +78,7 @@ export const metadata: Metadata = {
     canonical: "https://3cceylontours.com",
   },
   openGraph: {
-    title: "3C CEYLON TOURS | Luxury Private Tours & Holidays in Sri Lanka",
+    title: "3C Ceylon Tours | Luxury Sri Lanka Tours",
     description: "Extraordinary journeys. Timeless memories. Beautifully crafted private luxury holidays in Sri Lanka.",
     url: "https://3cceylontours.com",
     siteName: "3C Ceylon Tours",
@@ -76,7 +95,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "3C CEYLON TOURS | Luxury Sri Lanka Tours & Safaris",
+    title: "3C Ceylon Tours | Luxury Sri Lanka Tours",
     description: "Discover the soul of Sri Lanka with bespoke tailor-made luxury journeys, private wildlife safaris, and 5-star chauffeur guides.",
     images: ["/images/welcome-srilanka.jpg"],
     creator: "@3cceylontours",
@@ -117,6 +136,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jakarta.variable} ${manrope.variable} font-sans`}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon-precomposed.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link
           rel="preload"
           as="image"
