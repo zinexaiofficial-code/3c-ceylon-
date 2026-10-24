@@ -544,6 +544,52 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Privacy & Cookie Policy Section */}
+        <div id="privacy" className="scroll-mt-28 bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm space-y-6">
+          <div className="flex items-center space-x-3 rtl:space-x-reverse">
+            <div className="w-10 h-10 rounded-2xl bg-[#0E6838]/10 text-[#0E6838] flex items-center justify-center">
+              <ShieldCheck className="w-5 h-5" />
+            </div>
+            <div>
+              <h2 className="font-sans text-2xl font-extrabold text-[#172334] tracking-tight">
+                Privacy &amp; Cookie Policy
+              </h2>
+              <p className="text-xs text-gray-500 font-medium">
+                Last updated: October 2026 • 3C Ceylon Tours (Pvt) Ltd
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-4 text-xs sm:text-sm text-gray-600 leading-relaxed">
+            <p>
+              At <strong>3C Ceylon Tours</strong>, your privacy and data autonomy are paramount. We collect only the information necessary to plan and conduct tailor-made luxury travel itineraries across Sri Lanka.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 space-y-2">
+                <h3 className="font-bold text-sm text-[#172334]">Essential Browser Storage</h3>
+                <p className="text-xs text-gray-500">
+                  We use browser local storage solely to retain your selected language preference and your cookie consent decision so you are not prompted repeatedly.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 space-y-2">
+                <h3 className="font-bold text-sm text-[#172334]">Third-Party &amp; Optional Services</h3>
+                <p className="text-xs text-gray-500">
+                  External interactive embeds (such as Google Maps) are disabled until you provide consent. You may change your choice at any time using the Cookie Settings link in the footer.
+                </p>
+              </div>
+            </div>
+
+            <p id="terms" className="scroll-mt-28 text-xs text-gray-500 pt-2 border-t border-gray-100">
+              For any privacy inquiries or bespoke travel assistance, please contact our concierge team at{" "}
+              <a href={`mailto:${COMPANY_INFO.email}`} className="text-[#0E6838] font-semibold underline">
+                {COMPANY_INFO.email}
+              </a>.
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   );

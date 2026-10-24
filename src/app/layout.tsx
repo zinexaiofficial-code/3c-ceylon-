@@ -2,10 +2,12 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Manrope } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { CookieConsentProvider } from "@/context/CookieConsentContext";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ReadyToPlanSection } from "@/components/common/ReadyToPlanSection";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { CookieConsent } from "@/components/CookieConsent";
 import { DynamicBackground } from "@/components/DynamicBackground";
 import { PageLoader } from "@/components/PageLoader";
 import { COMPANY_INFO } from "@/data/company";
@@ -156,13 +158,16 @@ export default function RootLayout({
       </head>
       <body className="font-sans flex flex-col min-h-screen bg-[#FAF8F2] text-[#172334] antialiased selection:bg-[#18F000] selection:text-black">
         <PageLoader />
-        <LanguageProvider>
-          <Header />
-          <main className="flex-grow relative z-10">{children}</main>
-          <ReadyToPlanSection />
-          <Footer />
-          <FloatingWhatsApp />
-        </LanguageProvider>
+        <CookieConsentProvider>
+          <LanguageProvider>
+            <Header />
+            <main className="flex-grow relative z-10">{children}</main>
+            <ReadyToPlanSection />
+            <Footer />
+            <FloatingWhatsApp />
+            <CookieConsent />
+          </LanguageProvider>
+        </CookieConsentProvider>
       </body>
     </html>
   );

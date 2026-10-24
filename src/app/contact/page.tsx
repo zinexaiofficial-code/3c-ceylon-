@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
 import { COMPANY_INFO, getWhatsAppLink, getSecondaryWhatsAppLink } from "@/data/company";
+import { useCookieConsent } from "@/context/CookieConsentContext";
 import { 
   Phone, 
   Mail, 
@@ -75,6 +76,8 @@ const CONTACT_CAROUSEL_SLIDES: ContactSlide[] = [
 const AUTO_PLAY_INTERVAL = 6000;
 
 export default function ContactPage() {
+  const { consent, acceptAll } = useCookieConsent();
+
   // Carousel State
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -507,16 +510,44 @@ export default function ContactPage() {
               </span>
               <div ref={mapContainerRef} className="w-full h-56 rounded-2xl overflow-hidden border border-gray-200 bg-gray-100 flex items-center justify-center">
                 {isMapInView ? (
-                  <iframe
-                    title="3C Ceylon Tours Colombo Head Office"
-                    src="https://maps.google.com/maps?q=6.9338,79.8433&z=15&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={false}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
+                  consent === "rejected" ? (
+                    <div className="flex flex-col items-center justify-center p-5 text-center space-y-2 bg-gray-50 h-full w-full">
+                      <div className="w-8 h-8 rounded-full bg-[#0E6838]/10 text-[#0E6838] flex items-center justify-center">
+                        <MapPin className="w-4 h-4" />
+                      </div>
+                      <p className="text-xs text-gray-600 max-w-xs leading-relaxed">
+                        Interactive map is paused because optional third-party services are disabled.
+                      </p>
+                      <div className="flex items-center gap-2 pt-1">
+                        <button
+                          type="button"
+                          onClick={acceptAll}
+                          className="px-3 py-1.5 rounded-lg bg-[#0E6838] hover:bg-[#0A4D2A] text-white text-[11px] font-bold transition-colors"
+                        >
+                          Enable Map
+                        </button>
+                        <a
+                          href="https://maps.google.com/?q=6.9338,79.8433"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-3 py-1.5 rounded-lg border border-gray-300 hover:bg-gray-100 text-gray-700 text-[11px] font-medium transition-colors"
+                        >
+                          Open in Google Maps ↗
+                        </a>
+                      </div>
+                    </div>
+                  ) : (
+                    <iframe
+                      title="3C Ceylon Tours Colombo Head Office"
+                      src="https://maps.google.com/maps?q=6.9338,79.8433&z=15&output=embed"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen={false}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  )
                 ) : (
                   <span className="text-xs text-gray-400 font-medium">Loading Map...</span>
                 )}

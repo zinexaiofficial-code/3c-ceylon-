@@ -10,6 +10,7 @@ import {
   Linkedin 
 } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
+import { useCookieConsent } from "@/context/CookieConsentContext";
 
 // Alphabetical Sri Lankan destination list (Inspired by ceylontours.lk)
 const DESTINATION_COLUMNS = [
@@ -52,6 +53,8 @@ const DESTINATION_COLUMNS = [
 ];
 
 export const Footer: React.FC = () => {
+  const { openCookieSettings } = useCookieConsent();
+
   return (
     <footer className="bg-[#050E1A] text-white border-t border-white/10 pt-16 sm:pt-20 pb-12 relative z-10 select-none">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -246,7 +249,15 @@ export const Footer: React.FC = () => {
             <span>Colombo, Sri Lanka</span>
           </div>
 
-          <div className="flex items-center space-x-5 text-gray-400">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-gray-400">
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="hover:text-white transition-colors cursor-pointer text-xs focus:outline-none focus:underline"
+            >
+              Cookie Settings
+            </button>
+            <span className="text-gray-600">•</span>
             <Link href="/about#privacy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>

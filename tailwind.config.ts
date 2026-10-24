@@ -52,6 +52,7 @@ const config: Config = {
       },
       animation: {
         'fade-in': 'fadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'fade-in-quick': 'fadeIn 0.2s ease-out forwards',
         'float-slow': 'float 4s ease-in-out infinite',
       },
     },
