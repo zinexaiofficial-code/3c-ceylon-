@@ -6,10 +6,15 @@ import { TripPlannerBar } from "@/components/TripPlannerBar";
 import { SigiriyaParallaxSection } from "@/components/home/SigiriyaParallaxSection";
 import { TourismExperienceGrid } from "@/components/TourismExperienceGrid";
 import { InteractiveSriLankaMap } from "@/components/home/InteractiveSriLankaMap";
+import { LeopardFullscreenScrollSection } from "@/components/home/LeopardFullscreenScrollSection";
 import { OurJourneyCategoriesSection } from "@/components/home/OurJourneyCategoriesSection";
 import { PackageCard } from "@/components/PackageCard";
 import { IconicDestinationsSection } from "@/components/home/IconicDestinationsSection";
+import { CinnamonExperienceSection } from "@/components/home/CinnamonExperienceSection";
 import { CuratedExperiencesSection } from "@/components/home/CuratedExperiencesSection";
+import { OxCartFullscreenScrollSection } from "@/components/home/OxCartFullscreenScrollSection";
+import { SpiritualActivitiesSection } from "@/components/home/SpiritualActivitiesSection";
+import { CeylonGemsSection } from "@/components/home/CeylonGemsSection";
 import { DestinationCard } from "@/components/DestinationCard";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
@@ -54,16 +59,28 @@ export default function HomePage() {
       {/* 5. Sri Lanka Tourism-Inspired 8-Category Wonders Gallery (Deep Navy Dark) */}
       <TourismExperienceGrid />
 
-      {/* 6. Interactive Sri Lanka Tourism Map Section (Warm Ivory Light) */}
+      {/* 6. Premium Scroll-Triggered Fullscreen Image Expansion (The Ceylon Leopard) */}
+      <LeopardFullscreenScrollSection />
+
+      {/* 7. Interactive Sri Lanka Tourism Map Section (Warm Ivory Light) */}
       <InteractiveSriLankaMap />
 
       {/* 7. Iconic Sri Lankan Destinations Section (Full-Image Gallery Mosaic with Shine & Pop-Up Transitions) */}
       <IconicDestinationsSection />
 
-      {/* 8. Curated Travel Experiences Grid (Full-Image Tourism Gallery Mosaic with Shine & Pop-Up Transitions) */}
+      {/* 8. The Ceylon Cinnamon Experience - Infinite Moving Marquee Loop */}
+      <CinnamonExperienceSection />
+
+      {/* 9. Curated Travel Experiences Grid (Full-Image Tourism Gallery Mosaic with Shine & Pop-Up Transitions) */}
       <CuratedExperiencesSection />
 
-      {/* 9. The 3C Standard (Why Choose 3C Ceylon Tours) (Pure White Light) */}
+      {/* 10. Ox Cart Countryside Adventures - Premium Scroll-Triggered Fullscreen Image Expansion */}
+      <OxCartFullscreenScrollSection />
+
+      {/* 11. Spiritual Activities & Mindful Sanctuaries Grid */}
+      <SpiritualActivitiesSection />
+
+      {/* 10. The 3C Standard (Why Choose 3C Ceylon Tours) (Pure White Light) */}
       <section id="why-us" className="py-14 sm:py-18 relative overflow-hidden bg-white text-[#172334]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
@@ -150,7 +167,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 11. Verified Customer Testimonials (Deep Navy Dark Section) */}
+      {/* 11. Ceylon Gems & Precious Jewels Section */}
+      <CeylonGemsSection />
+
+      {/* 12. Verified Customer Testimonials (Deep Navy Dark Section) */}
       <TestimonialsSection />
 
       {/* 12. Experience The Best In Travel (Checkerboard Alternating 6-Block Mosaic) */}

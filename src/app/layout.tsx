@@ -147,6 +147,13 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <link
           rel="preload"
+          as="video"
+          type="video/mp4"
+          href="/videos/loader.mp4"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
           as="image"
           href="/images/hero/triumphant-overlook-above-misty-valley.png"
           fetchPriority="high"

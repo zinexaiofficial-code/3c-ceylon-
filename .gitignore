@@ -37,10 +37,14 @@ yarn-error.log*
 /*.html
 /*_files/
 /*.mp4
+/*.png
 /images/
 /both section/
 /section/
 /vedio/
 /scratch/
+/destination/
+/gems/
+/Spiritual Activities/
 /logo.jpeg
 /logo-modified.png

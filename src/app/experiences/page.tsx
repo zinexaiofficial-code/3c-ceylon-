@@ -4,6 +4,10 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { EXPERIENCES, TravelExperience } from "@/data/experiences";
+import { AdventureFullscreenScrollSection } from "@/components/experiences/AdventureFullscreenScrollSection";
+import { SportAdventureCategoriesSection } from "@/components/experiences/SportAdventureCategoriesSection";
+import { VillageCookingFullscreenScrollSection } from "@/components/experiences/VillageCookingFullscreenScrollSection";
+import { GemMiningFullscreenScrollSection } from "@/components/experiences/GemMiningFullscreenScrollSection";
 import { getWhatsAppLink } from "@/data/company";
 import { 
   Compass, 
@@ -335,8 +339,17 @@ export default function ExperiencesPage() {
         </a>
       </section>
 
+      {/* 2. Premium Scroll-Triggered Fullscreen Adventure Showcase */}
+      <AdventureFullscreenScrollSection />
+
+      {/* 3. Sport & Adventure Categories Marquee Carousel */}
+      <SportAdventureCategoriesSection />
+
+      {/* 4. Sri Lankan Village Cooking Workshop - Premium Scroll-Triggered Fullscreen Image Expansion */}
+      <VillageCookingFullscreenScrollSection />
+
       {/* ─────────────────────────────────────────────────────────────
-          2. EXPERIENCES CONTENT SECTION (Matching Blue Lanka Tours)
+          5. EXPERIENCES CONTENT SECTION (Matching Blue Lanka Tours)
           - Header: Large serif "Experiences"
           - Intro text explaining Sri Lanka's exotic getaways
           - 3-Column Luxury Card Grid with Images from images/Experiences
@@ -404,9 +417,14 @@ export default function ExperiencesPage() {
             </div>
           ))}
         </div>
+      </section>
 
-        {/* Bottom Bespoke Callout */}
-        <div className="mt-20 bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 text-center max-w-3xl mx-auto shadow-sm space-y-6">
+      {/* 5. Sri Lankan Gem Mining Journey - Premium Scroll-Triggered Fullscreen Image Expansion */}
+      <GemMiningFullscreenScrollSection />
+
+      {/* 6. Tailor-Made Private Journey Bespoke Callout */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
+        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 text-center max-w-3xl mx-auto shadow-sm space-y-6">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-emerald-50 text-[#0E6838] text-xs font-bold uppercase tracking-wider border border-emerald-200">
             <Compass className="w-4 h-4 text-[#0E6838]" />
             <span>Tailor-Made Tour Experiences</span>
@@ -439,7 +457,6 @@ export default function ExperiencesPage() {
             </Link>
           </div>
         </div>
-
       </section>
     </div>
   );
