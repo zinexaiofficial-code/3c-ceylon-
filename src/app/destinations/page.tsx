@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { DESTINATIONS, Destination } from "@/data/destinations";
 import { DestinationCard } from "@/components/DestinationCard";
+import { DestinationsMovableCarouselSection } from "@/components/DestinationsMovableCarouselSection";
 import { getWhatsAppLink } from "@/data/company";
 import { 
   Compass, 
@@ -370,7 +371,7 @@ export default function DestinationsPage() {
 
         {/* Scroll Down Indicator */}
         <a 
-          href="#destinations-grid"
+          href="#movable-destinations"
           className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-1 text-white/60 hover:text-white transition-colors cursor-pointer"
         >
           <span className="text-[10px] tracking-widest uppercase font-medium">Scroll to Destinations</span>
@@ -379,9 +380,14 @@ export default function DestinationsPage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
-          2. FILTER & SEARCH CONTROL BAR
+          2. MOVABLE DESTINATIONS HORIZONTAL SECTION (Our Journey Categories Style)
          ───────────────────────────────────────────────────────────── */}
-      <div id="destinations-grid" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20 mb-12 sm:mb-16">
+      <DestinationsMovableCarouselSection />
+
+      {/* ─────────────────────────────────────────────────────────────
+          3. FILTER & SEARCH CONTROL BAR
+         ───────────────────────────────────────────────────────────── */}
+      <div id="destinations-grid" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16 relative z-20 mb-12 sm:mb-16">
         <div className="bg-white rounded-3xl p-5 sm:p-6 shadow-[0_12px_40px_rgba(0,0,0,0.08)] border border-gray-200/90 space-y-4">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             
