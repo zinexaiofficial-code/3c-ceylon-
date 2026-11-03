@@ -49,7 +49,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private journey with 3C Ceylon Tours",
     durationDays: 6,
     durationNights: 5,
-    image: "/images/packages/tropical-lighthouse-tuk-tuk.png",
+    image: "/images/packages/main/sri-lanka-highlights-6-days.jpg",
     gallery: [
       "/images/packages/tropical-lighthouse-tuk-tuk.png",
       "/images/places/dambulla-sigiriya/dambulla1.jpg",
@@ -171,7 +171,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private cultural journey with 3C Ceylon Tours",
     durationDays: 3,
     durationNights: 2,
-    image: "/images/packages/ceylon-heritage-escape.jpeg",
+    image: "/images/packages/main/ceylon-heritage-escape-3-days.jpg",
     gallery: [
       "/images/packages/ceylon-heritage-escape.jpeg",
       "/images/places/dambulla-sigiriya/dambulla2.jpg",
@@ -255,7 +255,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private coastal journey with 3C Ceylon Tours",
     durationDays: 3,
     durationNights: 2,
-    image: "/images/packages/southern-soul.jpeg",
+    image: "/images/packages/main/southern-soul-3-days.jpg",
     gallery: [
       "/images/packages/southern-soul.jpeg",
       "/images/places/galle/galle1.jpg",
@@ -340,7 +340,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private cultural and highland tour with 3C Ceylon Tours",
     durationDays: 4,
     durationNights: 3,
-    image: "/images/packages/ceylon-explorer.jpeg",
+    image: "/images/packages/main/ceylon-explorer-4-days.jpg",
     gallery: [
       "/images/packages/ceylon-explorer.jpeg",
       "/images/places/dambulla-sigiriya/dambulla3.jpg",
@@ -437,7 +437,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private signature journey with 3C Ceylon Tours",
     durationDays: 8,
     durationNights: 7,
-    image: "/images/hero/jungle-curve-blue-train-adventure.png",
+    image: "/images/packages/main/ceylon-grand-discovery-8-days.jpg",
     gallery: [
       "/images/hero/jungle-curve-blue-train-adventure.png",
       "/images/places/dambulla-sigiriya/dambulla1.jpg",
@@ -572,7 +572,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private adventure with 3C Ceylon Tours",
     durationDays: 5,
     durationNights: 4,
-    image: "/images/leopard-portraits-in-the-forest.png",
+    image: "/images/packages/main/ceylon-wild-escape-5-days.jpg",
     gallery: [
       "/images/leopard-portraits-in-the-forest.png",
       "/images/places/yala/yala2.jpg",
@@ -678,7 +678,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private highland journey with 3C Ceylon Tours",
     durationDays: 8,
     durationNights: 7,
-    image: "/images/misty-valleys.png",
+    image: "/images/packages/main/ceylon-hill-country-journey-8-days.jpg",
     gallery: [
       "/images/misty-valleys.png",
       "/images/places/kandy/kandy1.jpg",
@@ -812,7 +812,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private family holiday with 3C Ceylon Tours",
     durationDays: 11,
     durationNights: 10,
-    image: "/images/kandy-group-portrait.png",
+    image: "/images/packages/main/ceylon-family-adventure-11-days.jpg",
     gallery: [
       "/images/kandy-group-portrait.png",
       "/images/ox-cart-adventures-countryside.png",
@@ -975,7 +975,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private romantic getaway with 3C Ceylon Tours",
     durationDays: 9,
     durationNights: 8,
-    image: "/images/romance-sigiriya.png",
+    image: "/images/packages/main/ceylon-romantic-escape-9-days.jpg",
     gallery: [
       "/images/romance-sigiriya.png",
       "/images/places/hirikatiya/hiriketiya1.jpg",
@@ -1117,7 +1117,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private cultural exploration with 3C Ceylon Tours",
     durationDays: 8,
     durationNights: 7,
-    image: "/images/packages/ceylon-northern-discovery.jpg",
+    image: "/images/packages/main/ceylon-northern-discovery-8-days.jpg",
     gallery: [
       "/images/packages/ceylon-northern-discovery.jpg",
       "/images/places/anuradhapura/anu1.jpg",
@@ -1249,7 +1249,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private epic expedition with 3C Ceylon Tours",
     durationDays: 15,
     durationNights: 14,
-    image: "/images/packages/ceylon-east-to-south-adventure.jpg",
+    image: "/images/packages/main/ceylon-east-to-south-adventure-15-days.jpg",
     gallery: [
       "/images/packages/ceylon-east-to-south-adventure.jpg",
       "/images/places/ella/ella2.jpg",
@@ -1444,7 +1444,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "The definitive grand tour by 3C Ceylon Tours",
     durationDays: 15,
     durationNights: 14,
-    image: "/images/packages-hero.png",
+    image: "/images/packages/main/ceylon-complete-journey-15-days.jpg",
     gallery: [
       "/images/packages-hero.png",
       "/images/places/dambulla-sigiriya/dambulla2.jpg",
@@ -1647,7 +1647,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A sacred journey with 3C Ceylon Tours",
     durationDays: 11,
     durationNights: 10,
-    image: "/images/packages/Couple at a Vibrant Buddhist Stupa.png",
+    image: "/images/packages/main/ceylon-spiritual-journey-11-days.jpg",
     gallery: [
       "/images/packages/Couple at a Vibrant Buddhist Stupa.png",
       "/images/places/anuradhapura/anu2.jpg",
@@ -1805,7 +1805,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private high-adventure expedition with 3C Ceylon Tours",
     durationDays: 9,
     durationNights: 8,
-    image: "/images/packages/adams-peak-sunrise.jpg",
+    image: "/images/packages/main/ceylon-wild-and-sacred-adventure-9-days.jpg",
     gallery: [
       "/images/packages/adams-peak-sunrise.jpg",
       "/images/packages/knuckles-mountain-range.jpg",
@@ -1951,7 +1951,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     brandLine: "A private artisan & rainforest journey with 3C Ceylon Tours",
     durationDays: 7,
     durationNights: 6,
-    image: "/images/packages/bopath-ella-falls.jpg",
+    image: "/images/packages/main/ceylon-gem-and-green-heritage-7-days.jpg",
     gallery: [
       "/images/packages/bopath-ella-falls.jpg",
       "/images/packages/ratnapura-gem-mining.jpg",
