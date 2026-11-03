@@ -492,9 +492,9 @@ export default function PackagesPage() {
       {/* ─────────────────────────────────────────────────────────────
           3. PACKAGES FULLSCREEN SCROLL SHOWCASE (One by One)
          ───────────────────────────────────────────────────────────── */}
-      <div className="w-full pb-20">
+      <div className="w-full">
         {filteredPackages.length > 0 ? (
-          <div className="space-y-0 w-full overflow-hidden">
+          <div className="w-full">
             {filteredPackages.map((pkg, idx) => (
               <PackageFullscreenScrollCard key={pkg.id} pkg={pkg} index={idx} />
             ))}

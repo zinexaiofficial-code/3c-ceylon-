@@ -4,7 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { Compass, Clock, MapPin, ArrowRight, MessageCircle, ShieldCheck } from "lucide-react";
+import { Compass, MapPin, ArrowRight, MessageCircle } from "lucide-react";
 import { TourPackage } from "@/data/packages";
 import { getWhatsAppLink } from "@/data/company";
 
@@ -15,11 +15,14 @@ interface PackageFullscreenScrollCardProps {
 
 /**
  * Premium Scroll-Triggered Fullscreen Package Card for 3C Ceylon Tours Packages Page.
- * Matches the exact interactive sticky-scroll zoom/reveal aesthetic from the Experiences page.
+ * Follows the EXACT architecture and motion mechanics from https://www.3cceylon.com/experiences
+ * (AdventureFullscreenScrollSection).
  * 
- * - Stage 1 (0%): Contained image (76vw / 64vh) with 24px border radius & package overview header.
+ * - Stage 1 (0%): Contained image (76vw / 64% on desktop, 92vw / 56% on mobile) with 24px border radius & curated header.
  * - Stage 2 (8-82%): Proportional scroll-controlled expansion to 100vw x 100%, border radius 24px -> 0px.
- * - Stage 3 (74-100%): Full viewport coverage with cinematic vignette, bold title, route, overview, and CTA buttons.
+ * - Stage 3 (74-100%): Complete full-bleed viewport coverage with subtle cinematic overlay, bold title, route & CTA.
+ * - Stage 4: Unlocks smoothly into the next package without scroll-locking.
+ * - Stage 5: Flawless bidirectional reverse animation upon upward scroll.
  */
 export const PackageFullscreenScrollCard: React.FC<PackageFullscreenScrollCardProps> = ({ pkg, index }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,21 +48,21 @@ export const PackageFullscreenScrollCard: React.FC<PackageFullscreenScrollCardPr
   // Stage 1 -> 2 -> 3 Progress Normalization (Active expansion from 8% to 82% scroll)
   const expansionProgress = useTransform(scrollYProgress, [0.08, 0.82], [0, 1]);
 
-  // Width: 76vw (92vw on mobile) -> 100vw
+  // Width: 76vw (92vw on mobile) -> 100vw (totally fills the screen)
   const width = useTransform(expansionProgress, (v) => {
     const clamped = Math.min(Math.max(v, 0), 1);
     const start = isMobile ? 92 : 76;
     return `${start + (100 - start) * clamped}vw`;
   });
 
-  // Height: 64% (56% on mobile) -> 100% (100dvh)
+  // Height: 64% (56% on mobile) -> 100% (100dvh totally fills the screen)
   const height = useTransform(expansionProgress, (v) => {
     const clamped = Math.min(Math.max(v, 0), 1);
     const start = isMobile ? 56 : 64;
     return `${start + (100 - start) * clamped}%`;
   });
 
-  // Border radius: 24px -> 0px
+  // Border radius: 24px -> 0px (seamless edge-to-edge)
   const borderRadius = useTransform(expansionProgress, (v) => {
     const clamped = Math.min(Math.max(v, 0), 1);
     return `${24 * (1 - clamped)}px`;
@@ -76,25 +79,25 @@ export const PackageFullscreenScrollCard: React.FC<PackageFullscreenScrollCardPr
   const headerOpacity = useTransform(scrollYProgress, [0.0, 0.12], [1, 0]);
   const headerY = useTransform(scrollYProgress, [0.0, 0.12], [0, -28]);
 
-  // Fullscreen cinematic details overlay appears at Stage 3 (74% -> 86%)
-  const captionOpacity = useTransform(scrollYProgress, [0.70, 0.85], [0, 1]);
-  const captionY = useTransform(scrollYProgress, [0.70, 0.85], [16, 0]);
+  // Fullscreen cinematic typography overlay appears at Stage 3 (74% -> 86%)
+  const captionOpacity = useTransform(scrollYProgress, [0.74, 0.86], [0, 1]);
+  const captionY = useTransform(scrollYProgress, [0.74, 0.86], [10, 0]);
 
   const whatsappUrl = getWhatsAppLink(undefined, pkg.title);
 
   // Reduced motion fallback (Static clean layout)
   if (shouldReduceMotion) {
     return (
-      <section className="py-14 sm:py-20 bg-[#FAF8F2] text-[#172334] overflow-hidden border-b border-gray-200/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-6">
+      <section className="py-16 sm:py-20 bg-[#FAF8F2] text-[#172334] overflow-hidden border-b border-gray-200/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#18E600]/15 text-[#123B2A] border border-[#18E600]/30 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-xs">
             <Compass className="w-3.5 h-3.5 text-[#123B2A]" />
             <span>{pkg.style} • {pkg.durationNights}N / {pkg.durationDays}D</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#172334] tracking-tight leading-tight mb-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#172334] mb-3">
             {pkg.title}
           </h2>
-          <p className="text-xs sm:text-sm md:text-base text-[#526173] font-normal max-w-xl mx-auto">
+          <p className="text-base sm:text-lg text-[#526173] max-w-xl mx-auto">
             {pkg.subtitle}
           </p>
         </div>
@@ -102,7 +105,7 @@ export const PackageFullscreenScrollCard: React.FC<PackageFullscreenScrollCardPr
         <div className="relative w-[92vw] md:w-[76vw] max-w-6xl h-[56vh] md:h-[64vh] mx-auto rounded-3xl overflow-hidden shadow-2xl">
           <Image
             src={pkg.image}
-            alt={pkg.title}
+            alt={`${pkg.title} - 3C Ceylon Tours`}
             fill
             priority={index < 2}
             sizes="100vw"
@@ -133,8 +136,8 @@ export const PackageFullscreenScrollCard: React.FC<PackageFullscreenScrollCardPr
   return (
     <section
       ref={containerRef}
-      className="relative h-[190vh] bg-[#FAF8F2] text-[#172334] z-20 border-b border-gray-200/30"
-      aria-label={`${pkg.title} Interactive Showcase`}
+      className="relative h-[230vh] bg-[#FAF8F2] text-[#172334] z-20"
+      aria-label={`${pkg.title} Scroll Showcase`}
     >
       {/* Sticky Fullscreen Frame */}
       <div className="sticky top-0 h-screen h-[100dvh] w-full overflow-hidden flex flex-col items-center justify-center">
@@ -156,12 +159,12 @@ export const PackageFullscreenScrollCard: React.FC<PackageFullscreenScrollCardPr
             {pkg.title}
           </h2>
 
-          <p className="text-xs sm:text-sm md:text-base text-[#526173] font-normal max-w-xl mx-auto mt-1 sm:mt-1.5 line-clamp-2">
+          <p className="text-xs sm:text-sm md:text-base text-[#526173] font-normal max-w-xl mx-auto mt-1 sm:mt-1.5">
             {pkg.subtitle}
           </p>
         </motion.div>
 
-        {/* Scroll-Expanding Image Container */}
+        {/* Scroll-Expanding Image Container (Expands to totally fill the screen: 100vw x 100%) */}
         <motion.div
           style={{
             width: isMounted ? width : isMobile ? "92vw" : "76vw",
@@ -183,67 +186,38 @@ export const PackageFullscreenScrollCard: React.FC<PackageFullscreenScrollCardPr
             className="object-cover object-center select-none pointer-events-none"
           />
 
-          {/* Top Floating Badges (Visible during Stage 1) */}
-          <motion.div
-            style={{
-              opacity: isMounted ? headerOpacity : 1,
-            }}
-            className="absolute top-4 left-4 sm:top-6 sm:left-6 right-4 sm:right-6 z-20 flex items-center justify-between pointer-events-none"
-          >
-            <div className="flex items-center space-x-2">
-              <span className="px-3.5 py-1.5 rounded-full bg-black/75 backdrop-blur-md text-[#18E600] border border-[#18E600]/40 text-xs font-extrabold tracking-wide shadow-lg flex items-center space-x-1.5">
-                <Clock className="w-3.5 h-3.5 text-[#18E600]" />
-                <span>{pkg.durationNights} Nights / {pkg.durationDays} Days</span>
-              </span>
-
-              <span className="hidden sm:inline-flex items-center space-x-1 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white/90 border border-white/20 text-xs font-semibold shadow">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#18E600]" />
-                <span>100% Private</span>
-              </span>
-            </div>
-
-            <span className="px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[#172334] text-xs font-bold shadow-md border border-black/5">
-              {pkg.style}
-            </span>
-          </motion.div>
-
           {/* Cinematic Vignette Overlay (Becomes prominent in Stage 3 for readability) */}
           <motion.div
             style={{
               opacity: isMounted ? captionOpacity : 0,
             }}
-            className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 via-45% to-black/20 pointer-events-none z-10"
+            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 via-40% to-transparent pointer-events-none z-10"
           />
 
-          {/* Stage 3 Fullscreen Typography Overlay (Reveals smoothly at 70-85%) */}
+          {/* Stage 3 Fullscreen Typography & CTA Overlay (Reveals smoothly at 74-86%) */}
           <motion.div
             style={{
               opacity: isMounted ? captionOpacity : 0,
-              y: isMounted ? captionY : 16,
+              y: isMounted ? captionY : 0,
             }}
-            className="absolute bottom-12 sm:bottom-16 md:bottom-20 lg:bottom-24 left-6 sm:left-12 md:left-16 lg:left-20 right-6 sm:right-12 z-20 max-w-4xl text-white select-none pointer-events-auto pb-2"
+            className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-28 left-6 sm:left-12 md:left-16 lg:left-20 z-20 max-w-4xl text-white select-none pointer-events-auto pb-2"
           >
             {/* Route Breadcrumbs */}
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-[11px] sm:text-xs font-semibold text-[#18E600] mb-3">
-              <MapPin className="w-3.5 h-3.5 text-[#18E600] flex-shrink-0" />
-              <span className="truncate">{pkg.destinationsCovered.join(" → ")}</span>
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-[#18E600]/40 text-[#18E600] text-xs font-bold uppercase tracking-wider mb-3">
+              <MapPin className="w-3.5 h-3.5 text-[#18E600]" />
+              <span>{pkg.destinationsCovered.join(" → ")}</span>
             </div>
 
-            {/* Stage 3 Title */}
-            <h3 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.95)] text-white leading-tight mb-3">
+            {/* Bold Impact Title */}
+            <h3 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.95)] text-white leading-tight mb-4">
               {pkg.title}
             </h3>
 
-            {/* Overview Snippet */}
-            <p className="text-xs sm:text-sm md:text-base text-gray-200/90 font-normal leading-relaxed line-clamp-2 sm:line-clamp-3 mb-6 max-w-2xl drop-shadow">
-              {pkg.overview}
-            </p>
-
-            {/* Interactive Call-To-Action Buttons */}
+            {/* Direct Call-To-Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <Link
                 href={`/packages/${pkg.slug}`}
-                className="px-6 sm:px-8 py-3.5 rounded-full bg-[#18E600] hover:bg-[#15D600] text-black font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-[0_0_25px_rgba(24,230,0,0.45)] hover:shadow-[0_0_35px_rgba(24,230,0,0.7)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
+                className="px-7 sm:px-9 py-3.5 rounded-full bg-[#18E600] hover:bg-[#15D600] text-black font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-[0_0_25px_rgba(24,230,0,0.45)] hover:shadow-[0_0_35px_rgba(24,230,0,0.7)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
               >
                 <span>Explore Full Itinerary</span>
                 <ArrowRight className="w-4 h-4" />
@@ -253,7 +227,7 @@ export const PackageFullscreenScrollCard: React.FC<PackageFullscreenScrollCardPr
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 sm:px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold text-xs sm:text-sm tracking-wider border border-white/25 hover:border-white/50 shadow-md hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
+                className="px-6 sm:px-8 py-3.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold text-xs sm:text-sm tracking-wider border border-white/25 hover:border-white/50 shadow-md hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4 text-[#18E600]" />
                 <span>Inquire on WhatsApp</span>
