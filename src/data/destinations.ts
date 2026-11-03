@@ -26,7 +26,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Central Province / Cultural Triangle",
     tagline: "The UNESCO 5th-Century Fortress in the Clouds & Golden Cave Temples",
     description: "Rising 200 meters dramatically above the emerald jungle canopy, the monumental citadel of Sigiriya (Lion Rock) is acclaimed by travelers as the eighth wonder of the world. Built by King Kasyapa in the 5th century AD, it features symmetrical royal water gardens, mysterious mirror walls, heavenly frescoes of celestial nymphs, and colossal stone lion paws flanking the summit stairway. Nearby lies the ancient Dambulla Cave Temple complex, housing 153 statues of Buddha covered in intricate 2,000-year-old murals.",
-    image: "/images/places/dambulla-sigiriya/IMG_3583.JPG",
+    image: "/images/destinations/main/sigiriya.jpg",
     gallery: [
       "/images/places/dambulla-sigiriya/IMG_3583.JPG",
       "/images/places/dambulla-sigiriya/IMG_3579.JPG",
@@ -77,7 +77,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Central Province",
     tagline: "The Sacred Royal Hill Capital of Sri Lanka",
     description: "Nestled amidst misty green mountain ranges and encircling a peaceful centerpiece lake, Kandy was the last independent royal stronghold of Ceylon before British colonisation in 1815. Today, it remains the spiritual heartbeat of the island, home to the sacred Temple of the Tooth (Sri Dalada Maligawa), bustling spice markets, and the world-renowned Peradeniya Royal Botanical Gardens.",
-    image: "/images/places/kandy/IMG_3645.JPG",
+    image: "/images/destinations/main/kandy.jpg",
     gallery: [
       "/images/places/kandy/IMG_3645.JPG",
       "/images/places/kandy/IMG_3647.JPG",
@@ -130,7 +130,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Uva Province",
     tagline: "The Bohemian Mountain Haven & Iconic Train Trails",
     description: "Perched at the edge of the southern highland plateau, Ella is a serene mountain paradise surrounded by rolling cloud forests, cascading waterfalls, and emerald tea ridges. Famous worldwide for the colonial Nine Arch Bridge where blue passenger trains snake through lush valleys, Ella offers world-class hiking to Little Adam's Peak, panoramic zip-lining, and vibrant organic hillside cafes.",
-    image: "/images/places/ella/IMG_3589.JPG",
+    image: "/images/destinations/main/ella.jpg",
     gallery: [
       "/images/places/ella/IMG_3589.JPG",
       "/images/places/ella/IMG_3595.JPG",
@@ -178,7 +178,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Central Province",
     tagline: "Little England Among Cloud Forests & Pure Ceylon Tea",
     description: "Nestled at 1,868 meters above sea level beneath Pidurutalagala (Sri Lanka's highest peak), Nuwara Eliya exudes the refined charm of an English country village. Established in the 19th century by British planters, it features red-brick post offices, Tudor-style manor houses, immaculate 18-hole golf greens, Gregory Lake boating, and world-renowned high-grown Ceylon tea factories.",
-    image: "/images/places/nuwara-eliya/IMG_3612.JPG",
+    image: "/images/destinations/main/nuwara-eliya.jpg",
     gallery: [
       "/images/places/nuwara-eliya/IMG_3612.JPG",
       "/images/places/nuwara-eliya/IMG_3608.JPG",
@@ -229,7 +229,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Southern Province",
     tagline: "UNESCO 17th-Century Living Dutch Colonial Citadel",
     description: "Built first by the Portuguese in 1588 and extensively fortified by the Dutch in the 17th century, Galle Fort is Asia's best-preserved European sea fortress. Within its massive coral-and-granite ramparts lies a living, vibrant colonial town where historic villas are transformed into luxury boutique hotels, jewel boutiques, chic cafes, and art galleries. Sunset strolls along the lighthouse ramparts over the Indian Ocean are unforgettable.",
-    image: "/images/places/galle/IMG_3596.JPG",
+    image: "/images/destinations/main/galle.jpg",
     gallery: [
       "/images/places/galle/IMG_3596.JPG",
       "/images/places/galle/IMG_3598.JPG",
@@ -277,7 +277,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Southern & Uva Provinces",
     tagline: "The World's Highest Density Realm of the Elusive Leopard",
     description: "Bordering the wild Indian Ocean on Sri Lanka's southeast coast, Yala National Park is the crown jewel of Asian wildlife conservation. Boasting the highest concentration of leopards (Panthera pardus kotiya) on Earth, Yala's dramatic landscape transitions from coastal lagoons and sand dunes to thorny scrub jungle and sacred granite monoliths, inhabited by wild elephants, sloth bears, and mugger crocodiles.",
-    image: "/images/places/yala/IMG_3569.JPG",
+    image: "/images/destinations/main/yala.jpg",
     gallery: [
       "/images/places/yala/IMG_3569.JPG",
       "/images/places/yala/IMG_3575.JPG",
@@ -328,7 +328,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Southern Province",
     tagline: "Blue Whale Encounters & Iconic Coconut Tree Hill",
     description: "Mirissa is the premier marine sanctuary and coastal jewel of southern Sri Lanka. Just a few nautical miles offshore, deep underwater submarine trenches bring nutrient-rich currents that attract colossal blue whales, sperm whales, and pods of spinner dolphins. On land, Mirissa enchants with Coconut Tree Hill — an iconic palm-crested promontory jutting into turquoise water — along with secret swimming coves and beachfront candlelight seafood dining.",
-    image: "/images/places/mirissa/IMG_3554.PNG",
+    image: "/images/destinations/main/mirissa.jpg",
     gallery: [
       "/images/places/mirissa/IMG_3554.PNG",
       "/images/places/mirissa/IMG_3556.JPG",
@@ -373,7 +373,7 @@ export const DESTINATIONS: Destination[] = [
     province: "North Central Province",
     tagline: "Sacred 2,500-Year Ancient Capital & Colossal Stupas",
     description: "Established in the 4th century BC, the sacred city of Anuradhapura was the cradle of Theravada Buddhism and the flourishing capital of ancient Sri Lanka for over a millennium. Spanning dozens of square kilometers of forested archaeological park, it is home to colossal brick stupas rivaling the Pyramids of Giza in volume, sophisticated ancient irrigation tanks, and the sacred Jaya Sri Maha Bodhi — the world's oldest historically documented human-planted tree.",
-    image: "/images/places/anuradhapura/IMG_3663.PNG",
+    image: "/images/destinations/main/anuradhapura.jpg",
     gallery: [
       "/images/places/anuradhapura/IMG_3663.PNG",
       "/images/places/anuradhapura/IMG_3654.WEBP",
@@ -424,7 +424,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Northern Province",
     tagline: "Vibrant Tamil Culture, Nallur Kovil & Adam's Bridge",
     description: "Distinctly different from the rest of the island, Northern Sri Lanka is a realm of radiant Hindu temple towers, palmyrah-shaded causeways, colonial Dutch star forts, and ancient maritime legends. In Jaffna, the golden Nallur Kandaswamy Kovil resonates with Vedic chants, while the remote Mannar peninsula boasts centuries-old African baobab trees, flamingos, and the mythical sandbanks of Adam's Bridge (Ram Setu) stretching toward India.",
-    image: "/images/places/jaffna-mannar/IMG_3622.JPG",
+    image: "/images/destinations/main/jaffna-mannar.jpg",
     gallery: [
       "/images/places/jaffna-mannar/IMG_3622.JPG",
       "/images/places/jaffna-mannar/IMG_3628.WEBP",
@@ -487,7 +487,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Southern Province",
     tagline: "Secret Island Tombolo & Turquoise Snorkeling Haven",
     description: "Blue Beach Island in Nilwella is one of southern Sri Lanka's most breathtaking geological secrets. A natural sand tombolo connects the mainland to a rocky emerald islet, creating calm, crystalline waters on both sides. Visitors can walk across the sandbar, snorkel over shallow coral beds teeming with colorful parrotfish, and camp beneath starlit skies surrounded by panoramic ocean breezes.",
-    image: "/images/places/blue-beach/IMG_3535.JPG",
+    image: "/images/destinations/main/blue-beach.jpg",
     gallery: [
       "/images/places/blue-beach/IMG_3535.JPG",
       "/images/places/blue-beach/IMG_3532.JPG",
@@ -532,7 +532,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Southern Province",
     tagline: "The Horseshoe Surf Cove & Bohemian Beach Haven",
     description: "Tucked inside a sheltered natural horseshoe-shaped bay fringed by leaning coconut palms, Hirikatiya (fondly called 'Hiri') has earned a global reputation as Sri Lanka's coolest boutique surf haven. Gentle left-hand peelers make it a dream for beginner and intermediate surfers, while the beachfront is dotted with specialty espresso bars, farm-to-table sourdough bakeries, yoga shalas, and laid-back sunset cocktail lounges.",
-    image: "/images/places/hirikatiya/IMG_3524.WEBP",
+    image: "/images/destinations/main/hirikatiya.jpg",
     gallery: [
       "/images/places/hirikatiya/IMG_3524.WEBP",
       "/images/places/hirikatiya/IMG_3523.JPG",
@@ -577,7 +577,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Central Province / Dambulla",
     tagline: "Geoffrey Bawa's Architectural Masterpiece in the Jungle",
     description: "Designed by Sri Lanka's legendary master architect Geoffrey Bawa, Heritance Kandalama is celebrated worldwide as a tour de force of sustainable luxury. Stretching 1 kilometer along a dramatic granite cliff face, the building is wrapped in creeping vines, wild fig trees, and timber pavilions that blur the boundary between human design and nature. Overlooking the serene Kandalama reservoir, wild monkeys and exotic birds roam the open-air corridors.",
-    image: "/images/places/heritance-kandalama/IMG_3540.JPG",
+    image: "/images/destinations/main/heritance-kandalama.jpg",
     gallery: [
       "/images/places/heritance-kandalama/IMG_3540.JPG",
       "/images/places/heritance-kandalama/IMG_3541.JPG",
@@ -623,7 +623,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Central Province / Sigiriya",
     tagline: "Overwater Chalets & Reclaimed Wetland Luxury Sanctuary",
     description: "Jetwing Vil Uyana represents the pinnacle of eco-luxury hospitality in Sri Lanka. Inspired by the ancient royal water gardens of Sigiriya, the retreat was created by re-flooding agricultural lands to create an expansive, thriving wetland reserve. Guests reside in thatched luxury chalets set on stilts over water, within paddy fields, or inside forest groves, where wild otters, peacocks, and nocturnal slender lorises thrive.",
-    image: "/images/places/vil-uyana/IMG_3527.JPG",
+    image: "/images/destinations/main/vil-uyana.jpg",
     gallery: [
       "/images/places/vil-uyana/IMG_3527.JPG",
       "/images/places/vil-uyana/IMG_3531.JPG",
@@ -668,7 +668,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Southern Province",
     tagline: "Coral Sanctuaries, Giant Wild Sea Turtles & Coastal Vibe",
     description: "Hikkaduwa is the legendary birthplace of Sri Lanka's coastal surf and beach culture. Famous for its National Coral Reef Marine Park, gentle green sea turtles that swim right up to the shoreline to be fed seaweed, and vibrant coastal dining, Hikkaduwa combines beachfront luxury at resorts like Hikka Tranz with laid-back beach cafes, live acoustic music, and world-class scuba diving over historic shipwrecks.",
-    image: "/images/places/hikka-tranz/IMG_3547.JPG",
+    image: "/images/destinations/main/hikkaduwa.jpg",
     gallery: [
       "/images/places/hikka-tranz/IMG_3547.JPG",
       "/images/places/hikka-tranz/IMG_3546.JPG",
@@ -713,7 +713,7 @@ export const DESTINATIONS: Destination[] = [
     province: "Southern Province",
     tagline: "Pristine Moonlit Beaches & Endangered Sea Turtle Nesting",
     description: "Situated along a secluded, windswept stretch of southern coastline near Tangalle, Rekawa is internationally recognized as Sri Lanka's most important natural sea turtle nesting beach. Five of the world's seven species of marine turtles — including the giant Leatherback, Green, Loggerhead, Hawksbill, and Olive Ridley — crawl ashore under the cover of night to dig nests and lay eggs in the untouched warm sand.",
-    image: "/images/places/rekawa/IMG_3521.JPG",
+    image: "/images/destinations/main/rekawa.jpg",
     gallery: [
       "/images/places/rekawa/IMG_3521.JPG",
       "/images/places/rekawa/IMG_3517.JPG",
@@ -760,7 +760,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "North Western Province / Puttalam",
   "tagline": "Ramsar Ancient Wetland Cascade & Migratory Bird Haven",
   "description": "Spanning over 1,397 hectares between the coast and the Chilaw-Puttalam lagoon corridor, Anawilundawa is one of Sri Lanka's six designated Ramsar Wetlands of International Importance. Centered around a remarkable ancient cascade system of seven interconnected freshwater reservoirs dating back to the 12th century, this ecological paradise hosts over 168 resident and migratory bird species, fishing cats, rusty-spotted cats, and Indian otters.",
-  "image": "/images/places/anawilundawa/anawilundawa-1.jpg",
+  "image": "/images/destinations/main/anawilundawa.jpg",
   "gallery": [
     "/images/places/anawilundawa/anawilundawa-1.jpg",
     "/images/places/anawilundawa/anawilundawa-2.jpg",
@@ -807,7 +807,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "Southern Province / Hambantota",
   "tagline": "UNESCO Biosphere Reserve & World-Class Waterbird Haven",
   "description": "Bundala National Park is a globally acclaimed coastal sanctuary and Sri Lanka's very first Ramsar wetland site, designated as a UNESCO Man and Biosphere Reserve. Featuring five shallow brackish lagoons, thorn scrublands, sand dunes, and saltpans, Bundala is the ultimate wintering ground for tens of thousands of migratory shorebirds, including flocks of Greater Flamingos, alongside wild elephants, marsh crocodiles, and marine turtles.",
-  "image": "/images/places/bundala/bundala-1.jpg",
+  "image": "/images/destinations/main/bundala.jpg",
   "gallery": [
     "/images/places/bundala/bundala-1.jpg",
     "/images/places/bundala/bundala-2.jpg",
@@ -855,7 +855,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "Uva Province / Koslanda",
   "tagline": "Sri Lanka's 2nd-Highest Cascading Wonder & River Gorge",
   "description": "Plunging 220 meters (720 feet) straight down a colossal vertical cliff face in Koslanda, Diyaluma Falls is the second-tallest waterfall in Sri Lanka. Fed by the Punagala Oya, a tributary of the Kirindi Oya, the roaring sheet of water crashes into a deep misty gorge below, creating magnificent rainbows in the morning sun and offering an awe-inspiring roadside vista along the Colombo-Batticaloa highway.",
-  "image": "/images/places/diyaluma/diyaluma-1.jpg",
+  "image": "/images/destinations/main/diyaluma.jpg",
   "gallery": [
     "/images/places/diyaluma/diyaluma-1.jpg",
     "/images/places/diyaluma/diyaluma-2.jpg",
@@ -899,7 +899,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "Uva Province / Koslanda",
   "tagline": "The World-Famous Mountain Infinity Pools on the Cliff Edge",
   "description": "Perched atop Sri Lanka's second-highest waterfall, Upper Diyaluma is one of the most exhilarating natural wonders in Asia. A guided hike through rural hillside villages leads to a series of tiered natural infinity pools, soothing rock slides, and freshwater jacuzzis sculpted out of smooth granite rock. Looking over the edge reveals a breathtaking 220-meter drop into the emerald valleys of Koslanda.",
-  "image": "/images/places/upper-diyaluma/upper-diyaluma-1.jpg",
+  "image": "/images/destinations/main/upper-diyaluma.jpg",
   "gallery": [
     "/images/places/upper-diyaluma/upper-diyaluma-1.jpg",
     "/images/places/upper-diyaluma/upper-diyaluma-2.jpg",
@@ -942,7 +942,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "Uva Province / Badulla",
   "tagline": "The Legendary 'Smoky Falls' & Jungle Canyon",
   "description": "Revered as one of Sri Lanka's most romantic and visually stunning waterfalls, Dunhinda Falls plunges 64 meters (210 feet) into a dramatic rock-walled amphitheater near Badulla. Fed by the Badulu Oya, the torrential cascade atomizes into a thick, perpetual cloud of mist (giving it the name 'Dun' meaning smoke or mist). The scenic 1-kilometer jungle walking path passes wild monkey troops, native songbirds, and panoramic canyon vistas.",
-  "image": "/images/places/dunhinda/dunhinda-1.png",
+  "image": "/images/destinations/main/dunhinda.jpg",
   "gallery": [
     "/images/places/dunhinda/dunhinda-1.png",
     "/images/places/dunhinda/dunhinda-2.jpg",
@@ -984,7 +984,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "North Central Province / Cultural Triangle",
   "tagline": "Tranquil Lotus Waterways, Village Catamarans & Birdlife",
   "description": "Located at the central crossroads of Sri Lanka's Cultural Triangle, Habarana is a peaceful ecological haven centered around ancient royal irrigation lakes. Shaded by majestic Kumbuk trees and floating purple water lilies, Habarana Lake is famous for traditional catamaran boat safaris, serene sunrise kayaking, birdwatching, and authentic rural village tours where guests experience ox-cart rides, lakeside farming, and home-cooked culinary hospitality.",
-  "image": "/images/places/habarana-lake/habarana-lake-1.jpg",
+  "image": "/images/destinations/main/habarana-lake.jpg",
   "gallery": [
     "/images/places/habarana-lake/habarana-lake-1.jpg",
     "/images/places/habarana-lake/habarana-lake-2.jpg",
@@ -1029,7 +1029,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "Southern Province / Tangalle",
   "tagline": "Coastal Brackish Lagoons & Mangrove Birding Safari",
   "description": "Kalametiya is one of the oldest bird sanctuaries in Sri Lanka, established in 1938 along the tranquil southern coastline near Rekawa and Tangalle. Comprising a rich labyrinth of coastal salt marshes, tidal lagoons, and dense mangrove forests, Kalametiya is home to over 150 bird species including rare water birds, painted storks, reef herons, and winter migrants. Visitors explore the waterways aboard guided silent rowing boats.",
-  "image": "/images/places/kalametiya/kalametiya-1.jpg",
+  "image": "/images/destinations/main/kalametiya.jpg",
   "gallery": [
     "/images/places/kalametiya/kalametiya-1.jpg",
     "/images/places/kalametiya/kalametiya-2.jpg",
@@ -1077,7 +1077,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "Southern Province / Galle District",
   "tagline": "The KDN Complex UNESCO Biosphere Reserve & Hidden Waterfalls",
   "description": "Recognized by UNESCO as a premier Biosphere Reserve, Kanneliya is the core of the KDN (Kanneliya-Dediyagala-Nakiyadeniya) forest complex, representing the most important tropical rainforest in Sri Lanka after Sinharaja. Located just 35 km northeast of Galle, it boasts exceptionally high endemism with rare bird species, green pit vipers, endemic freshwater fish, jungle streams, and scenic waterfalls such as Anagimale Falls and Narangas Falls.",
-  "image": "/images/places/kanneliya/kanneliya-1.jpg",
+  "image": "/images/destinations/main/kanneliya.jpg",
   "gallery": [
     "/images/places/kanneliya/kanneliya-1.jpg",
     "/images/places/kanneliya/kanneliya-2.jpg",
@@ -1125,7 +1125,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "Eastern Province / Yala East",
   "tagline": "Sri Lanka's Ultimate Avian Eden & Wilderness Safari",
   "description": "Historically known as Yala East National Park, Kumana is Sri Lanka's undisputed birding paradise. Encompassing a massive 200-hectare natural mangrove swamp lake ('Kumana Villu') fed by the Kumbukkan Oya, the park serves as an essential breeding ground for thousands of water birds, black-necked storks, spoonbills, and pelicans. In addition to birdlife, Kumana's remote, uncrowded savanna and granite hills shelter thriving populations of leopards, elephants, and sloth bears.",
-  "image": "/images/places/kumana/kumana-1.jpg",
+  "image": "/images/destinations/main/kumana.jpg",
   "gallery": [
     "/images/places/kumana/kumana-1.jpg",
     "/images/places/kumana/kumana-2.jpg",
@@ -1172,7 +1172,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "North Central Province / Cultural Triangle",
   "tagline": "Home of 'The Gathering' — Asia's Greatest Elephant Spectacle",
   "description": "Anchored around the monumental 3rd-century Minneriya Reservoir built by King Mahasen, Minneriya National Park is globally renowned for hosting 'The Gathering'—recognized by Lonely Planet and National Geographic as one of the world's greatest wildlife spectacles. During the dry season, up to 300 to 400 wild Asian elephants congregate on the lush receding lake bed to feed, socialize, bathe, and play.",
-  "image": "/images/places/minneriya/minneriya-1.jpg",
+  "image": "/images/destinations/main/minneriya.jpg",
   "gallery": [
     "/images/places/minneriya/minneriya-1.jpg",
     "/images/places/minneriya/minneriya-2.jpg",
@@ -1221,7 +1221,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "Central Province / Sigiriya",
   "tagline": "The Ancient Monastic Peak & Golden Sunset Over Lion Rock",
   "description": "Rising directly adjacent to the world-famous Sigiriya fortress, Pidurangala Rock is a colossal granite peak rich in spiritual history and legendary panoramic vistas. Originally developed as a Buddhist monastery by King Kasyapa in the 5th century AD, the rock features an ancient cave temple with a 12.5-meter reclining brick Buddha. The moderately adventurous climb culminates in a vast flat rocky summit with the ultimate 360-degree photographic view directly facing the sheer face of Sigiriya Lion Rock.",
-  "image": "/images/places/pidurangala/pidurangala-1.jpg",
+  "image": "/images/destinations/main/pidurangala.jpg",
   "gallery": [
     "/images/places/pidurangala/pidurangala-1.jpg",
     "/images/places/pidurangala/pidurangala-2.jpg",
@@ -1264,7 +1264,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "Uva Province / Ella",
   "tagline": "Legendary Ramayana Waterfall & Misty Mountain Ravines",
   "description": "Dropping 25 meters (82 feet) over three tiers of concave rock formations, Ravana Falls is one of the most famous and photographed waterfalls in Sri Lanka, situated right along the main mountain pass south of Ella. According to the ancient Hindu epic Ramayana, King Ravana hid Princess Sita in the subterranean caves behind this waterfall. The rushing waters create a spectacular roar, framed by lush tropical jungle and sheer mountain cliffs.",
-  "image": "/images/places/ravana-falls/ravana-falls-1.jpg",
+  "image": "/images/destinations/main/ravana-falls.jpg",
   "gallery": [
     "/images/places/ravana-falls/ravana-falls-1.jpg",
     "/images/places/ravana-falls/ravana-falls-2.jpg",
@@ -1308,7 +1308,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "Sabaragamuwa & Southern Provinces",
   "tagline": "UNESCO World Heritage Tropical Lowland Virgin Rainforest",
   "description": "Sinharaja is Sri Lanka's last viable area of primary tropical rainforest and a UNESCO World Heritage Site and Biosphere Reserve. Spanning over 11,000 hectares of rugged virgin jungle, over 60% of the trees are endemic to the island, with many considered rare. Sinharaja is globally celebrated for its mixed-species bird feeding flocks (the largest bird waves on Earth), harboring 28 endemic bird species including the Sri Lanka Blue Magpie, purple-faced langurs, and vibrant tree frogs.",
-  "image": "/images/places/sinharaja/sinharaja-1.jpg",
+  "image": "/images/destinations/main/sinharaja.jpg",
   "gallery": [
     "/images/places/sinharaja/sinharaja-1.jpg",
     "/images/places/sinharaja/sinharaja-2.jpg",
@@ -1356,7 +1356,7 @@ export const DESTINATIONS: Destination[] = [
   "province": "North Western & North Central Provinces",
   "tagline": "The Land of Natural Sand-Rimmed Lakes & Elusive Leopards",
   "description": "Covering an expansive 131,693 hectares, Wilpattu is Sri Lanka's largest and one of its oldest national parks. What sets Wilpattu apart globally is its unique topography featuring nearly sixty natural sand-rimmed water basins called 'Willus' (freshwater rain-fed lakes). This pristine dry-zone wilderness of dense forest, copper-red sand tracks, and open grasslands offers an unhurried, private safari experience famous for tracking the majestic Sri Lankan leopard, sloth bears, barking deer, and crocodiles.",
-  "image": "/images/places/wilpattu/wilpattu-1.jpg",
+  "image": "/images/destinations/main/wilpattu.jpg",
   "gallery": [
     "/images/places/wilpattu/wilpattu-1.jpg",
     "/images/places/wilpattu/wilpattu-2.webp",
