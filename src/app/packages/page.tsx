@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { TOUR_PACKAGES } from "@/data/packages";
 import { PackageCard } from "@/components/PackageCard";
+import { PackagesMovableCarouselSection } from "@/components/PackagesMovableCarouselSection";
 import { useLanguage } from "@/context/LanguageContext";
 import { getWhatsAppLink } from "@/data/company";
 import { 
@@ -386,7 +387,7 @@ export default function PackagesPage() {
 
         {/* Scroll Down Indicator */}
         <a 
-          href="#packages-grid"
+          href="#movable-packages"
           className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-1 text-white/60 hover:text-white transition-colors cursor-pointer"
         >
           <span className="text-[10px] tracking-widest uppercase font-medium">Scroll to Packages</span>
@@ -395,9 +396,14 @@ export default function PackagesPage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
-          2. FILTER & SEARCH CONTROL BAR
+          2. MOVABLE JOURNEY PACKAGES HORIZONTAL SECTION (Our Journey Categories Style)
          ───────────────────────────────────────────────────────────── */}
-      <div id="packages-grid" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20 mb-12 sm:mb-16">
+      <PackagesMovableCarouselSection />
+
+      {/* ─────────────────────────────────────────────────────────────
+          3. FILTER & SEARCH CONTROL BAR
+         ───────────────────────────────────────────────────────────── */}
+      <div id="packages-grid" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16 relative z-20 mb-12 sm:mb-16">
         <div className="bg-white rounded-3xl p-5 sm:p-6 shadow-[0_12px_40px_rgba(0,0,0,0.08)] border border-gray-200/90 space-y-4">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             
