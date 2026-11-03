@@ -750,5 +750,650 @@ export const DESTINATIONS: Destination[] = [
     relatedPackageSlugs: [
       "wild-sri-lanka-safari-big-four-expedition"
     ]
-  }
+  },
+
+  // ── NEW DESTINATIONS ADDED FROM CLIENT DIRECTORY ──
+  {
+  "id": "dest-16",
+  "slug": "anawilundawa",
+  "name": "Anawilundawa Wetland Sanctuary",
+  "province": "North Western Province / Puttalam",
+  "tagline": "Ramsar Ancient Wetland Cascade & Migratory Bird Haven",
+  "description": "Spanning over 1,397 hectares between the coast and the Chilaw-Puttalam lagoon corridor, Anawilundawa is one of Sri Lanka's six designated Ramsar Wetlands of International Importance. Centered around a remarkable ancient cascade system of seven interconnected freshwater reservoirs dating back to the 12th century, this ecological paradise hosts over 168 resident and migratory bird species, fishing cats, rusty-spotted cats, and Indian otters.",
+  "image": "/images/places/anawilundawa/anawilundawa-1.jpg",
+  "gallery": [
+    "/images/places/anawilundawa/anawilundawa-1.jpg",
+    "/images/places/anawilundawa/anawilundawa-2.jpg",
+    "/images/places/anawilundawa/anawilundawa-3.jpg",
+    "/images/places/anawilundawa/anawilundawa-4.jpg",
+    "/images/places/anawilundawa/anawilundawa-5.jpg",
+    "/images/places/anawilundawa/anawilundawa-6.jpg",
+    "/images/places/anawilundawa/anawilundawa-7.jpg",
+    "/images/places/anawilundawa/anawilundawa-8.jpg",
+    "/images/places/anawilundawa/anawilundawa-9.jpg",
+    "/images/places/anawilundawa/anawilundawa-10.jpg"
+  ],
+  "bestTimeToVisit": "October to April (Peak migratory waterbird season)",
+  "weather": "28°C - 33°C (Tropical coastal climate)",
+  "idealStay": "Half Day to 1 Day",
+  "attractions": [
+    {
+      "title": "Ancient Seven-Tank Cascade System",
+      "description": "Historic 12th-century interconnected irrigation tanks covered in water lilies, providing breeding grounds for countless waterfowl."
+    },
+    {
+      "title": "Ramsar Bird Sanctuary",
+      "description": "Spot Asian openbills, purple swamphens, cotton pygmy-geese, pheasant-tailed jacanas, and migratory waders along quiet bunds."
+    },
+    {
+      "title": "Mangrove Waterways & Estuaries",
+      "description": "Peaceful eco-walks winding through saltwater mangroves, coastal scrub, and lotus ponds."
+    }
+  ],
+  "insiderTips": [
+    "Early morning (6:30 AM to 8:30 AM) is the golden hour for bird photography and serene lake reflections.",
+    "A convenient nature stop when traveling north from Bandaranaike Airport towards Wilpattu National Park."
+  ],
+  "relatedPackageSlugs": [
+    "ceylon-northern-discovery-8-days",
+    "ceylon-wild-escape-5-days"
+  ]
+},
+
+  {
+  "id": "dest-17",
+  "slug": "bundala",
+  "name": "Bundala National Park",
+  "province": "Southern Province / Hambantota",
+  "tagline": "UNESCO Biosphere Reserve & World-Class Waterbird Haven",
+  "description": "Bundala National Park is a globally acclaimed coastal sanctuary and Sri Lanka's very first Ramsar wetland site, designated as a UNESCO Man and Biosphere Reserve. Featuring five shallow brackish lagoons, thorn scrublands, sand dunes, and saltpans, Bundala is the ultimate wintering ground for tens of thousands of migratory shorebirds, including flocks of Greater Flamingos, alongside wild elephants, marsh crocodiles, and marine turtles.",
+  "image": "/images/places/bundala/bundala-1.jpg",
+  "gallery": [
+    "/images/places/bundala/bundala-1.jpg",
+    "/images/places/bundala/bundala-2.jpg",
+    "/images/places/bundala/bundala-3.jpg",
+    "/images/places/bundala/bundala-4.jpg",
+    "/images/places/bundala/bundala-5.jpg",
+    "/images/places/bundala/bundala-6.jpg",
+    "/images/places/bundala/bundala-7.jpg",
+    "/images/places/bundala/bundala-8.jpg",
+    "/images/places/bundala/bundala-9.jpg",
+    "/images/places/bundala/bundala-10.jpg"
+  ],
+  "bestTimeToVisit": "September to March (Migratory shorebird peak)",
+  "weather": "27°C - 32°C (Warm semi-arid coastal climate)",
+  "idealStay": "Half Day to 1 Day",
+  "attractions": [
+    {
+      "title": "Greater Flamingo Lagoons",
+      "description": "Shallow coastal lagoons where elegant pink flamingo flocks and migratory waders congregate in season."
+    },
+    {
+      "title": "Coastal 4x4 Jeep Safari",
+      "description": "Intimate game drives through saltpans and sand dunes spotting wild elephants, spotted deer, and wild boars."
+    },
+    {
+      "title": "Marine Turtle Nesting Coast",
+      "description": "Pristine beaches where green, olive ridley, and leatherback turtles come ashore under the stars."
+    }
+  ],
+  "insiderTips": [
+    "Bundala offers tranquil, intimate game drives far away from the heavy jeep traffic of central Yala.",
+    "Bring high-magnification binoculars or a telephoto lens for rewarding lagoon birding."
+  ],
+  "relatedPackageSlugs": [
+    "ceylon-wild-escape-5-days",
+    "sri-lanka-highlights-6-days",
+    "ceylon-grand-discovery-8-days"
+  ]
+},
+
+  {
+  "id": "dest-18",
+  "slug": "diyaluma",
+  "name": "Diyaluma Falls",
+  "province": "Uva Province / Koslanda",
+  "tagline": "Sri Lanka's 2nd-Highest Cascading Wonder & River Gorge",
+  "description": "Plunging 220 meters (720 feet) straight down a colossal vertical cliff face in Koslanda, Diyaluma Falls is the second-tallest waterfall in Sri Lanka. Fed by the Punagala Oya, a tributary of the Kirindi Oya, the roaring sheet of water crashes into a deep misty gorge below, creating magnificent rainbows in the morning sun and offering an awe-inspiring roadside vista along the Colombo-Batticaloa highway.",
+  "image": "/images/places/diyaluma/diyaluma-1.jpg",
+  "gallery": [
+    "/images/places/diyaluma/diyaluma-1.jpg",
+    "/images/places/diyaluma/diyaluma-2.jpg",
+    "/images/places/diyaluma/diyaluma-3.jpg",
+    "/images/places/diyaluma/diyaluma-4.jpg",
+    "/images/places/diyaluma/diyaluma-5.jpg"
+  ],
+  "bestTimeToVisit": "Year-round; best volume from October to March after monsoon rains",
+  "weather": "22°C - 28°C (Pleasant sub-montane valley climate)",
+  "idealStay": "Half Day (Often combined with Upper Diyaluma)",
+  "attractions": [
+    {
+      "title": "The 220m Lower Cascades Lookout",
+      "description": "Iconic viewpoint directly from the bridge and river banks at Koslanda looking up at the sheer drop."
+    },
+    {
+      "title": "Punagala Oya River Valley",
+      "description": "Tropical riverbanks surrounded by bamboo groves and traditional rubber estates."
+    },
+    {
+      "title": "Scenic Southern Mountain Pass",
+      "description": "The picturesque highland drive connecting Ella and Wellawaya."
+    }
+  ],
+  "insiderTips": [
+    "Never attempt to swim in the turbulent lower plunge pool—enjoy the view from the safe viewing platform.",
+    "Enjoy fresh king coconuts from local fruit stalls near the bridge while taking photographs."
+  ],
+  "relatedPackageSlugs": [
+    "ceylon-wild-escape-5-days",
+    "ceylon-east-to-south-adventure-15-days",
+    "ceylon-complete-journey-15-days",
+    "ceylon-hill-country-journey-8-days"
+  ]
+},
+
+  {
+  "id": "dest-19",
+  "slug": "upper-diyaluma",
+  "name": "Upper Diyaluma Natural Rock Pools",
+  "province": "Uva Province / Koslanda",
+  "tagline": "The World-Famous Mountain Infinity Pools on the Cliff Edge",
+  "description": "Perched atop Sri Lanka's second-highest waterfall, Upper Diyaluma is one of the most exhilarating natural wonders in Asia. A guided hike through rural hillside villages leads to a series of tiered natural infinity pools, soothing rock slides, and freshwater jacuzzis sculpted out of smooth granite rock. Looking over the edge reveals a breathtaking 220-meter drop into the emerald valleys of Koslanda.",
+  "image": "/images/places/upper-diyaluma/upper-diyaluma-1.jpg",
+  "gallery": [
+    "/images/places/upper-diyaluma/upper-diyaluma-1.jpg",
+    "/images/places/upper-diyaluma/upper-diyaluma-2.jpg",
+    "/images/places/upper-diyaluma/upper-diyaluma-3.jpg",
+    "/images/places/upper-diyaluma/upper-diyaluma-4.jpg",
+    "/images/places/upper-diyaluma/upper-diyaluma-5.jpg"
+  ],
+  "bestTimeToVisit": "January to September (Calm waters and sunny conditions)",
+  "weather": "20°C - 26°C (Breezy mountain climate)",
+  "idealStay": "Half Day to 1 Day",
+  "attractions": [
+    {
+      "title": "Cliff-Edge Natural Infinity Pool",
+      "description": "World-famous natural freshwater pool right at the lip of the 220m drop with panoramic valley views."
+    },
+    {
+      "title": "Upper Tier Cascades & Rock Slides",
+      "description": "Multiple calm swimming basins higher up the river with smooth natural waterslides."
+    },
+    {
+      "title": "Guided Village Highland Hike",
+      "description": "Scenic trek starting from Makaldenya village through lemongrass fields and pine forests."
+    }
+  ],
+  "insiderTips": [
+    "Always hike with a reputable local guide and only swim in designated safe pools away from heavy currents.",
+    "Wear secure water shoes or hiking sandals for grip on damp granite rocks."
+  ],
+  "relatedPackageSlugs": [
+    "ceylon-wild-escape-5-days",
+    "ceylon-east-to-south-adventure-15-days",
+    "ceylon-hill-country-journey-8-days"
+  ]
+},
+
+  {
+  "id": "dest-20",
+  "slug": "dunhinda",
+  "name": "Dunhinda Falls",
+  "province": "Uva Province / Badulla",
+  "tagline": "The Legendary 'Smoky Falls' & Jungle Canyon",
+  "description": "Revered as one of Sri Lanka's most romantic and visually stunning waterfalls, Dunhinda Falls plunges 64 meters (210 feet) into a dramatic rock-walled amphitheater near Badulla. Fed by the Badulu Oya, the torrential cascade atomizes into a thick, perpetual cloud of mist (giving it the name 'Dun' meaning smoke or mist). The scenic 1-kilometer jungle walking path passes wild monkey troops, native songbirds, and panoramic canyon vistas.",
+  "image": "/images/places/dunhinda/dunhinda-1.png",
+  "gallery": [
+    "/images/places/dunhinda/dunhinda-1.png",
+    "/images/places/dunhinda/dunhinda-2.jpg",
+    "/images/places/dunhinda/dunhinda-3.jpg",
+    "/images/places/dunhinda/dunhinda-4.jpg",
+    "/images/places/dunhinda/dunhinda-5.jpg"
+  ],
+  "bestTimeToVisit": "June to September and December to February",
+  "weather": "23°C - 28°C (Pleasant highland climate)",
+  "idealStay": "Half Day",
+  "attractions": [
+    {
+      "title": "Smoky Falls Main Amphitheater",
+      "description": "The thunderous main drop enveloped in cool refreshing mist clouds and dramatic rock walls."
+    },
+    {
+      "title": "Kuda Dunhinda (Little Dunhinda)",
+      "description": "A charming smaller cascade encountered halfway along the jungle footpath."
+    },
+    {
+      "title": "Badulu Oya Canyon Trail",
+      "description": "Shaded forest trail flanked by endemic trees, hanging vines, and local herbal tea stalls."
+    }
+  ],
+  "insiderTips": [
+    "Stop for a cup of authentic herbal 'Belimal' or 'Ranawara' tea served with jaggery along the walking trail.",
+    "Wear comfortable walking shoes with good tread as the jungle pathway can be damp and rocky."
+  ],
+  "relatedPackageSlugs": [
+    "ceylon-hill-country-journey-8-days",
+    "ceylon-complete-journey-15-days"
+  ]
+},
+
+  {
+  "id": "dest-21",
+  "slug": "habarana-lake",
+  "name": "Habarana Lake & Countryside",
+  "province": "North Central Province / Cultural Triangle",
+  "tagline": "Tranquil Lotus Waterways, Village Catamarans & Birdlife",
+  "description": "Located at the central crossroads of Sri Lanka's Cultural Triangle, Habarana is a peaceful ecological haven centered around ancient royal irrigation lakes. Shaded by majestic Kumbuk trees and floating purple water lilies, Habarana Lake is famous for traditional catamaran boat safaris, serene sunrise kayaking, birdwatching, and authentic rural village tours where guests experience ox-cart rides, lakeside farming, and home-cooked culinary hospitality.",
+  "image": "/images/places/habarana-lake/habarana-lake-1.jpg",
+  "gallery": [
+    "/images/places/habarana-lake/habarana-lake-1.jpg",
+    "/images/places/habarana-lake/habarana-lake-2.jpg",
+    "/images/places/habarana-lake/habarana-lake-3.jpg",
+    "/images/places/habarana-lake/habarana-lake-4.jpg",
+    "/images/places/habarana-lake/habarana-lake-5.jpg",
+    "/images/places/habarana-lake/habarana-lake-6.jpg"
+  ],
+  "bestTimeToVisit": "Year-round (Especially November to May)",
+  "weather": "26°C - 32°C (Warm tropical dry-zone climate)",
+  "idealStay": "1 to 2 Days",
+  "attractions": [
+    {
+      "title": "Habarana Lake Catamaran Safari",
+      "description": "Traditional twin-hulled wooden boat ride gliding past lotus flowers and cormorant perches."
+    },
+    {
+      "title": "Authentic Bullock Cart & Village Life",
+      "description": "Scenic cart ride through green paddy fields to a traditional mud-brick home."
+    },
+    {
+      "title": "Wild Elephant Lakeside Sightings",
+      "description": "Watching wild elephants wander down to the reservoir edges at twilight."
+    }
+  ],
+  "insiderTips": [
+    "An early morning boat ride offers mirror-smooth lake reflections and cooler temperatures for photography.",
+    "Combine with an afternoon safari to nearby Minneriya or Kaudulla National Parks."
+  ],
+  "relatedPackageSlugs": [
+    "sri-lanka-highlights-6-days",
+    "ceylon-heritage-escape-3-days",
+    "ceylon-grand-discovery-8-days",
+    "ceylon-complete-journey-15-days"
+  ]
+},
+
+  {
+  "id": "dest-22",
+  "slug": "kalametiya",
+  "name": "Kalametiya Bird Sanctuary",
+  "province": "Southern Province / Tangalle",
+  "tagline": "Coastal Brackish Lagoons & Mangrove Birding Safari",
+  "description": "Kalametiya is one of the oldest bird sanctuaries in Sri Lanka, established in 1938 along the tranquil southern coastline near Rekawa and Tangalle. Comprising a rich labyrinth of coastal salt marshes, tidal lagoons, and dense mangrove forests, Kalametiya is home to over 150 bird species including rare water birds, painted storks, reef herons, and winter migrants. Visitors explore the waterways aboard guided silent rowing boats.",
+  "image": "/images/places/kalametiya/kalametiya-1.jpg",
+  "gallery": [
+    "/images/places/kalametiya/kalametiya-1.jpg",
+    "/images/places/kalametiya/kalametiya-2.jpg",
+    "/images/places/kalametiya/kalametiya-3.jpg",
+    "/images/places/kalametiya/kalametiya-4.jpg",
+    "/images/places/kalametiya/kalametiya-5.jpg",
+    "/images/places/kalametiya/kalametiya-6.jpg",
+    "/images/places/kalametiya/kalametiya-7.jpg",
+    "/images/places/kalametiya/kalametiya-8.jpg",
+    "/images/places/kalametiya/kalametiya-9.jpg",
+    "/images/places/kalametiya/kalametiya-10.jpg"
+  ],
+  "bestTimeToVisit": "November to April (Peak migratory period)",
+  "weather": "27°C - 31°C (Breezy tropical coast)",
+  "idealStay": "Half Day to 1 Day",
+  "attractions": [
+    {
+      "title": "Silent Wooden Boat Lagoon Safari",
+      "description": "Gliding noiselessly through mangrove tunnels with an expert local boatman."
+    },
+    {
+      "title": "Kalametiya Rock Viewpoint",
+      "description": "A gentle hill climb offering panoramic vistas over the lagoons, ocean, and coconut estates."
+    },
+    {
+      "title": "Secluded Southern Beaches",
+      "description": "Nearby wild, pristine beaches untouched by commercial development."
+    }
+  ],
+  "insiderTips": [
+    "Silent manual rowing boats allow you to get within meters of resting herons and kingfishers without startling them.",
+    "Combine with an evening visit to the nearby Rekawa marine turtle nesting beach."
+  ],
+  "relatedPackageSlugs": [
+    "southern-soul-3-days",
+    "ceylon-wild-escape-5-days",
+    "ceylon-romantic-escape-9-days"
+  ]
+},
+
+  {
+  "id": "dest-23",
+  "slug": "kanneliya",
+  "name": "Kanneliya Rainforest Reserve",
+  "province": "Southern Province / Galle District",
+  "tagline": "The KDN Complex UNESCO Biosphere Reserve & Hidden Waterfalls",
+  "description": "Recognized by UNESCO as a premier Biosphere Reserve, Kanneliya is the core of the KDN (Kanneliya-Dediyagala-Nakiyadeniya) forest complex, representing the most important tropical rainforest in Sri Lanka after Sinharaja. Located just 35 km northeast of Galle, it boasts exceptionally high endemism with rare bird species, green pit vipers, endemic freshwater fish, jungle streams, and scenic waterfalls such as Anagimale Falls and Narangas Falls.",
+  "image": "/images/places/kanneliya/kanneliya-1.jpg",
+  "gallery": [
+    "/images/places/kanneliya/kanneliya-1.jpg",
+    "/images/places/kanneliya/kanneliya-2.jpg",
+    "/images/places/kanneliya/kanneliya-3.jpg",
+    "/images/places/kanneliya/kanneliya-4.jpg",
+    "/images/places/kanneliya/kanneliya-5.jpg",
+    "/images/places/kanneliya/kanneliya-6.jpg",
+    "/images/places/kanneliya/kanneliya-7.jpg",
+    "/images/places/kanneliya/kanneliya-8.jpg",
+    "/images/places/kanneliya/kanneliya-9.jpg",
+    "/images/places/kanneliya/kanneliya-10.jpg"
+  ],
+  "bestTimeToVisit": "December to April and July to September (Drier forest conditions)",
+  "weather": "24°C - 29°C (Humid tropical rainforest climate)",
+  "idealStay": "1 Day",
+  "attractions": [
+    {
+      "title": "Anagimale & Narangas Falls",
+      "description": "Gorgeous forest cascades hidden deep within the verdant jungle canopy."
+    },
+    {
+      "title": "Giant Nawada Tree Trek",
+      "description": "An ancient forest giant tree with colossal buttress roots standing over 40 meters high."
+    },
+    {
+      "title": "Kabbale Kanda Mountain Viewpoint",
+      "description": "A challenging guided hike to the highest peak in the reserve with 360° forest views."
+    }
+  ],
+  "insiderTips": [
+    "Wear leech socks and light waterproof hiking gear; hire an official department naturalist guide at the entrance.",
+    "Ideal day-trip excursion from Galle Fort, Mirissa, or Unawatuna."
+  ],
+  "relatedPackageSlugs": [
+    "ceylon-romantic-escape-9-days",
+    "ceylon-complete-journey-15-days",
+    "southern-soul-3-days"
+  ]
+},
+
+  {
+  "id": "dest-24",
+  "slug": "kumana",
+  "name": "Kumana National Park",
+  "province": "Eastern Province / Yala East",
+  "tagline": "Sri Lanka's Ultimate Avian Eden & Wilderness Safari",
+  "description": "Historically known as Yala East National Park, Kumana is Sri Lanka's undisputed birding paradise. Encompassing a massive 200-hectare natural mangrove swamp lake ('Kumana Villu') fed by the Kumbukkan Oya, the park serves as an essential breeding ground for thousands of water birds, black-necked storks, spoonbills, and pelicans. In addition to birdlife, Kumana's remote, uncrowded savanna and granite hills shelter thriving populations of leopards, elephants, and sloth bears.",
+  "image": "/images/places/kumana/kumana-1.jpg",
+  "gallery": [
+    "/images/places/kumana/kumana-1.jpg",
+    "/images/places/kumana/kumana-2.jpg",
+    "/images/places/kumana/kumana-3.jpg",
+    "/images/places/kumana/kumana-4.jpg",
+    "/images/places/kumana/kumana-5.jpg",
+    "/images/places/kumana/kumana-6.jpg",
+    "/images/places/kumana/kumana-7.jpg",
+    "/images/places/kumana/kumana-8.jpg",
+    "/images/places/kumana/kumana-9.jpg",
+    "/images/places/kumana/kumana-10.jpg"
+  ],
+  "bestTimeToVisit": "May to September (Breeding season & dry-zone game viewing)",
+  "weather": "28°C - 34°C (Tropical dry-zone climate)",
+  "idealStay": "1 to 2 Days",
+  "attractions": [
+    {
+      "title": "Kumana Villu Mangrove Swamp",
+      "description": "A sprawling natural wetland where thousands of birds build nests in mangrove branches."
+    },
+    {
+      "title": "Bopaththalawa & Kudumbigala Hermitage",
+      "description": "Nearby ancient Buddhist rock cave monasteries hidden deep in the jungle."
+    },
+    {
+      "title": "Uncrowded Big Four Game Drives",
+      "description": "Wild leopards, elephants, and sloth bears amidst stunning coastal dunes."
+    }
+  ],
+  "insiderTips": [
+    "Kumana is easily accessible from Arugam Bay and offers one of the most serene, non-touristy safari experiences on the island.",
+    "Visit the historic Kudumbigala Monastery on the park boundary for unforgettable views."
+  ],
+  "relatedPackageSlugs": [
+    "ceylon-east-to-south-adventure-15-days",
+    "ceylon-wild-escape-5-days"
+  ]
+},
+
+  {
+  "id": "dest-25",
+  "slug": "minneriya",
+  "name": "Minneriya National Park",
+  "province": "North Central Province / Cultural Triangle",
+  "tagline": "Home of 'The Gathering' — Asia's Greatest Elephant Spectacle",
+  "description": "Anchored around the monumental 3rd-century Minneriya Reservoir built by King Mahasen, Minneriya National Park is globally renowned for hosting 'The Gathering'—recognized by Lonely Planet and National Geographic as one of the world's greatest wildlife spectacles. During the dry season, up to 300 to 400 wild Asian elephants congregate on the lush receding lake bed to feed, socialize, bathe, and play.",
+  "image": "/images/places/minneriya/minneriya-1.jpg",
+  "gallery": [
+    "/images/places/minneriya/minneriya-1.jpg",
+    "/images/places/minneriya/minneriya-2.jpg",
+    "/images/places/minneriya/minneriya-3.jpg",
+    "/images/places/minneriya/minneriya-4.jpg",
+    "/images/places/minneriya/minneriya-5.jpg",
+    "/images/places/minneriya/minneriya-6.jpg",
+    "/images/places/minneriya/minneriya-7.webp",
+    "/images/places/minneriya/minneriya-8.jpg",
+    "/images/places/minneriya/minneriya-9.jpg",
+    "/images/places/minneriya/minneriya-10.jpg"
+  ],
+  "bestTimeToVisit": "July to October (Peak Gathering season); year-round game drives",
+  "weather": "28°C - 33°C (Warm dry-zone climate)",
+  "idealStay": "Half Day (Afternoon Safari)",
+  "attractions": [
+    {
+      "title": "The Great Elephant Gathering",
+      "description": "Watching massive family herds of elephants gather on the open lake shores."
+    },
+    {
+      "title": "Minneriya Ancient Reservoir",
+      "description": "An ancient hydraulic marvel with panoramic views of distant Cultural Triangle hills."
+    },
+    {
+      "title": "Rich Birdlife & Reptiles",
+      "description": "Spotting painted storks, grey herons, sea eagles, mugger crocodiles, and sambar deer."
+    }
+  ],
+  "insiderTips": [
+    "Afternoon safaris (starting at 2:30 PM) are the best as elephants emerge from the shade of the forest towards the water.",
+    "Our private chauffeur-guides coordinate with park rangers to select whether Minneriya or neighboring Kaudulla has the highest herd density that day."
+  ],
+  "relatedPackageSlugs": [
+    "sri-lanka-highlights-6-days",
+    "ceylon-heritage-escape-3-days",
+    "ceylon-grand-discovery-8-days",
+    "ceylon-family-adventure-11-days"
+  ]
+},
+
+  {
+  "id": "dest-26",
+  "slug": "pidurangala",
+  "name": "Pidurangala Rock",
+  "province": "Central Province / Sigiriya",
+  "tagline": "The Ancient Monastic Peak & Golden Sunset Over Lion Rock",
+  "description": "Rising directly adjacent to the world-famous Sigiriya fortress, Pidurangala Rock is a colossal granite peak rich in spiritual history and legendary panoramic vistas. Originally developed as a Buddhist monastery by King Kasyapa in the 5th century AD, the rock features an ancient cave temple with a 12.5-meter reclining brick Buddha. The moderately adventurous climb culminates in a vast flat rocky summit with the ultimate 360-degree photographic view directly facing the sheer face of Sigiriya Lion Rock.",
+  "image": "/images/places/pidurangala/pidurangala-1.jpg",
+  "gallery": [
+    "/images/places/pidurangala/pidurangala-1.jpg",
+    "/images/places/pidurangala/pidurangala-2.jpg",
+    "/images/places/pidurangala/pidurangala-3.jpg",
+    "/images/places/pidurangala/pidurangala-4.jpg"
+  ],
+  "bestTimeToVisit": "Year-round (Early dawn for sunrise or late afternoon for sunset)",
+  "weather": "26°C - 31°C (Warm tropical climate)",
+  "idealStay": "Half Day (2-3 Hours)",
+  "attractions": [
+    {
+      "title": "The Summit Panoramic Plateau",
+      "description": "Wide open rock platform offering the single best photo angle of Sigiriya Lion Rock."
+    },
+    {
+      "title": "Ancient Reclining Buddha Cave",
+      "description": "Historic 5th-century brick and plaster Buddha image resting peacefully inside a natural cavern."
+    },
+    {
+      "title": "Pidurangala Sigiri Raja Maha Viharaya",
+      "description": "Sacred monastery at the base with ancient inscriptions and peaceful monks' quarters."
+    }
+  ],
+  "insiderTips": [
+    "Start the climb around 5:15 AM with a torch for sunrise, or around 4:30 PM for sunset.",
+    "As you pass through an active Buddhist temple at the base, cover shoulders and knees until reaching the upper trail."
+  ],
+  "relatedPackageSlugs": [
+    "sri-lanka-highlights-6-days",
+    "ceylon-heritage-escape-3-days",
+    "ceylon-explorer-4-days",
+    "ceylon-grand-discovery-8-days"
+  ]
+},
+
+  {
+  "id": "dest-27",
+  "slug": "ravana-falls",
+  "name": "Ravana Falls & Caves",
+  "province": "Uva Province / Ella",
+  "tagline": "Legendary Ramayana Waterfall & Misty Mountain Ravines",
+  "description": "Dropping 25 meters (82 feet) over three tiers of concave rock formations, Ravana Falls is one of the most famous and photographed waterfalls in Sri Lanka, situated right along the main mountain pass south of Ella. According to the ancient Hindu epic Ramayana, King Ravana hid Princess Sita in the subterranean caves behind this waterfall. The rushing waters create a spectacular roar, framed by lush tropical jungle and sheer mountain cliffs.",
+  "image": "/images/places/ravana-falls/ravana-falls-1.jpg",
+  "gallery": [
+    "/images/places/ravana-falls/ravana-falls-1.jpg",
+    "/images/places/ravana-falls/ravana-falls-2.jpg",
+    "/images/places/ravana-falls/ravana-falls-3.jpg",
+    "/images/places/ravana-falls/ravana-falls-4.jpg"
+  ],
+  "bestTimeToVisit": "Year-round; most thunderous during and after monsoon seasons",
+  "weather": "20°C - 26°C (Pleasant mountain climate)",
+  "idealStay": "Half Day",
+  "attractions": [
+    {
+      "title": "Ravana Falls Viewing Bridge",
+      "description": "Prime roadside viewing point with mist spraying into the air and dramatic photo backdrops."
+    },
+    {
+      "title": "Ravana Cave (Ravana Ella Guhawa)",
+      "description": "Ancient cave 1,370m above sea level with tunnels connected to the Ramayana legend."
+    },
+    {
+      "title": "Ella Gap Scenery",
+      "description": "Breathtaking vistas down the southern mountain escarpment to the distant coastal plains."
+    }
+  ],
+  "insiderTips": [
+    "Visit in the morning when the light illuminates the cascades and traffic along the pass is light.",
+    "Do not climb or swim on slippery rocks above the main viewing area; observe safety barriers."
+  ],
+  "relatedPackageSlugs": [
+    "sri-lanka-highlights-6-days",
+    "ceylon-grand-discovery-8-days",
+    "ceylon-wild-escape-5-days",
+    "ceylon-hill-country-journey-8-days",
+    "ceylon-romantic-escape-9-days"
+  ]
+},
+
+  {
+  "id": "dest-28",
+  "slug": "sinharaja",
+  "name": "Sinharaja Rainforest Reserve",
+  "province": "Sabaragamuwa & Southern Provinces",
+  "tagline": "UNESCO World Heritage Tropical Lowland Virgin Rainforest",
+  "description": "Sinharaja is Sri Lanka's last viable area of primary tropical rainforest and a UNESCO World Heritage Site and Biosphere Reserve. Spanning over 11,000 hectares of rugged virgin jungle, over 60% of the trees are endemic to the island, with many considered rare. Sinharaja is globally celebrated for its mixed-species bird feeding flocks (the largest bird waves on Earth), harboring 28 endemic bird species including the Sri Lanka Blue Magpie, purple-faced langurs, and vibrant tree frogs.",
+  "image": "/images/places/sinharaja/sinharaja-1.jpg",
+  "gallery": [
+    "/images/places/sinharaja/sinharaja-1.jpg",
+    "/images/places/sinharaja/sinharaja-2.jpg",
+    "/images/places/sinharaja/sinharaja-3.webp",
+    "/images/places/sinharaja/sinharaja-4.jpg",
+    "/images/places/sinharaja/sinharaja-5.jpg",
+    "/images/places/sinharaja/sinharaja-6.jpg",
+    "/images/places/sinharaja/sinharaja-7.jpg",
+    "/images/places/sinharaja/sinharaja-8.jpg",
+    "/images/places/sinharaja/sinharaja-9.jpg",
+    "/images/places/sinharaja/sinharaja-10.jpg"
+  ],
+  "bestTimeToVisit": "December to April and August to September (Driest months)",
+  "weather": "23°C - 28°C (Humid tropical rainforest climate)",
+  "idealStay": "1 to 2 Days",
+  "attractions": [
+    {
+      "title": "Moulawella & Sinhagala Peaks",
+      "description": "Elevated vantage points with sweeping views across the endless emerald forest canopy."
+    },
+    {
+      "title": "Endemic Bird Feeding Waves",
+      "description": "Fascinating phenomenon where dozens of different bird species forage together in harmony."
+    },
+    {
+      "title": "Jungle Waterfalls & Crystal Streams",
+      "description": "Pristine cascades including Kekuna Falls and hidden swimming pools."
+    }
+  ],
+  "insiderTips": [
+    "Enter through either Kudawa (northern gate) or Pitadeniya (southern gate) with a government-licensed forest naturalist.",
+    "Bring leech socks, rain protection, and binoculars for canopy wildlife."
+  ],
+  "relatedPackageSlugs": [
+    "ceylon-gem-and-green-heritage-7-days",
+    "ceylon-complete-journey-15-days",
+    "ceylon-romantic-escape-9-days"
+  ]
+},
+
+  {
+  "id": "dest-29",
+  "slug": "wilpattu",
+  "name": "Wilpattu National Park",
+  "province": "North Western & North Central Provinces",
+  "tagline": "The Land of Natural Sand-Rimmed Lakes & Elusive Leopards",
+  "description": "Covering an expansive 131,693 hectares, Wilpattu is Sri Lanka's largest and one of its oldest national parks. What sets Wilpattu apart globally is its unique topography featuring nearly sixty natural sand-rimmed water basins called 'Willus' (freshwater rain-fed lakes). This pristine dry-zone wilderness of dense forest, copper-red sand tracks, and open grasslands offers an unhurried, private safari experience famous for tracking the majestic Sri Lankan leopard, sloth bears, barking deer, and crocodiles.",
+  "image": "/images/places/wilpattu/wilpattu-1.jpg",
+  "gallery": [
+    "/images/places/wilpattu/wilpattu-1.jpg",
+    "/images/places/wilpattu/wilpattu-2.webp",
+    "/images/places/wilpattu/wilpattu-3.jpg",
+    "/images/places/wilpattu/wilpattu-4.jpg",
+    "/images/places/wilpattu/wilpattu-5.jpg",
+    "/images/places/wilpattu/wilpattu-6.jpg",
+    "/images/places/wilpattu/wilpattu-7.avif",
+    "/images/places/wilpattu/wilpattu-8.jpg",
+    "/images/places/wilpattu/wilpattu-9.jpg",
+    "/images/places/wilpattu/wilpattu-10.jpg"
+  ],
+  "bestTimeToVisit": "February to October (Dry season draws animals to the willus)",
+  "weather": "27°C - 33°C (Tropical dry-zone climate)",
+  "idealStay": "1 to 2 Days",
+  "attractions": [
+    {
+      "title": "Natural Sand-Rimmed Willus",
+      "description": "Spotting wildlife drinking beside picturesque natural lakes like Maradanmaduwa and Kumbuk Wila."
+    },
+    {
+      "title": "Sri Lankan Leopard & Sloth Bear Tracking",
+      "description": "Renowned for high leopard and sloth bear sightings along secluded red-dirt tracks."
+    },
+    {
+      "title": "Kudrimalai Point (Horse Mountain)",
+      "description": "Historic red-cliff coastal headland where Prince Vijaya landed in 543 BC."
+    }
+  ],
+  "insiderTips": [
+    "Opt for a full-day safari with a packed picnic breakfast and lunch to explore the deeper, pristine northern willus.",
+    "Far less crowded than Yala, offering photographers quiet, uninterrupted wildlife encounters."
+  ],
+  "relatedPackageSlugs": [
+    "ceylon-northern-discovery-8-days",
+    "ceylon-wild-escape-5-days",
+    "ceylon-complete-journey-15-days"
+  ]
+}
 ];

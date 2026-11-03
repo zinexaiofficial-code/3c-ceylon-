@@ -410,9 +410,12 @@ export default function DestinationsPage() {
                   <option value="all">All Island Regions</option>
                   <option value="Central">Central Highlands & Cultural Triangle</option>
                   <option value="Southern">Southern Golden Coast & Beaches</option>
-                  <option value="Northern">Northern Province & Mannar</option>
-                  <option value="North Central">North Central Ancient Kingdoms</option>
                   <option value="Uva">Uva Province & Ella Valleys</option>
+                  <option value="North Central">North Central Ancient Kingdoms</option>
+                  <option value="North Western">North Western Ramsar Wetlands</option>
+                  <option value="Eastern">Eastern Province & Kumana</option>
+                  <option value="Sabaragamuwa">Sabaragamuwa & Sinharaja</option>
+                  <option value="Northern">Northern Province & Mannar</option>
                 </select>
               </div>
 

@@ -48,3 +48,4 @@ yarn-error.log*
 /Spiritual Activities/
 /logo.jpeg
 /logo-modified.png
+*.tsbuildinfo
