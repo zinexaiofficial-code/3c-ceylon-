@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { DESTINATIONS, Destination } from "@/data/destinations";
 import { DestinationCard } from "@/components/DestinationCard";
+import { DestinationFullscreenScrollCard } from "@/components/DestinationFullscreenScrollCard";
 import { DestinationsMovableCarouselSection } from "@/components/DestinationsMovableCarouselSection";
 import { getWhatsAppLink } from "@/data/company";
 import { 
@@ -446,39 +447,40 @@ export default function DestinationsPage() {
       </div>
 
       {/* ─────────────────────────────────────────────────────────────
-          3. DESTINATIONS GRID (Cards with Shining Sweep Effect)
+          3. DESTINATIONS FULLSCREEN SCROLL SHOWCASE (One by One)
          ───────────────────────────────────────────────────────────── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="w-full">
         {filteredDestinations.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredDestinations.map((dest) => (
-              <DestinationCard key={dest.id} destination={dest} />
+          <div className="w-full">
+            {filteredDestinations.map((dest, idx) => (
+              <DestinationFullscreenScrollCard key={dest.id} destination={dest} index={idx} />
             ))}
           </div>
         ) : (
-          <div className="bg-white rounded-3xl p-12 text-center border border-gray-200 max-w-xl mx-auto space-y-4 shadow-sm">
-            <Compass className="w-12 h-12 text-[#18E600] mx-auto animate-spin-slow" />
-            <h3 className="font-sans text-2xl font-extrabold text-[#172334] tracking-tight">No Destinations Found</h3>
-            <p className="text-sm text-[#526173] leading-relaxed font-normal">
-              We cover all 9 provinces and hidden gems across Sri Lanka! Let us tailor-make your dream route.
-            </p>
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <button
-                onClick={handleReset}
-                className="px-6 py-2.5 rounded-full bg-gray-100 hover:bg-gray-200 text-[#172334] text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
-              >
-                Reset Search Filters
-              </button>
-              <Link
-                href="/contact"
-                className="px-6 py-2.5 rounded-full bg-[#18E600] hover:bg-[#15c400] text-black text-xs font-extrabold uppercase tracking-wider transition-all shadow-md"
-              >
-                Plan a Custom Tour
-              </Link>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20">
+            <div className="bg-white rounded-3xl p-12 text-center border border-gray-200 max-w-xl mx-auto space-y-4 shadow-sm">
+              <Compass className="w-12 h-12 text-[#18E600] mx-auto animate-spin-slow" />
+              <h3 className="font-sans text-2xl font-extrabold text-[#172334] tracking-tight">No Destinations Found</h3>
+              <p className="text-sm text-[#526173] leading-relaxed font-normal">
+                We cover all 9 provinces and hidden gems across Sri Lanka! Let us tailor-make your dream route.
+              </p>
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <button
+                  onClick={handleReset}
+                  className="px-6 py-2.5 rounded-full bg-gray-100 hover:bg-gray-200 text-[#172334] text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                >
+                  Reset Search Filters
+                </button>
+                <Link
+                  href="/contact"
+                  className="px-6 py-2.5 rounded-full bg-[#18E600] hover:bg-[#15c400] text-black text-xs font-extrabold uppercase tracking-wider transition-all shadow-md"
+                >
+                  Plan a Custom Tour
+                </Link>
+              </div>
             </div>
           </div>
         )}
-
       </div>
     </div>
   );
