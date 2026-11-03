@@ -164,9 +164,18 @@ export default function PackagesPage() {
   const filteredPackages = useMemo(() => {
     return TOUR_PACKAGES.filter((pkg) => {
       // Filter by duration
+      if (selectedDuration === "short" && pkg.durationDays > 4) return false;
+      if (selectedDuration === "classic" && (pkg.durationDays < 5 || pkg.durationDays > 8)) return false;
+      if (selectedDuration === "extended" && pkg.durationDays < 9) return false;
       if (selectedDuration === "3d" && pkg.durationDays !== 3) return false;
       if (selectedDuration === "4d" && pkg.durationDays !== 4) return false;
+      if (selectedDuration === "5d" && pkg.durationDays !== 5) return false;
       if (selectedDuration === "6d" && pkg.durationDays !== 6) return false;
+      if (selectedDuration === "7d" && pkg.durationDays !== 7) return false;
+      if (selectedDuration === "8d" && pkg.durationDays !== 8) return false;
+      if (selectedDuration === "9d" && pkg.durationDays !== 9) return false;
+      if (selectedDuration === "11d" && pkg.durationDays !== 11) return false;
+      if (selectedDuration === "15d" && pkg.durationDays !== 15) return false;
 
       // Filter by style
       if (selectedStyle !== "all" && !pkg.style.toLowerCase().includes(selectedStyle.toLowerCase())) {
@@ -415,9 +424,18 @@ export default function PackagesPage() {
                   className="bg-transparent text-xs font-bold text-[#172334] focus:outline-none cursor-pointer pr-2"
                 >
                   <option value="all">All Durations</option>
+                  <option value="short">Short Escapes (2 - 4 Days)</option>
+                  <option value="classic">Classic Holidays (5 - 8 Days)</option>
+                  <option value="extended">Grand Expeditions (9 - 15 Days)</option>
                   <option value="3d">2 Nights / 3 Days</option>
                   <option value="4d">3 Nights / 4 Days</option>
+                  <option value="5d">4 Nights / 5 Days</option>
                   <option value="6d">5 Nights / 6 Days</option>
+                  <option value="7d">6 Nights / 7 Days</option>
+                  <option value="8d">7 Nights / 8 Days</option>
+                  <option value="9d">8 Nights / 9 Days</option>
+                  <option value="11d">10 Nights / 11 Days</option>
+                  <option value="15d">14 Nights / 15 Days</option>
                 </select>
               </div>
 
@@ -434,6 +452,13 @@ export default function PackagesPage() {
                   <option value="Heritage & Culture">Heritage & Culture</option>
                   <option value="Coastal & Beach">Coastal & Beach</option>
                   <option value="Highlands & Culture">Highlands & Culture</option>
+                  <option value="Wildlife & Safari">Wildlife & Safari</option>
+                  <option value="Adventure & Nature">Adventure & Nature</option>
+                  <option value="Family Adventure">Family Adventure</option>
+                  <option value="Romantic Escape">Romantic Escape</option>
+                  <option value="Northern & Cultural">Northern & Cultural</option>
+                  <option value="Spiritual & Pilgrimage">Spiritual & Pilgrimage</option>
+                  <option value="Gems & Living Heritage">Gems & Living Heritage</option>
                 </select>
               </div>
 

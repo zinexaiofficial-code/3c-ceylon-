@@ -454,6 +454,46 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Founder Profile - Champaka Mataraarachchi */}
+        <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-200/90 relative overflow-hidden">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#18E600]/15 text-[#0E6838] border border-[#18E600]/30 text-xs font-black uppercase tracking-widest">
+              <span>Founder &amp; Senior Tour Operator</span>
+            </div>
+            
+            <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#172334] tracking-tight">
+              Meet Champaka Mataraarachchi
+            </h2>
+
+            <div className="space-y-4 text-base sm:text-lg text-[#526173] leading-relaxed font-normal">
+              <p className="text-xl sm:text-2xl font-serif text-[#172334] font-medium italic">
+                &ldquo;Ayubowan! 🙏 I’m Champaka, a proud Sri Lankan travel professional and the founder of 3C Ceylon Tours.&rdquo;
+              </p>
+              <p>
+                My passion is helping travellers discover the authentic beauty of Sri Lanka—from its golden beaches and misty mountains to its rich cultural heritage, breathtaking landscapes, and unforgettable local experiences.
+              </p>
+              <p>
+                With a personal approach to every journey, I strive to make your holiday comfortable, memorable, and stress-free. From your airport arrival to your final departure, I’m here to ensure you experience the warmth of Sri Lankan hospitality, the beauty of our island, and the joy of travelling with confidence.
+              </p>
+              <p className="font-bold text-[#172334]">
+                Sri Lanka is more than my home—it’s a land of wonders I’m proud to share with the world. ❤️🇱🇰
+              </p>
+            </div>
+
+            <div className="pt-4 flex flex-wrap items-center gap-4 border-t border-gray-100">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 rounded-full bg-[#0E6838] text-white flex items-center justify-center font-extrabold text-lg shadow-sm">
+                  CM
+                </div>
+                <div>
+                  <h4 className="font-bold text-[#172334] text-base">Champaka Mataraarachchi</h4>
+                  <p className="text-xs text-[#526173]">Founder &amp; Senior Tour Operator, 3C Ceylon Tours</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Vision & Mission Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white text-[#172334] rounded-3xl p-8 sm:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.06)] space-y-4 border border-gray-200">
@@ -461,10 +501,10 @@ export default function AboutPage() {
               Our Vision
             </span>
             <h3 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#172334] tracking-tight">
-              The World&apos;s Most Trusted Gateway to Sri Lanka
+              To Become a Trusted &amp; Recognised Tour Operator
             </h3>
             <p className="text-sm text-[#526173] font-normal leading-relaxed">
-              Setting the international benchmark for authentic, ethical, and inspiring private luxury travel across Sri Lanka.
+              To become a trusted and recognised Sri Lankan tour operator, connecting travellers from around the world with the authentic beauty, rich culture, and unforgettable experiences of our island, while creating lasting memories through exceptional hospitality and personalised travel experiences.
             </p>
           </div>
 
@@ -473,10 +513,10 @@ export default function AboutPage() {
               Our Mission
             </span>
             <h3 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#172334] tracking-tight">
-              Deliver Transformative Island Experiences
+              Deliver Safe, Comfortable &amp; Personalised Experiences
             </h3>
             <p className="text-sm text-[#526173] font-normal leading-relaxed">
-              Flawless private journeys guided by licensed naturalists, transparent pricing, and 24/7 concierge care.
+              Our mission is to deliver safe, comfortable, and personalised travel experiences that showcase the true spirit of Sri Lanka. Through reliable service, local expertise, genuine Sri Lankan hospitality, and tailor-made itineraries, we strive to make every journey seamless, memorable, and meaningful while building lasting relationships with our guests.
             </p>
           </div>
         </div>

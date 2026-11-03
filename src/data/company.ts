@@ -38,6 +38,13 @@ export interface CompanyInfo {
     desc: string;
     icon: string;
   }[];
+  founder: {
+    name: string;
+    title: string;
+    message: string;
+  };
+  vision: string;
+  mission: string;
 }
 
 export const COMPANY_INFO: CompanyInfo = {
@@ -46,6 +53,13 @@ export const COMPANY_INFO: CompanyInfo = {
   tagline: "Discover the Soul of Sri Lanka",
   slogan: "Extraordinary journeys. Timeless memories. Beautifully crafted by 3C Ceylon Tours.",
   description: "Premier destination management company and bespoke luxury tour operator in Sri Lanka. We craft private, authentic, and unforgettable island journeys with 24/7 dedicated concierge service.",
+  founder: {
+    name: "Champaka Mataraarachchi",
+    title: "Founder & Senior Tour Operator | 3C Ceylon Tours",
+    message: "Ayubowan! 🙏 I’m Champaka, a proud Sri Lankan travel professional and the founder of 3C Ceylon Tours. My passion is helping travellers discover the authentic beauty of Sri Lanka—from its golden beaches and misty mountains to its rich cultural heritage, breathtaking landscapes, and unforgettable local experiences. With a personal approach to every journey, I strive to make your holiday comfortable, memorable, and stress-free."
+  },
+  vision: "To become a trusted and recognised Sri Lankan tour operator, connecting travellers from around the world with the authentic beauty, rich culture, and unforgettable experiences of our island, while creating lasting memories through exceptional hospitality and personalised travel experiences.",
+  mission: "Our mission is to deliver safe, comfortable, and personalised travel experiences that showcase the true spirit of Sri Lanka. Through reliable service, local expertise, genuine Sri Lankan hospitality, and tailor-made itineraries, we strive to make every journey seamless, memorable, and meaningful while building lasting relationships with our guests.",
   phone: "+94 77 954 1203",
   phoneSecondary: "+94 76 914 1852",
   whatsapp: "94779541203",
