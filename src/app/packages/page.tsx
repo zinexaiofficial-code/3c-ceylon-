@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { TOUR_PACKAGES } from "@/data/packages";
 import { PackageCard } from "@/components/PackageCard";
+import { PackageFullscreenScrollCard } from "@/components/PackageFullscreenScrollCard";
 import { PackagesMovableCarouselSection } from "@/components/PackagesMovableCarouselSection";
 import { useLanguage } from "@/context/LanguageContext";
 import { getWhatsAppLink } from "@/data/company";
@@ -489,35 +490,37 @@ export default function PackagesPage() {
       </div>
 
       {/* ─────────────────────────────────────────────────────────────
-          3. PACKAGES GRID (2 Packages per Row - Visual Focus)
+          3. PACKAGES FULLSCREEN SCROLL SHOWCASE (One by One)
          ───────────────────────────────────────────────────────────── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="w-full pb-20">
         {filteredPackages.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-            {filteredPackages.map((pkg) => (
-              <PackageCard key={pkg.id} pkg={pkg} />
+          <div className="space-y-0 w-full overflow-hidden">
+            {filteredPackages.map((pkg, idx) => (
+              <PackageFullscreenScrollCard key={pkg.id} pkg={pkg} index={idx} />
             ))}
           </div>
         ) : (
-          <div className="bg-white rounded-3xl p-12 text-center border border-gray-200 max-w-xl mx-auto space-y-4 shadow-sm">
-            <Compass className="w-12 h-12 text-[#18E600] mx-auto animate-spin-slow" />
-            <h3 className="font-sans text-2xl font-extrabold text-[#172334] tracking-tight">No Exact Matches Found</h3>
-            <p className="text-sm text-[#526173] leading-relaxed font-normal">
-              We customize every journey from scratch! Let our travel designers craft your bespoke itinerary.
-            </p>
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <button
-                onClick={handleReset}
-                className="px-6 py-2.5 rounded-full bg-gray-100 hover:bg-gray-200 text-[#172334] text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
-              >
-                Reset Search Filters
-              </button>
-              <Link
-                href="/contact"
-                className="px-6 py-2.5 rounded-full bg-[#18E600] hover:bg-[#15c400] text-black text-xs font-extrabold uppercase tracking-wider transition-all shadow-md"
-              >
-                Plan a Custom Tour
-              </Link>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+            <div className="bg-white rounded-3xl p-12 text-center border border-gray-200 max-w-xl mx-auto space-y-4 shadow-sm">
+              <Compass className="w-12 h-12 text-[#18E600] mx-auto animate-spin-slow" />
+              <h3 className="font-sans text-2xl font-extrabold text-[#172334] tracking-tight">No Exact Matches Found</h3>
+              <p className="text-sm text-[#526173] leading-relaxed font-normal">
+                We customize every journey from scratch! Let our travel designers craft your bespoke itinerary.
+              </p>
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <button
+                  onClick={handleReset}
+                  className="px-6 py-2.5 rounded-full bg-gray-100 hover:bg-gray-200 text-[#172334] text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                >
+                  Reset Search Filters
+                </button>
+                <Link
+                  href="/contact"
+                  className="px-6 py-2.5 rounded-full bg-[#18E600] hover:bg-[#15c400] text-black text-xs font-extrabold uppercase tracking-wider transition-all shadow-md"
+                >
+                  Plan a Custom Tour
+                </Link>
+              </div>
             </div>
           </div>
         )}
