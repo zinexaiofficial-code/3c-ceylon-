@@ -81,10 +81,6 @@ export const PackagesMovableCarouselSection: React.FC = () => {
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        {/* Soft edge blur vignettes */}
-        <div className="absolute top-0 left-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-[#FAF8F2] to-transparent z-20 pointer-events-none" />
-        <div className="absolute top-0 right-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-[#FAF8F2] to-transparent z-20 pointer-events-none" />
-
         {/* The Marquee Track */}
         <div 
           ref={scrollContainerRef}
@@ -125,14 +121,14 @@ export const PackagesMovableCarouselSection: React.FC = () => {
                       </div>
                     )}
 
-                    {/* PHOTO CARD */}
+                    {/* PHOTO CARD - Crystal Clear, High Definition, No Dark Fog / No Blur */}
                     <div className="relative w-full h-[360px] sm:h-[400px] md:h-[430px] rounded-2xl overflow-hidden bg-gray-100 shadow-[0_8px_25px_rgba(0,0,0,0.06)] group-hover:shadow-[0_16px_35px_rgba(0,0,0,0.14)] transition-all duration-500 border border-black/5">
                       <Image
                         src={pkg.image}
                         alt={pkg.title}
                         fill
-                        quality={88}
-                        sizes="(max-width: 768px) 280px, 350px"
+                        quality={95}
+                        sizes="(max-width: 768px) 100vw, 700px"
                         className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                       />
 
@@ -148,17 +144,17 @@ export const PackagesMovableCarouselSection: React.FC = () => {
                         </span>
                       </div>
 
-                      {/* Bottom Destinations Preview Bar */}
-                      <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 z-10">
-                        <p className="text-[11px] font-semibold text-white/90 line-clamp-1 flex items-center space-x-1.5 mb-1">
+                      {/* Bottom Destinations Floating Pill - Clean, crisp, no dark gradient veil covering photo */}
+                      <div className="absolute bottom-3 left-3 right-3 z-10 pointer-events-none flex items-center">
+                        <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-black/75 backdrop-blur-sm text-white/95 text-[10px] sm:text-[11px] font-semibold border border-white/15 shadow-md truncate max-w-full">
                           <MapPin className="w-3 h-3 text-[#18E600] flex-shrink-0" />
-                          <span>{pkg.destinationsCovered.slice(0, 4).join(" • ")}{pkg.destinationsCovered.length > 4 ? " +" : ""}</span>
-                        </p>
+                          <span className="truncate">{pkg.destinationsCovered.slice(0, 4).join(" • ")}{pkg.destinationsCovered.length > 4 ? " +" : ""}</span>
+                        </span>
                       </div>
 
-                      {/* Interactive Hover CTA Pill */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5 z-20">
-                        <span className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-[#18E600] text-black font-sans font-extrabold text-xs uppercase tracking-wider shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                      {/* Interactive Hover CTA Pill - Subtle accent, photo stays 100% visible */}
+                      <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 z-20 pointer-events-none">
+                        <span className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#18E600] text-black font-sans font-extrabold text-xs uppercase tracking-wider shadow-2xl transform scale-95 group-hover:scale-100 transition-transform duration-300">
                           <span>View Itinerary</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </span>
