@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeroSection } from "@/components/HeroSection";
 import { TripPlannerBar } from "@/components/TripPlannerBar";
+import { WhyExploreSriLanka } from "@/components/home/WhyExploreSriLanka";
 import { SigiriyaParallaxSection } from "@/components/home/SigiriyaParallaxSection";
 import { TourismExperienceGrid } from "@/components/TourismExperienceGrid";
 import { InteractiveSriLankaMap } from "@/components/home/InteractiveSriLankaMap";
@@ -50,7 +51,10 @@ export default function HomePage() {
       {/* 2. Interactive Quick Trip Finder */}
       <TripPlannerBar />
 
-      {/* 3. Cinematic Two-Layer Parallax Section (Sigiriya Rock + Moving Couple Inspired by SLTDA) */}
+      {/* 3. Why explore Sri Lanka with us? - Cinematic Rotating Vertical Image Panels */}
+      <WhyExploreSriLanka />
+
+      {/* 4. Cinematic Two-Layer Parallax Section (Sigiriya Rock + Moving Couple Inspired by SLTDA) */}
       <SigiriyaParallaxSection />
 
       {/* 4. Our Journey Categories - Infinite Moving Marquee Loop */}
