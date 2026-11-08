@@ -57,15 +57,21 @@ const PANELS: VerticalPanelItem[] = [
 ];
 
 export const WhyExploreSriLanka: React.FC = () => {
-  // -1 indicates initial state: all 5 panels completely clear and sharp (as in reference screenshot 1)
-  const [activeIndex, setActiveIndex] = useState<number>(-1);
-  const [isHovered, setIsHovered] = useState<boolean>(false);
+  // State for 3D flip rotation
+  const [autoFlippedIndex, setAutoFlippedIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState<boolean>(false);
+
   const sectionRef = useRef<HTMLElement>(null);
   const mobileScrollRef = useRef<HTMLDivElement>(null);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const autoIndexRef = useRef<number>(0);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Viewport intersection observer to auto-start when scrolled into view
+  // Active flipped index: hover strictly overrides auto sequence
+  const activeFlippedIndex = hoveredIndex !== null ? hoveredIndex : autoFlippedIndex;
+
+  // Viewport IntersectionObserver
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -88,7 +94,6 @@ export const WhyExploreSriLanka: React.FC = () => {
   }, []);
 
   // Check prefers-reduced-motion
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState<boolean>(false);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -99,48 +104,64 @@ export const WhyExploreSriLanka: React.FC = () => {
     }
   }, []);
 
-  // Initial delay: When first visible, show all clear images for 1.2s, then activate panel 0
+  // Automatic sequential 3D flip animation loop:
+  // Panel 0 flips forward (850ms) -> holds (2000ms) -> flips back (850ms) -> pause (400ms) -> Panel 1...
   useEffect(() => {
-    if (isVisible && activeIndex === -1 && !prefersReducedMotion) {
-      const initialTimer = setTimeout(() => {
-        setActiveIndex(0);
-      }, 1100);
-      return () => clearTimeout(initialTimer);
-    }
-  }, [isVisible, activeIndex, prefersReducedMotion]);
-
-  // Next slide advancing function
-  const advanceNext = useCallback(() => {
-    setActiveIndex((prev) => (prev + 1) % PANELS.length);
-  }, []);
-
-  // Automatic rotation loop: 2.8s per panel
-  useEffect(() => {
-    if (timerRef.current) {
-      clearInterval(timerRef.current);
-      timerRef.current = null;
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
     }
 
-    // Only run interval when in viewport, not hovered, activeIndex >= 0, and not reduced motion
-    if (isVisible && !isHovered && activeIndex >= 0 && !prefersReducedMotion) {
-      timerRef.current = setInterval(() => {
-        advanceNext();
-      }, 2800);
+    // Pause when hovered, offscreen, or if user prefers reduced motion
+    if (hoveredIndex !== null || !isVisible || prefersReducedMotion) {
+      if (hoveredIndex !== null) {
+        setAutoFlippedIndex(null);
+      }
+      return;
     }
+
+    let isCancelled = false;
+
+    const runStep = () => {
+      if (isCancelled) return;
+      const currentIdx = autoIndexRef.current;
+
+      // 1. Flip to back face
+      setAutoFlippedIndex(currentIdx);
+
+      // 2. Hold back face: 850ms transition + 2000ms display time = 2850ms
+      timeoutRef.current = setTimeout(() => {
+        if (isCancelled) return;
+
+        // 3. Flip back to front face
+        setAutoFlippedIndex(null);
+
+        // 4. Wait for return flip (850ms transition + 400ms pause = 1250ms)
+        timeoutRef.current = setTimeout(() => {
+          if (isCancelled) return;
+          autoIndexRef.current = (currentIdx + 1) % PANELS.length;
+          runStep();
+        }, 1250);
+      }, 2850);
+    };
+
+    // Initial small pause when entering viewport or after hover stops
+    timeoutRef.current = setTimeout(runStep, 1000);
 
     return () => {
-      if (timerRef.current) {
-        clearInterval(timerRef.current);
-        timerRef.current = null;
+      isCancelled = true;
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
       }
     };
-  }, [isVisible, isHovered, activeIndex, advanceNext, prefersReducedMotion]);
+  }, [hoveredIndex, isVisible, prefersReducedMotion]);
 
-  // Mobile scroll sync when activeIndex updates
+  // Mobile scroll sync when panel flips
   useEffect(() => {
-    if (activeIndex >= 0 && mobileScrollRef.current) {
+    if (activeFlippedIndex !== null && mobileScrollRef.current) {
       const container = mobileScrollRef.current;
-      const targetCard = container.children[activeIndex] as HTMLElement;
+      const targetCard = container.children[activeFlippedIndex] as HTMLElement;
       if (targetCard) {
         const containerLeft = container.getBoundingClientRect().left;
         const targetLeft = targetCard.getBoundingClientRect().left;
@@ -148,20 +169,22 @@ export const WhyExploreSriLanka: React.FC = () => {
         container.scrollBy({ left: offset, behavior: "smooth" });
       }
     }
-  }, [activeIndex]);
+  }, [activeFlippedIndex]);
 
-  const handleMouseEnter = (index: number) => {
-    setIsHovered(true);
-    setActiveIndex(index);
-  };
+  // Desktop hover handlers
+  const handleMouseEnter = useCallback((index: number) => {
+    setHoveredIndex(index);
+    autoIndexRef.current = (index + 1) % PANELS.length;
+  }, []);
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  const handleMouseLeave = useCallback(() => {
+    setHoveredIndex(null);
+  }, []);
 
-  const handlePanelClick = (index: number) => {
-    setActiveIndex(index);
-  };
+  // Click/Tap toggle (especially for touch devices)
+  const handlePanelClick = useCallback((index: number) => {
+    setHoveredIndex((prev) => (prev === index ? null : index));
+  }, []);
 
   return (
     <section
@@ -182,21 +205,21 @@ export const WhyExploreSriLanka: React.FC = () => {
           </h2>
         </div>
 
-        {/* Desktop View: Exactly 5 tall portrait-oriented panels in one row (equal width & height) */}
+        {/* Desktop View: Exactly 5 tall vertical panels with Real 3D Card Flip */}
         <div
-          className="hidden md:flex w-full h-[600px] lg:h-[680px] xl:h-[720px] bg-white divide-x-[3px] divide-white overflow-hidden shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)]"
+          className="hidden md:flex w-full h-[600px] lg:h-[680px] xl:h-[720px] bg-white overflow-visible shadow-[0_15px_40px_-15px_rgba(0,0,0,0.08)]"
           role="region"
-          aria-label="Vertical Image Gallery"
+          aria-label="Vertical 3D Rotating Image Gallery"
         >
           {PANELS.map((panel, idx) => {
-            const isActive = activeIndex === idx;
+            const isFlipped = activeFlippedIndex === idx;
 
             return (
               <div
                 key={panel.id}
                 role="button"
                 tabIndex={0}
-                aria-pressed={isActive}
+                aria-pressed={isFlipped}
                 aria-label={`${panel.title}: ${panel.description}`}
                 onMouseEnter={() => handleMouseEnter(idx)}
                 onMouseLeave={handleMouseLeave}
@@ -207,106 +230,153 @@ export const WhyExploreSriLanka: React.FC = () => {
                     handlePanelClick(idx);
                   }
                 }}
-                className="relative flex-1 h-full cursor-pointer overflow-hidden group select-none transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#18E600] focus-visible:z-20"
+                className={`relative flex-1 h-full cursor-pointer select-none border-r-[3px] last:border-r-0 border-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#18E600] ${
+                  isFlipped ? "z-20" : "z-10"
+                }`}
+                style={{
+                  perspective: "1200px",
+                  WebkitPerspective: "1200px",
+                }}
               >
-                {/* 1. Underlying Photograph */}
-                <Image
-                  src={panel.image}
-                  alt={panel.alt}
-                  fill
-                  sizes="(max-width: 1024px) 20vw, 250px"
-                  className={`object-cover transition-[filter,transform] duration-[650ms] ${
-                    isActive
-                      ? "scale-[1.04] filter blur-[6px]"
-                      : "scale-100 filter-none"
-                  }`}
-                  style={{
-                    objectPosition: panel.objectPosition,
-                    transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
-                  }}
-                  priority={idx < 2}
-                />
-
-                {/* 2. Dark Translucent Overlay (Active only) */}
+                {/* Inner 3D Rotating Container */}
                 <div
-                  className={`absolute inset-0 bg-black/50 transition-opacity duration-[650ms] pointer-events-none ${
-                    isActive ? "opacity-100" : "opacity-0"
-                  }`}
+                  className="relative w-full h-full"
                   style={{
-                    transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
-                  }}
-                />
-
-                {/* 3. Centered Elegant White Description Text */}
-                <div
-                  className={`absolute inset-0 flex flex-col items-center justify-center p-6 text-center pointer-events-none transition-all duration-500 ease-out ${
-                    isActive
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-3"
-                  }`}
-                  style={{
-                    transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
+                    transformStyle: "preserve-3d",
+                    WebkitTransformStyle: "preserve-3d",
+                    transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+                    transition: "transform 850ms cubic-bezier(0.22, 1, 0.36, 1)",
+                    willChange: "transform",
                   }}
                 >
-                  <p className="text-white text-base sm:text-[17px] md:text-[18px] lg:text-[19px] font-normal leading-relaxed max-w-[85%] mx-auto drop-shadow-sm select-none">
-                    {panel.description}
-                  </p>
+                  {/* FRONT FACE: Crystal clear original photograph, no blur, no text */}
+                  <div
+                    className="absolute inset-0 w-full h-full overflow-hidden bg-gray-950"
+                    style={{
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                      transform: "rotateY(0deg)",
+                    }}
+                  >
+                    <Image
+                      src={panel.image}
+                      alt={panel.alt}
+                      fill
+                      sizes="(max-width: 1024px) 20vw, 260px"
+                      className="object-cover"
+                      style={{ objectPosition: panel.objectPosition }}
+                      priority={idx < 2}
+                    />
+                  </div>
+
+                  {/* BACK FACE: Dark overlay, cinematic blur, and centered white description */}
+                  <div
+                    className="absolute inset-0 w-full h-full overflow-hidden bg-black"
+                    style={{
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                      transform: "rotateY(180deg)",
+                    }}
+                  >
+                    {/* Underlying image with cinematic blur */}
+                    <Image
+                      src={panel.image}
+                      alt={panel.alt}
+                      fill
+                      sizes="(max-width: 1024px) 20vw, 260px"
+                      className="object-cover filter blur-[6px] scale-[1.06]"
+                      style={{ objectPosition: panel.objectPosition }}
+                    />
+
+                    {/* Dark translucent overlay */}
+                    <div className="absolute inset-0 bg-black/55" />
+
+                    {/* Centered white description text (never mirrored) */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center select-none">
+                      <p className="text-white text-base sm:text-[17px] md:text-[18px] lg:text-[19px] font-normal leading-relaxed max-w-[85%] mx-auto drop-shadow-sm">
+                        {panel.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* Mobile View: Touch-friendly horizontal carousel with snapping */}
+        {/* Mobile View: Touch-friendly horizontal carousel with 3D Flip */}
         <div className="md:hidden w-full">
           <div
             ref={mobileScrollRef}
             className="flex overflow-x-auto snap-x snap-mandatory gap-3 pb-4 no-scrollbar -mx-4 px-4 touch-pan-x"
           >
             {PANELS.map((panel, idx) => {
-              const isActive = activeIndex === idx;
+              const isFlipped = activeFlippedIndex === idx;
 
               return (
                 <div
                   key={panel.id}
                   onClick={() => handlePanelClick(idx)}
-                  className="relative w-[78vw] sm:w-[50vw] shrink-0 h-[480px] snap-center overflow-hidden cursor-pointer shadow-md select-none border-r-[3px] last:border-r-0 border-white"
+                  className="relative w-[78vw] sm:w-[50vw] shrink-0 h-[480px] snap-center select-none border-r-[3px] last:border-r-0 border-white cursor-pointer shadow-md"
+                  style={{
+                    perspective: "1200px",
+                    WebkitPerspective: "1200px",
+                  }}
                 >
-                  {/* Photograph */}
-                  <Image
-                    src={panel.image}
-                    alt={panel.alt}
-                    fill
-                    sizes="80vw"
-                    className={`object-cover transition-[filter,transform] duration-[650ms] ${
-                      isActive
-                        ? "scale-[1.04] filter blur-[6px]"
-                        : "scale-100 filter-none"
-                    }`}
+                  {/* 3D Flipper Container */}
+                  <div
+                    className="relative w-full h-full"
                     style={{
-                      objectPosition: panel.objectPosition,
-                      transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
+                      transformStyle: "preserve-3d",
+                      WebkitTransformStyle: "preserve-3d",
+                      transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+                      transition: "transform 850ms cubic-bezier(0.22, 1, 0.36, 1)",
+                      willChange: "transform",
                     }}
-                  />
-
-                  {/* Dark Translucent Overlay */}
-                  <div
-                    className={`absolute inset-0 bg-black/50 transition-opacity duration-[650ms] pointer-events-none ${
-                      isActive ? "opacity-100" : "opacity-0"
-                    }`}
-                  />
-
-                  {/* Centered Description Text */}
-                  <div
-                    className={`absolute inset-0 flex flex-col items-center justify-center p-6 text-center pointer-events-none transition-all duration-500 ${
-                      isActive
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-3"
-                    }`}
                   >
-                    <p className="text-white text-base sm:text-[17px] font-normal leading-relaxed max-w-[90%] mx-auto drop-shadow-sm">
-                      {panel.description}
-                    </p>
+                    {/* Front Face */}
+                    <div
+                      className="absolute inset-0 w-full h-full overflow-hidden bg-gray-950"
+                      style={{
+                        backfaceVisibility: "hidden",
+                        WebkitBackfaceVisibility: "hidden",
+                        transform: "rotateY(0deg)",
+                      }}
+                    >
+                      <Image
+                        src={panel.image}
+                        alt={panel.alt}
+                        fill
+                        sizes="80vw"
+                        className="object-cover"
+                        style={{ objectPosition: panel.objectPosition }}
+                      />
+                    </div>
+
+                    {/* Back Face */}
+                    <div
+                      className="absolute inset-0 w-full h-full overflow-hidden bg-black"
+                      style={{
+                        backfaceVisibility: "hidden",
+                        WebkitBackfaceVisibility: "hidden",
+                        transform: "rotateY(180deg)",
+                      }}
+                    >
+                      <Image
+                        src={panel.image}
+                        alt={panel.alt}
+                        fill
+                        sizes="80vw"
+                        className="object-cover filter blur-[6px] scale-[1.06]"
+                        style={{ objectPosition: panel.objectPosition }}
+                      />
+                      <div className="absolute inset-0 bg-black/55" />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center select-none">
+                        <p className="text-white text-base sm:text-[17px] font-normal leading-relaxed max-w-[90%] mx-auto drop-shadow-sm">
+                          {panel.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               );
@@ -321,7 +391,7 @@ export const WhyExploreSriLanka: React.FC = () => {
                 onClick={() => handlePanelClick(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  activeIndex === idx
+                  activeFlippedIndex === idx
                     ? "w-8 bg-[#18E600]"
                     : "w-2 bg-gray-300 hover:bg-gray-400"
                 }`}
