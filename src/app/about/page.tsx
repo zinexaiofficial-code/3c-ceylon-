@@ -4,6 +4,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { COMPANY_INFO, getWhatsAppLink } from "@/data/company";
+import { OurWorkGallerySection } from "@/components/about/OurWorkGallerySection";
 import { 
   ShieldCheck, 
   Heart, 
@@ -568,6 +569,11 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+
+        {/* ─────────────────────────────────────────────────────────────
+            OUR WORK & EXPEDITIONS GALLERY ("Into the Wild & Beyond" Style)
+            ───────────────────────────────────────────────────────────── */}
+        <OurWorkGallerySection />
 
         {/* Accreditations & Trust */}
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm space-y-6">
