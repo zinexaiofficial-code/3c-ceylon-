@@ -4,7 +4,6 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { COMPANY_INFO, getWhatsAppLink } from "@/data/company";
-import { OurWorkGallerySection } from "@/components/about/OurWorkGallerySection";
 import { 
   ShieldCheck, 
   Heart, 
@@ -23,6 +22,7 @@ import {
   Pause,
   Star
 } from "lucide-react";
+import { OurWorkGallerySection } from "@/components/about/OurWorkGallerySection";
 
 interface AboutSlide {
   id: string;
@@ -570,11 +570,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* ─────────────────────────────────────────────────────────────
-            OUR WORK & EXPEDITIONS GALLERY ("Into the Wild & Beyond" Style)
-            ───────────────────────────────────────────────────────────── */}
-        <OurWorkGallerySection />
-
         {/* Accreditations & Trust */}
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm space-y-6">
           <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#172334] text-center tracking-tight">
@@ -589,8 +584,17 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
+      </div>
 
-        {/* Privacy & Cookie Policy Section */}
+      {/* ─────────────────────────────────────────────────────────────
+          3. OUR WORK GALLERY SECTION (21 Real Guest Moments with Shining Effect)
+         ───────────────────────────────────────────────────────────── */}
+      <OurWorkGallerySection />
+
+      {/* ─────────────────────────────────────────────────────────────
+          4. PRIVACY & COOKIE POLICY (End of Content)
+         ───────────────────────────────────────────────────────────── */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div id="privacy" className="scroll-mt-28 bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm space-y-6">
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
             <div className="w-10 h-10 rounded-2xl bg-[#0E6838]/10 text-[#0E6838] flex items-center justify-center">
@@ -635,8 +639,8 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-
       </div>
+
     </div>
   );
 }
