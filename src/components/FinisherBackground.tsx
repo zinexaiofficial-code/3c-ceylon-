@@ -22,7 +22,7 @@ export const FinisherBackground: React.FC = () => {
               speed: { x: { min: 0.4, max: 1.2 }, y: { min: 0.4, max: 1.2 } },
               colors: {
                 background: "#000000",
-                particles: ["#0023dd", "#476A4C", "#91B58A"]
+                particles: ["#0023dd", "#329B38", "#00f0ff"]
               },
               blending: "lighten",
               opacity: { center: 0.22, edge: 0 },
@@ -55,22 +55,22 @@ export const FinisherBackground: React.FC = () => {
 
   return (
     <>
-      <Script 
-        src="/js/finisher-header.es5.min.js" 
-        strategy="afterInteractive" 
+      <Script
+        src="/js/finisher-header.es5.min.js"
+        strategy="afterInteractive"
       />
 
       {/* Persistent Background Container */}
-      <div 
+      <div
         ref={containerRef}
         className="finisher-header fixed inset-0 pointer-events-none -z-20 overflow-hidden bg-black"
         aria-hidden="true"
       >
-        {/* CSS Ambient Mesh Lights */}
+        {/* CSS Ambient Mesh Lights (Refined elegant natural ambient orbs) */}
         <div className="absolute top-[-10%] left-[-10%] w-[55vw] h-[55vw] rounded-full bg-[#0023dd]/20 blur-[140px] animate-pulse" />
-        <div className="absolute top-[35%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#91B58A]/14 blur-[150px] animate-pulse delay-1000" />
+        <div className="absolute top-[35%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#329B38]/08 blur-[150px] animate-pulse delay-1000" />
         <div className="absolute bottom-[-10%] left-[20%] w-[45vw] h-[45vw] rounded-full bg-[#0023dd]/18 blur-[130px]" />
-        <div className="absolute top-[60%] left-[-5%] w-[40vw] h-[40vw] rounded-full bg-[#476A4C]/10 blur-[140px]" />
+        <div className="absolute top-[60%] left-[-5%] w-[40vw] h-[40vw] rounded-full bg-[#329B38]/06 blur-[140px]" />
       </div>
     </>
   );

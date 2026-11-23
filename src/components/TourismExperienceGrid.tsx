@@ -51,13 +51,13 @@ export const TourismExperienceGrid: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header — AI Expo / Sri Lanka Tourism Bold Style */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-2.5">
-          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#D97706] border border-[#91B58A]/40 text-xs font-extrabold uppercase tracking-widest shadow-sm">
-            <Compass className="w-3.5 h-3.5 text-[#D97706]" />
+          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-[#329B38]/10 text-[#329B38] border border-[#329B38]/30 text-xs font-extrabold uppercase tracking-widest shadow-xs">
+            <Compass className="w-3.5 h-3.5 text-[#329B38]" />
             <span>Sri Lanka Tourism Gallery</span>
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-white tracking-tight leading-[1.05]">
-            Into the Wild &amp; <span className="text-[#91B58A]">Beyond.</span>
+            Into the Wild &amp; <span className="text-[#329B38]">Beyond.</span>
           </h2>
 
           <p className="text-base sm:text-lg md:text-xl text-slate-300 font-normal max-w-xl mx-auto">
@@ -179,7 +179,7 @@ export const TourismExperienceGrid: React.FC = () => {
         <div className="text-center mt-14 sm:mt-18">
           <Link
             href="/experiences"
-            className="inline-flex items-center space-x-2.5 px-9 py-4 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-xs uppercase tracking-wider border border-[#91B58A]/40 transition-all shadow-md transform hover:-translate-y-0.5"
+            className="inline-flex items-center space-x-2.5 px-9 py-4 rounded-full bg-[#329B38] hover:bg-[#3CA647] text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
           >
             <span>Explore All 8 Experiences</span>
             <ArrowRight className="w-4 h-4" />

@@ -78,7 +78,7 @@ export const PackageBookingSidebar: React.FC<PackageBookingSidebarProps> = ({
 
         {/* Modal Header */}
         <div className="pr-12 mb-6 space-y-2">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#91B58A]/20 text-[#476A4C] text-xs font-extrabold uppercase tracking-wider">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#329B38]/12 text-[#0E6838] text-xs font-extrabold uppercase tracking-wider">
             <span>Tailored Private Proposal</span>
           </div>
           
@@ -114,7 +114,7 @@ export const PackageBookingSidebar: React.FC<PackageBookingSidebarProps> = ({
       <div className="sticky top-28 space-y-6 select-none">
         <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-[0_15px_45px_rgba(0,0,0,0.08)] border border-gray-200/90 space-y-5">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#476A4C] block">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#0E6838] block">
               100% Private Tour
             </span>
             <h3 className="font-sans text-2xl font-black text-[#172334] tracking-tight mt-1">
@@ -132,50 +132,50 @@ export const PackageBookingSidebar: React.FC<PackageBookingSidebarProps> = ({
               href={getWhatsAppLink(undefined, packageTitle)}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-4 px-4 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-xs uppercase tracking-wider border border-[#91B58A]/40 flex items-center justify-center space-x-2 shadow-md transition-all hover:scale-102 active:scale-95 text-center cursor-pointer"
+              className="w-full py-4 px-4 rounded-full bg-[#329B38] hover:bg-[#3CA647] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-md transition-all hover:scale-102 active:scale-95 text-center cursor-pointer"
             >
-              <MessageCircle className="w-4 h-4 text-white flex-shrink-0" />
+              <MessageCircle className="w-4 h-4 text-black flex-shrink-0" />
               <span>Inquire on WhatsApp</span>
             </a>
 
             {/* Request Custom Proposal - Opens Professional Modal */}
             <button
               onClick={() => setIsModalOpen(true)}
-              className="w-full py-3.5 px-4 rounded-full bg-[#172334] hover:bg-[#476A4C] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-sm transition-all hover:scale-102 active:scale-95 text-center cursor-pointer"
+              className="w-full py-3.5 px-4 rounded-full bg-[#172334] hover:bg-[#123B2A] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-sm transition-all hover:scale-102 active:scale-95 text-center cursor-pointer"
             >
-              <Calendar className="w-4 h-4 text-[#D97706] flex-shrink-0" />
+              <Calendar className="w-4 h-4 text-[#329B38] flex-shrink-0" />
               <span>Request Custom Proposal</span>
             </button>
           </div>
 
           {/* Quick Tour Highlights Summary */}
-          <div className="p-3.5 rounded-2xl bg-[#F4F9F5] border border-[#91B58A]/40 text-xs text-[#476A4C] font-semibold space-y-1.5">
+          <div className="p-3.5 rounded-2xl bg-[#F4F9F5] border border-[#329B38]/30 text-xs text-[#123B2A] font-semibold space-y-1.5">
             <div className="flex items-center justify-between">
               <span>Duration:</span>
-              <strong className="text-[#476A4C]">{durationNights}N / {durationDays}D</strong>
+              <strong className="text-[#0E6838]">{durationNights}N / {durationDays}D</strong>
             </div>
             <div className="flex items-center justify-between">
               <span>Transportation:</span>
-              <strong className="text-[#476A4C]">Dedicated AC Vehicle</strong>
+              <strong className="text-[#0E6838]">Dedicated AC Vehicle</strong>
             </div>
             <div className="flex items-center justify-between">
               <span>Flexibility:</span>
-              <strong className="text-[#476A4C]">100% Customizable</strong>
+              <strong className="text-[#0E6838]">100% Customizable</strong>
             </div>
           </div>
 
           {/* Trust Guarantee List */}
           <div className="pt-4 border-t border-gray-100 space-y-2.5 text-xs text-[#526173]">
             <div className="flex items-center space-x-2 rtl:space-x-reverse">
-              <ShieldCheck className="w-4 h-4 text-[#476A4C] flex-shrink-0" />
+              <ShieldCheck className="w-4 h-4 text-[#0E6838] flex-shrink-0" />
               <span>100% Private tour with dedicated chauffeur</span>
             </div>
             <div className="flex items-center space-x-2 rtl:space-x-reverse">
-              <Compass className="w-4 h-4 text-[#476A4C] flex-shrink-0" />
+              <Compass className="w-4 h-4 text-[#0E6838] flex-shrink-0" />
               <span>Flexible dates &amp; customizable stops</span>
             </div>
             <div className="flex items-center space-x-2 rtl:space-x-reverse">
-              <Clock className="w-4 h-4 text-[#476A4C] flex-shrink-0" />
+              <Clock className="w-4 h-4 text-[#0E6838] flex-shrink-0" />
               <span>Instant response from local travel specialist</span>
             </div>
           </div>

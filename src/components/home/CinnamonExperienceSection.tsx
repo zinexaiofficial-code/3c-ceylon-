@@ -97,8 +97,8 @@ export const CinnamonExperienceSection: React.FC = () => {
   };
 
   return (
-    <section 
-      id="cinnamon-experience" 
+    <section
+      id="cinnamon-experience"
       className="pt-10 pb-14 sm:pt-14 sm:pb-16 relative overflow-hidden bg-[#FAF8F2] text-[#172334] select-none"
       aria-label="The Ceylon Cinnamon Experience"
     >
@@ -151,7 +151,7 @@ export const CinnamonExperienceSection: React.FC = () => {
       </div>
 
       {/* Infinite Seamless Continuous Marquee Loop */}
-      <div 
+      <div
         className="relative w-full overflow-hidden cursor-grab active:cursor-grabbing"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
@@ -161,12 +161,12 @@ export const CinnamonExperienceSection: React.FC = () => {
         <div className="absolute top-0 right-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-[#FAF8F2] to-transparent z-20 pointer-events-none" />
 
         {/* The Marquee Track (Strictly no scrollbar / no timeline) */}
-        <div 
+        <div
           ref={scrollContainerRef}
           className="flex overflow-x-hidden no-scrollbar py-2 px-3"
           style={{ scrollBehavior: "smooth" }}
         >
-          <div 
+          <div
             className="flex gap-5 sm:gap-7 flex-nowrap will-change-transform"
             style={{
               animation: "journey-marquee 48s linear infinite",

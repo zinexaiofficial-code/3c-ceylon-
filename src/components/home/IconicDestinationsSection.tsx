@@ -100,7 +100,7 @@ export const IconicDestinationsSection: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/35 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-sm">
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#329B38]/12 text-[#123B2A] border border-[#329B38]/30 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-sm">
             <span>Explore the Island</span>
           </div>
 
@@ -123,13 +123,13 @@ export const IconicDestinationsSection: React.FC = () => {
               style={{
                 transitionDelay: `${index * 85}ms`,
               }}
-              className={`group relative block w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-200/80 hover:border-[#91B58A]/60 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#91B58A] ${
+              className={`group relative block w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-200/80 hover:border-[#329B38]/40 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#329B38] ${
                 isVisible
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-12 scale-[0.96]"
               } ${dest.gridSpan}`}
             >
-              {/* Background Image with Smooth 4% Hover Zoom - Natural brightness without artificial darkening */}
+              {/* Background Image with Smooth 4% Hover Zoom */}
               <Image
                 src={dest.image}
                 alt={`Sri Lanka Destination - ${dest.name}`}
@@ -145,25 +145,37 @@ export const IconicDestinationsSection: React.FC = () => {
                 aria-hidden="true"
               />
 
+              {/* Layer 1: Bottom Text Readability Vignette (Top 65% stays natural, bright & colorful) */}
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 via-40% to-transparent transition-opacity duration-500 z-10"
+                aria-hidden="true"
+              />
+
+              {/* Layer 2: Subtle Brand Glow on Hover */}
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-[#329B38]/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
+                aria-hidden="true"
+              />
+
               {/* Card Content (Bottom): Circular Pin Icon + Destination Name Only */}
               <div className="absolute bottom-5 sm:bottom-7 left-5 sm:left-7 right-5 sm:right-7 z-20 flex items-center justify-between">
                 <div className="flex items-center space-x-3 sm:space-x-4">
                   {/* Circular Destination Badge */}
                   <div
                     className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0 backdrop-blur-md border border-white/25 shadow-lg transition-transform duration-500 group-hover:scale-110"
-                    style={{ backgroundColor: `${dest.badgeColor}44`, borderColor: `${dest.badgeColor}77` }}
+                    style={{ backgroundColor: `${dest.badgeColor}33`, borderColor: `${dest.badgeColor}66` }}
                   >
                     <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow" />
                   </div>
 
                   {/* Destination Name — ONLY THE NAME (Big Bold White Typography) */}
-                  <h3 className="font-sans text-2xl sm:text-3xl lg:text-[38px] xl:text-[42px] font-black uppercase tracking-tight text-white [text-shadow:_0_3px_20px_rgb(0_0_0_/_95%),_0_1px_5px_rgb(0_0_0_/_80%)] leading-none select-none group-hover:text-white transition-colors">
+                  <h3 className="font-sans text-2xl sm:text-3xl lg:text-[38px] xl:text-[42px] font-black uppercase tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] leading-none select-none group-hover:text-white transition-colors">
                     {dest.name}
                   </h3>
                 </div>
 
                 {/* Micro Hover Arrow */}
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 flex-shrink-0 shadow-md">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 flex-shrink-0 shadow-md">
                   <ArrowUpRight className="w-5 h-5 text-white" />
                 </div>
               </div>
@@ -175,7 +187,7 @@ export const IconicDestinationsSection: React.FC = () => {
         <div className="text-center mt-12 sm:mt-14">
           <Link
             href="/destinations"
-            className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-[#172334] hover:bg-[#476A4C] text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-[#172334] hover:bg-[#329B38] text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
           >
             <span>View All 10 Destination Guides</span>
             <ArrowRight className="w-4 h-4" />

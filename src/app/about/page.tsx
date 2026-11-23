@@ -161,7 +161,7 @@ export default function AboutPage() {
           1. FULL-HEIGHT CINEMATIC CAROUSEL (Identical Home Page Format)
           - Height: min-h-[92vh] md:min-h-screen
           - Color pattern: Natural vibrant photo with subtle multi-layer vignette
-          - Hero Typography: Bold Impact with #91B58A highlight
+          - Hero Typography: Bold Impact with #329B38 highlight
           - Primary image: Group Portrait at Kandy's Temple of the Tooth
          ───────────────────────────────────────────────────────────── */}
       <section 
@@ -173,7 +173,7 @@ export default function AboutPage() {
         aria-roledescription="carousel"
         aria-label="3C Ceylon Tours Story and Heritage"
       >
-        {/* Background Images Carousel Stack - Natural Vibrant Scenery with NO Dark Overlays */}
+        {/* Background Images Carousel Stack */}
         <div className="absolute inset-0 z-0">
           {ABOUT_CAROUSEL_SLIDES.map((slide, index) => {
             const isMounted = mountedSlides.includes(index);
@@ -192,7 +192,7 @@ export default function AboutPage() {
                   alt={slide.alt}
                   fill
                   priority={index === 0}
-                  quality={90}
+                  quality={88}
                   sizes="100vw"
                   className={`object-cover object-center transition-transform duration-[7000ms] ease-out ${
                     isActive ? "scale-105" : "scale-100"
@@ -201,32 +201,41 @@ export default function AboutPage() {
               </div>
             );
           })}
+
+          {/* Home Page Matching Multi-Layer Natural Readability Overlay */}
+          {/* Top Vignette: Ensures navbar labels and logo are razor-sharp */}
+          <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-black/85 via-black/40 to-transparent z-10 pointer-events-none" />
+
+          {/* Center Vignette: Soft radial gradient preserving photo vibrancy without over-darkening */}
+          <div 
+            className="absolute inset-0 z-10 pointer-events-none" 
+            style={{
+              background: "radial-gradient(ellipse at center, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.28) 55%, rgba(0,0,0,0.12) 100%)"
+            }}
+          />
+
+          {/* Subtle Bottom Gradient for Clean Transition */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent z-10 pointer-events-none" />
         </div>
 
         {/* Main Content Container */}
         <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 md:pt-32 pb-24">
-          {/* Subtle Localized Text Contrast Backdrop — Preserves 100% natural photo brightness across the rest of the image */}
-          <div 
-            className="absolute inset-x-2 sm:inset-x-8 top-12 bottom-12 -z-10 bg-black/35 backdrop-blur-[1.5px] rounded-3xl pointer-events-none" 
-            aria-hidden="true" 
-          />
           
           {/* Tagline Badge */}
           <div 
             key={`badge-${currentSlideIndex}`}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-[#91B58A]/50 text-white text-xs font-bold uppercase tracking-widest mb-6 shadow-lg animate-fade-in transition-all duration-500"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-[#329B38]/30 text-[#329B38] text-xs font-bold uppercase tracking-widest mb-6 shadow-sm animate-fade-in transition-all duration-500"
           >
-            <span className="w-2 h-2 rounded-full bg-[#91B58A] inline-block mr-2" />
-            <span className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">{currentSlide.tagline}</span>
+            <span className="text-white drop-shadow">{currentSlide.tagline}</span>
           </div>
 
           {/* Master Headline - Home Page Style Bold Impact */}
           <h1 
             key={`headline-${currentSlideIndex}`}
-            className="font-sans text-[42px] sm:text-[58px] md:text-[72px] lg:text-[88px] xl:text-[96px] font-black text-white tracking-tight leading-[1.02] mb-6 [text-shadow:_0_2px_10px_rgba(0,0,0,0.95),_0_4px_30px_rgba(0,0,0,0.9),_0_1px_3px_rgba(0,0,0,1)] animate-fade-in transition-all duration-700 select-none"
+            className="font-sans text-[42px] sm:text-[58px] md:text-[72px] lg:text-[88px] xl:text-[96px] font-black text-white tracking-tight leading-[1.02] mb-6 drop-shadow-[0_4px_28px_rgba(0,0,0,0.98)] animate-fade-in transition-all duration-700 select-none"
           >
             {currentSlide.titlePrefix}
-            <span className="text-[#91B58A] [text-shadow:_0_2px_12px_rgba(0,0,0,0.98),_0_4px_32px_rgba(0,0,0,0.95),_0_1px_3px_rgba(0,0,0,1)]">
+            <span className="text-[#329B38]">
               {currentSlide.titleHighlight}
             </span>
           </h1>
@@ -234,7 +243,7 @@ export default function AboutPage() {
           {/* Subtitle - Short & Powerful */}
           <p 
             key={`sub-${currentSlideIndex}`}
-            className="max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl text-[#F6F3E9] font-medium leading-relaxed mb-10 [text-shadow:_0_2px_16px_rgba(0,0,0,0.95),_0_1px_4px_rgba(0,0,0,0.9)] animate-fade-in transition-all duration-700"
+            className="max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl text-white font-medium leading-relaxed mb-10 drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] animate-fade-in transition-all duration-700"
           >
             {currentSlide.subtitle}
           </p>
@@ -243,7 +252,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
             <a
               href="#about-content"
-              className="w-full sm:w-auto px-9 py-4 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-sm sm:text-base tracking-wider uppercase border border-[#91B58A]/40 shadow-[0_4px_25px_rgba(71,106,76,0.5)] hover:shadow-[0_4px_30px_rgba(145,181,138,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2.5 rtl:space-x-reverse cursor-pointer"
+              className="w-full sm:w-auto px-9 py-4 rounded-full bg-[#329B38] hover:bg-[#3CA647] text-white font-extrabold text-sm sm:text-base tracking-wider uppercase shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2.5 rtl:space-x-reverse cursor-pointer"
             >
               <span>Discover Our Philosophy</span>
               <ArrowRight className="w-4 h-4" />
@@ -251,7 +260,7 @@ export default function AboutPage() {
 
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-9 py-4 rounded-full bg-black/50 backdrop-blur-md hover:bg-black/75 text-white font-bold text-sm sm:text-base tracking-wider border border-white/30 hover:border-[#91B58A] shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse"
+              className="w-full sm:w-auto px-9 py-4 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-bold text-sm sm:text-base tracking-wider border border-white/25 hover:border-white/50 shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse"
             >
               <span>Plan Your Bespoke Trip</span>
             </Link>
@@ -259,18 +268,18 @@ export default function AboutPage() {
 
           {/* Trust Badges — High-Contrast Frosted Glass Luxury Pills */}
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-2xl mx-auto pt-6 border-t border-white/20">
-            <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <Compass className="w-4 h-4 text-[#91B58A] flex-shrink-0" />
+            <div className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
+              <Compass className="w-4 h-4 text-[#329B38] flex-shrink-0" />
               <span className="tracking-wide">100% Private &amp; Bespoke</span>
             </div>
 
-            <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <ShieldCheck className="w-4 h-4 text-[#91B58A] flex-shrink-0" />
+            <div className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
+              <ShieldCheck className="w-4 h-4 text-[#329B38] flex-shrink-0" />
               <span className="tracking-wide">SLTDA Certified</span>
             </div>
 
-            <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <Star className="w-4 h-4 text-[#91B58A] fill-[#91B58A] flex-shrink-0" />
+            <div className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
+              <Star className="w-4 h-4 text-[#329B38] fill-[#329B38] flex-shrink-0" />
               <span className="tracking-wide">5-Star Chauffeurs</span>
             </div>
           </div>
@@ -280,7 +289,7 @@ export default function AboutPage() {
         <button
           onClick={prevSlide}
           aria-label="Previous Slide"
-          className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/90 hover:text-[#91B58A] border border-white/20 hover:border-[#91B58A]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
+          className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/80 hover:text-[#329B38] border border-white/15 hover:border-[#329B38]/40 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
         >
           <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
         </button>
@@ -288,13 +297,13 @@ export default function AboutPage() {
         <button
           onClick={nextSlide}
           aria-label="Next Slide"
-          className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/90 hover:text-[#91B58A] border border-white/20 hover:border-[#91B58A]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
+          className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/80 hover:text-[#329B38] border border-white/15 hover:border-[#329B38]/40 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
         >
           <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
         </button>
 
         {/* Carousel Slide Indicators & Auto-Play Controls (Bottom Right) */}
-        <div className="absolute bottom-7 right-4 md:right-8 z-20 flex items-center space-x-3 rtl:space-x-reverse bg-black/60 backdrop-blur-xl px-3 py-2 rounded-full border border-white/15 text-xs text-white shadow-xl">
+        <div className="absolute bottom-7 right-4 md:right-8 z-20 flex items-center space-x-3 rtl:space-x-reverse bg-black/60 backdrop-blur-xl px-3 py-2 rounded-full border border-white/10 text-xs text-white shadow-xl">
           {/* Slide Dots / Pill Bars */}
           <div className="flex items-center space-x-1.5 rtl:space-x-reverse">
             {ABOUT_CAROUSEL_SLIDES.map((slide, idx) => (
@@ -304,8 +313,8 @@ export default function AboutPage() {
                 aria-label={`Go to slide ${idx + 1}`}
                 className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
                   idx === currentSlideIndex
-                    ? "w-7 bg-[#91B58A] shadow-[0_0_10px_rgba(145,181,138,0.7)]"
-                    : "w-2 bg-white/40 hover:bg-white/70"
+                    ? "w-7 bg-[#329B38] shadow-sm"
+                    : "w-2 bg-white/30 hover:bg-white/60"
                 }`}
               />
             ))}
@@ -315,13 +324,13 @@ export default function AboutPage() {
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
             aria-label={isAutoPlaying ? "Pause carousel auto-play" : "Start carousel auto-play"}
-            className="pl-1 text-gray-300 hover:text-[#91B58A] transition-colors cursor-pointer"
+            className="pl-1 text-gray-400 hover:text-[#329B38] transition-colors cursor-pointer"
             title={isAutoPlaying ? "Pause" : "Play"}
           >
             {isAutoPlaying ? (
               <Pause className="w-3.5 h-3.5" />
             ) : (
-              <Play className="w-3.5 h-3.5 text-[#91B58A]" />
+              <Play className="w-3.5 h-3.5 text-[#329B38]" />
             )}
           </button>
         </div>
@@ -329,10 +338,10 @@ export default function AboutPage() {
         {/* Scroll Down Indicator */}
         <a 
           href="#about-content"
-          className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-1 text-white/70 hover:text-white transition-colors cursor-pointer"
+          className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-1 text-white/60 hover:text-white transition-colors cursor-pointer"
         >
-          <span className="text-[10px] tracking-widest uppercase font-medium drop-shadow">Scroll to Discover</span>
-          <ChevronDown className="w-4 h-4 animate-bounce text-[#91B58A]" />
+          <span className="text-[10px] tracking-widest uppercase font-medium">Scroll to Discover</span>
+          <ChevronDown className="w-4 h-4 animate-bounce text-[#329B38]" />
         </a>
       </section>
 
@@ -362,7 +371,7 @@ export default function AboutPage() {
           </div>
 
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3 py-1 rounded-full bg-[#91B58A]/20 border border-[#91B58A]/40 text-[#476A4C] text-xs font-extrabold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3 py-1 rounded-full bg-[#329B38]/12 border border-[#329B38]/30 text-[#0E6838] text-xs font-extrabold uppercase tracking-wider">
               <span>Our Founding Story</span>
             </div>
 
@@ -371,7 +380,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-sm sm:text-base text-[#526173] leading-relaxed font-normal">
-              3C Ceylon Tours was established by Sri Lankan travel architects and seasoned naturalists committed to unhurried, bespoke private travel rooted in deep island knowledge, authentic cultural encounters, and uncompromised traveler comfort.
+              3C Ceylon Tours was established by Sri Lankan travel architects and seasoned naturalists committed to unhurried, private luxury travel rooted in deep island knowledge, authentic cultural encounters, and uncompromised traveler comfort.
             </p>
 
             <p className="text-sm sm:text-base text-[#526173] leading-relaxed font-normal">
@@ -380,7 +389,7 @@ export default function AboutPage() {
 
             <div className="pt-2 flex items-center space-x-4 rtl:space-x-reverse">
               <div className="p-4 rounded-2xl bg-white border border-gray-200 shadow-sm text-center flex-1">
-                <span className="font-sans text-2xl sm:text-3xl font-extrabold text-[#476A4C] block tracking-tight">100%</span>
+                <span className="font-sans text-2xl sm:text-3xl font-extrabold text-[#0E6838] block tracking-tight">100%</span>
                 <span className="text-[11px] text-[#526173] uppercase font-bold tracking-wider">Private & Tailor-Made</span>
               </div>
               <div className="p-4 rounded-2xl bg-white border border-gray-200 shadow-sm text-center flex-1">
@@ -388,7 +397,7 @@ export default function AboutPage() {
                 <span className="text-[11px] text-[#526173] uppercase font-bold tracking-wider">Concierge Care</span>
               </div>
               <div className="p-4 rounded-2xl bg-white border border-gray-200 shadow-sm text-center flex-1">
-                <span className="font-sans text-2xl sm:text-3xl font-extrabold text-[#476A4C] block tracking-tight">5★</span>
+                <span className="font-sans text-2xl sm:text-3xl font-extrabold text-[#0E6838] block tracking-tight">5★</span>
                 <span className="text-[11px] text-[#526173] uppercase font-bold tracking-wider">Verified Standards</span>
               </div>
             </div>
@@ -398,7 +407,7 @@ export default function AboutPage() {
         {/* The 3C Philosophy (Care, Comfort, Craftsmanship) */}
         <div className="bg-white rounded-3xl p-8 sm:p-14 shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-200/90 space-y-10">
           <div className="text-center max-w-2xl mx-auto space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#476A4C]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#0E6838]">
               Our Core DNA
             </span>
             <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#172334] tracking-tight">
@@ -411,9 +420,9 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Pillar 1: Care */}
-            <div className="p-7 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#91B58A]/70 transition-colors space-y-4">
+            <div className="p-7 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#329B38]/50 transition-colors space-y-4">
               <div className="w-12 h-12 rounded-xl bg-[#172334] border border-[#172334] text-white flex items-center justify-center font-bold shadow-md">
-                <Heart className="w-6 h-6 text-[#D97706]" />
+                <Heart className="w-6 h-6 text-[#329B38]" />
               </div>
               <h3 className="font-sans text-xl font-extrabold text-[#172334] tracking-tight">1. Care (You &amp; Island)</h3>
               <p className="text-xs sm:text-sm text-[#526173] leading-relaxed font-normal">
@@ -422,9 +431,9 @@ export default function AboutPage() {
             </div>
 
             {/* Pillar 2: Comfort */}
-            <div className="p-7 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#91B58A]/70 transition-colors space-y-4">
+            <div className="p-7 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#329B38]/50 transition-colors space-y-4">
               <div className="w-12 h-12 rounded-xl bg-[#172334] border border-[#172334] text-white flex items-center justify-center font-bold shadow-md">
-                <Car className="w-6 h-6 text-[#D97706]" />
+                <Car className="w-6 h-6 text-[#329B38]" />
               </div>
               <h3 className="font-sans text-xl font-extrabold text-[#172334] tracking-tight">2. Comfort (VIP Transport)</h3>
               <p className="text-xs sm:text-sm text-[#526173] leading-relaxed font-normal">
@@ -433,9 +442,9 @@ export default function AboutPage() {
             </div>
 
             {/* Pillar 3: Craftsmanship */}
-            <div className="p-7 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#91B58A]/70 transition-colors space-y-4">
+            <div className="p-7 rounded-2xl bg-gray-50 border border-gray-200 hover:border-[#329B38]/50 transition-colors space-y-4">
               <div className="w-12 h-12 rounded-xl bg-[#172334] border border-[#172334] text-white flex items-center justify-center font-bold shadow-md">
-                <Compass className="w-6 h-6 text-[#D97706]" />
+                <Compass className="w-6 h-6 text-[#329B38]" />
               </div>
               <h3 className="font-sans text-xl font-extrabold text-[#172334] tracking-tight">3. Craftsmanship (Bespoke)</h3>
               <p className="text-xs sm:text-sm text-[#526173] leading-relaxed font-normal">
@@ -448,7 +457,7 @@ export default function AboutPage() {
         {/* Founder Profile - Champaka Mataraarachchi */}
         <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-200/90 relative overflow-hidden">
           <div className="max-w-4xl mx-auto space-y-6">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/40 text-xs font-black uppercase tracking-widest">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#329B38]/12 text-[#0E6838] border border-[#329B38]/30 text-xs font-black uppercase tracking-widest">
               <span>Founder &amp; Senior Tour Operator</span>
             </div>
             
@@ -473,7 +482,7 @@ export default function AboutPage() {
 
             <div className="pt-4 flex flex-wrap items-center gap-4 border-t border-gray-100">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 rounded-full bg-[#476A4C] text-white flex items-center justify-center font-extrabold text-lg shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-[#0E6838] text-white flex items-center justify-center font-extrabold text-lg shadow-sm">
                   CM
                 </div>
                 <div>
@@ -488,7 +497,7 @@ export default function AboutPage() {
         {/* Vision & Mission Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white text-[#172334] rounded-3xl p-8 sm:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.06)] space-y-4 border border-gray-200">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#476A4C]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#0E6838]">
               Our Vision
             </span>
             <h3 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#172334] tracking-tight">
@@ -500,7 +509,7 @@ export default function AboutPage() {
           </div>
 
           <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-gray-200 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#476A4C]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#0E6838]">
               Our Mission
             </span>
             <h3 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#172334] tracking-tight">
@@ -514,7 +523,7 @@ export default function AboutPage() {
 
         {/* Responsible Tourism & Wildlife Ethics */}
         <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-gray-200 space-y-8">
-          <div className="flex items-center space-x-3 rtl:space-x-reverse text-[#476A4C]">
+          <div className="flex items-center space-x-3 rtl:space-x-reverse text-[#0E6838]">
             <TreePine className="w-7 h-7" />
             <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#172334] tracking-tight">
               Responsible Tourism &amp; Wildlife Ethics
@@ -527,7 +536,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="flex items-start space-x-3 rtl:space-x-reverse bg-gray-50 p-4 rounded-2xl border border-gray-100">
-              <CheckCircle2 className="w-5 h-5 text-[#476A4C] flex-shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-[#0E6838] flex-shrink-0 mt-0.5" />
               <div className="space-y-1">
                 <h4 className="font-extrabold text-sm text-[#172334]">Ethical Safari Distances</h4>
                 <p className="text-xs text-[#526173] font-normal">We never crowd or harass wildlife. Jeep engines are shut down during sightings.</p>
@@ -535,7 +544,7 @@ export default function AboutPage() {
             </div>
 
             <div className="flex items-start space-x-3 rtl:space-x-reverse bg-gray-50 p-4 rounded-2xl border border-gray-100">
-              <CheckCircle2 className="w-5 h-5 text-[#476A4C] flex-shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-[#0E6838] flex-shrink-0 mt-0.5" />
               <div className="space-y-1">
                 <h4 className="font-extrabold text-sm text-[#172334]">No Animal Exploitation</h4>
                 <p className="text-xs text-[#526173] font-normal">Strictly no elephant riding or captive shows. Only verified sanctuaries.</p>
@@ -543,7 +552,7 @@ export default function AboutPage() {
             </div>
 
             <div className="flex items-start space-x-3 rtl:space-x-reverse bg-gray-50 p-4 rounded-2xl border border-gray-100">
-              <CheckCircle2 className="w-5 h-5 text-[#476A4C] flex-shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-[#0E6838] flex-shrink-0 mt-0.5" />
               <div className="space-y-1">
                 <h4 className="font-extrabold text-sm text-[#172334]">Community Empowerment</h4>
                 <p className="text-xs text-[#526173] font-normal">Directing tourism revenue directly to village artisans, naturalists, and local cooks.</p>
@@ -551,7 +560,7 @@ export default function AboutPage() {
             </div>
 
             <div className="flex items-start space-x-3 rtl:space-x-reverse bg-gray-50 p-4 rounded-2xl border border-gray-100">
-              <CheckCircle2 className="w-5 h-5 text-[#476A4C] flex-shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-[#0E6838] flex-shrink-0 mt-0.5" />
               <div className="space-y-1">
                 <h4 className="font-extrabold text-sm text-[#172334]">Plastic Reduction</h4>
                 <p className="text-xs text-[#526173] font-normal">Promoting refillable bottles and eliminating single-use plastics.</p>
@@ -568,7 +577,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
             {COMPANY_INFO.certifications.map((cert, i) => (
               <div key={i} className="p-4 rounded-xl bg-gray-50 border border-gray-200 flex items-center space-x-3 rtl:space-x-reverse">
-                <ShieldCheck className="w-5 h-5 text-[#476A4C] flex-shrink-0" />
+                <ShieldCheck className="w-5 h-5 text-[#0E6838] flex-shrink-0" />
                 <span className="text-xs font-bold text-[#172334]">{cert}</span>
               </div>
             ))}
@@ -578,7 +587,7 @@ export default function AboutPage() {
         {/* Privacy & Cookie Policy Section */}
         <div id="privacy" className="scroll-mt-28 bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm space-y-6">
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
-            <div className="w-10 h-10 rounded-2xl bg-[#91B58A]/20 text-[#476A4C] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-2xl bg-[#0E6838]/10 text-[#0E6838] flex items-center justify-center">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
@@ -614,7 +623,7 @@ export default function AboutPage() {
 
             <p id="terms" className="scroll-mt-28 text-xs text-gray-500 pt-2 border-t border-gray-100">
               For any privacy inquiries or bespoke travel assistance, please contact our concierge team at{" "}
-              <a href={`mailto:${COMPANY_INFO.email}`} className="text-[#476A4C] font-semibold underline">
+              <a href={`mailto:${COMPANY_INFO.email}`} className="text-[#0E6838] font-semibold underline">
                 {COMPANY_INFO.email}
               </a>.
             </p>

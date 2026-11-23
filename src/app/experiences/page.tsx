@@ -160,7 +160,7 @@ export default function ExperiencesPage() {
           1. FULL-HEIGHT CINEMATIC CAROUSEL (Identical Home Page Pattern)
           - Height: min-h-[92vh] md:min-h-screen
           - Color pattern: Natural vibrant photo with subtle multi-layer vignette
-          - Hero Typography: Bold Impact with #91B58A highlight
+          - Hero Typography: Bold Impact with #329B38 highlight
           - Primary image: Romance Beneath Sigiriya Rock
          ───────────────────────────────────────────────────────────── */}
       <section 
@@ -201,32 +201,37 @@ export default function ExperiencesPage() {
             );
           })}
 
+          {/* Multi-Layer Natural Readability Overlay */}
+          <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-black/85 via-black/40 to-transparent z-10 pointer-events-none" />
+
+          <div 
+            className="absolute inset-0 z-10 pointer-events-none" 
+            style={{
+              background: "radial-gradient(ellipse at center, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.28) 55%, rgba(0,0,0,0.12) 100%)"
+            }}
+          />
+
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent z-10 pointer-events-none" />
         </div>
 
         {/* Main Content Container */}
         <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 md:pt-32 pb-24">
-          {/* Subtle Localized Text Contrast Backdrop — Preserves 100% natural photo brightness across the rest of the image */}
-          <div 
-            className="absolute inset-x-2 sm:inset-x-8 top-12 bottom-12 -z-10 bg-black/35 backdrop-blur-[1.5px] rounded-3xl pointer-events-none" 
-            aria-hidden="true" 
-          />
           
           {/* Tagline Badge */}
           <div 
             key={`badge-${currentSlideIndex}`}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-[#91B58A]/50 text-white text-xs font-bold uppercase tracking-widest mb-6 shadow-lg animate-fade-in transition-all duration-500"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-[#329B38]/30 text-[#329B38] text-xs font-bold uppercase tracking-widest mb-6 shadow-sm animate-fade-in transition-all duration-500"
           >
-            <span className="w-2 h-2 rounded-full bg-[#91B58A] inline-block mr-2" />
-            <span className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">{currentSlide.tagline}</span>
+            <span className="text-white drop-shadow">{currentSlide.tagline}</span>
           </div>
 
           {/* Master Headline */}
           <h1 
             key={`headline-${currentSlideIndex}`}
-            className="font-sans text-[42px] sm:text-[58px] md:text-[72px] lg:text-[88px] xl:text-[96px] font-black text-white tracking-tight leading-[1.02] mb-6 [text-shadow:_0_2px_10px_rgba(0,0,0,0.95),_0_4px_30px_rgba(0,0,0,0.9),_0_1px_3px_rgba(0,0,0,1)] animate-fade-in transition-all duration-700 select-none"
+            className="font-sans text-[42px] sm:text-[58px] md:text-[72px] lg:text-[88px] xl:text-[96px] font-black text-white tracking-tight leading-[1.02] mb-6 drop-shadow-[0_4px_28px_rgba(0,0,0,0.98)] animate-fade-in transition-all duration-700 select-none"
           >
             {currentSlide.titlePrefix}
-            <span className="text-[#91B58A] [text-shadow:_0_2px_12px_rgba(0,0,0,0.98),_0_4px_32px_rgba(0,0,0,0.95),_0_1px_3px_rgba(0,0,0,1)]">
+            <span className="text-[#329B38]">
               {currentSlide.titleHighlight}
             </span>
           </h1>
@@ -234,7 +239,7 @@ export default function ExperiencesPage() {
           {/* Subtitle */}
           <p 
             key={`sub-${currentSlideIndex}`}
-            className="max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl text-[#F6F3E9] font-medium leading-relaxed mb-10 [text-shadow:_0_2px_16px_rgba(0,0,0,0.95),_0_1px_4px_rgba(0,0,0,0.9)] animate-fade-in transition-all duration-700"
+            className="max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl text-white font-medium leading-relaxed mb-10 drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] animate-fade-in transition-all duration-700"
           >
             {currentSlide.subtitle}
           </p>
@@ -243,7 +248,7 @@ export default function ExperiencesPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
             <a
               href="#experiences-section"
-              className="w-full sm:w-auto px-9 py-4 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-sm sm:text-base tracking-wider uppercase border border-[#91B58A]/40 shadow-[0_4px_25px_rgba(71,106,76,0.5)] hover:shadow-[0_4px_30px_rgba(145,181,138,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2.5 rtl:space-x-reverse cursor-pointer"
+              className="w-full sm:w-auto px-9 py-4 rounded-full bg-[#329B38] hover:bg-[#3CA647] text-white font-extrabold text-sm sm:text-base tracking-wider uppercase shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2.5 rtl:space-x-reverse cursor-pointer"
             >
               <span>Explore All Experiences</span>
               <ArrowRight className="w-4 h-4" />
@@ -251,7 +256,7 @@ export default function ExperiencesPage() {
 
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-9 py-4 rounded-full bg-black/50 backdrop-blur-md hover:bg-black/75 text-white font-bold text-sm sm:text-base tracking-wider border border-white/30 hover:border-[#91B58A] shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse"
+              className="w-full sm:w-auto px-9 py-4 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-bold text-sm sm:text-base tracking-wider border border-white/25 hover:border-white/50 shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse"
             >
               <span>Design Bespoke Theme</span>
             </Link>
@@ -259,18 +264,18 @@ export default function ExperiencesPage() {
 
           {/* Trust Badges */}
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-2xl mx-auto pt-6 border-t border-white/20">
-            <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <Compass className="w-4 h-4 text-[#91B58A] flex-shrink-0" />
+            <div className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
+              <Compass className="w-4 h-4 text-[#329B38] flex-shrink-0" />
               <span className="tracking-wide">100% Private &amp; Bespoke</span>
             </div>
 
-            <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <ShieldCheck className="w-4 h-4 text-[#91B58A] flex-shrink-0" />
+            <div className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
+              <ShieldCheck className="w-4 h-4 text-[#329B38] flex-shrink-0" />
               <span className="tracking-wide">SLTDA Certified</span>
             </div>
 
-            <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <Star className="w-4 h-4 text-[#91B58A] fill-[#91B58A] flex-shrink-0" />
+            <div className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
+              <Star className="w-4 h-4 text-[#329B38] fill-[#329B38] flex-shrink-0" />
               <span className="tracking-wide">5-Star Chauffeurs</span>
             </div>
           </div>
@@ -280,7 +285,7 @@ export default function ExperiencesPage() {
         <button
           onClick={prevSlide}
           aria-label="Previous Slide"
-          className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/90 hover:text-[#91B58A] border border-white/20 hover:border-[#91B58A]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
+          className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/80 hover:text-[#329B38] border border-white/15 hover:border-[#329B38]/40 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
         >
           <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
         </button>
@@ -288,13 +293,13 @@ export default function ExperiencesPage() {
         <button
           onClick={nextSlide}
           aria-label="Next Slide"
-          className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/90 hover:text-[#91B58A] border border-white/20 hover:border-[#91B58A]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
+          className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/80 hover:text-[#329B38] border border-white/15 hover:border-[#329B38]/40 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
         >
           <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
         </button>
 
         {/* Carousel Slide Indicators */}
-        <div className="absolute bottom-7 right-4 md:right-8 z-20 flex items-center space-x-3 rtl:space-x-reverse bg-black/60 backdrop-blur-xl px-3 py-2 rounded-full border border-white/15 text-xs text-white shadow-xl">
+        <div className="absolute bottom-7 right-4 md:right-8 z-20 flex items-center space-x-3 rtl:space-x-reverse bg-black/60 backdrop-blur-xl px-3 py-2 rounded-full border border-white/10 text-xs text-white shadow-xl">
           <div className="flex items-center space-x-1.5 rtl:space-x-reverse">
             {EXPERIENCE_CAROUSEL_SLIDES.map((slide, idx) => (
               <button
@@ -303,8 +308,8 @@ export default function ExperiencesPage() {
                 aria-label={`Go to slide ${idx + 1}`}
                 className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
                   idx === currentSlideIndex
-                    ? "w-7 bg-[#91B58A] shadow-[0_0_10px_rgba(145,181,138,0.7)]"
-                    : "w-2 bg-white/40 hover:bg-white/70"
+                    ? "w-7 bg-[#329B38] shadow-sm"
+                    : "w-2 bg-white/30 hover:bg-white/60"
                 }`}
               />
             ))}
@@ -313,13 +318,13 @@ export default function ExperiencesPage() {
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
             aria-label={isAutoPlaying ? "Pause carousel auto-play" : "Start carousel auto-play"}
-            className="pl-1 text-gray-300 hover:text-[#91B58A] transition-colors cursor-pointer"
+            className="pl-1 text-gray-400 hover:text-[#329B38] transition-colors cursor-pointer"
             title={isAutoPlaying ? "Pause" : "Play"}
           >
             {isAutoPlaying ? (
               <Pause className="w-3.5 h-3.5" />
             ) : (
-              <Play className="w-3.5 h-3.5 text-[#91B58A]" />
+              <Play className="w-3.5 h-3.5 text-[#329B38]" />
             )}
           </button>
         </div>
@@ -327,10 +332,10 @@ export default function ExperiencesPage() {
         {/* Scroll Down Indicator */}
         <a 
           href="#experiences-section"
-          className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-1 text-white/70 hover:text-white transition-colors cursor-pointer"
+          className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-1 text-white/60 hover:text-white transition-colors cursor-pointer"
         >
-          <span className="text-[10px] tracking-widest uppercase font-medium drop-shadow">Scroll to Experiences</span>
-          <ChevronDown className="w-4 h-4 animate-bounce text-[#91B58A]" />
+          <span className="text-[10px] tracking-widest uppercase font-medium">Scroll to Experiences</span>
+          <ChevronDown className="w-4 h-4 animate-bounce text-[#329B38]" />
         </a>
       </section>
 
@@ -354,7 +359,7 @@ export default function ExperiencesPage() {
         
         {/* Editorial Header & Introduction */}
         <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 space-y-5">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/40 text-xs font-black uppercase tracking-widest">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-[#329B38]/12 text-[#0E6838] border border-[#329B38]/30 text-xs font-black uppercase tracking-widest">
             Unforgettable Sri Lanka
           </span>
 
@@ -366,7 +371,7 @@ export default function ExperiencesPage() {
             Sri Lanka is one of the most exotic getaways in the world. Surrounded by the azure Indian Ocean, this island paradise has contrasting landscapes, stretches of golden sandy beaches and a wealth of wildlife and culture to discover. It is home to 8 UNESCO World Heritage Sites, 15 national parks showcasing spectacular wildlife and nearly 500,000 acres of lush tea estates.
           </p>
 
-          <div className="w-24 h-1 bg-[#476A4C] mx-auto rounded-full mt-6" />
+          <div className="w-24 h-1 bg-[#329B38] mx-auto rounded-full mt-6" />
         </div>
 
         {/* 3-Column Experiences Grid (Matching Blue Lanka Tours structure without Read More button) */}
@@ -374,7 +379,7 @@ export default function ExperiencesPage() {
           {EXPERIENCES.map((exp) => (
             <div 
               key={exp.id}
-              className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_45px_rgba(71,106,76,0.14)] border border-gray-200/80 hover:border-[#91B58A]/60 transition-all duration-500 transform hover:-translate-y-2"
+              className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.06)] hover:shadow-xl border border-gray-200/80 hover:border-[#329B38]/40 transition-all duration-500 transform hover:-translate-y-2"
             >
               {/* Card Image Container (Top) */}
               <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-neutral-950">
@@ -392,12 +397,15 @@ export default function ExperiencesPage() {
                   className="pointer-events-none absolute inset-0 -translate-x-[140%] skew-x-[-25deg] bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-1000 ease-out group-hover:translate-x-[240%] z-20" 
                   aria-hidden="true"
                 />
+
+                {/* Soft Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity z-10" />
               </div>
 
               {/* Card Content (Bottom) - Centered text matching Blue Lanka Tours */}
               <div className="flex-1 p-7 sm:p-8 text-center flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
-                  <h3 className="font-serif text-2xl sm:text-[26px] font-bold text-[#172334] group-hover:text-[#476A4C] transition-colors leading-snug">
+                  <h3 className="font-serif text-2xl sm:text-[26px] font-bold text-[#172334] group-hover:text-[#0E6838] transition-colors leading-snug">
                     {exp.title}
                   </h3>
 
@@ -417,8 +425,8 @@ export default function ExperiencesPage() {
       {/* 6. Tailor-Made Private Journey Bespoke Callout */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 text-center max-w-3xl mx-auto shadow-sm space-y-6">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] text-xs font-bold uppercase tracking-wider border border-[#91B58A]/40">
-            <Compass className="w-4 h-4 text-[#476A4C]" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-emerald-50 text-[#0E6838] text-xs font-bold uppercase tracking-wider border border-emerald-200">
+            <Compass className="w-4 h-4 text-[#0E6838]" />
             <span>Tailor-Made Tour Experiences</span>
           </div>
 
@@ -427,7 +435,7 @@ export default function ExperiencesPage() {
           </h3>
 
           <p className="text-sm sm:text-base text-[#526173] max-w-xl mx-auto leading-relaxed">
-            Our bespoke travel specialists will seamlessly weave these authentic experiences, private chauffeur transfers, and 5-star boutique accommodations into a customized itinerary tailored specifically for you.
+            Our luxury travel specialists will seamlessly weave these authentic experiences, private chauffeur transfers, and 5-star boutique accommodations into a customized itinerary tailored specifically for you.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -435,7 +443,7 @@ export default function ExperiencesPage() {
               href={getWhatsAppLink("Hello 3C Ceylon Tours, I am interested in customizing an itinerary with authentic Sri Lanka experiences (Yoga, Ayurveda, Wildlife, Culture). Can you assist me?")}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-xs uppercase tracking-wider border border-[#91B58A]/40 flex items-center justify-center space-x-2 transition-all shadow-md hover:shadow-lg cursor-pointer"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#329B38] hover:bg-[#3CA647] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all shadow-md hover:shadow-lg cursor-pointer"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Inquire via WhatsApp</span>

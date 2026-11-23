@@ -31,12 +31,12 @@ export const CookieConsent: React.FC = () => {
         >
           <div className="relative overflow-hidden rounded-2xl bg-[#070B14]/95 backdrop-blur-xl border border-white/15 p-4 sm:p-5 shadow-[0_16px_50px_rgba(0,0,0,0.65)] text-white">
             {/* Subtle luxury ambient accent glow */}
-            <div className="absolute top-0 right-0 -mt-8 -mr-8 w-24 h-24 bg-[#91B58A]/15 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute top-0 right-0 -mt-8 -mr-8 w-24 h-24 bg-[#329B38]/10 rounded-full blur-2xl pointer-events-none" />
 
             {/* Header: Icon, Title & Close Button */}
             <div className="flex items-start justify-between gap-3">
               <div className="flex items-center space-x-2.5 rtl:space-x-reverse">
-                <div className="w-8 h-8 rounded-xl bg-[#91B58A]/20 border border-[#91B58A]/35 flex items-center justify-center flex-shrink-0 text-[#D97706]">
+                <div className="w-8 h-8 rounded-xl bg-[#329B38]/12 border border-[#329B38]/30 flex items-center justify-center flex-shrink-0 text-[#329B38]">
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
@@ -46,7 +46,7 @@ export const CookieConsent: React.FC = () => {
                   {consent && (
                     <span className="text-[10px] text-gray-400 font-medium block">
                       Current setting:{" "}
-                      <span className={consent === "accepted" ? "text-[#D97706]" : "text-gray-300 font-semibold"}>
+                      <span className={consent === "accepted" ? "text-[#329B38]" : "text-gray-300 font-semibold"}>
                         {consent === "accepted" ? "All Cookies Enabled" : "Optional Disabled"}
                       </span>
                     </span>
@@ -76,7 +76,7 @@ export const CookieConsent: React.FC = () => {
               <button
                 type="button"
                 onClick={openPrivacyModal}
-                className="text-[#D97706] hover:text-[#B85C00] underline font-medium hover:opacity-90 transition-colors focus:outline-none focus:ring-1 focus:ring-[#91B58A] rounded"
+                className="text-[#329B38] hover:text-[#3CA647] underline font-medium hover:opacity-90 transition-colors focus:outline-none focus:ring-1 focus:ring-[#329B38] rounded"
               >
                 Privacy Policy
               </button>
@@ -102,7 +102,7 @@ export const CookieConsent: React.FC = () => {
               <button
                 type="button"
                 onClick={acceptAll}
-                className="w-full px-3 py-2.5 rounded-xl bg-[#476A4C] hover:bg-[#38553C] text-white text-xs font-bold tracking-wide border border-[#91B58A]/40 transition-all duration-150 shadow-md active:scale-[0.98] text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#91B58A]"
+                className="w-full px-3 py-2.5 rounded-xl bg-[#329B38] hover:bg-[#3CA647] text-white text-xs font-bold tracking-wide transition-all duration-150 shadow-md hover:shadow-lg active:scale-[0.98] text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#329B38]"
               >
                 Accept All
               </button>
@@ -123,7 +123,7 @@ export const CookieConsent: React.FC = () => {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-white/10 pb-3">
               <div className="flex items-center space-x-2.5 rtl:space-x-reverse">
-                <div className="w-8 h-8 rounded-xl bg-[#91B58A]/20 border border-[#91B58A]/35 flex items-center justify-center text-[#D97706]">
+                <div className="w-8 h-8 rounded-xl bg-[#329B38]/12 border border-[#329B38]/30 flex items-center justify-center text-[#329B38]">
                   <Lock className="w-4 h-4" />
                 </div>
                 <h2 id="privacy-modal-title" className="font-sans text-lg font-bold text-white">
@@ -148,12 +148,12 @@ export const CookieConsent: React.FC = () => {
 
               <div className="bg-white/5 rounded-2xl p-3.5 border border-white/10 space-y-2">
                 <div className="flex items-center space-x-2 text-white font-semibold text-xs uppercase tracking-wider">
-                  <Cookie className="w-3.5 h-3.5 text-[#D97706]" />
+                  <Cookie className="w-3.5 h-3.5 text-[#329B38]" />
                   <span>How We Use Cookies &amp; Storage</span>
                 </div>
                 <ul className="space-y-1.5 pl-4 list-disc text-gray-300 text-xs">
                   <li>
-                    <strong className="text-white">Essential Preferences:</strong> We use local storage solely to store your chosen language (<code className="text-[#D97706] bg-black/40 px-1 py-0.5 rounded">3c_locale</code>) and your cookie consent status.
+                    <strong className="text-white">Essential Preferences:</strong> We use local storage solely to store your chosen language (<code className="text-[#329B38] bg-black/40 px-1 py-0.5 rounded">3c_locale</code>) and your cookie consent status.
                   </li>
                   <li>
                     <strong className="text-white">Third-Party Embeds:</strong> Interactive elements like Google Maps on our contact page are only activated if you accept optional services.
@@ -165,12 +165,12 @@ export const CookieConsent: React.FC = () => {
               </div>
 
               <p>
-                You can review or change your cookie choices at any time by clicking <span className="text-[#D97706] font-semibold">Cookie Settings</span> located in the footer of every page.
+                You can review or change your cookie choices at any time by clicking <span className="text-[#329B38] font-semibold">Cookie Settings</span> located in the footer of every page.
               </p>
 
               <p className="text-[11px] text-gray-400 pt-1">
                 For questions regarding your data or our bespoke tour arrangements, contact us at{" "}
-                <a href="mailto:info@3cceylontours.com" className="text-[#D97706] underline">
+                <a href="mailto:info@3cceylontours.com" className="text-[#329B38] underline">
                   info@3cceylontours.com
                 </a>.
               </p>

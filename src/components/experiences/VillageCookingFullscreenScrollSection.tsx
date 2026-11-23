@@ -80,8 +80,8 @@ export const VillageCookingFullscreenScrollSection: React.FC = () => {
     return (
       <section className="py-16 sm:py-20 bg-[#FAF8F2] text-[#172334] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/40 text-xs font-extrabold uppercase tracking-widest mb-3">
-            <Utensils className="w-3.5 h-3.5 text-[#476A4C]" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#329B38]/12 text-[#123B2A] border border-[#329B38]/30 text-xs font-extrabold uppercase tracking-widest mb-3">
+            <Utensils className="w-3.5 h-3.5 text-[#123B2A]" />
             <span>Authentic Culinary Heritage • Clay Pot Hearth</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#172334] mb-3">
@@ -121,8 +121,8 @@ export const VillageCookingFullscreenScrollSection: React.FC = () => {
           }}
           className="w-full max-w-4xl text-center px-4 mb-3 sm:mb-5 flex-shrink-0 pointer-events-none select-none z-10"
         >
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/40 text-xs font-extrabold uppercase tracking-widest mb-2 sm:mb-3 shadow-xs">
-            <Compass className="w-3.5 h-3.5 text-[#476A4C]" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#329B38]/12 text-[#123B2A] border border-[#329B38]/30 text-xs font-extrabold uppercase tracking-widest mb-2 sm:mb-3 shadow-xs">
+            <Compass className="w-3.5 h-3.5 text-[#123B2A]" />
             <span>Authentic Culinary Heritage • Clay Pot Hearth</span>
           </div>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#172334] tracking-tight leading-tight">
@@ -144,7 +144,7 @@ export const VillageCookingFullscreenScrollSection: React.FC = () => {
           }}
           className="relative overflow-hidden flex items-center justify-center bg-[#07130F] flex-shrink-0"
         >
-          {/* High-Definition Village Cooking Image - Natural vibrant photography without dark overlay */}
+          {/* High-Definition Village Cooking Image */}
           <Image
             src="/images/sri-lankan-village-cooking-workshop.png"
             alt="Sri Lankan Village Cooking Workshop - Traditional Clay Pot Culinary Experience"
@@ -155,6 +155,14 @@ export const VillageCookingFullscreenScrollSection: React.FC = () => {
             className="object-cover object-center select-none pointer-events-none"
           />
 
+          {/* Cinematic Vignette Overlay (Becomes prominent in Stage 3 for readability) */}
+          <motion.div
+            style={{
+              opacity: isMounted ? captionOpacity : 0,
+            }}
+            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 via-40% to-transparent pointer-events-none z-10"
+          />
+
           {/* Stage 3 Fullscreen Typography Overlay (Reveals smoothly at 80-100%) */}
           <motion.div
             style={{
@@ -163,7 +171,7 @@ export const VillageCookingFullscreenScrollSection: React.FC = () => {
             }}
             className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-28 left-6 sm:left-12 md:left-16 lg:left-20 z-20 max-w-3xl text-white pointer-events-none select-none pb-2"
           >
-            <h3 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight [text-shadow:_0_4px_30px_rgb(0_0_0_/_95%),_0_2px_12px_rgb(0_0_0_/_85%)] text-white leading-tight">
+            <h3 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.95)] text-white leading-tight">
               Sri Lankan Village Cooking Workshop.
             </h3>
           </motion.div>

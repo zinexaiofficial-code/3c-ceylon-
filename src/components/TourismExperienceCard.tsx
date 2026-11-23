@@ -21,7 +21,7 @@ export const TourismExperienceCard: React.FC<TourismExperienceCardProps> = ({
   name,
   image,
   link,
-  badgeColor = "#91B58A",
+  badgeColor = "#329B38",
   icon: IconComponent,
   className = "",
   priority = false,
@@ -35,13 +35,13 @@ export const TourismExperienceCard: React.FC<TourismExperienceCardProps> = ({
       style={{
         transitionDelay: `${index * 80}ms`,
       }}
-      className={`group relative block w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-[#91B58A]/60 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#91B58A] ${
+      className={`group relative block w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-[#329B38]/40 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#329B38] ${
         isVisible
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-12 scale-[0.96]"
       } ${className}`}
     >
-      {/* Background Image with Smooth 4% Hover Zoom - Natural vibrant photo with no dark filter */}
+      {/* Background Image with Smooth 4% Hover Zoom */}
       <Image
         src={image}
         alt={`Sri Lanka ${name}`}
@@ -58,25 +58,37 @@ export const TourismExperienceCard: React.FC<TourismExperienceCardProps> = ({
         aria-hidden="true"
       />
 
+      {/* Layer 1: Bottom Text Readability Vignette (Top 60% stays natural, bright & colorful) */}
+      <div 
+        className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 via-40% to-transparent transition-opacity duration-500 z-10" 
+        aria-hidden="true"
+      />
+
+      {/* Layer 2: Subtle Brand Glow on Hover */}
+      <div 
+        className="absolute inset-0 bg-gradient-to-t from-[#329B38]/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" 
+        aria-hidden="true"
+      />
+
       {/* Card Content (Bottom): Circular Category Icon + One Large Bold Title */}
       <div className="absolute bottom-5 sm:bottom-7 left-5 sm:left-7 right-5 sm:right-7 z-20 flex items-center justify-between">
         <div className="flex items-center space-x-3 sm:space-x-4">
           {/* Circular Category Icon Badge (Matching Sri Lanka Tourism Reference) */}
           <div 
             className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0 backdrop-blur-md border border-white/25 shadow-lg transition-transform duration-500 group-hover:scale-110"
-            style={{ backgroundColor: `${badgeColor}55`, borderColor: `${badgeColor}88` }}
+            style={{ backgroundColor: `${badgeColor}33`, borderColor: `${badgeColor}66` }}
           >
             <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow" />
           </div>
 
           {/* Category Title — ONLY ONE WORD (36-48px on Desktop, 24-32px on Mobile) */}
-          <h3 className="font-sans text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-extrabold uppercase tracking-tight text-white [text-shadow:_0_3px_20px_rgb(0_0_0_/_95%),_0_1px_5px_rgb(0_0_0_/_80%)] leading-none select-none group-hover:text-white transition-colors">
+          <h3 className="font-sans text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-extrabold uppercase tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] leading-none select-none group-hover:text-white transition-colors">
             {name}
           </h3>
         </div>
 
         {/* Micro Hover Arrow */}
-        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 flex-shrink-0 shadow-md">
+        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 flex-shrink-0">
           <ArrowUpRight className="w-5 h-5 text-white" />
         </div>
       </div>

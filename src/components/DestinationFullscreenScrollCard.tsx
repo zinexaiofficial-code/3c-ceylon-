@@ -90,8 +90,8 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
     return (
       <section className="py-16 sm:py-20 bg-[#FAF8F2] text-[#172334] overflow-hidden border-b border-gray-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/40 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-xs">
-            <Compass className="w-3.5 h-3.5 text-[#476A4C]" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#329B38]/12 text-[#123B2A] border border-[#329B38]/30 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-xs">
+            <Compass className="w-3.5 h-3.5 text-[#123B2A]" />
             <span>{destination.province} • Stay: {destination.idealStay}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#172334] mb-3">
@@ -111,17 +111,17 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 p-6 sm:p-8 rounded-2xl bg-black/60 backdrop-blur-md border border-white/15 flex flex-col justify-end text-white">
-            <div className="inline-flex items-center space-x-2 text-xs font-semibold text-[#D97706] mb-2">
-              <MapPin className="w-3.5 h-3.5 text-[#D97706]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 via-40% to-transparent p-6 sm:p-10 flex flex-col justify-end text-white">
+            <div className="inline-flex items-center space-x-2 text-xs font-semibold text-[#329B38] mb-2">
+              <MapPin className="w-3.5 h-3.5 text-[#329B38]" />
               <span>{destination.province} • {destination.weather.split("(")[0]}</span>
             </div>
             <h3 className="text-2xl sm:text-4xl font-extrabold mb-2">{destination.name}</h3>
-            <p className="text-xs sm:text-sm text-white/90 line-clamp-2 max-w-2xl mb-4">{destination.description}</p>
+            <p className="text-xs sm:text-sm text-white/85 line-clamp-2 max-w-2xl mb-4">{destination.description}</p>
             <div className="flex flex-wrap gap-3">
               <Link
                 href={`/destinations/${destination.slug}`}
-                className="px-6 py-3 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-xs uppercase tracking-wider flex items-center space-x-2 border border-[#91B58A]/40 shadow-lg transition-colors"
+                className="px-6 py-3 rounded-full bg-[#329B38] text-white font-extrabold text-xs uppercase tracking-wider flex items-center space-x-2 shadow-lg"
               >
                 <span>Explore Destination Guide</span>
                 <ArrowRight className="w-4 h-4" />
@@ -150,8 +150,8 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
           }}
           className="w-full max-w-4xl text-center px-4 mb-3 sm:mb-5 flex-shrink-0 pointer-events-none select-none z-10"
         >
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/40 text-xs font-extrabold uppercase tracking-widest mb-2 sm:mb-3 shadow-xs">
-            <Compass className="w-3.5 h-3.5 text-[#476A4C]" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#329B38]/12 text-[#123B2A] border border-[#329B38]/30 text-xs font-extrabold uppercase tracking-widest mb-2 sm:mb-3 shadow-xs">
+            <Compass className="w-3.5 h-3.5 text-[#123B2A]" />
             <span>{destination.province} • Stay: {destination.idealStay}</span>
           </div>
 
@@ -175,7 +175,7 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
           }}
           className="relative overflow-hidden flex items-center justify-center bg-[#07130F] flex-shrink-0"
         >
-          {/* Main Destination Photo - Natural brightness with no artificial darkening */}
+          {/* Main Destination Photo */}
           <Image
             src={destination.image}
             alt={`${destination.name} - 3C Ceylon Tours`}
@@ -184,6 +184,14 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
             quality={92}
             sizes="100vw"
             className="object-cover object-center select-none pointer-events-none"
+          />
+
+          {/* Cinematic Vignette Overlay (Becomes prominent in Stage 3 for readability) */}
+          <motion.div
+            style={{
+              opacity: isMounted ? captionOpacity : 0,
+            }}
+            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 via-40% to-transparent pointer-events-none z-10"
           />
 
           {/* Stage 3 Fullscreen Typography & CTA Overlay (Reveals smoothly at 74-86%) */}
@@ -195,13 +203,13 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
             className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-28 left-6 sm:left-12 md:left-16 lg:left-20 z-20 max-w-4xl text-white select-none pointer-events-auto pb-2"
           >
             {/* Province and Weather Pill */}
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-[#91B58A]/40 text-[#D97706] text-xs font-bold uppercase tracking-wider mb-3">
-              <MapPin className="w-3.5 h-3.5 text-[#D97706]" />
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-[#329B38]/30 text-[#329B38] text-xs font-bold uppercase tracking-wider mb-3">
+              <MapPin className="w-3.5 h-3.5 text-[#329B38]" />
               <span>{destination.province} • Stay: {destination.idealStay}</span>
             </div>
 
             {/* Bold Impact Title */}
-            <h3 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight [text-shadow:_0_4px_30px_rgb(0_0_0_/_95%),_0_2px_12px_rgb(0_0_0_/_85%)] text-white leading-tight mb-4">
+            <h3 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.95)] text-white leading-tight mb-4">
               {destination.name}
             </h3>
 
@@ -209,7 +217,7 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <Link
                 href={`/destinations/${destination.slug}`}
-                className="px-7 sm:px-9 py-3.5 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase border border-[#91B58A]/40 shadow-lg hover:shadow-[0_4px_30px_rgba(145,181,138,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
+                className="px-7 sm:px-9 py-3.5 rounded-full bg-[#329B38] hover:bg-[#3CA647] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
               >
                 <span>Explore Destination Guide</span>
                 <ArrowRight className="w-4 h-4" />
@@ -219,9 +227,9 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 sm:px-8 py-3.5 rounded-full bg-black/50 hover:bg-[#38553C] backdrop-blur-md text-white font-bold text-xs sm:text-sm tracking-wider border border-white/25 hover:border-[#91B58A]/60 shadow-md hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
+                className="px-6 sm:px-8 py-3.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold text-xs sm:text-sm tracking-wider border border-white/25 hover:border-white/50 shadow-md hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
               >
-                <MessageCircle className="w-4 h-4 text-[#D97706]" />
+                <MessageCircle className="w-4 h-4 text-[#329B38]" />
                 <span>Inquire on WhatsApp</span>
               </a>
             </div>

@@ -4,9 +4,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { TravelExperience } from "@/data/experiences";
-import { 
-  ArrowRight, 
-  Clock, 
+import {
+  ArrowRight,
+  Clock,
   CheckCircle2,
   Compass,
   Landmark,
@@ -39,11 +39,10 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
   const isLight = variant === "light";
 
   return (
-    <div className={`group rounded-3xl overflow-hidden transition-all duration-500 flex flex-col h-full transform hover:-translate-y-1.5 ${
-      isLight
-        ? "bg-white border border-gray-200/80 hover:border-[#91B58A]/60 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)]"
-        : "bg-[#060B14]/85 backdrop-blur-xl border border-white/10 hover:border-[#91B58A]/50 shadow-2xl hover:shadow-[0_10px_35px_rgba(71,106,76,0.14)]"
-    }`}>
+    <div className={`group rounded-3xl overflow-hidden transition-all duration-500 flex flex-col h-full transform hover:-translate-y-1.5 ${isLight
+      ? "bg-white border border-gray-200/80 hover:border-[#91B58A]/60 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)]"
+      : "bg-[#060B14]/85 backdrop-blur-xl border border-white/10 hover:border-[#91B58A]/50 shadow-2xl hover:shadow-[0_10px_35px_rgba(71,106,76,0.14)]"
+      }`}>
       {/* Visual Header */}
       <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-black">
         <Image
@@ -56,8 +55,8 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
         />
 
         {/* Shining Light Sweep Effect on Hover (Inspired by Into the Wild & Beyond) */}
-        <div 
-          className="pointer-events-none absolute inset-0 -translate-x-[140%] skew-x-[-25deg] bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-1000 ease-out group-hover:translate-x-[240%] z-20" 
+        <div
+          className="pointer-events-none absolute inset-0 -translate-x-[140%] skew-x-[-25deg] bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-1000 ease-out group-hover:translate-x-[240%] z-20"
           aria-hidden="true"
         />
 
@@ -83,27 +82,23 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
       {/* Card Body */}
       <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
         <div className="space-y-3">
-          <h3 className={`text-xl sm:text-2xl font-extrabold tracking-tight leading-snug transition-colors ${
-            isLight ? "text-[#172334] group-hover:text-[#476A4C]" : "text-white group-hover:text-[#D97706]"
-          }`}>
+          <h3 className={`text-xl sm:text-2xl font-extrabold tracking-tight leading-snug transition-colors ${isLight ? "text-[#172334] group-hover:text-[#476A4C]" : "text-white group-hover:text-[#D97706]"
+            }`}>
             {exp.title}
           </h3>
 
-          <p className={`text-xs sm:text-sm line-clamp-3 leading-relaxed font-normal ${
-            isLight ? "text-[#526173]" : "text-gray-300"
-          }`}>
+          <p className={`text-xs sm:text-sm line-clamp-3 leading-relaxed font-normal ${isLight ? "text-[#526173]" : "text-gray-300"
+            }`}>
             {exp.shortDesc}
           </p>
 
           {/* Top 3 Highlights */}
           <ul className={`space-y-1.5 pt-3 border-t ${isLight ? "border-gray-100" : "border-white/10"}`}>
             {exp.topHighlights.slice(0, 3).map((hl, i) => (
-              <li key={i} className={`flex items-start space-x-2 rtl:space-x-reverse text-xs ${
-                isLight ? "text-[#526173]" : "text-gray-300"
-              }`}>
-                <CheckCircle2 className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${
-                  isLight ? "text-[#476A4C]" : "text-[#D97706]"
-                }`} />
+              <li key={i} className={`flex items-start space-x-2 rtl:space-x-reverse text-xs ${isLight ? "text-[#526173]" : "text-gray-300"
+                }`}>
+                <CheckCircle2 className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${isLight ? "text-[#476A4C]" : "text-[#D97706]"
+                  }`} />
                 <span className="line-clamp-1">{hl}</span>
               </li>
             ))}
@@ -114,9 +109,8 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
         <div className={`pt-3 border-t flex items-center justify-between ${isLight ? "border-gray-100" : "border-white/10"}`}>
           <Link
             href={`/packages/${exp.featuredPackageSlug}`}
-            className={`text-xs font-bold flex items-center space-x-1.5 transition-colors ${
-              isLight ? "text-[#476A4C] hover:text-[#D97706]" : "text-gray-300 hover:text-[#D97706]"
-            }`}
+            className={`text-xs font-bold flex items-center space-x-1.5 transition-colors ${isLight ? "text-[#476A4C] hover:text-[#D97706]" : "text-gray-300 hover:text-[#D97706]"
+              }`}
           >
             <span>Explore Related Tour</span>
             <ArrowRight className="w-3.5 h-3.5 text-[#D97706]" />
@@ -126,8 +120,8 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
             href={`/contact?experience=${encodeURIComponent(exp.title)}`}
             className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
               isLight
-                ? "bg-gray-100 hover:bg-[#476A4C] text-[#476A4C] hover:text-white border border-gray-200"
-                : "bg-[#91B58A]/20 hover:bg-[#476A4C] text-[#D97706] hover:text-white border border-[#91B58A]/30"
+                ? "bg-gray-100 hover:bg-[#329B38] text-[#123B2A] hover:text-white border border-gray-200"
+                : "bg-[#329B38]/10 hover:bg-[#329B38] text-[#329B38] hover:text-white border border-[#329B38]/30"
             }`}
           >
             Inquire

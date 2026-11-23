@@ -196,7 +196,7 @@ export default function DestinationsPage() {
           1. FULL-HEIGHT CINEMATIC CAROUSEL (Identical Home Page Format)
           - Height: min-h-[92vh] md:min-h-screen
           - Color pattern: Natural vibrant photo with subtle multi-layer vignette
-          - Hero Typography: Bold Impact with #91B58A highlight
+          - Hero Typography: Bold Impact with #329B38 highlight
           - Primary image: Golden Sunset Over Sigiriya Rock
          ───────────────────────────────────────────────────────────── */}
       <section 
@@ -208,7 +208,7 @@ export default function DestinationsPage() {
         aria-roledescription="carousel"
         aria-label="3C Ceylon Tours Featured Destinations"
       >
-        {/* Background Images Carousel Stack - Natural Vibrant Brightness with NO Dark Overlays */}
+        {/* Background Images Carousel Stack */}
         <div className="absolute inset-0 z-0">
           {DESTINATION_CAROUSEL_SLIDES.map((slide, index) => {
             const isMounted = mountedSlides.includes(index);
@@ -227,7 +227,7 @@ export default function DestinationsPage() {
                   alt={slide.alt}
                   fill
                   priority={index === 0}
-                  quality={90}
+                  quality={88}
                   sizes="100vw"
                   className={`object-cover object-center transition-transform duration-[7000ms] ease-out ${
                     isActive ? "scale-105" : "scale-100"
@@ -236,32 +236,41 @@ export default function DestinationsPage() {
               </div>
             );
           })}
+
+          {/* Home Page Matching Multi-Layer Natural Readability Overlay */}
+          {/* Top Vignette: Ensures navbar labels and logo are razor-sharp */}
+          <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-black/85 via-black/40 to-transparent z-10 pointer-events-none" />
+
+          {/* Center Vignette: Soft radial gradient preserving photo vibrancy without over-darkening */}
+          <div 
+            className="absolute inset-0 z-10 pointer-events-none" 
+            style={{
+              background: "radial-gradient(ellipse at center, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.28) 55%, rgba(0,0,0,0.12) 100%)"
+            }}
+          />
+
+          {/* Subtle Bottom Gradient for Clean Transition */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent z-10 pointer-events-none" />
         </div>
 
         {/* Main Content Container */}
         <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 md:pt-32 pb-24">
-          {/* Subtle Localized Text Contrast Backdrop — Preserves 100% natural photo brightness across the rest of the image */}
-          <div 
-            className="absolute inset-x-2 sm:inset-x-8 top-12 bottom-12 -z-10 bg-black/35 backdrop-blur-[1.5px] rounded-3xl pointer-events-none" 
-            aria-hidden="true" 
-          />
           
           {/* Tagline Badge */}
           <div 
             key={`badge-${currentSlideIndex}`}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-[#91B58A]/50 text-white text-xs font-bold uppercase tracking-widest mb-6 shadow-lg animate-fade-in transition-all duration-500"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-[#329B38]/30 text-[#329B38] text-xs font-bold uppercase tracking-widest mb-6 shadow-sm animate-fade-in transition-all duration-500"
           >
-            <span className="w-2 h-2 rounded-full bg-[#91B58A] inline-block mr-2" />
-            <span className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">{currentSlide.tagline}</span>
+            <span className="text-white drop-shadow">{currentSlide.tagline}</span>
           </div>
 
           {/* Master Headline - Home Page Style Bold Impact */}
           <h1 
             key={`headline-${currentSlideIndex}`}
-            className="font-sans text-[42px] sm:text-[58px] md:text-[72px] lg:text-[88px] xl:text-[96px] font-black text-white tracking-tight leading-[1.02] mb-6 [text-shadow:_0_2px_10px_rgba(0,0,0,0.95),_0_4px_30px_rgba(0,0,0,0.9),_0_1px_3px_rgba(0,0,0,1)] animate-fade-in transition-all duration-700 select-none"
+            className="font-sans text-[42px] sm:text-[58px] md:text-[72px] lg:text-[88px] xl:text-[96px] font-black text-white tracking-tight leading-[1.02] mb-6 drop-shadow-[0_4px_28px_rgba(0,0,0,0.98)] animate-fade-in transition-all duration-700 select-none"
           >
             {currentSlide.titlePrefix}
-            <span className="text-[#91B58A] [text-shadow:_0_2px_12px_rgba(0,0,0,0.98),_0_4px_32px_rgba(0,0,0,0.95),_0_1px_3px_rgba(0,0,0,1)]">
+            <span className="text-[#329B38]">
               {currentSlide.titleHighlight}
             </span>
           </h1>
@@ -269,7 +278,7 @@ export default function DestinationsPage() {
           {/* Subtitle - Short & Powerful */}
           <p 
             key={`sub-${currentSlideIndex}`}
-            className="max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl text-[#F6F3E9] font-medium leading-relaxed mb-10 [text-shadow:_0_2px_16px_rgba(0,0,0,0.95),_0_1px_4px_rgba(0,0,0,0.9)] animate-fade-in transition-all duration-700"
+            className="max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl text-white font-medium leading-relaxed mb-10 drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] animate-fade-in transition-all duration-700"
           >
             {currentSlide.subtitle}
           </p>
@@ -278,7 +287,7 @@ export default function DestinationsPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
             <a
               href="#destinations-grid"
-              className="w-full sm:w-auto px-9 py-4 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-sm sm:text-base tracking-wider uppercase border border-[#91B58A]/40 shadow-[0_4px_25px_rgba(71,106,76,0.5)] hover:shadow-[0_4px_30px_rgba(145,181,138,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2.5 rtl:space-x-reverse cursor-pointer"
+              className="w-full sm:w-auto px-9 py-4 rounded-full bg-[#329B38] hover:bg-[#3CA647] text-white font-extrabold text-sm sm:text-base tracking-wider uppercase shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2.5 rtl:space-x-reverse cursor-pointer"
             >
               <span>Explore All Destinations</span>
               <ArrowRight className="w-4 h-4" />
@@ -286,7 +295,7 @@ export default function DestinationsPage() {
 
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-9 py-4 rounded-full bg-black/50 backdrop-blur-md hover:bg-black/75 text-white font-bold text-sm sm:text-base tracking-wider border border-white/30 hover:border-[#91B58A] shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse"
+              className="w-full sm:w-auto px-9 py-4 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-bold text-sm sm:text-base tracking-wider border border-white/25 hover:border-white/50 shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse"
             >
               <span>Plan Bespoke Route</span>
             </Link>
@@ -294,18 +303,18 @@ export default function DestinationsPage() {
 
           {/* Trust Badges — High-Contrast Frosted Glass Luxury Pills */}
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-2xl mx-auto pt-6 border-t border-white/20">
-            <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <Compass className="w-4 h-4 text-[#91B58A] flex-shrink-0" />
+            <div className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
+              <Compass className="w-4 h-4 text-[#329B38] flex-shrink-0" />
               <span className="tracking-wide">100% Private &amp; Bespoke</span>
             </div>
 
-            <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <ShieldCheck className="w-4 h-4 text-[#91B58A] flex-shrink-0" />
+            <div className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
+              <ShieldCheck className="w-4 h-4 text-[#329B38] flex-shrink-0" />
               <span className="tracking-wide">SLTDA Certified</span>
             </div>
 
-            <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <Star className="w-4 h-4 text-[#91B58A] fill-[#91B58A] flex-shrink-0" />
+            <div className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
+              <Star className="w-4 h-4 text-[#329B38] fill-[#329B38] flex-shrink-0" />
               <span className="tracking-wide">5-Star Chauffeurs</span>
             </div>
           </div>
@@ -315,7 +324,7 @@ export default function DestinationsPage() {
         <button
           onClick={prevSlide}
           aria-label="Previous Slide"
-          className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/90 hover:text-[#91B58A] border border-white/20 hover:border-[#91B58A]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
+          className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/80 hover:text-[#329B38] border border-white/15 hover:border-[#329B38]/40 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
         >
           <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
         </button>
@@ -323,13 +332,13 @@ export default function DestinationsPage() {
         <button
           onClick={nextSlide}
           aria-label="Next Slide"
-          className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/90 hover:text-[#91B58A] border border-white/20 hover:border-[#91B58A]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
+          className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/80 hover:text-[#329B38] border border-white/15 hover:border-[#329B38]/40 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
         >
           <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
         </button>
 
         {/* Carousel Slide Indicators & Auto-Play Controls (Bottom Right) */}
-        <div className="absolute bottom-7 right-4 md:right-8 z-20 flex items-center space-x-3 rtl:space-x-reverse bg-black/60 backdrop-blur-xl px-3 py-2 rounded-full border border-white/15 text-xs text-white shadow-xl">
+        <div className="absolute bottom-7 right-4 md:right-8 z-20 flex items-center space-x-3 rtl:space-x-reverse bg-black/60 backdrop-blur-xl px-3 py-2 rounded-full border border-white/10 text-xs text-white shadow-xl">
           {/* Slide Dots / Pill Bars */}
           <div className="flex items-center space-x-1.5 rtl:space-x-reverse">
             {DESTINATION_CAROUSEL_SLIDES.map((slide, idx) => (
@@ -339,8 +348,8 @@ export default function DestinationsPage() {
                 aria-label={`Go to slide ${idx + 1}`}
                 className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
                   idx === currentSlideIndex
-                    ? "w-7 bg-[#91B58A] shadow-[0_0_10px_rgba(145,181,138,0.7)]"
-                    : "w-2 bg-white/40 hover:bg-white/70"
+                    ? "w-7 bg-[#329B38] shadow-sm"
+                    : "w-2 bg-white/30 hover:bg-white/60"
                 }`}
               />
             ))}
@@ -350,13 +359,13 @@ export default function DestinationsPage() {
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
             aria-label={isAutoPlaying ? "Pause carousel auto-play" : "Start carousel auto-play"}
-            className="pl-1 text-gray-300 hover:text-[#91B58A] transition-colors cursor-pointer"
+            className="pl-1 text-gray-400 hover:text-[#329B38] transition-colors cursor-pointer"
             title={isAutoPlaying ? "Pause" : "Play"}
           >
             {isAutoPlaying ? (
               <Pause className="w-3.5 h-3.5" />
             ) : (
-              <Play className="w-3.5 h-3.5 text-[#91B58A]" />
+              <Play className="w-3.5 h-3.5 text-[#329B38]" />
             )}
           </button>
         </div>
@@ -364,10 +373,10 @@ export default function DestinationsPage() {
         {/* Scroll Down Indicator */}
         <a 
           href="#movable-destinations"
-          className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-1 text-white/70 hover:text-white transition-colors cursor-pointer"
+          className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-1 text-white/60 hover:text-white transition-colors cursor-pointer"
         >
-          <span className="text-[10px] tracking-widest uppercase font-medium drop-shadow">Scroll to Destinations</span>
-          <ChevronDown className="w-4 h-4 animate-bounce text-[#91B58A]" />
+          <span className="text-[10px] tracking-widest uppercase font-medium">Scroll to Destinations</span>
+          <ChevronDown className="w-4 h-4 animate-bounce text-[#329B38]" />
         </a>
       </section>
 
@@ -391,7 +400,7 @@ export default function DestinationsPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search destinations (Sigiriya, Galle, Ella, Yala)..."
-                className="w-full pl-10 pr-4 py-3 rounded-full bg-gray-50 border border-gray-200 text-xs sm:text-sm text-[#172334] placeholder-gray-400 focus:outline-none focus:border-[#91B58A] focus:ring-1 focus:ring-[#91B58A] transition-all"
+                className="w-full pl-10 pr-4 py-3 rounded-full bg-gray-50 border border-gray-200 text-xs sm:text-sm text-[#172334] placeholder-gray-400 focus:outline-none focus:border-[#329B38] focus:ring-1 focus:ring-[#329B38] transition-all"
               />
             </div>
 
@@ -399,7 +408,7 @@ export default function DestinationsPage() {
             <div className="flex flex-wrap items-center gap-3 w-full lg:w-auto">
               {/* Region / Province filter */}
               <div className="flex items-center space-x-2 rtl:space-x-reverse bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200">
-                <SlidersHorizontal className="w-3.5 h-3.5 text-[#476A4C]" />
+                <SlidersHorizontal className="w-3.5 h-3.5 text-[#0E6838]" />
                 <select
                   value={selectedProvince}
                   onChange={(e) => setSelectedProvince(e.target.value)}
@@ -432,7 +441,7 @@ export default function DestinationsPage() {
 
           <div className="flex items-center justify-between text-xs text-[#526173] border-t border-gray-100 pt-3">
             <span>Showing <strong className="text-[#172334] font-bold">{filteredDestinations.length}</strong> premier Sri Lankan destinations</span>
-            <span className="text-[#476A4C] font-bold hidden sm:inline">100% Private Dedicated Chauffeur &amp; VIP Tailor-Made Itineraries</span>
+            <span className="text-[#0E6838] font-bold hidden sm:inline">100% Private Luxury Chauffeur &amp; VIP Tailor-Made Itineraries</span>
           </div>
         </div>
       </div>
@@ -450,7 +459,7 @@ export default function DestinationsPage() {
         ) : (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20">
             <div className="bg-white rounded-3xl p-12 text-center border border-gray-200 max-w-xl mx-auto space-y-4 shadow-sm">
-              <Compass className="w-12 h-12 text-[#476A4C] mx-auto animate-spin-slow" />
+              <Compass className="w-12 h-12 text-[#329B38] mx-auto animate-spin-slow" />
               <h3 className="font-sans text-2xl font-extrabold text-[#172334] tracking-tight">No Destinations Found</h3>
               <p className="text-sm text-[#526173] leading-relaxed font-normal">
                 We cover all 9 provinces and hidden gems across Sri Lanka! Let us tailor-make your dream route.
@@ -464,7 +473,7 @@ export default function DestinationsPage() {
                 </button>
                 <Link
                   href="/contact"
-                  className="px-6 py-2.5 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white text-xs font-extrabold uppercase tracking-wider border border-[#91B58A]/40 transition-all shadow-md"
+                  className="px-6 py-2.5 rounded-full bg-[#329B38] hover:bg-[#3CA647] text-white text-xs font-extrabold uppercase tracking-wider transition-all shadow-md"
                 >
                   Plan a Custom Tour
                 </Link>

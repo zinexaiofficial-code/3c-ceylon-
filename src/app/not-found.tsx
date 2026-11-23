@@ -6,11 +6,11 @@ export default function NotFound() {
   return (
     <div className="min-h-[80vh] flex items-center justify-center bg-transparent px-4 py-24 relative z-10 text-white">
       <div className="max-w-md w-full bg-white/[0.04] backdrop-blur-2xl rounded-3xl p-8 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-white/15 text-center space-y-6">
-        <div className="w-16 h-16 rounded-full bg-[#91B58A]/20 border border-[#91B58A]/40 text-[#91B58A] flex items-center justify-center mx-auto shadow-sm">
-          <Compass className="w-8 h-8 text-[#91B58A] animate-spin-slow" />
+        <div className="w-16 h-16 rounded-full bg-[#329B38]/10 border border-[#329B38]/30 text-[#329B38] flex items-center justify-center mx-auto shadow-sm">
+          <Compass className="w-8 h-8 text-[#329B38] animate-spin-slow" />
         </div>
 
-        <span className="text-xs uppercase font-bold tracking-widest text-[#D97706] block">
+        <span className="text-xs uppercase font-bold tracking-widest text-[#329B38] block">
           404 — Page Not Found
         </span>
 
@@ -27,13 +27,13 @@ export default function NotFound() {
             href="/"
             className="w-full sm:w-auto px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-colors"
           >
-            <Home className="w-4 h-4 text-[#D97706]" />
+            <Home className="w-4 h-4 text-[#329B38]" />
             <span>Return to Home</span>
           </Link>
 
           <Link
             href="/packages"
-            className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-bold text-xs uppercase tracking-wider border border-[#91B58A]/40 flex items-center justify-center space-x-2 transition-all shadow-md"
+            className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#329B38] hover:bg-[#3CA647] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all shadow-sm"
           >
             <span>Explore Tours</span>
             <ArrowRight className="w-4 h-4" />

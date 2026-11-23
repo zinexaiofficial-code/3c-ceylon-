@@ -51,7 +51,7 @@ export const SigiriyaParallaxSection: React.FC = () => {
       // When section leaves top: rect.bottom = 0 -> progress ~ 1
       const sectionHeight = rect.height;
       const progress = (viewportHeight - rect.top) / (viewportHeight + sectionHeight);
-      
+
       // Clamp between 0 and 1
       const clampedProgress = Math.max(0, Math.min(1, progress));
       setOffsetY(clampedProgress);
@@ -108,7 +108,7 @@ export const SigiriyaParallaxSection: React.FC = () => {
         {/* Soft atmospheric gradient layers (preserves natural vibrant colors of rock & sky) */}
         {/* Top vignette to blend smoothly from preceding section */}
         <div className="absolute top-0 inset-x-0 h-36 bg-gradient-to-b from-[#FAF8F2] via-[#FAF8F2]/40 to-transparent" />
-        
+
         {/* Bottom vignette to transition into next section */}
         <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#071323] via-[#071323]/50 to-transparent" />
       </div>
@@ -141,14 +141,14 @@ export const SigiriyaParallaxSection: React.FC = () => {
       <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
         <div className="max-w-2xl lg:max-w-xl space-y-6">
           {/* Section Pill Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/20 text-[#D97706] text-xs font-extrabold uppercase tracking-widest shadow-lg">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#329B38] text-xs font-extrabold uppercase tracking-widest shadow-lg">
             <span className="text-white">Living Ceylon Heritage</span>
           </div>
 
           {/* Heading */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08] [text-shadow:_0_3px_18px_rgba(0,0,0,0.95)]">
             Experience Sri Lanka{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#91B58A] to-[#D97706] [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)]">
+            <span className="text-[#329B38]">
               Beyond the Ordinary.
             </span>
           </h2>
@@ -165,9 +165,9 @@ export const SigiriyaParallaxSection: React.FC = () => {
 
           {/* Luxury Feature Badges */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 max-w-lg">
-            <div className="p-4 rounded-2xl bg-black/50 backdrop-blur-md border border-white/15 flex items-center space-x-3 shadow-lg">
-              <div className="w-9 h-9 rounded-full bg-[#91B58A]/20 flex items-center justify-center flex-shrink-0 border border-[#91B58A]/40">
-                <ShieldCheck className="w-5 h-5 text-[#D97706]" />
+            <div className="p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/15 flex items-center space-x-3 shadow-lg">
+              <div className="w-9 h-9 rounded-full bg-[#329B38]/12 flex items-center justify-center flex-shrink-0 border border-[#329B38]/30">
+                <ShieldCheck className="w-5 h-5 text-[#329B38]" />
               </div>
               <div>
                 <h4 className="font-bold text-sm text-white">100% Private Journeys</h4>
@@ -175,9 +175,9 @@ export const SigiriyaParallaxSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="p-4 rounded-2xl bg-black/50 backdrop-blur-md border border-white/15 flex items-center space-x-3 shadow-lg">
-              <div className="w-9 h-9 rounded-full bg-[#91B58A]/20 flex items-center justify-center flex-shrink-0 border border-[#91B58A]/40">
-                <Compass className="w-5 h-5 text-[#D97706]" />
+            <div className="p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/15 flex items-center space-x-3 shadow-lg">
+              <div className="w-9 h-9 rounded-full bg-[#329B38]/12 flex items-center justify-center flex-shrink-0 border border-[#329B38]/30">
+                <Compass className="w-5 h-5 text-[#329B38]" />
               </div>
               <div>
                 <h4 className="font-bold text-sm text-white">Chauffeur-Guides</h4>
@@ -190,7 +190,7 @@ export const SigiriyaParallaxSection: React.FC = () => {
           <div className="pt-4 flex flex-wrap items-center gap-4">
             <Link
               href="/packages"
-              className="px-8 py-4 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-xs uppercase tracking-wider border border-[#91B58A]/40 shadow-md hover:shadow-lg transition-all inline-flex items-center space-x-2.5 transform hover:-translate-y-0.5"
+              className="px-8 py-4 rounded-full bg-[#329B38] hover:bg-[#3CA647] text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all inline-flex items-center space-x-2.5 transform hover:-translate-y-0.5"
             >
               <span>Explore Tour Packages</span>
               <ArrowRight className="w-4 h-4" />
@@ -202,7 +202,7 @@ export const SigiriyaParallaxSection: React.FC = () => {
               rel="noopener noreferrer"
               className="px-7 py-4 rounded-full bg-black/40 hover:bg-[#476A4C] backdrop-blur-md text-white font-extrabold text-xs uppercase tracking-wider border border-white/25 hover:border-[#D97706]/40 transition-all inline-flex items-center space-x-2"
             >
-              <MessageCircle className="w-4 h-4 text-[#D97706]" />
+              <MessageCircle className="w-4 h-4 text-[#329B38]" />
               <span>Ask via WhatsApp</span>
             </a>
           </div>

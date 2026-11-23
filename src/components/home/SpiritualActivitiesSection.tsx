@@ -3,15 +3,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Heart, 
-  Sun, 
-  Flower2, 
-  Waves, 
-  Landmark, 
+import {
+  Heart,
+  Sun,
+  Flower2,
+  Waves,
+  Landmark,
   Sparkles,
-  ArrowUpRight, 
-  ArrowRight 
+  ArrowUpRight,
+  ArrowRight
 } from "lucide-react";
 
 interface SpiritualActivityItem {
@@ -135,11 +135,10 @@ export const SpiritualActivitiesSection: React.FC = () => {
                 style={{
                   transitionDelay: `${index * 85}ms`,
                 }}
-                className={`group relative block w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-200/80 hover:border-[#91B58A]/60 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#91B58A] ${
-                  isVisible
+                className={`group relative block w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-200/80 hover:border-[#91B58A]/60 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#91B58A] ${isVisible
                     ? "opacity-100 translate-y-0 scale-100"
                     : "opacity-0 translate-y-12 scale-[0.96]"
-                } ${act.gridSpan}`}
+                  } ${act.gridSpan}`}
               >
                 {/* Background Image with Smooth 4% Hover Zoom - Natural brightness without artificial darkening */}
                 <Image

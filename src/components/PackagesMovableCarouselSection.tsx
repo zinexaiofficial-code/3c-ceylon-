@@ -31,8 +31,8 @@ export const PackagesMovableCarouselSection: React.FC = () => {
         {/* Header Section matching Our Journey Categories format */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/40 text-[11px] font-extrabold uppercase tracking-widest mb-2 shadow-sm">
-              <Compass className="w-3.5 h-3.5 text-[#476A4C]" />
+            <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#329B38]/12 text-[#123B2A] border border-[#329B38]/30 text-[11px] font-extrabold uppercase tracking-widest mb-2 shadow-sm">
+              <Compass className="w-3.5 h-3.5 text-[#123B2A]" />
               <span>Explore All Handcrafted Journeys</span>
             </div>
 
@@ -51,14 +51,14 @@ export const PackagesMovableCarouselSection: React.FC = () => {
               <button
                 onClick={() => handleScroll("left")}
                 aria-label="Previous packages"
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#91B58A] text-[#172334] hover:text-[#476A4C] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#329B38] text-[#172334] hover:text-[#0E6838] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={() => handleScroll("right")}
                 aria-label="Next packages"
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#91B58A] text-[#172334] hover:text-[#476A4C] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#329B38] text-[#172334] hover:text-[#0E6838] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -66,10 +66,10 @@ export const PackagesMovableCarouselSection: React.FC = () => {
 
             <a
               href="#packages-grid"
-              className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#172334] hover:bg-[#38553C] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer"
+              className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#172334] hover:bg-[#123B2A] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer"
             >
               <span>Filter Packages</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#D97706]" />
+              <ArrowRight className="w-3.5 h-3.5 text-[#329B38]" />
             </a>
           </div>
         </div>
@@ -111,7 +111,7 @@ export const PackagesMovableCarouselSection: React.FC = () => {
                     {isTop && (
                       <div className="min-h-[52px] flex items-end mb-2.5 px-1">
                         <div>
-                          <h3 className="font-sans text-base sm:text-lg font-bold text-[#172334] group-hover:text-[#476A4C] transition-colors leading-snug line-clamp-1">
+                          <h3 className="font-sans text-base sm:text-lg font-bold text-[#172334] group-hover:text-[#0E6838] transition-colors leading-snug line-clamp-1">
                             {pkg.title}
                           </h3>
                           <p className="text-xs text-[#526173] font-medium line-clamp-1 mt-0.5">
@@ -134,8 +134,8 @@ export const PackagesMovableCarouselSection: React.FC = () => {
 
                       {/* Top Badges (Duration & Travel Style) */}
                       <div className="absolute top-3.5 left-3.5 right-3.5 z-10 flex items-center justify-between pointer-events-none">
-                        <span className="px-3 py-1 rounded-full bg-black/75 backdrop-blur-md text-white border border-white/20 text-[11px] font-extrabold tracking-wide shadow-md flex items-center space-x-1">
-                          <Clock className="w-3 h-3 text-[#D97706]" />
+                        <span className="px-3 py-1 rounded-full bg-black/75 backdrop-blur-md text-[#329B38] border border-[#329B38]/30 text-[11px] font-extrabold tracking-wide shadow-md flex items-center space-x-1">
+                          <Clock className="w-3 h-3 text-[#329B38]" />
                           <span>{pkg.durationNights}N / {pkg.durationDays}D</span>
                         </span>
 
@@ -147,14 +147,14 @@ export const PackagesMovableCarouselSection: React.FC = () => {
                       {/* Bottom Destinations Floating Pill - Clean, crisp, no dark gradient veil covering photo */}
                       <div className="absolute bottom-3 left-3 right-3 z-10 pointer-events-none flex items-center">
                         <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-black/75 backdrop-blur-sm text-white/95 text-[10px] sm:text-[11px] font-semibold border border-white/15 shadow-md truncate max-w-full">
-                          <MapPin className="w-3 h-3 text-[#D97706] flex-shrink-0" />
+                          <MapPin className="w-3 h-3 text-[#329B38] flex-shrink-0" />
                           <span className="truncate">{pkg.destinationsCovered.slice(0, 4).join(" • ")}{pkg.destinationsCovered.length > 4 ? " +" : ""}</span>
                         </span>
                       </div>
 
-                      {/* Interactive Hover CTA Pill - Photo stays 100% naturally bright */}
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 z-20 pointer-events-none">
-                        <span className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-sans font-extrabold text-xs uppercase tracking-wider border border-[#91B58A]/40 shadow-2xl transform scale-95 group-hover:scale-100 transition-transform duration-300">
+                      {/* Interactive Hover CTA Pill - Subtle accent, photo stays 100% visible */}
+                      <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 z-20 pointer-events-none">
+                        <span className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#329B38] text-white font-sans font-extrabold text-xs uppercase tracking-wider shadow-2xl transform scale-95 group-hover:scale-100 transition-transform duration-300">
                           <span>View Itinerary</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </span>
@@ -165,7 +165,7 @@ export const PackagesMovableCarouselSection: React.FC = () => {
                     {!isTop && (
                       <div className="min-h-[52px] flex items-start mt-2.5 px-1">
                         <div>
-                          <h3 className="font-sans text-base sm:text-lg font-bold text-[#172334] group-hover:text-[#476A4C] transition-colors leading-snug line-clamp-1">
+                          <h3 className="font-sans text-base sm:text-lg font-bold text-[#172334] group-hover:text-[#0E6838] transition-colors leading-snug line-clamp-1">
                             {pkg.title}
                           </h3>
                           <p className="text-xs text-[#526173] font-medium line-clamp-1 mt-0.5">

@@ -230,9 +230,8 @@ export const WhyExploreSriLanka: React.FC = () => {
                     handlePanelClick(idx);
                   }
                 }}
-                className={`relative flex-1 h-full cursor-pointer select-none border-r-[3px] last:border-r-0 border-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#91B58A] ${
-                  isFlipped ? "z-20" : "z-10"
-                }`}
+                className={`relative flex-1 h-full cursor-pointer select-none border-r-[3px] last:border-r-0 border-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#91B58A] ${isFlipped ? "z-20" : "z-10"
+                  }`}
                 style={{
                   perspective: "1200px",
                   WebkitPerspective: "1200px",
@@ -390,11 +389,10 @@ export const WhyExploreSriLanka: React.FC = () => {
                 key={panel.id}
                 onClick={() => handlePanelClick(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  activeFlippedIndex === idx
+                className={`h-2 rounded-full transition-all duration-300 ${activeFlippedIndex === idx
                     ? "w-8 bg-[#476A4C]"
                     : "w-2 bg-gray-300 hover:bg-gray-400"
-                }`}
+                  }`}
               />
             ))}
           </div>
