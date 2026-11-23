@@ -109,6 +109,9 @@ export const SigiriyaParallaxSection: React.FC = () => {
         {/* Top vignette to blend smoothly from preceding section */}
         <div className="absolute top-0 inset-x-0 h-36 bg-gradient-to-b from-[#FAF8F2] via-[#FAF8F2]/40 to-transparent" />
 
+        {/* Cinematic dark readability scrim behind text (rich dark on text side, transparent toward couple) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/55 to-black/30 md:bg-gradient-to-r md:from-black/85 md:via-black/60 md:to-transparent" />
+
         {/* Bottom vignette to transition into next section */}
         <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#071323] via-[#071323]/50 to-transparent" />
       </div>
@@ -141,25 +144,25 @@ export const SigiriyaParallaxSection: React.FC = () => {
       <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
         <div className="max-w-2xl lg:max-w-xl space-y-6">
           {/* Section Pill Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#329B38] text-xs font-extrabold uppercase tracking-widest shadow-lg">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-[#48C757] text-xs font-extrabold uppercase tracking-widest shadow-lg">
             <span className="text-white">Living Ceylon Heritage</span>
           </div>
 
           {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08] [text-shadow:_0_3px_18px_rgba(0,0,0,0.95)]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08] [text-shadow:_0_3px_18px_rgba(0,0,0,0.95),_0_1px_4px_rgba(0,0,0,1)]">
             Experience Sri Lanka{" "}
-            <span className="text-[#329B38]">
+            <span className="text-[#48C757] [text-shadow:_0_2px_14px_rgba(0,0,0,0.95),_0_1px_3px_rgba(0,0,0,1)]">
               Beyond the Ordinary.
             </span>
           </h2>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-100 tracking-tight leading-snug [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">
+          <p className="text-lg sm:text-xl lg:text-2xl font-bold text-white tracking-tight leading-snug [text-shadow:_0_2px_10px_rgba(0,0,0,0.95)]">
             Where timeless landscapes and unforgettable journeys come together.
           </p>
 
           {/* Short Narrative */}
-          <p className="text-sm sm:text-base text-gray-200 leading-relaxed font-normal max-w-lg [text-shadow:_0_1px_6px_rgba(0,0,0,0.9)]">
+          <p className="text-sm sm:text-base text-gray-100 leading-relaxed font-normal max-w-lg [text-shadow:_0_1px_8px_rgba(0,0,0,0.95)]">
             Stand in awe before the 5th-century fortress citadel of Sigiriya. Traverse untouched wilderness, misty Ceylon tea hills, and sunlit coastlines with bespoke chauffeured luxury crafted exclusively for you.
           </p>
 
