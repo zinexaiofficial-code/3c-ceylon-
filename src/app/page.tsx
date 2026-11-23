@@ -174,7 +174,7 @@ export default function HomePage() {
       {/* 11. Ceylon Gems & Precious Jewels Section */}
       <CeylonGemsSection />
 
-      {/* 12. Verified Customer Testimonials (Deep Navy Dark Section) */}
+      {/* 12. Customer Reviews - Elfsight All-in-One Reviews Widget */}
       <TestimonialsSection />
 
       {/* 12. Experience The Best In Travel (Checkerboard Alternating 6-Block Mosaic) */}
