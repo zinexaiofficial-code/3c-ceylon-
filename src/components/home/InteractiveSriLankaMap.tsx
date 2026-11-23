@@ -30,12 +30,12 @@ export const InteractiveSriLankaMap: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading matching Iconic Destinations font style */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#18E600]/15 text-[#123B2A] border border-[#18E600]/30 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-sm">
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-sm">
             <span>Explore the Island</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-[#172334] tracking-tight leading-[1.08] mb-3">
-            Discover Sri Lanka <span className="text-[#123B2A]">Your Way.</span>
+            Discover Sri Lanka <span className="text-[#045965]">Your Way.</span>
           </h2>
 
           <p className="text-base sm:text-lg text-[#526173] font-normal max-w-xl mx-auto">
@@ -176,7 +176,7 @@ export const InteractiveSriLankaMap: React.FC = () => {
         <div className="mt-12 sm:mt-16 text-center">
           <Link
             href="/destinations"
-            className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-[#18E600] hover:bg-[#15D000] text-black font-sans font-bold text-sm tracking-wide shadow-md hover:shadow-lg hover:scale-102 active:scale-98 transition-all duration-300"
+            className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-sans font-bold text-sm tracking-wide shadow-md hover:shadow-lg hover:scale-102 active:scale-98 transition-all duration-300"
           >
             <span>View All Destinations</span>
             <ArrowRight className="w-4 h-4 ml-1" />

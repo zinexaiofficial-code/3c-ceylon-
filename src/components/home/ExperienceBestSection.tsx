@@ -16,7 +16,7 @@ export const ExperienceBestSection: React.FC = () => {
         
         {/* Section Header matching Ceylon Expeditions */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#18E600]/15 text-[#123B2A] border border-[#18E600]/30 text-[11px] font-extrabold uppercase tracking-widest mb-2.5 shadow-sm">
+          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-[11px] font-extrabold uppercase tracking-widest mb-2.5 shadow-sm">
             <span>Why Choose Us</span>
           </div>
 
@@ -44,9 +44,9 @@ export const ExperienceBestSection: React.FC = () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
             />
-            {/* Subtle overlay on hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-              <span className="text-white text-xs font-bold uppercase tracking-wider">
+            {/* Clean tag badge on hover without darkening image */}
+            <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+              <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider border border-white/20 shadow-md">
                 Sigiriya &amp; Cultural Triangle
               </span>
             </div>
@@ -82,9 +82,9 @@ export const ExperienceBestSection: React.FC = () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
             />
-            {/* Subtle overlay on hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-              <span className="text-white text-xs font-bold uppercase tracking-wider">
+            {/* Clean tag badge on hover without darkening image */}
+            <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+              <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider border border-white/20 shadow-md">
                 Sacred Heritage &amp; Spiritual Wonders
               </span>
             </div>
@@ -120,9 +120,9 @@ export const ExperienceBestSection: React.FC = () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
             />
-            {/* Subtle overlay on hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-              <span className="text-white text-xs font-bold uppercase tracking-wider">
+            {/* Clean tag badge on hover without darkening image */}
+            <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+              <span className="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider border border-white/20 shadow-md">
                 Highland Waterfalls &amp; Tea Trails
               </span>
             </div>
@@ -152,10 +152,10 @@ export const ExperienceBestSection: React.FC = () => {
         <div className="mt-10 sm:mt-12 text-center">
           <Link
             href="/contact"
-            className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-[#172334] hover:bg-[#123B2A] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all active:scale-95"
+            className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-[#172334] hover:bg-[#023A42] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all active:scale-95"
           >
             <span>Plan Your Bespoke Ceylon Journey</span>
-            <ArrowRight className="w-4 h-4 text-[#18E600]" />
+            <ArrowRight className="w-4 h-4 text-[#D97706]" />
           </Link>
         </div>
 

@@ -98,8 +98,8 @@ export const SportAdventureCategoriesSection: React.FC = () => {
         {/* Header Section matching Our Journey Categories style */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#18E600]/15 text-[#123B2A] border border-[#18E600]/30 text-[11px] font-extrabold uppercase tracking-widest mb-2 shadow-sm">
-              <Flame className="w-3.5 h-3.5 text-[#123B2A]" />
+            <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-[11px] font-extrabold uppercase tracking-widest mb-2 shadow-sm">
+              <Flame className="w-3.5 h-3.5 text-[#045965]" />
               <span>Extreme Thrills &amp; Water Sports</span>
             </div>
 
@@ -118,14 +118,14 @@ export const SportAdventureCategoriesSection: React.FC = () => {
               <button
                 onClick={() => handleScroll("left")}
                 aria-label="Previous sports categories"
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#18E600] text-[#172334] hover:text-[#0E6838] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#045965] text-[#172334] hover:text-[#045965] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={() => handleScroll("right")}
                 aria-label="Next sports categories"
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#18E600] text-[#172334] hover:text-[#0E6838] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#045965] text-[#172334] hover:text-[#045965] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -135,10 +135,10 @@ export const SportAdventureCategoriesSection: React.FC = () => {
               href={getWhatsAppLink("Hello 3C Ceylon Tours! I am interested in booking Waterfall Ziplining, Canyoning & Extreme Sports in Sri Lanka. Please share packages and pricing.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#172334] hover:bg-[#123B2A] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer"
+              className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#172334] hover:bg-[#045965] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer"
             >
               <span>Book Adventure</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#18E600]" />
+              <ArrowRight className="w-3.5 h-3.5 text-[#D97706]" />
             </a>
           </div>
         </div>
@@ -186,7 +186,7 @@ export const SportAdventureCategoriesSection: React.FC = () => {
                     {/* TOP TITLE (If titlePosition === 'top') */}
                     {isTop && (
                       <div className="min-h-[46px] flex items-end mb-2.5 px-1">
-                        <h3 className="font-sans text-lg sm:text-[20px] font-bold text-[#172334] group-hover:text-[#0E6838] transition-colors leading-snug line-clamp-2">
+                        <h3 className="font-sans text-lg sm:text-[20px] font-bold text-[#172334] group-hover:text-[#045965] transition-colors leading-snug line-clamp-2">
                           {item.title}
                         </h3>
                       </div>
@@ -203,9 +203,9 @@ export const SportAdventureCategoriesSection: React.FC = () => {
                         className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                       />
 
-                      {/* Subtle hover gradient and interactive pill badge */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-                        <span className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full bg-[#18E600] text-black font-sans font-bold text-xs uppercase tracking-wider shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                      {/* Natural image presentation without dark overlay, interactive pill badge */}
+                      <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+                        <span className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                           <span>Explore Sport</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </span>
@@ -222,7 +222,7 @@ export const SportAdventureCategoriesSection: React.FC = () => {
                     {/* BOTTOM TITLE (If titlePosition === 'bottom') */}
                     {!isTop && (
                       <div className="min-h-[46px] flex items-start mt-2.5 px-1">
-                        <h3 className="font-sans text-lg sm:text-[20px] font-bold text-[#172334] group-hover:text-[#0E6838] transition-colors leading-snug line-clamp-2">
+                        <h3 className="font-sans text-lg sm:text-[20px] font-bold text-[#172334] group-hover:text-[#045965] transition-colors leading-snug line-clamp-2">
                           {item.title}
                         </h3>
                       </div>

@@ -22,7 +22,7 @@ export const FinisherBackground: React.FC = () => {
               speed: { x: { min: 0.4, max: 1.2 }, y: { min: 0.4, max: 1.2 } },
               colors: {
                 background: "#000000",
-                particles: ["#0023dd", "#0bff01", "#00f0ff"]
+                particles: ["#0023dd", "#045965", "#D97706"]
               },
               blending: "lighten",
               opacity: { center: 0.22, edge: 0 },
@@ -66,11 +66,11 @@ export const FinisherBackground: React.FC = () => {
         className="finisher-header fixed inset-0 pointer-events-none -z-20 overflow-hidden bg-black"
         aria-hidden="true"
       >
-        {/* CSS Ambient Mesh Lights (Graceful instant glowing orbs matching AI Expo) */}
+        {/* CSS Ambient Mesh Lights */}
         <div className="absolute top-[-10%] left-[-10%] w-[55vw] h-[55vw] rounded-full bg-[#0023dd]/20 blur-[140px] animate-pulse" />
-        <div className="absolute top-[35%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#0bff01]/14 blur-[150px] animate-pulse delay-1000" />
+        <div className="absolute top-[35%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#045965]/14 blur-[150px] animate-pulse delay-1000" />
         <div className="absolute bottom-[-10%] left-[20%] w-[45vw] h-[45vw] rounded-full bg-[#0023dd]/18 blur-[130px]" />
-        <div className="absolute top-[60%] left-[-5%] w-[40vw] h-[40vw] rounded-full bg-[#0bff01]/10 blur-[140px]" />
+        <div className="absolute top-[60%] left-[-5%] w-[40vw] h-[40vw] rounded-full bg-[#045965]/10 blur-[140px]" />
       </div>
     </>
   );

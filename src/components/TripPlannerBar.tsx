@@ -30,7 +30,7 @@ export const TripPlannerBar: React.FC = () => {
       >
         {/* Field 1: Duration */}
         <div className="flex items-center space-x-3 rtl:space-x-reverse px-3 py-2 border-b md:border-b-0 md:border-r border-gray-200">
-          <Clock className="w-5 h-5 text-[#123B2A] flex-shrink-0" />
+          <Clock className="w-5 h-5 text-[#023A42] flex-shrink-0" />
           <div className="w-full">
             <label htmlFor="duration-select" className="block text-[10px] font-bold uppercase tracking-wider text-gray-500">
               Duration
@@ -51,7 +51,7 @@ export const TripPlannerBar: React.FC = () => {
 
         {/* Field 2: Travel Style */}
         <div className="flex items-center space-x-3 rtl:space-x-reverse px-3 py-2 border-b md:border-b-0 md:border-r border-gray-200">
-          <Compass className="w-5 h-5 text-[#123B2A] flex-shrink-0" />
+          <Compass className="w-5 h-5 text-[#023A42] flex-shrink-0" />
           <div className="w-full">
             <label htmlFor="style-select" className="block text-[10px] font-bold uppercase tracking-wider text-gray-500">
               Travel Style
@@ -74,7 +74,7 @@ export const TripPlannerBar: React.FC = () => {
 
         {/* Field 3: Number of Travelers */}
         <div className="flex items-center space-x-3 rtl:space-x-reverse px-3 py-2 border-b sm:border-b-0 md:border-r border-gray-200">
-          <Users className="w-5 h-5 text-[#123B2A] flex-shrink-0" />
+          <Users className="w-5 h-5 text-[#023A42] flex-shrink-0" />
           <div className="w-full">
             <label htmlFor="travelers-select" className="block text-[10px] font-bold uppercase tracking-wider text-gray-500">
               Travelers
@@ -97,7 +97,7 @@ export const TripPlannerBar: React.FC = () => {
         <div className="px-2">
           <button
             type="submit"
-            className="w-full py-3.5 px-6 rounded-full bg-[#18E600] hover:bg-[#15C800] text-black font-extrabold text-xs md:text-sm tracking-wider uppercase shadow-[0_4px_15px_rgba(24,230,0,0.3)] hover:shadow-[0_6px_22px_rgba(24,230,0,0.5)] hover:scale-102 active:scale-98 transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse"
+            className="w-full py-3.5 px-6 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-xs md:text-sm tracking-wider uppercase shadow-[0_4px_15px_rgba(4,89,101,0.3)] hover:shadow-[0_6px_22px_rgba(217,119,6,0.5)] hover:scale-102 active:scale-98 transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse"
           >
             <Search className="w-4 h-4" />
             <span>{t.common.findTours}</span>

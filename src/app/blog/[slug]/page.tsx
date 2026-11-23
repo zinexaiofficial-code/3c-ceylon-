@@ -96,22 +96,22 @@ export default function BlogPostDetailPage({ params }: BlogPostPageProps) {
       {/* Breadcrumb Navigation */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center space-x-2 rtl:space-x-reverse text-xs text-white/50">
-          <Link href="/" className="hover:text-[#0BFF01] transition-colors">Home</Link>
+          <Link href="/" className="hover:text-[#045965] transition-colors">Home</Link>
           <span>/</span>
-          <Link href="/blog" className="hover:text-[#0BFF01] transition-colors">Travel Guide</Link>
+          <Link href="/blog" className="hover:text-[#045965] transition-colors">Travel Guide</Link>
           <span>/</span>
-          <span className="text-[#0BFF01] font-medium truncate max-w-xs">{post.title}</span>
+          <span className="text-[#045965] font-medium truncate max-w-xs">{post.title}</span>
         </div>
       </div>
 
       {/* Article Header Container */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 mb-10">
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span className="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#0BFF01] text-black shadow-[0_0_15px_rgba(11,255,1,0.4)]">
+          <span className="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#045965] text-white shadow-[0_0_15px_rgba(4,89,101,0.4)]">
             {post.category}
           </span>
           <span className="text-xs text-white/60 flex items-center space-x-1">
-            <Clock className="w-3.5 h-3.5 text-[#0BFF01]" />
+            <Clock className="w-3.5 h-3.5 text-[#D97706]" />
             <span>{post.readTime}</span>
           </span>
         </div>
@@ -164,14 +164,14 @@ export default function BlogPostDetailPage({ params }: BlogPostPageProps) {
         {/* Table of Contents */}
         {post.tableOfContents && post.tableOfContents.length > 0 && (
           <div className="bg-white/[0.04] backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.5)] border border-white/10 space-y-3">
-            <h3 className="font-sans text-base sm:text-lg font-extrabold text-[#18E600] uppercase tracking-wider flex items-center space-x-2">
-              <Bookmark className="w-4 h-4 text-[#18E600]" />
+            <h3 className="font-sans text-base sm:text-lg font-extrabold text-[#045965] uppercase tracking-wider flex items-center space-x-2">
+              <Bookmark className="w-4 h-4 text-[#045965]" />
               <span>In This Travel Guide:</span>
             </h3>
             <ul className="space-y-1.5 text-xs sm:text-sm text-white/80">
               {post.tableOfContents.map((toc, i) => (
                 <li key={i} className="flex items-start space-x-2 rtl:space-x-reverse">
-                  <span className="text-[#18E600] font-bold">•</span>
+                  <span className="text-[#D97706] font-bold">•</span>
                   <span>{toc}</span>
                 </li>
               ))}
@@ -187,7 +187,7 @@ export default function BlogPostDetailPage({ params }: BlogPostPageProps) {
                 {sec.heading}
               </h2>
               {sec.subheading && (
-                <h3 className="font-bold text-base sm:text-lg text-[#18E600]">
+                <h3 className="font-bold text-base sm:text-lg text-[#045965]">
                   {sec.subheading}
                 </h3>
               )}
@@ -198,7 +198,7 @@ export default function BlogPostDetailPage({ params }: BlogPostPageProps) {
           ))}
 
           {/* Internal Planning Callout Box inside Article */}
-          <div className="p-6 rounded-2xl bg-gradient-to-r from-black via-[#051138] to-black border border-[#0023DD]/50 space-y-3 shadow-[0_0_30px_rgba(0,35,221,0.2)]">
+          <div className="p-6 rounded-2xl bg-gradient-to-r from-black via-[#1c2912] to-black border border-[#045965]/50 space-y-3 shadow-[0_0_30px_rgba(4,89,101,0.2)]">
             <h4 className="font-sans text-lg sm:text-xl font-extrabold text-white tracking-tight">
               Plan Your Trip with 3C Ceylon Tours
             </h4>
@@ -208,7 +208,7 @@ export default function BlogPostDetailPage({ params }: BlogPostPageProps) {
             <div className="pt-2 flex flex-wrap gap-3">
               <Link
                 href="/contact"
-                className="px-5 py-2.5 rounded-full bg-[#18E600] hover:bg-[#15c400] text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(24,230,0,0.35)]"
+                className="px-5 py-2.5 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(4,89,101,0.35)]"
               >
                 Plan a Custom Itinerary
               </Link>
@@ -216,7 +216,7 @@ export default function BlogPostDetailPage({ params }: BlogPostPageProps) {
                 href={getWhatsAppLink(undefined, post.title)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] text-[#18E600] border border-[#18E600]/40 font-bold text-xs uppercase tracking-wider flex items-center space-x-1.5 transition-colors"
+                className="px-5 py-2.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] text-white hover:text-[#D97706] border border-white/20 hover:border-[#D97706]/40 font-bold text-xs uppercase tracking-wider flex items-center space-x-1.5 transition-colors"
               >
                 <MessageCircle className="w-3.5 h-3.5" />
                 <span>Chat via WhatsApp</span>
@@ -236,7 +236,7 @@ export default function BlogPostDetailPage({ params }: BlogPostPageProps) {
                 <Link
                   key={rel.id}
                   href={`/blog/${rel.slug}`}
-                  className="group bg-white/[0.04] backdrop-blur-xl rounded-2xl p-5 shadow-[0_8px_32px_rgba(0,0,0,0.5)] border border-white/10 hover:border-[#18E600]/40 transition-all flex space-x-4 rtl:space-x-reverse"
+                  className="group bg-white/[0.04] backdrop-blur-xl rounded-2xl p-5 shadow-[0_8px_32px_rgba(0,0,0,0.5)] border border-white/10 hover:border-[#045965]/40 transition-all flex space-x-4 rtl:space-x-reverse"
                 >
                   <div className="relative w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 bg-black border border-white/10">
                     <Image
@@ -249,10 +249,10 @@ export default function BlogPostDetailPage({ params }: BlogPostPageProps) {
                     />
                   </div>
                   <div className="space-y-1">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#18E600]">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#D97706]">
                       {rel.category}
                     </span>
-                    <h4 className="font-sans text-sm sm:text-base font-extrabold text-white group-hover:text-[#18E600] line-clamp-2 tracking-tight">
+                    <h4 className="font-sans text-sm sm:text-base font-extrabold text-white group-hover:text-[#045965] line-clamp-2 tracking-tight">
                       {rel.title}
                     </h4>
                     <span className="text-[11px] text-white/50 block">

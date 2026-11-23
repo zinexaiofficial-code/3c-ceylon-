@@ -116,8 +116,8 @@ export const CeylonGemsSection: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-[#18E600]/15 text-[#123B2A] border border-[#18E600]/30 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-sm">
-            <Gem className="w-3.5 h-3.5 text-[#123B2A]" />
+          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-sm">
+            <Gem className="w-3.5 h-3.5 text-[#045965]" />
             <span>Treasures of Ratnapura & Beyond</span>
           </div>
 
@@ -146,13 +146,13 @@ export const CeylonGemsSection: React.FC = () => {
                 style={{
                   transitionDelay: `${index * 85}ms`,
                 }}
-                className={`group relative block w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-200/80 hover:border-[#18E600]/60 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#18E600] ${
+                className={`group relative block w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-200/80 hover:border-[#045965]/60 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#045965] ${
                   isVisible
                     ? "opacity-100 translate-y-0 scale-100"
                     : "opacity-0 translate-y-12 scale-[0.96]"
                 } ${exp.gridSpan}`}
               >
-                {/* Background Image with Smooth 4% Hover Zoom */}
+                {/* Background Image with Smooth 4% Hover Zoom - Natural brightness without artificial darkening */}
                 <Image
                   src={exp.image}
                   alt={`Ceylon Gem Experience - ${exp.name}`}
@@ -168,37 +168,25 @@ export const CeylonGemsSection: React.FC = () => {
                   aria-hidden="true"
                 />
 
-                {/* Layer 1: Bottom Text Readability Vignette (Top 65% stays natural, bright & colorful) */}
-                <div
-                  className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 via-40% to-transparent transition-opacity duration-500 z-10"
-                  aria-hidden="true"
-                />
-
-                {/* Layer 2: Subtle Brand Glow on Hover */}
-                <div
-                  className="absolute inset-0 bg-gradient-to-t from-[#18E600]/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
-                  aria-hidden="true"
-                />
-
                 {/* Card Content (Bottom): Circular Icon + Experience Name Only */}
                 <div className="absolute bottom-5 sm:bottom-7 left-5 sm:left-7 right-5 sm:right-7 z-20 flex items-center justify-between">
                   <div className="flex items-center space-x-3 sm:space-x-4">
                     {/* Circular Experience Badge */}
                     <div
                       className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0 backdrop-blur-md border border-white/25 shadow-lg transition-transform duration-500 group-hover:scale-110"
-                      style={{ backgroundColor: `${exp.badgeColor}33`, borderColor: `${exp.badgeColor}66` }}
+                      style={{ backgroundColor: `${exp.badgeColor}44`, borderColor: `${exp.badgeColor}77` }}
                     >
                       <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow" />
                     </div>
 
                     {/* Experience Name — ONLY THE NAME (Big Bold White Typography) */}
-                    <h3 className="font-sans text-2xl sm:text-3xl lg:text-[34px] xl:text-[38px] font-black uppercase tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] leading-none select-none group-hover:text-white transition-colors">
+                    <h3 className="font-sans text-2xl sm:text-3xl lg:text-[34px] xl:text-[38px] font-black uppercase tracking-tight text-white [text-shadow:_0_3px_20px_rgb(0_0_0_/_95%),_0_1px_5px_rgb(0_0_0_/_80%)] leading-none select-none group-hover:text-white transition-colors">
                       {exp.name}
                     </h3>
                   </div>
 
                   {/* Micro Hover Arrow */}
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 flex-shrink-0 shadow-md">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 flex-shrink-0 shadow-md">
                     <ArrowUpRight className="w-5 h-5 text-white" />
                   </div>
                 </div>
@@ -213,7 +201,7 @@ export const CeylonGemsSection: React.FC = () => {
             href={getWhatsAppLink("Hello 3C Ceylon Tours! I am interested in planning a private Gem & Jewelry Tour in Sri Lanka (Ratnapura, gem mines & workshops). Please send me more details.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-[#18E600] hover:bg-[#15C800] text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(24,230,0,0.3)] hover:shadow-[0_6px_22px_rgba(24,230,0,0.45)] transform hover:-translate-y-0.5"
+            className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(4,89,101,0.3)] hover:shadow-[0_6px_22px_rgba(217,119,6,0.45)] transform hover:-translate-y-0.5"
           >
             <span>Inquire About Private Gem Tours</span>
             <ArrowRight className="w-4 h-4" />

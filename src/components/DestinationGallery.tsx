@@ -131,8 +131,8 @@ export const DestinationGallery: React.FC<DestinationGalleryProps> = ({ destinat
       {/* Gallery Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-gray-200 pb-4">
         <div>
-          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3 py-1 rounded-full bg-[#18E600]/15 text-[#0E6838] border border-[#18E600]/30 text-xs font-extrabold uppercase tracking-widest mb-2">
-            <Camera className="w-3.5 h-3.5 text-[#0E6838]" />
+          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3 py-1 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-extrabold uppercase tracking-widest mb-2">
+            <Camera className="w-3.5 h-3.5 text-[#045965]" />
             <span>High-Resolution Photo Gallery</span>
           </div>
           <h3 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#172334] tracking-tight">
@@ -140,7 +140,7 @@ export const DestinationGallery: React.FC<DestinationGalleryProps> = ({ destinat
           </h3>
         </div>
         <p className="text-xs sm:text-sm text-[#526173] font-medium">
-          Showing <span className="text-[#0E6838] font-bold">{images.length}</span> authentic photographs • Click any image to expand
+          Showing <span className="text-[#045965] font-bold">{images.length}</span> authentic photographs • Click any image to expand
         </p>
       </div>
 
@@ -152,7 +152,7 @@ export const DestinationGallery: React.FC<DestinationGalleryProps> = ({ destinat
             <div
               key={index}
               onClick={() => openLightbox(index)}
-              className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-neutral-950 cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1.5 border border-gray-200/70 hover:border-[#18E600] ${layout.span} ${layout.height}`}
+              className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-neutral-950 cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1.5 border border-gray-200/70 hover:border-[#045965] ${layout.span} ${layout.height}`}
             >
               <Image
                 src={imgSrc}
@@ -169,12 +169,9 @@ export const DestinationGallery: React.FC<DestinationGalleryProps> = ({ destinat
                 aria-hidden="true"
               />
 
-              {/* Subtle Bottom Vignette */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-
               {/* Expand Icon on Hover */}
               <div className="absolute bottom-3 right-3 z-20 p-2 sm:p-2.5 rounded-full bg-black/60 text-white backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-lg">
-                <Maximize2 className="w-4 h-4 text-[#18E600]" />
+                <Maximize2 className="w-4 h-4 text-[#D97706]" />
               </div>
 
               {/* Photo Count Pill */}
@@ -205,7 +202,7 @@ export const DestinationGallery: React.FC<DestinationGalleryProps> = ({ destinat
           <button
             onClick={prevImage}
             aria-label="Previous Image"
-            className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-50 p-3 sm:p-4 rounded-full bg-black/60 hover:bg-black/90 text-white border border-white/20 hover:border-[#18E600] transition-all hover:scale-110 cursor-pointer"
+            className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-50 p-3 sm:p-4 rounded-full bg-black/60 hover:bg-black/90 text-white border border-white/20 hover:border-[#D97706] transition-all hover:scale-110 cursor-pointer"
           >
             <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
           </button>
@@ -214,7 +211,7 @@ export const DestinationGallery: React.FC<DestinationGalleryProps> = ({ destinat
           <button
             onClick={nextImage}
             aria-label="Next Image"
-            className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-50 p-3 sm:p-4 rounded-full bg-black/60 hover:bg-black/90 text-white border border-white/20 hover:border-[#18E600] transition-all hover:scale-110 cursor-pointer"
+            className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-50 p-3 sm:p-4 rounded-full bg-black/60 hover:bg-black/90 text-white border border-white/20 hover:border-[#D97706] transition-all hover:scale-110 cursor-pointer"
           >
             <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
           </button>
@@ -237,7 +234,7 @@ export const DestinationGallery: React.FC<DestinationGalleryProps> = ({ destinat
           {/* Bottom Counter & Caption */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-2 rounded-full bg-black/70 border border-white/20 text-white text-xs font-bold backdrop-blur-md flex items-center space-x-3">
             <span>{destinationName}</span>
-            <span className="text-[#18E600]">•</span>
+            <span className="text-[#D97706]">•</span>
             <span>{lightboxIndex + 1} / {images.length}</span>
           </div>
         </div>

@@ -87,10 +87,10 @@ export const Header: React.FC = () => {
             {/* Logo and Brand Name */}
             <Link
               href="/"
-              className="flex items-center space-x-3 rtl:space-x-reverse group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#18E600] rounded-xl"
+              className="flex items-center space-x-3 rtl:space-x-reverse group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#045965] rounded-xl"
             >
               {/* Circular Company Logo (Desktop: 54px, Mobile: 44px) */}
-              <div className="relative w-[44px] h-[44px] md:w-[54px] md:h-[54px] rounded-full overflow-hidden bg-white/95 p-0.5 shadow-md flex-shrink-0 border-2 border-white/20 group-hover:border-[#18E600] transition-all duration-300 aspect-square">
+              <div className="relative w-[44px] h-[44px] md:w-[54px] md:h-[54px] rounded-full overflow-hidden bg-white/95 p-0.5 shadow-md flex-shrink-0 border-2 border-white/20 group-hover:border-[#045965] transition-all duration-300 aspect-square">
                 <Image
                   src="/images/logo.png"
                   alt="3C Ceylon Tours Logo"
@@ -103,8 +103,8 @@ export const Header: React.FC = () => {
 
               {/* Brand Typography */}
               <div className="flex flex-col drop-shadow-[0_2px_4px_rgba(0,0,0,0.85)]">
-                <span className="font-sans text-[17px] sm:text-[18px] xl:text-[20px] font-extrabold tracking-tight text-white uppercase group-hover:text-[#18E600] transition-colors leading-tight">
-                  3C CEYLON <span className="text-[#18E600]">TOURS</span>
+                <span className="font-sans text-[17px] sm:text-[18px] xl:text-[20px] font-extrabold tracking-tight text-white uppercase group-hover:text-[#045965] transition-colors leading-tight">
+                  3C CEYLON <span className="text-[#045965]">TOURS</span>
                 </span>
                 <span className="text-[10px] xl:text-[11px] tracking-[0.22em] uppercase font-semibold text-gray-200 block -mt-0.5">
                   Luxury Island Journeys
@@ -123,17 +123,17 @@ export const Header: React.FC = () => {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`relative py-1 text-[14px] xl:text-[15px] font-bold tracking-wider uppercase transition-colors duration-200 group focus:outline-none focus-visible:ring-1 focus-visible:ring-[#18E600] rounded drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] ${
+                    className={`relative py-1 text-[14px] xl:text-[15px] font-bold tracking-wider uppercase transition-colors duration-200 group focus:outline-none focus-visible:ring-1 focus-visible:ring-[#045965] rounded drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] ${
                       active
-                        ? "text-[#18E600]"
-                        : "text-white hover:text-[#18E600]"
+                        ? "text-[#045965]"
+                        : "text-white hover:text-[#D97706]"
                     }`}
                   >
                     <span>{link.label}</span>
 
                     {/* Active Accent Indicator */}
                     {active ? (
-                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#18E600] shadow-[0_0_8px_rgba(24,230,0,0.8)] rounded-full" />
+                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#045965] shadow-[0_0_8px_rgba(4,89,101,0.8)] rounded-full" />
                     ) : (
                       /* Hover subtle underline slide */
                       <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-white/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center rounded-full" />
@@ -148,7 +148,7 @@ export const Header: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white hover:text-[#18E600] transition-colors focus:outline-none focus:ring-2 focus:ring-[#18E600]"
+                className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white hover:text-[#D97706] transition-colors focus:outline-none focus:ring-2 focus:ring-[#045965]"
                 aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                 aria-expanded={mobileMenuOpen}
               >
@@ -189,7 +189,7 @@ export const Header: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-sans text-[17px] font-extrabold tracking-tight text-white uppercase leading-tight">
-                  3C CEYLON <span className="text-[#18E600]">TOURS</span>
+                  3C CEYLON <span className="text-[#045965]">TOURS</span>
                 </span>
                 <span className="text-[10px] tracking-[0.22em] uppercase font-semibold text-gray-300 block -mt-0.5">
                   Luxury Island Journeys
@@ -200,7 +200,7 @@ export const Header: React.FC = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 text-white flex items-center justify-center transition-all focus:outline-none focus:ring-2 focus:ring-[#18E600]"
+              className="w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 text-white flex items-center justify-center transition-all focus:outline-none focus:ring-2 focus:ring-[#045965]"
               aria-label="Close navigation menu"
             >
               <X className="w-6 h-6 text-white" />
@@ -209,7 +209,7 @@ export const Header: React.FC = () => {
 
           {/* Drawer Navigation Links (scrollable with overscroll-contain) */}
           <nav className="flex-1 overflow-y-auto px-5 py-6 space-y-2 overscroll-contain">
-            <div className="text-[11px] font-bold uppercase tracking-widest text-[#18E600] px-3 mb-2 flex items-center space-x-1.5">
+            <div className="text-[11px] font-bold uppercase tracking-widest text-[#D97706] px-3 mb-2 flex items-center space-x-1.5">
               <span>EXPLORE THE ISLAND</span>
             </div>
 
@@ -222,12 +222,12 @@ export const Header: React.FC = () => {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between py-3.5 px-4 rounded-2xl text-[16px] font-extrabold tracking-wider uppercase transition-all duration-200 ${
                     active
-                      ? "bg-[#18E600] text-black shadow-[0_0_20px_rgba(24,230,0,0.35)]"
-                      : "text-white hover:text-[#18E600] bg-white/[0.04] hover:bg-white/[0.08] border border-white/5"
+                      ? "bg-[#045965] text-white shadow-[0_4px_20px_rgba(4,89,101,0.35)]"
+                      : "text-white hover:text-[#D97706] bg-white/[0.04] hover:bg-white/[0.08] border border-white/5"
                   }`}
                 >
                   <span>{link.label}</span>
-                  <ChevronRight className={`w-5 h-5 ${active ? "text-black" : "text-gray-400"}`} />
+                  <ChevronRight className={`w-5 h-5 ${active ? "text-white" : "text-gray-400"}`} />
                 </Link>
               );
             })}
@@ -237,7 +237,7 @@ export const Header: React.FC = () => {
               <Link
                 href="/packages"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-4 px-5 rounded-2xl bg-[#18E600] hover:bg-[#15D600] text-black font-extrabold text-sm uppercase tracking-wider shadow-[0_0_25px_rgba(24,230,0,0.4)] flex items-center justify-center space-x-2 transition-all active:scale-98"
+                className="w-full py-4 px-5 rounded-2xl bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-sm uppercase tracking-wider shadow-[0_4px_25px_rgba(4,89,101,0.4)] flex items-center justify-center space-x-2 transition-all active:scale-98"
               >
                 <span>Explore All Tour Packages</span>
                 <ArrowRight className="w-4 h-4" />

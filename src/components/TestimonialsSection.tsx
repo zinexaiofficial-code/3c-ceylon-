@@ -104,8 +104,8 @@ export const TestimonialsSection: React.FC = () => {
         
         {/* Section Header matching Ceylon Expeditions */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#18E600]/15 text-[#123B2A] border border-[#18E600]/30 text-[11px] font-extrabold uppercase tracking-widest mb-2 shadow-sm">
-            <Award className="w-3.5 h-3.5 text-[#123B2A]" />
+          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-[11px] font-extrabold uppercase tracking-widest mb-2 shadow-sm">
+            <Award className="w-3.5 h-3.5 text-[#023A42]" />
             <span>TESTIMONIALS</span>
           </div>
 
@@ -143,13 +143,10 @@ export const TestimonialsSection: React.FC = () => {
                 className="object-cover object-center transition-all duration-700 ease-out animate-fadeIn"
               />
 
-              {/* Gradient overlay for text contrast */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent pointer-events-none" />
-
               {/* Verified Traveler Badge overlay on top */}
               <div className="absolute top-4 left-4 z-10 flex items-center space-x-2">
                 <span className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white border border-white/20 text-xs font-semibold shadow-lg">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#18E600]" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#045965]" />
                   <span>Verified Guest</span>
                 </span>
               </div>
@@ -157,7 +154,7 @@ export const TestimonialsSection: React.FC = () => {
               {/* Tour Taken badge on bottom */}
               <div className="absolute bottom-4 left-4 right-4 z-10">
                 <div className="inline-block px-3.5 py-1.5 rounded-xl bg-white/95 backdrop-blur-md text-[#172334] text-xs font-bold shadow-md border border-black/5">
-                  <span className="text-[#123B2A] font-extrabold mr-1.5">Itinerary:</span>
+                  <span className="text-[#023A42] font-extrabold mr-1.5">Itinerary:</span>
                   <span>{currentItem.tourTaken}</span>
                 </div>
               </div>
@@ -219,7 +216,7 @@ export const TestimonialsSection: React.FC = () => {
                     href={getWhatsAppLink(`Hi 3C Ceylon Tours, I saw the review by ${currentItem.name} from ${currentItem.country} and would like to plan a similar Sri Lanka tour!`)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-1.5 mt-3 text-[11px] font-bold text-[#18E600] hover:text-[#52FF3D] transition-colors"
+                    className="inline-flex items-center space-x-1.5 mt-3 text-[11px] font-bold text-[#045965] hover:text-[#D97706] transition-colors"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
                     <span>Inquire on WhatsApp</span>

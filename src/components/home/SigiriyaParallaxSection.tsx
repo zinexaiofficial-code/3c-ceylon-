@@ -109,9 +109,6 @@ export const SigiriyaParallaxSection: React.FC = () => {
         {/* Top vignette to blend smoothly from preceding section */}
         <div className="absolute top-0 inset-x-0 h-36 bg-gradient-to-b from-[#FAF8F2] via-[#FAF8F2]/40 to-transparent" />
         
-        {/* Left side text readability shadow (transparent soft veil, keeping right 65% bright & open) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 via-45% to-transparent" />
-
         {/* Bottom vignette to transition into next section */}
         <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#071323] via-[#071323]/50 to-transparent" />
       </div>
@@ -144,33 +141,33 @@ export const SigiriyaParallaxSection: React.FC = () => {
       <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
         <div className="max-w-2xl lg:max-w-xl space-y-6">
           {/* Section Pill Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#18E600] text-xs font-extrabold uppercase tracking-widest shadow-lg">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/20 text-[#D97706] text-xs font-extrabold uppercase tracking-widest shadow-lg">
             <span className="text-white">Living Ceylon Heritage</span>
           </div>
 
           {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08] drop-shadow-[0_3px_18px_rgba(0,0,0,0.85)]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08] [text-shadow:_0_3px_18px_rgba(0,0,0,0.95)]">
             Experience Sri Lanka{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#18E600] to-[#55FF38]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#045965] to-[#D97706] [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)]">
               Beyond the Ordinary.
             </span>
           </h2>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-100 tracking-tight leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+          <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-100 tracking-tight leading-snug [text-shadow:_0_2px_10px_rgba(0,0,0,0.9)]">
             Where timeless landscapes and unforgettable journeys come together.
           </p>
 
           {/* Short Narrative */}
-          <p className="text-sm sm:text-base text-gray-200/90 leading-relaxed font-normal max-w-lg drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">
+          <p className="text-sm sm:text-base text-gray-200 leading-relaxed font-normal max-w-lg [text-shadow:_0_1px_6px_rgba(0,0,0,0.9)]">
             Stand in awe before the 5th-century fortress citadel of Sigiriya. Traverse untouched wilderness, misty Ceylon tea hills, and sunlit coastlines with bespoke chauffeured luxury crafted exclusively for you.
           </p>
 
           {/* Luxury Feature Badges */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 max-w-lg">
-            <div className="p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/15 flex items-center space-x-3 shadow-lg">
-              <div className="w-9 h-9 rounded-full bg-[#18E600]/20 flex items-center justify-center flex-shrink-0 border border-[#18E600]/40">
-                <ShieldCheck className="w-5 h-5 text-[#18E600]" />
+            <div className="p-4 rounded-2xl bg-black/50 backdrop-blur-md border border-white/15 flex items-center space-x-3 shadow-lg">
+              <div className="w-9 h-9 rounded-full bg-[#045965]/20 flex items-center justify-center flex-shrink-0 border border-[#045965]/40">
+                <ShieldCheck className="w-5 h-5 text-[#D97706]" />
               </div>
               <div>
                 <h4 className="font-bold text-sm text-white">100% Private Journeys</h4>
@@ -178,9 +175,9 @@ export const SigiriyaParallaxSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/15 flex items-center space-x-3 shadow-lg">
-              <div className="w-9 h-9 rounded-full bg-[#18E600]/20 flex items-center justify-center flex-shrink-0 border border-[#18E600]/40">
-                <Compass className="w-5 h-5 text-[#18E600]" />
+            <div className="p-4 rounded-2xl bg-black/50 backdrop-blur-md border border-white/15 flex items-center space-x-3 shadow-lg">
+              <div className="w-9 h-9 rounded-full bg-[#045965]/20 flex items-center justify-center flex-shrink-0 border border-[#045965]/40">
+                <Compass className="w-5 h-5 text-[#D97706]" />
               </div>
               <div>
                 <h4 className="font-bold text-sm text-white">Chauffeur-Guides</h4>
@@ -193,7 +190,7 @@ export const SigiriyaParallaxSection: React.FC = () => {
           <div className="pt-4 flex flex-wrap items-center gap-4">
             <Link
               href="/packages"
-              className="px-8 py-4 rounded-full bg-[#18E600] hover:bg-[#15C800] text-black font-extrabold text-xs uppercase tracking-wider shadow-[0_4px_20px_rgba(24,230,0,0.4)] hover:shadow-[0_6px_25px_rgba(24,230,0,0.6)] transition-all inline-flex items-center space-x-2.5 transform hover:-translate-y-0.5"
+              className="px-8 py-4 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-xs uppercase tracking-wider shadow-[0_4px_20px_rgba(4,89,101,0.4)] hover:shadow-[0_6px_25px_rgba(217,119,6,0.5)] transition-all inline-flex items-center space-x-2.5 transform hover:-translate-y-0.5"
             >
               <span>Explore Tour Packages</span>
               <ArrowRight className="w-4 h-4" />
@@ -203,9 +200,9 @@ export const SigiriyaParallaxSection: React.FC = () => {
               href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-7 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-extrabold text-xs uppercase tracking-wider border border-white/25 hover:border-white/40 transition-all inline-flex items-center space-x-2"
+              className="px-7 py-4 rounded-full bg-black/40 hover:bg-[#023A42] backdrop-blur-md text-white font-extrabold text-xs uppercase tracking-wider border border-white/25 hover:border-[#D97706]/40 transition-all inline-flex items-center space-x-2"
             >
-              <MessageCircle className="w-4 h-4 text-[#18E600]" />
+              <MessageCircle className="w-4 h-4 text-[#D97706]" />
               <span>Ask via WhatsApp</span>
             </a>
           </div>

@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --color-neon: #0BFF01;
+  --color-primary: #045965;
+  --color-primary-dark: #023A42;
+  --color-accent: #D97706;
+  --color-accent-hover: #B85C00;
+  --color-background: #FFF9EF;
+  --color-text: #202820;
+  --color-white: #FFFFFF;
+  --color-neon: #045965;
   --color-blue: #0023DD;
   --color-dark: #000000;
   --color-surface: #050811;
@@ -12,13 +19,13 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #FAF8F2;
-  color: #172334;
+  background-color: #FFF9EF;
+  color: #202820;
 }
 
 body {
-  background-color: #FAF8F2;
-  color: #172334;
+  background-color: #FFF9EF;
+  color: #202820;
   font-family: var(--font-jakarta), var(--font-manrope), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
@@ -40,12 +47,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(24, 230, 0, 0.4);
+  background: rgba(4, 89, 101, 0.5);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #18E600;
+  background: #045965;
 }
 
 /* Utility to completely hide scrollbars */
@@ -60,7 +67,7 @@ body {
   scrollbar-width: none !important;
 }
 
-/* AI Expo Glassmorphic Card Styling */
+/* Luxury Glassmorphic Card Styling */
 .ai-card {
   background: rgba(255, 255, 255, 0.035);
   backdrop-filter: blur(12px);
@@ -71,27 +78,24 @@ body {
 
 .ai-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(24, 240, 0, 0.45);
-  box-shadow: 0 10px 30px rgba(24, 240, 0, 0.18);
+  border-color: rgba(4, 89, 101, 0.45);
+  box-shadow: 0 10px 30px rgba(4, 89, 101, 0.18);
 }
 
 /* High-Tech Glowing Borders */
 .glow-border {
-  border: 1px solid rgba(24, 240, 0, 0.35);
-  box-shadow: 0 0 15px rgba(24, 240, 0, 0.18);
+  border: 1px solid rgba(4, 89, 101, 0.35);
+  box-shadow: 0 0 15px rgba(4, 89, 101, 0.18);
 }
 
 /* =========================================================================
-   AI EXPO-INSPIRED DYNAMIC CONTINUOUS GRADIENT SYSTEM (DARK LUXURY PROFILE)
+   DYNAMIC CONTINUOUS GRADIENT SYSTEM (DARK LUXURY PROFILE)
    Colors:
    - Main Black: #020407
    - Midnight Navy: #03091C
    - Dark Blue Glow: #071A35
-   - Dark Forest Green: #052819
-   - Deep Emerald Glow: #07502A
-   Controlled Opacity:
-   - Green gradient opacity: 0.12 - 0.20
-   - Blue gradient opacity: 0.15 - 0.28
+   - Primary Olive Green: #045965
+   - Deep Olive Green: #023A42
    ========================================================================= */
 
 .dynamic-orb {
@@ -113,13 +117,13 @@ body {
   }
 }
 
-/* Layer 1: Elegant Deep Emerald Glow (Visible, smooth, non-blinding) */
+/* Layer 1: Elegant Deep Olive Glow */
 .dynamic-orb-emerald {
   background: radial-gradient(
     circle,
-    rgba(16, 185, 80, 0.38) 0%,
-    rgba(10, 130, 55, 0.24) 35%,
-    rgba(5, 70, 30, 0.12) 60%,
+    rgba(4, 89, 101, 0.38) 0%,
+    rgba(53, 74, 33, 0.24) 35%,
+    rgba(32, 40, 32, 0.12) 60%,
     transparent 80%
   );
   animation: bg-orb-emerald-motion 30s cubic-bezier(0.42, 0, 0.58, 1) infinite alternate;
@@ -137,12 +141,12 @@ body {
   animation: bg-orb-blue-motion 34s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
 }
 
-/* Layer 3: Dark Forest Green Subtle Glow */
+/* Layer 3: Dark Olive Subtle Glow */
 .dynamic-orb-forest {
   background: radial-gradient(
     circle,
-    rgba(10, 140, 60, 0.30) 0%,
-    rgba(5, 75, 35, 0.18) 45%,
+    rgba(4, 89, 101, 0.30) 0%,
+    rgba(53, 74, 33, 0.18) 45%,
     transparent 75%
   );
   animation: bg-orb-forest-motion 26s ease-in-out infinite alternate;
@@ -158,12 +162,6 @@ body {
   );
   animation: bg-orb-navy-motion 38s ease-in-out infinite alternate;
 }
-
-/* The 3 Continuous Cycle States (Dark, smooth, elegant motion):
-   State A: Deep black-navy foundation, gentle blue drift left, muted emerald center
-   State B: Deep-blue glow lower center, forest-green whisper to the right
-   State C: Subtle emerald lower left, dark navy drift upper right
-*/
 
 @keyframes bg-orb-emerald-motion {
   0% {

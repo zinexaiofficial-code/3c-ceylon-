@@ -6,16 +6,12 @@ import Script from "next/script";
 /**
  * DynamicBackground
  * 
- * Implements the continuous, cinema-grade animated background inspired by AI Expo Sri Lanka (https://www.aiexpo.lk/).
- * Calibrated specifically for 3C Ceylon Tours luxury branding:
+ * Luxury continuous animated background:
  * - Deep dark foundation: #020407
  * - Subtle Midnight Navy: #03091C
  * - Deep Ocean Glow: #071A35
- * - Dark Forest Green: #052819
- * - Deep Emerald Glow: #07502A
- * 
- * Tuned with controlled 0.12–0.28 opacities so text, badges, and tour cards
- * maintain flawless WCAG AA contrast and visibility throughout all cycles.
+ * - Primary Olive: #045965
+ * - Deep Olive: #023A42
  */
 interface DynamicBackgroundProps {
   className?: string;
@@ -44,7 +40,7 @@ export const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
               speed: { x: { min: 0.3, max: 0.7 }, y: { min: 0.3, max: 0.7 } },
               colors: {
                 background: "#071323",
-                particles: ["#0a40d0", "#0db840", "#066a35"]
+                particles: ["#0a40d0", "#045965", "#023A42"]
               },
               blending: "lighten",
               opacity: { center: 0.16, edge: 0 },
@@ -100,7 +96,7 @@ export const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
         }}
         aria-hidden="true"
       >
-        {/* Layer 1: Subtle Deep Emerald Glow Orb (State A -> B -> C) */}
+        {/* Layer 1: Subtle Deep Olive Glow Orb */}
         <div 
           className="dynamic-orb dynamic-orb-emerald"
           style={{
@@ -113,7 +109,7 @@ export const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
           }}
         />
 
-        {/* Layer 2: Deep Dark Blue Ambient Orb (State A -> B -> C) */}
+        {/* Layer 2: Deep Dark Blue Ambient Orb */}
         <div 
           className="dynamic-orb dynamic-orb-blue"
           style={{
@@ -126,7 +122,7 @@ export const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
           }}
         />
 
-        {/* Layer 3: Dark Forest Green Subtle Glow */}
+        {/* Layer 3: Dark Olive Subtle Glow */}
         <div 
           className="dynamic-orb dynamic-orb-forest"
           style={{

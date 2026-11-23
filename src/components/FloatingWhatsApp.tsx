@@ -51,7 +51,7 @@ export const FloatingWhatsApp: React.FC = () => {
         </div>
 
         {/* Online Status Green Indicator */}
-        <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-[#18E600] border-2 border-white rounded-full shadow-sm" />
+        <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-[#045965] border-2 border-white rounded-full shadow-sm" />
       </a>
     </div>
   );

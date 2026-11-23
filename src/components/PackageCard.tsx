@@ -21,9 +21,9 @@ export const PackageCard: React.FC<PackageCardProps> = ({ pkg }) => {
   return (
     <Link
       href={`/packages/${pkg.slug}`}
-      className="group relative h-[460px] sm:h-[500px] md:h-[530px] rounded-3xl overflow-hidden shadow-2xl block transform hover:-translate-y-2 transition-all duration-500 border border-gray-200/40 hover:border-[#18E600]/80 hover:shadow-[0_20px_45px_rgba(24,230,0,0.22)] bg-neutral-950 select-none"
+      className="group relative h-[460px] sm:h-[500px] md:h-[530px] rounded-3xl overflow-hidden shadow-2xl block transform hover:-translate-y-2 transition-all duration-500 border border-gray-200/40 hover:border-[#045965]/80 hover:shadow-[0_20px_45px_rgba(4,89,101,0.22)] bg-neutral-950 select-none"
     >
-      {/* Background Image - High-performance Next.js AVIF/WebP with crisp 88% quality */}
+      {/* Background Image - Natural brightness, vibrant colors, no dark filters */}
       <Image
         src={pkg.image}
         alt={`${pkg.title} - ${pkg.subtitle}`}
@@ -39,35 +39,32 @@ export const PackageCard: React.FC<PackageCardProps> = ({ pkg }) => {
         aria-hidden="true"
       />
 
-      {/* Layered Gradient Overlay - Exactly matching DestinationCard: Preserves image brightness and natural sunlight at top & center, deep contrast only at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent transition-opacity duration-300 group-hover:via-black/50 z-10" />
-
       {/* Top Badges (Matching Destination Card brightness) */}
       <div className="absolute top-5 left-5 right-5 z-20 flex items-center justify-between">
         {/* Style / Tour Type Badge */}
-        <span className="px-3.5 py-1.5 rounded-full text-[11px] font-extrabold tracking-wider uppercase bg-black/75 text-[#18E600] border border-[#18E600]/40 backdrop-blur-md flex items-center space-x-1.5 shadow-md">
-          <Compass className="w-3.5 h-3.5 text-[#18E600]" />
+        <span className="px-3.5 py-1.5 rounded-full text-[11px] font-extrabold tracking-wider uppercase bg-black/60 text-[#D97706] border border-[#045965]/40 backdrop-blur-md flex items-center space-x-1.5 shadow-md">
+          <Compass className="w-3.5 h-3.5 text-[#D97706]" />
           <span>{pkg.style}</span>
         </span>
 
         {/* Duration Badge */}
-        <span className="px-3.5 py-1.5 rounded-full text-xs font-bold bg-black/75 text-white border border-white/20 backdrop-blur-md flex items-center space-x-1.5 shadow-md">
-          <Clock className="w-3.5 h-3.5 text-[#18E600]" />
+        <span className="px-3.5 py-1.5 rounded-full text-xs font-bold bg-black/60 text-white border border-white/20 backdrop-blur-md flex items-center space-x-1.5 shadow-md">
+          <Clock className="w-3.5 h-3.5 text-[#D97706]" />
           <span>{pkg.durationNights}N / {pkg.durationDays}D</span>
         </span>
       </div>
 
-      {/* Content Container (Bottom) */}
-      <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7 z-20 text-white transform transition-transform duration-300">
+      {/* Content Container (Bottom) - High-contrast frosted glass pill for readability without darkening the whole image */}
+      <div className="absolute bottom-4 left-4 right-4 p-5 sm:p-6 z-20 text-white rounded-2xl bg-black/55 backdrop-blur-md border border-white/15 transform transition-transform duration-300">
         
         {/* Trust Pill */}
-        <div className="flex items-center space-x-2 text-[11px] font-bold uppercase tracking-wider text-[#18E600] mb-2 drop-shadow">
-          <ShieldCheck className="w-3.5 h-3.5 text-[#18E600]" />
+        <div className="flex items-center space-x-2 text-[11px] font-bold uppercase tracking-wider text-[#D97706] mb-1.5 drop-shadow">
+          <ShieldCheck className="w-3.5 h-3.5 text-[#D97706]" />
           <span>Private Chauffeur Tour</span>
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl sm:text-[28px] font-black text-white tracking-tight mb-2 group-hover:text-[#18E600] transition-colors leading-tight drop-shadow-md">
+        <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight mb-1.5 group-hover:text-[#D97706] transition-colors leading-tight drop-shadow-md">
           {pkg.title}
         </h3>
         
@@ -77,9 +74,9 @@ export const PackageCard: React.FC<PackageCardProps> = ({ pkg }) => {
         </p>
 
         {/* Route / Destinations Covered Pills */}
-        <div className="flex flex-wrap items-center gap-2 text-[11px] text-white/95 font-semibold mb-4">
-          <div className="flex items-center space-x-1.5 bg-black/45 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10 shadow-sm max-w-full">
-            <MapPin className="w-3.5 h-3.5 text-[#18E600] flex-shrink-0" />
+        <div className="flex flex-wrap items-center gap-2 text-[11px] text-white/95 font-semibold mb-3.5">
+          <div className="flex items-center space-x-1.5 bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10 shadow-sm max-w-full">
+            <MapPin className="w-3.5 h-3.5 text-[#D97706] flex-shrink-0" />
             <span className="truncate">
               {pkg.destinationsCovered.join(" → ")}
             </span>
@@ -88,7 +85,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({ pkg }) => {
 
         {/* Call-to-action Button Row */}
         <div className="flex items-center justify-between pt-2 border-t border-white/15">
-          <div className="flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-[#18E600] group-hover:text-white transition-colors">
+          <div className="flex items-center space-x-2 text-xs font-black uppercase tracking-widest text-[#D97706] group-hover:text-white transition-colors">
             <span>Explore Tour in Details</span>
             <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform rtl:group-hover:-translate-x-1.5" />
           </div>

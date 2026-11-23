@@ -41,8 +41,8 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
   return (
     <div className={`group rounded-3xl overflow-hidden transition-all duration-500 flex flex-col h-full transform hover:-translate-y-1.5 ${
       isLight
-        ? "bg-white border border-gray-200/80 hover:border-[#123B2A]/40 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)]"
-        : "bg-[#060B14]/85 backdrop-blur-xl border border-white/10 hover:border-[#18F000]/50 shadow-2xl hover:shadow-[0_10px_35px_rgba(24,240,0,0.14)]"
+        ? "bg-white border border-gray-200/80 hover:border-[#045965]/40 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)]"
+        : "bg-[#060B14]/85 backdrop-blur-xl border border-white/10 hover:border-[#045965]/50 shadow-2xl hover:shadow-[0_10px_35px_rgba(4,89,101,0.14)]"
     }`}>
       {/* Visual Header */}
       <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-black">
@@ -61,22 +61,20 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
           aria-hidden="true"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
         {/* Floating Category Icon */}
-        <div className="absolute top-4 left-4 z-10 p-2.5 rounded-full bg-black/70 border border-[#18E600]/40 text-[#18E600] shadow-lg backdrop-blur-md">
-          <IconComponent className="w-5 h-5 text-[#18E600]" />
+        <div className="absolute top-4 left-4 z-10 p-2.5 rounded-full bg-black/60 border border-[#045965]/40 text-[#D97706] shadow-lg backdrop-blur-md">
+          <IconComponent className="w-5 h-5 text-[#D97706]" />
         </div>
 
         {/* Duration Badge */}
-        <div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full text-xs font-semibold bg-black/70 text-white border border-white/15 backdrop-blur-md flex items-center space-x-1">
-          <Clock className="w-3.5 h-3.5 text-[#18E600]" />
+        <div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/15 backdrop-blur-md flex items-center space-x-1">
+          <Clock className="w-3.5 h-3.5 text-[#D97706]" />
           <span>{exp.recommendedDuration}</span>
         </div>
 
         {/* Tagline Over Image */}
         <div className="absolute bottom-4 left-4 right-4 z-10 text-white">
-          <p className="text-xs font-semibold text-[#18E600] tracking-wide line-clamp-1 drop-shadow">
+          <p className="text-xs font-semibold text-[#D97706] tracking-wide line-clamp-1 [text-shadow:_0_2px_10px_rgb(0_0_0_/_90%)]">
             {exp.tagline}
           </p>
         </div>
@@ -86,7 +84,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
       <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
         <div className="space-y-3">
           <h3 className={`text-xl sm:text-2xl font-extrabold tracking-tight leading-snug transition-colors ${
-            isLight ? "text-[#172334] group-hover:text-[#123B2A]" : "text-white group-hover:text-[#18E600]"
+            isLight ? "text-[#172334] group-hover:text-[#045965]" : "text-white group-hover:text-[#D97706]"
           }`}>
             {exp.title}
           </h3>
@@ -104,7 +102,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
                 isLight ? "text-[#526173]" : "text-gray-300"
               }`}>
                 <CheckCircle2 className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${
-                  isLight ? "text-[#123B2A]" : "text-[#0BFF01]"
+                  isLight ? "text-[#045965]" : "text-[#D97706]"
                 }`} />
                 <span className="line-clamp-1">{hl}</span>
               </li>
@@ -117,19 +115,19 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
           <Link
             href={`/packages/${exp.featuredPackageSlug}`}
             className={`text-xs font-bold flex items-center space-x-1.5 transition-colors ${
-              isLight ? "text-[#123B2A] hover:text-[#0E6838]" : "text-gray-300 hover:text-[#0BFF01]"
+              isLight ? "text-[#045965] hover:text-[#D97706]" : "text-gray-300 hover:text-[#D97706]"
             }`}
           >
             <span>Explore Related Tour</span>
-            <ArrowRight className="w-3.5 h-3.5 text-[#18E600]" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#D97706]" />
           </Link>
 
           <Link
             href={`/contact?experience=${encodeURIComponent(exp.title)}`}
             className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
               isLight
-                ? "bg-gray-100 hover:bg-[#18E600] text-[#123B2A] hover:text-black border border-gray-200"
-                : "bg-[#0BFF01]/10 hover:bg-[#0BFF01] text-[#0BFF01] hover:text-black border border-[#0BFF01]/30"
+                ? "bg-gray-100 hover:bg-[#045965] text-[#023A42] hover:text-white border border-gray-200"
+                : "bg-[#045965]/20 hover:bg-[#045965] text-[#D97706] hover:text-white border border-[#045965]/30"
             }`}
           >
             Inquire

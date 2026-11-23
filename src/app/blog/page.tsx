@@ -201,7 +201,7 @@ export default function BlogListingPage() {
         aria-roledescription="carousel"
         aria-label="3C Ceylon Tours Travel Guide"
       >
-        {/* Background Images Carousel Stack */}
+        {/* Background Images Carousel Stack - Natural Vibrant Scenery with NO Dark Overlays */}
         <div className="absolute inset-0 z-0">
           {BLOG_CAROUSEL_SLIDES.map((slide, index) => {
             const isMounted = mountedSlides.includes(index);
@@ -220,7 +220,7 @@ export default function BlogListingPage() {
                   alt={slide.alt}
                   fill
                   priority={index === 0}
-                  quality={88}
+                  quality={90}
                   sizes="100vw"
                   className={`object-cover object-center transition-transform duration-[7000ms] ease-out ${
                     isActive ? "scale-105" : "scale-100"
@@ -229,18 +229,6 @@ export default function BlogListingPage() {
               </div>
             );
           })}
-
-          {/* Home Page Matching Multi-Layer Natural Readability Overlay */}
-          <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-black/85 via-black/40 to-transparent z-10 pointer-events-none" />
-
-          <div 
-            className="absolute inset-0 z-10 pointer-events-none" 
-            style={{
-              background: "radial-gradient(ellipse at center, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.28) 55%, rgba(0,0,0,0.12) 100%)"
-            }}
-          />
-
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent z-10 pointer-events-none" />
         </div>
 
         {/* Main Content Container */}
@@ -249,18 +237,18 @@ export default function BlogListingPage() {
           {/* Tagline Badge */}
           <div 
             key={`badge-${currentSlideIndex}`}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-[#18E600]/40 text-[#18E600] text-xs font-bold uppercase tracking-widest mb-6 shadow-[0_0_20px_rgba(24,230,0,0.3)] animate-fade-in transition-all duration-500"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-[#023A42]/75 backdrop-blur-md border border-[#045965] text-white text-xs font-bold uppercase tracking-widest mb-6 shadow-lg animate-fade-in transition-all duration-500"
           >
-            <span className="text-white drop-shadow">{currentSlide.tagline}</span>
+            <span className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">{currentSlide.tagline}</span>
           </div>
 
           {/* Master Headline */}
           <h1 
             key={`headline-${currentSlideIndex}`}
-            className="font-sans text-[42px] sm:text-[58px] md:text-[72px] lg:text-[88px] xl:text-[96px] font-black text-white tracking-tight leading-[1.02] mb-6 drop-shadow-[0_4px_28px_rgba(0,0,0,0.98)] animate-fade-in transition-all duration-700 select-none"
+            className="font-sans text-[42px] sm:text-[58px] md:text-[72px] lg:text-[88px] xl:text-[96px] font-black text-white tracking-tight leading-[1.02] mb-6 [text-shadow:_0_4px_30px_rgb(0_0_0_/_95%),_0_2px_12px_rgb(0_0_0_/_85%)] animate-fade-in transition-all duration-700 select-none"
           >
             {currentSlide.titlePrefix}
-            <span className="text-[#18E600] drop-shadow-[0_0_35px_rgba(24,230,0,0.65)]">
+            <span className="text-[#045965] [text-shadow:_0_4px_30px_rgb(0_0_0_/_95%),_0_2px_12px_rgb(0_0_0_/_85%)]">
               {currentSlide.titleHighlight}
             </span>
           </h1>
@@ -268,7 +256,7 @@ export default function BlogListingPage() {
           {/* Subtitle */}
           <p 
             key={`sub-${currentSlideIndex}`}
-            className="max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl text-white font-medium leading-relaxed mb-10 drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] animate-fade-in transition-all duration-700"
+            className="max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl text-white font-medium leading-relaxed mb-10 [text-shadow:_0_2px_18px_rgb(0_0_0_/_95%),_0_1px_6px_rgb(0_0_0_/_90%)] animate-fade-in transition-all duration-700"
           >
             {currentSlide.subtitle}
           </p>
@@ -277,7 +265,7 @@ export default function BlogListingPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
             <a
               href="#guide-content-section"
-              className="w-full sm:w-auto px-9 py-4 rounded-full bg-[#18E600] hover:bg-[#15D600] text-black font-extrabold text-sm sm:text-base tracking-wider uppercase shadow-[0_0_25px_rgba(24,230,0,0.45)] hover:shadow-[0_0_40px_rgba(24,230,0,0.7)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2.5 rtl:space-x-reverse cursor-pointer"
+              className="w-full sm:w-auto px-9 py-4 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-sm sm:text-base tracking-wider uppercase shadow-[0_4px_25px_rgba(4,89,101,0.45)] hover:shadow-[0_4px_30px_rgba(217,119,6,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2.5 rtl:space-x-reverse cursor-pointer"
             >
               <span>Explore Travel Guides</span>
               <ArrowRight className="w-4 h-4" />
@@ -285,7 +273,7 @@ export default function BlogListingPage() {
 
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-9 py-4 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-bold text-sm sm:text-base tracking-wider border border-white/25 hover:border-white/50 shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse"
+              className="w-full sm:w-auto px-9 py-4 rounded-full bg-black/40 backdrop-blur-md hover:bg-black/60 text-white font-bold text-sm sm:text-base tracking-wider border border-white/30 hover:border-[#D97706] shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse"
             >
               <span>Ask a Chauffeur Specialist</span>
             </Link>
@@ -293,18 +281,18 @@ export default function BlogListingPage() {
 
           {/* Trust Badges */}
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-2xl mx-auto pt-6 border-t border-white/20">
-            <div className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <Compass className="w-4 h-4 text-[#18E600] flex-shrink-0" />
+            <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
+              <Compass className="w-4 h-4 text-[#D97706] flex-shrink-0" />
               <span className="tracking-wide">100% Private &amp; Bespoke</span>
             </div>
 
-            <div className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <ShieldCheck className="w-4 h-4 text-[#18E600] flex-shrink-0" />
+            <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
+              <ShieldCheck className="w-4 h-4 text-[#D97706] flex-shrink-0" />
               <span className="tracking-wide">SLTDA Certified</span>
             </div>
 
-            <div className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <Star className="w-4 h-4 text-[#18E600] fill-[#18E600] flex-shrink-0" />
+            <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
+              <Star className="w-4 h-4 text-[#D97706] fill-[#D97706] flex-shrink-0" />
               <span className="tracking-wide">5-Star Chauffeurs</span>
             </div>
           </div>
@@ -314,7 +302,7 @@ export default function BlogListingPage() {
         <button
           onClick={prevSlide}
           aria-label="Previous Slide"
-          className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/80 hover:text-[#0BFF01] border border-white/15 hover:border-[#0BFF01]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
+          className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/90 hover:text-[#D97706] border border-white/20 hover:border-[#D97706]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
         >
           <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
         </button>
@@ -322,13 +310,13 @@ export default function BlogListingPage() {
         <button
           onClick={nextSlide}
           aria-label="Next Slide"
-          className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/80 hover:text-[#0BFF01] border border-white/15 hover:border-[#0BFF01]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
+          className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/90 hover:text-[#D97706] border border-white/20 hover:border-[#D97706]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
         >
           <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
         </button>
 
         {/* Carousel Slide Indicators */}
-        <div className="absolute bottom-7 right-4 md:right-8 z-20 flex items-center space-x-3 rtl:space-x-reverse bg-black/60 backdrop-blur-xl px-3 py-2 rounded-full border border-white/10 text-xs text-white shadow-xl">
+        <div className="absolute bottom-7 right-4 md:right-8 z-20 flex items-center space-x-3 rtl:space-x-reverse bg-black/60 backdrop-blur-xl px-3 py-2 rounded-full border border-white/15 text-xs text-white shadow-xl">
           <div className="flex items-center space-x-1.5 rtl:space-x-reverse">
             {BLOG_CAROUSEL_SLIDES.map((slide, idx) => (
               <button
@@ -337,8 +325,8 @@ export default function BlogListingPage() {
                 aria-label={`Go to slide ${idx + 1}`}
                 className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
                   idx === currentSlideIndex
-                    ? "w-7 bg-[#0BFF01] shadow-[0_0_10px_rgba(11,255,1,0.7)]"
-                    : "w-2 bg-white/30 hover:bg-white/60"
+                    ? "w-7 bg-[#D97706] shadow-[0_0_10px_rgba(217,119,6,0.7)]"
+                    : "w-2 bg-white/40 hover:bg-white/70"
                 }`}
               />
             ))}
@@ -347,13 +335,13 @@ export default function BlogListingPage() {
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
             aria-label={isAutoPlaying ? "Pause carousel auto-play" : "Start carousel auto-play"}
-            className="pl-1 text-gray-400 hover:text-[#0BFF01] transition-colors cursor-pointer"
+            className="pl-1 text-gray-300 hover:text-[#D97706] transition-colors cursor-pointer"
             title={isAutoPlaying ? "Pause" : "Play"}
           >
             {isAutoPlaying ? (
               <Pause className="w-3.5 h-3.5" />
             ) : (
-              <Play className="w-3.5 h-3.5 text-[#0BFF01]" />
+              <Play className="w-3.5 h-3.5 text-[#D97706]" />
             )}
           </button>
         </div>
@@ -361,10 +349,10 @@ export default function BlogListingPage() {
         {/* Scroll Down Indicator */}
         <a 
           href="#guide-content-section"
-          className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-1 text-white/60 hover:text-white transition-colors cursor-pointer"
+          className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-1 text-white/70 hover:text-white transition-colors cursor-pointer"
         >
-          <span className="text-[10px] tracking-widest uppercase font-medium">Scroll to Guide</span>
-          <ChevronDown className="w-4 h-4 animate-bounce text-[#0BFF01]" />
+          <span className="text-[10px] tracking-widest uppercase font-medium drop-shadow">Scroll to Guide</span>
+          <ChevronDown className="w-4 h-4 animate-bounce text-[#D97706]" />
         </a>
       </section>
 
@@ -381,7 +369,7 @@ export default function BlogListingPage() {
         
         {/* Editorial Header (Matching Visit My Sri Lanka) */}
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-5">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[#18E600]/15 text-[#0E6838] border border-[#18E600]/30 text-xs font-black uppercase tracking-widest">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-black uppercase tracking-widest">
             KNOW BEFORE YOU GO
           </span>
 
@@ -394,12 +382,12 @@ export default function BlogListingPage() {
           </p>
 
           <div className="pt-2">
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0E6838]">
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#023A42]">
               Local knowledge for better journeys.
             </span>
           </div>
 
-          <div className="w-24 h-1 bg-[#18E600] mx-auto rounded-full mt-4" />
+          <div className="w-24 h-1 bg-[#045965] mx-auto rounded-full mt-4" />
         </div>
 
         {/* Filter & Search Bar */}
@@ -414,7 +402,7 @@ export default function BlogListingPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search guide (Wedding, Cost, Chauffeur, Honeymoon, Safaris)..."
-                className="w-full pl-10 pr-4 py-3 rounded-full bg-gray-50 border border-gray-200 text-xs sm:text-sm text-[#172334] placeholder-gray-400 focus:outline-none focus:border-[#18E600] focus:ring-1 focus:ring-[#18E600] transition-all"
+                className="w-full pl-10 pr-4 py-3 rounded-full bg-gray-50 border border-gray-200 text-xs sm:text-sm text-[#172334] placeholder-gray-400 focus:outline-none focus:border-[#045965] focus:ring-1 focus:ring-[#045965] transition-all"
               />
             </div>
 
@@ -433,7 +421,7 @@ export default function BlogListingPage() {
                     onClick={() => setSelectedCategory(cat.id)}
                     className={`px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                       isActive 
-                        ? "bg-[#18E600] text-black shadow-[0_0_15px_rgba(24,230,0,0.4)]" 
+                        ? "bg-[#045965] text-white shadow-[0_4px_15px_rgba(4,89,101,0.4)]" 
                         : "bg-gray-100 text-[#526173] hover:bg-gray-200 hover:text-[#172334]"
                     }`}
                   >
@@ -457,7 +445,7 @@ export default function BlogListingPage() {
 
           <div className="flex items-center justify-between text-xs text-[#526173] border-t border-gray-100 pt-3">
             <span>Showing <strong className="text-[#172334] font-bold">{filteredArticles.length}</strong> verified travel intelligence guides</span>
-            <span className="text-[#0E6838] font-bold hidden sm:inline">Written by 3C Ceylon Tours Master Local Chauffeurs</span>
+            <span className="text-[#045965] font-bold hidden sm:inline">Written by 3C Ceylon Tours Master Local Chauffeurs</span>
           </div>
         </div>
 
@@ -467,7 +455,7 @@ export default function BlogListingPage() {
             {filteredArticles.map((article) => (
               <div 
                 key={article.id}
-                className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_45px_rgba(24,230,0,0.18)] border border-gray-200/80 hover:border-[#18E600]/60 transition-all duration-500 transform hover:-translate-y-2"
+                className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_45px_rgba(4,89,101,0.18)] border border-gray-200/80 hover:border-[#045965]/60 transition-all duration-500 transform hover:-translate-y-2"
               >
                 {/* Top Image Container */}
                 <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-neutral-950">
@@ -486,19 +474,16 @@ export default function BlogListingPage() {
                     aria-hidden="true"
                   />
 
-                  {/* Soft Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity z-10" />
-
                   {/* Category Pill Tag */}
                   <div className="absolute top-4 left-4 z-20">
-                    <span className="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase bg-black/75 text-[#18E600] border border-[#18E600]/40 backdrop-blur-md shadow-sm">
+                    <span className="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase bg-[#023A42]/80 text-white border border-[#045965] backdrop-blur-md shadow-sm">
                       {article.category}
                     </span>
                   </div>
 
                   {/* Read Time Pill */}
                   <div className="absolute bottom-3 right-3 z-20 px-2.5 py-1 rounded-full bg-black/60 text-white text-[10px] font-medium backdrop-blur-md flex items-center space-x-1">
-                    <Clock className="w-3 h-3 text-[#18E600]" />
+                    <Clock className="w-3 h-3 text-[#D97706]" />
                     <span>{article.readTime}</span>
                   </div>
                 </div>
@@ -506,7 +491,7 @@ export default function BlogListingPage() {
                 {/* Card Content (Bottom) - No Read More Button */}
                 <div className="flex-1 p-6 sm:p-7 flex flex-col justify-between space-y-3">
                   <div className="space-y-2.5">
-                    <h3 className="font-serif text-xl sm:text-[22px] font-bold text-[#172334] group-hover:text-[#0E6838] transition-colors leading-snug">
+                    <h3 className="font-serif text-xl sm:text-[22px] font-bold text-[#172334] group-hover:text-[#045965] transition-colors leading-snug">
                       {article.title}
                     </h3>
 
@@ -520,7 +505,7 @@ export default function BlogListingPage() {
           </div>
         ) : (
           <div className="bg-white rounded-3xl p-12 text-center border border-gray-200 max-w-xl mx-auto space-y-4 shadow-sm">
-            <BookOpen className="w-12 h-12 text-[#18E600] mx-auto" />
+            <BookOpen className="w-12 h-12 text-[#045965] mx-auto" />
             <h3 className="font-sans text-2xl font-extrabold text-[#172334] tracking-tight">No Guides Found</h3>
             <p className="text-sm text-[#526173] leading-relaxed font-normal">
               Try a different keyword or reset filters to browse all Sri Lanka travel guides.
@@ -536,8 +521,8 @@ export default function BlogListingPage() {
 
         {/* Bottom Bespoke Callout */}
         <div className="mt-20 bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 text-center max-w-3xl mx-auto shadow-sm space-y-6">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-emerald-50 text-[#0E6838] text-xs font-bold uppercase tracking-wider border border-emerald-200">
-            <Compass className="w-4 h-4 text-[#0E6838]" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#045965]/10 text-[#023A42] text-xs font-bold uppercase tracking-wider border border-[#045965]/30">
+            <Compass className="w-4 h-4 text-[#045965]" />
             <span>Ready to Plan Your Journey?</span>
           </div>
 
@@ -554,7 +539,7 @@ export default function BlogListingPage() {
               href={getWhatsAppLink("Hello 3C Ceylon Tours, I am planning a trip to Sri Lanka and would like advice on itineraries, travel costs, and private chauffeur bookings.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#18E600] hover:bg-[#15D600] text-black font-extrabold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all shadow-md hover:shadow-lg cursor-pointer"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all shadow-md hover:shadow-lg cursor-pointer"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Ask a Specialist via WhatsApp</span>

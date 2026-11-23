@@ -88,8 +88,8 @@ export default function HomePage() {
       <section id="why-us" className="py-14 sm:py-18 relative overflow-hidden bg-white text-[#172334]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
-            <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1.5 rounded-full bg-[#18E600]/15 text-[#123B2A] border border-[#18E600]/30 text-xs font-extrabold uppercase tracking-wider mb-3">
-              <Award className="w-3.5 h-3.5 text-[#123B2A]" />
+            <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1.5 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-extrabold uppercase tracking-wider mb-3">
+              <Award className="w-3.5 h-3.5 text-[#023A42]" />
               <span>The 3C Difference</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-[#172334] tracking-tight leading-[1.08] mb-3">
@@ -104,13 +104,13 @@ export default function HomePage() {
             {COMPANY_INFO.features.map((feat, i) => (
               <div 
                 key={i} 
-                className="p-7 rounded-3xl bg-[#F7F9F6] border border-gray-200/80 hover:border-[#123B2A]/40 hover:shadow-xl transition-all duration-300 space-y-3"
+                className="p-7 rounded-3xl bg-[#F7F9F6] border border-gray-200/80 hover:border-[#023A42]/40 hover:shadow-xl transition-all duration-300 space-y-3"
               >
-                <div className="w-12 h-12 rounded-2xl bg-white border border-gray-200 text-[#123B2A] flex items-center justify-center font-bold shadow-sm">
-                  {i === 0 && <Compass className="w-6 h-6 text-[#123B2A]" />}
-                  {i === 1 && <ShieldCheck className="w-6 h-6 text-[#123B2A]" />}
-                  {i === 2 && <Car className="w-6 h-6 text-[#123B2A]" />}
-                  {i === 3 && <Clock className="w-6 h-6 text-[#123B2A]" />}
+                <div className="w-12 h-12 rounded-2xl bg-white border border-gray-200 text-[#023A42] flex items-center justify-center font-bold shadow-sm">
+                  {i === 0 && <Compass className="w-6 h-6 text-[#023A42]" />}
+                  {i === 1 && <ShieldCheck className="w-6 h-6 text-[#023A42]" />}
+                  {i === 2 && <Car className="w-6 h-6 text-[#023A42]" />}
+                  {i === 3 && <Clock className="w-6 h-6 text-[#023A42]" />}
                 </div>
                 <h3 className="font-extrabold text-xl text-[#172334] tracking-tight">
                   {feat.title}
@@ -136,13 +136,13 @@ export default function HomePage() {
       >
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl bg-white/85 backdrop-blur-xl border border-white/70 shadow-[0_20px_60px_rgba(0,0,0,0.15)] rounded-3xl p-8 sm:p-12 space-y-6">
-            <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-[#18E600]/15 border border-[#18E600]/30 text-[#0E6838] text-xs font-extrabold uppercase tracking-widest shadow-sm">
+            <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-[#045965]/15 border border-[#045965]/30 text-[#023A42] text-xs font-extrabold uppercase tracking-widest shadow-sm">
               <span>Pure Sri Lankan Splendor</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-[1.1] tracking-tight text-[#0A1E14]">
               &ldquo;There is no other island on Earth that offers{" "}
-              <span className="text-[#0E6838]">so much beauty</span>{" "}
+              <span className="text-[#045965]">so much beauty</span>{" "}
               in such intimate proximity.&rdquo;
             </h2>
 
@@ -153,7 +153,7 @@ export default function HomePage() {
             <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#18E600] hover:bg-[#15C800] text-black font-extrabold text-xs uppercase tracking-wider shadow-[0_4px_20px_rgba(24,230,0,0.35)] hover:scale-105 transition-all text-center"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-xs uppercase tracking-wider shadow-[0_4px_20px_rgba(4,89,101,0.35)] hover:scale-105 transition-all text-center"
               >
                 Plan Your Bespoke Escape
               </Link>
@@ -161,9 +161,9 @@ export default function HomePage() {
                 href={getWhatsAppLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#0A1E14] hover:bg-[#0E6838] text-white font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-colors flex items-center justify-center space-x-2 text-center"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#0A1E14] hover:bg-[#023A42] text-white font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-colors flex items-center justify-center space-x-2 text-center"
               >
-                <MessageCircle className="w-4 h-4 text-[#18E600]" />
+                <MessageCircle className="w-4 h-4 text-[#D97706]" />
                 <span>Chat With Our Team</span>
               </a>
             </div>
