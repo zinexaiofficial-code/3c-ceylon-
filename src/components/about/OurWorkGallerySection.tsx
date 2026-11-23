@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { Camera, Sparkles, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Sparkles, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface GalleryPhoto {
   id: string;
@@ -257,12 +257,6 @@ export const OurWorkGallerySection: React.FC = () => {
                   aria-hidden="true"
                 />
 
-                {/* Top Subtle Location Pill */}
-                <div className="absolute top-3.5 left-3.5 z-20 flex items-center space-x-1.5 px-3 py-1 rounded-full bg-black/45 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold tracking-wide shadow-md">
-                  <Camera className="w-3 h-3 text-[#329B38]" />
-                  <span>{photo.location}</span>
-                </div>
-
                 {/* Bottom Title & Verified Guest Badge */}
                 <div className="absolute bottom-3.5 left-3.5 right-3.5 z-20">
                   <h3 className="font-bold text-white text-sm sm:text-base lg:text-[17px] leading-snug drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] group-hover:text-[#3CA647] transition-colors">
@@ -340,7 +334,7 @@ export const OurWorkGallerySection: React.FC = () => {
             {/* Bottom Modal Caption */}
             <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6 text-center text-white">
               <span className="text-xs font-bold uppercase tracking-widest text-[#3CA647] block mb-1">
-                {WORK_PHOTOS[lightboxIndex].location} • {lightboxIndex + 1} of {WORK_PHOTOS.length}
+                Moment {lightboxIndex + 1} of {WORK_PHOTOS.length}
               </span>
               <h3 className="text-xl sm:text-2xl font-extrabold">
                 {WORK_PHOTOS[lightboxIndex].title}
