@@ -436,9 +436,9 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-xl bg-[#172334] border border-[#172334] text-white flex items-center justify-center font-bold shadow-md">
                 <Car className="w-6 h-6 text-[#329B38]" />
               </div>
-              <h3 className="font-sans text-xl font-extrabold text-[#172334] tracking-tight">2. Comfort (VIP Transport)</h3>
+              <h3 className="font-sans text-xl font-extrabold text-[#172334] tracking-tight">2. Comfort (Transport Provided)</h3>
               <p className="text-xs sm:text-sm text-[#526173] leading-relaxed font-normal">
-                Air-conditioned Mercedes, luxury minivans, and Prado SUVs with on-board Wi-Fi and handpicked boutique 5★ stays.
+                Dedicated air-conditioned private transport provided throughout your entire journey, paired with handpicked boutique stays.
               </p>
             </div>
 
