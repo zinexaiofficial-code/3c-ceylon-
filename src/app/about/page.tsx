@@ -570,7 +570,8 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Accreditations & Trust */}
+        {/* Accreditations & Trust - Hidden as requested */}
+        {/*
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm space-y-6">
           <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#172334] text-center tracking-tight">
             Official Accreditations &amp; Standards
@@ -584,6 +585,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
+        */}
       </div>
 
       {/* ─────────────────────────────────────────────────────────────
