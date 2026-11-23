@@ -6,7 +6,7 @@ import { Star } from "lucide-react";
 
 export const TestimonialsSection: React.FC = () => {
   return (
-    <section 
+    <section
       id="testimonials"
       className="py-16 sm:py-20 lg:py-24 relative bg-[#FAF8F2] text-[#172334] select-none"
       aria-label="Traveler Reviews and Testimonials"
@@ -18,7 +18,7 @@ export const TestimonialsSection: React.FC = () => {
       />
 
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1.5 rounded-full bg-[#329B38]/12 text-[#247A32] border border-[#329B38]/30 text-[11px] font-extrabold uppercase tracking-widest mb-3 shadow-xs">

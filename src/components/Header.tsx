@@ -105,8 +105,8 @@ export const Header: React.FC = () => {
                 <span className="font-sans text-[17px] sm:text-[18px] xl:text-[20px] font-extrabold tracking-tight text-white uppercase group-hover:text-[#329B38] transition-colors leading-tight">
                   3C CEYLON <span className="text-[#329B38]">TOURS</span>
                 </span>
-                <span className="text-[10px] xl:text-[11px] tracking-[0.22em] uppercase font-semibold text-gray-200 block -mt-0.5">
-                  Luxury Island Journeys
+                <span className="text-[9.5px] xl:text-[10.5px] tracking-[0.16em] uppercase font-semibold text-gray-200 block -mt-0.5 whitespace-nowrap">
+                  Your Journey, Our Passion
                 </span>
               </div>
             </Link>
@@ -190,8 +190,8 @@ export const Header: React.FC = () => {
                 <span className="font-sans text-[17px] font-extrabold tracking-tight text-white uppercase leading-tight">
                   3C CEYLON <span className="text-[#329B38]">TOURS</span>
                 </span>
-                <span className="text-[10px] tracking-[0.22em] uppercase font-semibold text-gray-300 block -mt-0.5">
-                  Luxury Island Journeys
+                <span className="text-[9.5px] tracking-[0.16em] uppercase font-semibold text-gray-300 block -mt-0.5 whitespace-nowrap">
+                  Your Journey, Our Passion
                 </span>
               </div>
             </Link>

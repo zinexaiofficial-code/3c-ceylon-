@@ -50,7 +50,7 @@ export interface CompanyInfo {
 export const COMPANY_INFO: CompanyInfo = {
   name: "3C CEYLON TOURS",
   legalName: "3C Ceylon Tours (Pvt) Ltd",
-  tagline: "Discover the Soul of Sri Lanka",
+  tagline: "Your Journey, Our Passion",
   slogan: "Extraordinary journeys. Timeless memories. Beautifully crafted by 3C Ceylon Tours.",
   description: "Premier destination management company and bespoke luxury tour operator in Sri Lanka. We craft private, authentic, and unforgettable island journeys with 24/7 dedicated concierge service.",
   founder: {

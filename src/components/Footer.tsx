@@ -77,8 +77,8 @@ export const Footer: React.FC = () => {
                 <span className="font-sans text-lg font-extrabold tracking-tight text-white uppercase group-hover:text-[#329B38] transition-colors leading-tight">
                   3C CEYLON <span className="text-[#329B38]">TOURS</span>
                 </span>
-                <span className="text-[10px] text-gray-300 tracking-[0.2em] uppercase font-semibold">
-                  Luxury Island Journeys
+                <span className="text-[10px] text-gray-300 tracking-[0.16em] uppercase font-semibold whitespace-nowrap">
+                  Your Journey, Our Passion
                 </span>
               </div>
             </Link>
