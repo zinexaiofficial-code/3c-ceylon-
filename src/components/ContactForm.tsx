@@ -78,9 +78,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
 
   if (status === "success") {
     return (
-      <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-[0_15px_45px_rgba(0,0,0,0.06)] border border-[#045965]/40 text-center space-y-6 animate-fade-in">
-        <div className="w-16 h-16 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/40 flex items-center justify-center mx-auto shadow-sm">
-          <CheckCircle className="w-8 h-8 text-[#023A42]" />
+      <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-[0_15px_45px_rgba(0,0,0,0.06)] border border-[#91B58A]/40 text-center space-y-6 animate-fade-in">
+        <div className="w-16 h-16 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/40 flex items-center justify-center mx-auto shadow-sm">
+          <CheckCircle className="w-8 h-8 text-[#476A4C]" />
         </div>
         <h3 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#172334] tracking-tight">
           Inquiry Successfully Received
@@ -94,7 +94,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
             href={getWhatsAppLink(getCustomWhatsAppText())}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#045965] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-[0_4px_20px_rgba(4,89,101,0.35)] hover:bg-[#D97706] transition-colors"
+            className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-xs uppercase tracking-wider border border-[#91B58A]/40 flex items-center justify-center space-x-2 shadow-md transition-colors"
           >
             <MessageCircle className="w-4 h-4" />
             <span>Fast-Track on WhatsApp</span>
@@ -116,7 +116,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
                 websiteHoneypot: ""
               });
             }}
-            className="text-xs text-[#045965] hover:underline font-bold"
+            className="text-xs text-[#476A4C] hover:underline font-bold"
           >
             Submit Another Request
           </button>
@@ -155,10 +155,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label htmlFor="fullName" className="block text-xs font-bold uppercase tracking-wider text-[#172334] mb-2">
-            {t.form.fullName} <span className="text-[#045965] font-black">*</span>
+            {t.form.fullName} <span className="text-[#476A4C] font-black">*</span>
           </label>
           <div className="relative">
-            <User className="w-4 h-4 text-[#045965] absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <User className="w-4 h-4 text-[#476A4C] absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="text"
               id="fullName"
@@ -167,17 +167,17 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
               onChange={handleChange}
               required
               placeholder="e.g. Lord & Lady Hamilton"
-              className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#045965] focus:ring-2 focus:ring-[#045965]/20 transition-all font-medium"
+              className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#91B58A] focus:ring-2 focus:ring-[#91B58A]/30 transition-all font-medium"
             />
           </div>
         </div>
 
         <div>
           <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-[#172334] mb-2">
-            {t.form.email} <span className="text-[#045965] font-black">*</span>
+            {t.form.email} <span className="text-[#476A4C] font-black">*</span>
           </label>
           <div className="relative">
-            <Mail className="w-4 h-4 text-[#045965] absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <Mail className="w-4 h-4 text-[#476A4C] absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="email"
               id="email"
@@ -186,7 +186,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
               onChange={handleChange}
               required
               placeholder="e.g. travel@example.com"
-              className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#045965] focus:ring-2 focus:ring-[#045965]/20 transition-all font-medium"
+              className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#91B58A] focus:ring-2 focus:ring-[#91B58A]/30 transition-all font-medium"
             />
           </div>
         </div>
@@ -199,7 +199,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
             {t.form.country}
           </label>
           <div className="relative">
-            <Globe2 className="w-4 h-4 text-[#045965] absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <Globe2 className="w-4 h-4 text-[#476A4C] absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="text"
               id="country"
@@ -207,17 +207,17 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
               value={formData.country}
               onChange={handleChange}
               placeholder="e.g. United Kingdom, Germany, UAE"
-              className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#045965] focus:ring-2 focus:ring-[#045965]/20 transition-all font-medium"
+              className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#91B58A] focus:ring-2 focus:ring-[#91B58A]/30 transition-all font-medium"
             />
           </div>
         </div>
 
         <div>
           <label htmlFor="whatsapp" className="block text-xs font-bold uppercase tracking-wider text-[#172334] mb-2">
-            {t.form.whatsappNumber} <span className="text-[#045965] font-black">*</span>
+            {t.form.whatsappNumber} <span className="text-[#476A4C] font-black">*</span>
           </label>
           <div className="relative">
-            <Phone className="w-4 h-4 text-[#045965] absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <Phone className="w-4 h-4 text-[#476A4C] absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="tel"
               id="whatsapp"
@@ -226,7 +226,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
               onChange={handleChange}
               required
               placeholder="e.g. +44 7911 123456"
-              className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#045965] focus:ring-2 focus:ring-[#045965]/20 transition-all font-medium"
+              className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#91B58A] focus:ring-2 focus:ring-[#91B58A]/30 transition-all font-medium"
             />
           </div>
         </div>
@@ -239,7 +239,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
             {t.form.preferredDates}
           </label>
           <div className="relative">
-            <Calendar className="w-4 h-4 text-[#045965] absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <Calendar className="w-4 h-4 text-[#476A4C] absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="text"
               id="dates"
@@ -247,7 +247,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
               value={formData.dates}
               onChange={handleChange}
               placeholder="e.g. Oct 2026 / 14 Days"
-              className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#045965] focus:ring-2 focus:ring-[#045965]/20 transition-all font-medium"
+              className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#91B58A] focus:ring-2 focus:ring-[#91B58A]/30 transition-all font-medium"
             />
           </div>
         </div>
@@ -261,7 +261,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
             name="travelers"
             value={formData.travelers}
             onChange={handleChange}
-            className="w-full px-4 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] text-sm focus:outline-none focus:bg-white focus:border-[#045965] focus:ring-2 focus:ring-[#045965]/20 transition-all font-medium cursor-pointer"
+            className="w-full px-4 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] text-sm focus:outline-none focus:bg-white focus:border-[#91B58A] focus:ring-2 focus:ring-[#91B58A]/30 transition-all font-medium cursor-pointer"
           >
             <option value="1">1 Traveler (Solo)</option>
             <option value="2">2 Travelers (Couple)</option>
@@ -280,7 +280,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
             name="style"
             value={formData.style}
             onChange={handleChange}
-            className="w-full px-4 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] text-sm focus:outline-none focus:bg-white focus:border-[#045965] focus:ring-2 focus:ring-[#045965]/20 transition-all font-medium cursor-pointer"
+            className="w-full px-4 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] text-sm focus:outline-none focus:bg-white focus:border-[#91B58A] focus:ring-2 focus:ring-[#91B58A]/30 transition-all font-medium cursor-pointer"
           >
             <option value="Ultra-Luxury">Ultra-Luxury & VIP</option>
             <option value="Boutique Luxury">Boutique & Heritage</option>
@@ -297,13 +297,13 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
           Accommodation Preference
         </label>
         <div className="relative">
-          <Compass className="w-4 h-4 text-[#045965] absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          <Compass className="w-4 h-4 text-[#476A4C] absolute left-3.5 rtl:left-auto rtl:right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
           <select
             id="accommodation"
             name="accommodation"
             value={formData.accommodation}
             onChange={handleChange}
-            className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] text-sm focus:outline-none focus:bg-white focus:border-[#045965] focus:ring-2 focus:ring-[#045965]/20 transition-all font-medium cursor-pointer"
+            className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-3.5 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] text-sm focus:outline-none focus:bg-white focus:border-[#91B58A] focus:ring-2 focus:ring-[#91B58A]/30 transition-all font-medium cursor-pointer"
           >
             <option value="5-Star Luxury Resorts">5-Star Luxury Hotels & Resorts</option>
             <option value="Boutique Heritage Villas">Boutique Heritage & Tea Bungalows</option>
@@ -326,7 +326,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
           value={formData.message}
           onChange={handleChange}
           placeholder="Please describe your dream trip, preferred places (Sigiriya, Tea Trails, Yala, beaches), dietary needs, or special milestones..."
-          className="w-full p-4 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#045965] focus:ring-2 focus:ring-[#045965]/20 transition-all resize-none font-medium leading-relaxed"
+          className="w-full p-4 rounded-2xl bg-[#F8FAF7] border border-gray-200 text-[#172334] placeholder-gray-400 text-sm focus:outline-none focus:bg-white focus:border-[#91B58A] focus:ring-2 focus:ring-[#91B58A]/30 transition-all resize-none font-medium leading-relaxed"
         />
       </div>
 
@@ -335,7 +335,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="w-full sm:flex-1 py-4 px-8 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-xs tracking-wider uppercase shadow-[0_4px_20px_rgba(4,89,101,0.35)] hover:shadow-[0_4px_25px_rgba(217,119,6,0.4)] transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse disabled:opacity-75 cursor-pointer hover:scale-102 active:scale-95"
+          className="w-full sm:flex-1 py-4 px-8 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-xs tracking-wider uppercase border border-[#91B58A]/40 shadow-md transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse disabled:opacity-75 cursor-pointer hover:scale-102 active:scale-95"
         >
           <Send className="w-4 h-4 text-white" />
           <span>{status === "submitting" ? t.form.submitting : t.form.submit}</span>
@@ -345,7 +345,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPackageTitle, o
           href={getWhatsAppLink(getCustomWhatsAppText())}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-auto py-4 px-6 rounded-full bg-[#172334] hover:bg-[#023A42] text-white font-bold text-xs tracking-wider uppercase flex items-center justify-center space-x-2 rtl:space-x-reverse transition-colors shadow-sm text-center"
+          className="w-full sm:w-auto py-4 px-6 rounded-full bg-[#172334] hover:bg-[#476A4C] text-white font-bold text-xs tracking-wider uppercase flex items-center justify-center space-x-2 rtl:space-x-reverse transition-colors shadow-sm text-center"
         >
           <MessageCircle className="w-4 h-4 text-[#D97706]" />
           <span>Instant WhatsApp Chat</span>

@@ -10,8 +10,8 @@ import Script from "next/script";
  * - Deep dark foundation: #020407
  * - Subtle Midnight Navy: #03091C
  * - Deep Ocean Glow: #071A35
- * - Primary Olive: #045965
- * - Deep Olive: #023A42
+ * - Primary Olive: #476A4C
+ * - Soft Green: #91B58A
  */
 interface DynamicBackgroundProps {
   className?: string;
@@ -40,7 +40,7 @@ export const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
               speed: { x: { min: 0.3, max: 0.7 }, y: { min: 0.3, max: 0.7 } },
               colors: {
                 background: "#071323",
-                particles: ["#0a40d0", "#045965", "#023A42"]
+                particles: ["#0a40d0", "#476A4C", "#91B58A"]
               },
               blending: "lighten",
               opacity: { center: 0.16, edge: 0 },

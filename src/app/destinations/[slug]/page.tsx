@@ -75,7 +75,7 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
   };
 
   return (
-    <div className="bg-[#FAF8F2] min-h-screen pt-24 sm:pt-28 pb-24 text-[#172334] relative z-10 selection:bg-[#045965] selection:text-white">
+    <div className="bg-[#FAF8F2] min-h-screen pt-24 sm:pt-28 pb-24 text-[#172334] relative z-10 selection:bg-[#91B58A] selection:text-[#172319]">
       {/* JSON-LD Script */}
       <script
         type="application/ld+json"
@@ -86,16 +86,16 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex flex-wrap items-center justify-between gap-3 text-xs">
           <div className="flex items-center space-x-2 rtl:space-x-reverse text-[#526173]">
-            <Link href="/" className="hover:text-[#045965] transition-colors font-medium">Home</Link>
+            <Link href="/" className="hover:text-[#476A4C] transition-colors font-medium">Home</Link>
             <span>/</span>
-            <Link href="/destinations" className="hover:text-[#045965] transition-colors font-medium">Destinations</Link>
+            <Link href="/destinations" className="hover:text-[#476A4C] transition-colors font-medium">Destinations</Link>
             <span>/</span>
-            <span className="text-[#045965] font-bold">{dest.name}</span>
+            <span className="text-[#476A4C] font-bold">{dest.name}</span>
           </div>
 
           <Link
             href="/destinations"
-            className="inline-flex items-center space-x-1.5 text-xs font-bold text-[#045965] hover:text-[#D97706] transition-colors"
+            className="inline-flex items-center space-x-1.5 text-xs font-bold text-[#476A4C] hover:text-[#D97706] transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back to All Destinations</span>
@@ -125,7 +125,7 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
           {/* Hero Overlay Details with frosted pill box preserving image natural brightness */}
           <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 p-6 sm:p-8 rounded-2xl bg-black/60 backdrop-blur-md border border-white/15 text-white space-y-3 sm:space-y-4 z-20">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-[#045965] text-white inline-flex items-center space-x-1.5 shadow-[0_0_15px_rgba(4,89,101,0.5)]">
+              <span className="px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-[#476A4C] text-white inline-flex items-center space-x-1.5 border border-[#91B58A]/30 shadow-md">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>{dest.province}</span>
               </span>
@@ -171,8 +171,8 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
           {/* Main Description & Attractions */}
           <div className="lg:col-span-8 bg-white rounded-3xl p-7 sm:p-10 shadow-[0_10px_35px_rgba(0,0,0,0.06)] border border-gray-200/90 space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3 py-1 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-extrabold uppercase tracking-widest">
-                <Compass className="w-3.5 h-3.5 text-[#045965]" />
+              <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3 py-1 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/40 text-xs font-extrabold uppercase tracking-widest">
+                <Compass className="w-3.5 h-3.5 text-[#476A4C]" />
                 <span>Destination Overview</span>
               </div>
 
@@ -188,7 +188,7 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
             {/* Top Attractions & Experiences */}
             <div className="pt-6 border-t border-gray-200 space-y-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#045965]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#476A4C]">
                   Must-Visit Sights
                 </span>
                 <h3 className="font-sans text-xl sm:text-2xl font-extrabold text-[#172334] tracking-tight mt-1">
@@ -200,10 +200,10 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
                 {dest.attractions.map((att, i) => (
                   <div 
                     key={i} 
-                    className="p-5 rounded-2xl bg-gray-50 border border-gray-200/80 hover:border-[#045965]/60 hover:bg-[#045965]/5 transition-all duration-300 space-y-2 group"
+                    className="p-5 rounded-2xl bg-gray-50 border border-gray-200/80 hover:border-[#91B58A]/60 hover:bg-[#91B58A]/5 transition-all duration-300 space-y-2 group"
                   >
-                    <h4 className="font-extrabold text-sm sm:text-base text-[#172334] group-hover:text-[#045965] transition-colors flex items-center space-x-2 rtl:space-x-reverse">
-                      <CheckCircle2 className="w-4 h-4 text-[#045965] flex-shrink-0" />
+                    <h4 className="font-extrabold text-sm sm:text-base text-[#172334] group-hover:text-[#476A4C] transition-colors flex items-center space-x-2 rtl:space-x-reverse">
+                      <CheckCircle2 className="w-4 h-4 text-[#476A4C] flex-shrink-0" />
                       <span>{att.title}</span>
                     </h4>
                     <p className="text-xs sm:text-sm text-[#526173] leading-relaxed font-normal">
@@ -220,7 +220,7 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
             <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-[0_12px_40px_rgba(0,0,0,0.07)] border border-gray-200/90 space-y-6 sticky top-28">
               <h3 className="font-sans text-lg sm:text-xl font-extrabold text-[#172334] border-b border-gray-200 pb-3 tracking-tight flex items-center justify-between">
                 <span>Visitor Information</span>
-                <span className="text-[11px] font-bold text-[#045965] uppercase bg-[#045965]/10 px-2.5 py-0.5 rounded-full border border-[#045965]/20">
+                <span className="text-[11px] font-bold text-[#476A4C] uppercase bg-[#91B58A]/20 px-2.5 py-0.5 rounded-full border border-[#91B58A]/30">
                   Verified Guide
                 </span>
               </h3>
@@ -236,7 +236,7 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
 
                 <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-100">
                   <span className="text-[10px] uppercase font-bold text-[#526173] tracking-wider flex items-center space-x-1.5 mb-1">
-                    <Clock className="w-3.5 h-3.5 text-[#045965]" />
+                    <Clock className="w-3.5 h-3.5 text-[#476A4C]" />
                     <span>Weather &amp; Temperatures</span>
                   </span>
                   <p className="font-bold text-[#172334]">{dest.weather}</p>
@@ -244,7 +244,7 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
 
                 <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-100">
                   <span className="text-[10px] uppercase font-bold text-[#526173] tracking-wider flex items-center space-x-1.5 mb-1">
-                    <Calendar className="w-3.5 h-3.5 text-[#045965]" />
+                    <Calendar className="w-3.5 h-3.5 text-[#476A4C]" />
                     <span>Recommended Duration</span>
                   </span>
                   <p className="font-bold text-[#172334]">{dest.idealStay}</p>
@@ -253,13 +253,13 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
 
               {/* Local Chauffeur Insider Tips */}
               <div className="pt-4 border-t border-gray-200 space-y-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#045965] block">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#476A4C] block">
                   Chauffeur &amp; Guide Tips:
                 </span>
                 <ul className="space-y-2 text-xs text-[#526173]">
                   {dest.insiderTips.map((tip, i) => (
                     <li key={i} className="flex items-start space-x-2 rtl:space-x-reverse">
-                      <span className="text-[#045965] font-bold text-sm leading-none">•</span>
+                      <span className="text-[#476A4C] font-bold text-sm leading-none">•</span>
                       <span className="leading-relaxed">{tip}</span>
                     </li>
                   ))}
@@ -272,7 +272,7 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
                   href={getWhatsAppLink(`Hello 3C Ceylon Tours, I'd like to plan a private tour to ${dest.name}. Can you recommend the best itinerary and luxury hotels?`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-4 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all shadow-[0_0_20px_rgba(4,89,101,0.35)] hover:shadow-[0_0_30px_rgba(217,119,6,0.5)] cursor-pointer"
+                  className="w-full py-4 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 border border-[#91B58A]/40 transition-all shadow-lg hover:shadow-[0_4px_30px_rgba(145,181,138,0.5)] cursor-pointer"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Customize Trip to {dest.name}</span>
@@ -290,7 +290,7 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
           <div className="space-y-8 pt-8 border-t border-gray-200">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#045965]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#476A4C]">
                   Recommended Itineraries
                 </span>
                 <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#172334] mt-1 tracking-tight">
@@ -299,7 +299,7 @@ export default function DestinationDetailPage({ params }: DestinationDetailPageP
               </div>
               <Link
                 href="/packages"
-                className="text-xs font-bold text-[#023A42] hover:text-[#045965] flex items-center space-x-1.5 transition-colors"
+                className="text-xs font-bold text-[#476A4C] hover:text-[#38553C] flex items-center space-x-1.5 transition-colors"
               >
                 <span>View All Tour Packages</span>
                 <ArrowRight className="w-4 h-4" />

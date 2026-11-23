@@ -22,7 +22,7 @@ export const FinisherBackground: React.FC = () => {
               speed: { x: { min: 0.4, max: 1.2 }, y: { min: 0.4, max: 1.2 } },
               colors: {
                 background: "#000000",
-                particles: ["#0023dd", "#045965", "#D97706"]
+                particles: ["#0023dd", "#476A4C", "#91B58A"]
               },
               blending: "lighten",
               opacity: { center: 0.22, edge: 0 },
@@ -68,9 +68,9 @@ export const FinisherBackground: React.FC = () => {
       >
         {/* CSS Ambient Mesh Lights */}
         <div className="absolute top-[-10%] left-[-10%] w-[55vw] h-[55vw] rounded-full bg-[#0023dd]/20 blur-[140px] animate-pulse" />
-        <div className="absolute top-[35%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#045965]/14 blur-[150px] animate-pulse delay-1000" />
+        <div className="absolute top-[35%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#91B58A]/14 blur-[150px] animate-pulse delay-1000" />
         <div className="absolute bottom-[-10%] left-[20%] w-[45vw] h-[45vw] rounded-full bg-[#0023dd]/18 blur-[130px]" />
-        <div className="absolute top-[60%] left-[-5%] w-[40vw] h-[40vw] rounded-full bg-[#045965]/10 blur-[140px]" />
+        <div className="absolute top-[60%] left-[-5%] w-[40vw] h-[40vw] rounded-full bg-[#476A4C]/10 blur-[140px]" />
       </div>
     </>
   );

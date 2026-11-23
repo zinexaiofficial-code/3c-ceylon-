@@ -182,7 +182,7 @@ export default function ContactPage() {
           1. FULL-HEIGHT CINEMATIC CAROUSEL (Identical Home Page Format)
           - Height: min-h-[92vh] md:min-h-screen
           - Color pattern: Natural vibrant photo with subtle multi-layer vignette
-          - Hero Typography: Bold Impact with #045965 highlight
+          - Hero Typography: Bold Impact with #91B58A highlight
           - Primary image: Joyful Tropical Surf Adventure
          ───────────────────────────────────────────────────────────── */}
       <section 
@@ -228,22 +228,28 @@ export default function ContactPage() {
 
         {/* Main Content Container */}
         <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 md:pt-32 pb-24">
+          {/* Subtle Localized Text Contrast Backdrop — Preserves 100% natural photo brightness across the rest of the image */}
+          <div 
+            className="absolute inset-x-2 sm:inset-x-8 top-12 bottom-12 -z-10 bg-black/35 backdrop-blur-[1.5px] rounded-3xl pointer-events-none" 
+            aria-hidden="true" 
+          />
           
           {/* Tagline Badge */}
           <div 
             key={`badge-${currentSlideIndex}`}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-[#045965]/40 text-[#D97706] text-xs font-bold uppercase tracking-widest mb-6 shadow-[0_0_20px_rgba(4,89,101,0.3)] animate-fade-in transition-all duration-500"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-[#91B58A]/50 text-white text-xs font-bold uppercase tracking-widest mb-6 shadow-lg animate-fade-in transition-all duration-500"
           >
-            <span className="text-white drop-shadow">{currentSlide.tagline}</span>
+            <span className="w-2 h-2 rounded-full bg-[#91B58A] inline-block mr-2" />
+            <span className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">{currentSlide.tagline}</span>
           </div>
 
           {/* Master Headline - Home Page Style Bold Impact */}
           <h1 
             key={`headline-${currentSlideIndex}`}
-            className="font-sans text-[42px] sm:text-[58px] md:text-[72px] lg:text-[88px] xl:text-[96px] font-black text-white tracking-tight leading-[1.02] mb-6 [text-shadow:_0_4px_30px_rgb(0_0_0_/_95%),_0_2px_12px_rgb(0_0_0_/_85%)] animate-fade-in transition-all duration-700 select-none"
+            className="font-sans text-[42px] sm:text-[58px] md:text-[72px] lg:text-[88px] xl:text-[96px] font-black text-white tracking-tight leading-[1.02] mb-6 [text-shadow:_0_2px_10px_rgba(0,0,0,0.95),_0_4px_30px_rgba(0,0,0,0.9),_0_1px_3px_rgba(0,0,0,1)] animate-fade-in transition-all duration-700 select-none"
           >
             {currentSlide.titlePrefix}
-            <span className="text-[#045965] [text-shadow:_0_2px_20px_rgb(0_0_0_/_90%),_0_0_35px_rgba(4,89,101,0.65)]">
+            <span className="text-[#91B58A] [text-shadow:_0_2px_12px_rgba(0,0,0,0.98),_0_4px_32px_rgba(0,0,0,0.95),_0_1px_3px_rgba(0,0,0,1)]">
               {currentSlide.titleHighlight}
             </span>
           </h1>
@@ -251,7 +257,7 @@ export default function ContactPage() {
           {/* Subtitle - Short & Powerful */}
           <p 
             key={`sub-${currentSlideIndex}`}
-            className="max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl text-white font-medium leading-relaxed mb-10 [text-shadow:_0_2px_15px_rgb(0_0_0_/_90%)] animate-fade-in transition-all duration-700"
+            className="max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl text-[#F6F3E9] font-medium leading-relaxed mb-10 [text-shadow:_0_2px_16px_rgba(0,0,0,0.95),_0_1px_4px_rgba(0,0,0,0.9)] animate-fade-in transition-all duration-700"
           >
             {currentSlide.subtitle}
           </p>
@@ -260,7 +266,7 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
             <a
               href="#contact-section"
-              className="w-full sm:w-auto px-9 py-4 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-sm sm:text-base tracking-wider uppercase shadow-[0_0_25px_rgba(4,89,101,0.45)] hover:shadow-[0_0_40px_rgba(217,119,6,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2.5 rtl:space-x-reverse cursor-pointer"
+              className="w-full sm:w-auto px-9 py-4 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-sm sm:text-base tracking-wider uppercase border border-[#91B58A]/40 shadow-[0_4px_25px_rgba(71,106,76,0.5)] hover:shadow-[0_4px_30px_rgba(145,181,138,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2.5 rtl:space-x-reverse cursor-pointer"
             >
               <span>Start Planning Below</span>
               <ArrowRight className="w-4 h-4" />
@@ -270,7 +276,7 @@ export default function ContactPage() {
               href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-9 py-4 rounded-full bg-black/40 backdrop-blur-md hover:bg-[#023A42]/80 text-white font-bold text-sm sm:text-base tracking-wider border border-white/25 hover:border-[#D97706]/50 shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse"
+              className="w-full sm:w-auto px-9 py-4 rounded-full bg-black/50 backdrop-blur-md hover:bg-black/75 text-white font-bold text-sm sm:text-base tracking-wider border border-white/25 hover:border-[#91B58A]/60 shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-2 rtl:space-x-reverse"
             >
               <MessageCircle className="w-4 h-4 text-[#D97706]" />
               <span>WhatsApp Concierge</span>
@@ -280,17 +286,17 @@ export default function ContactPage() {
           {/* Trust Badges — High-Contrast Frosted Glass Luxury Pills */}
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-2xl mx-auto pt-6 border-t border-white/20">
             <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <Compass className="w-4 h-4 text-[#D97706] flex-shrink-0" />
+              <Compass className="w-4 h-4 text-[#91B58A] flex-shrink-0" />
               <span className="tracking-wide">100% Private &amp; Bespoke</span>
             </div>
 
             <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <ShieldCheck className="w-4 h-4 text-[#D97706] flex-shrink-0" />
+              <ShieldCheck className="w-4 h-4 text-[#91B58A] flex-shrink-0" />
               <span className="tracking-wide">SLTDA Certified</span>
             </div>
 
             <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white font-semibold text-xs sm:text-[13px] flex items-center space-x-2 shadow-lg drop-shadow">
-              <Star className="w-4 h-4 text-[#D97706] fill-[#D97706] flex-shrink-0" />
+              <Star className="w-4 h-4 text-[#91B58A] fill-[#91B58A] flex-shrink-0" />
               <span className="tracking-wide">5-Star Chauffeurs</span>
             </div>
           </div>
@@ -300,7 +306,7 @@ export default function ContactPage() {
         <button
           onClick={prevSlide}
           aria-label="Previous Slide"
-          className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/80 hover:text-[#D97706] border border-white/15 hover:border-[#D97706]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
+          className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/80 hover:text-[#91B58A] border border-white/15 hover:border-[#91B58A]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
         >
           <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
         </button>
@@ -308,7 +314,7 @@ export default function ContactPage() {
         <button
           onClick={nextSlide}
           aria-label="Next Slide"
-          className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/80 hover:text-[#D97706] border border-white/15 hover:border-[#D97706]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
+          className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-black/80 backdrop-blur-md text-white/80 hover:text-[#91B58A] border border-white/15 hover:border-[#91B58A]/60 transition-all duration-300 shadow-xl hover:scale-110 active:scale-95 group cursor-pointer"
         >
           <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
         </button>
@@ -324,7 +330,7 @@ export default function ContactPage() {
                 aria-label={`Go to slide ${idx + 1}`}
                 className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
                   idx === currentSlideIndex
-                    ? "w-7 bg-[#D97706] shadow-[0_0_10px_rgba(217,119,6,0.7)]"
+                    ? "w-7 bg-[#91B58A] shadow-[0_0_10px_rgba(145,181,138,0.7)]"
                     : "w-2 bg-white/30 hover:bg-white/60"
                 }`}
               />
@@ -335,13 +341,13 @@ export default function ContactPage() {
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
             aria-label={isAutoPlaying ? "Pause carousel auto-play" : "Start carousel auto-play"}
-            className="pl-1 text-gray-400 hover:text-[#D97706] transition-colors cursor-pointer"
+            className="pl-1 text-gray-400 hover:text-[#91B58A] transition-colors cursor-pointer"
             title={isAutoPlaying ? "Pause" : "Play"}
           >
             {isAutoPlaying ? (
               <Pause className="w-3.5 h-3.5" />
             ) : (
-              <Play className="w-3.5 h-3.5 text-[#D97706]" />
+              <Play className="w-3.5 h-3.5 text-[#91B58A]" />
             )}
           </button>
         </div>
@@ -352,7 +358,7 @@ export default function ContactPage() {
           className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-1 text-white/60 hover:text-white transition-colors cursor-pointer"
         >
           <span className="text-[10px] tracking-widest uppercase font-medium">Scroll to Inquiry Form</span>
-          <ChevronDown className="w-4 h-4 animate-bounce text-[#D97706]" />
+          <ChevronDown className="w-4 h-4 animate-bounce text-[#91B58A]" />
         </a>
       </section>
 
@@ -368,7 +374,7 @@ export default function ContactPage() {
             {/* Quick Contact Card */}
             <div className="bg-white rounded-3xl p-8 shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-200/90 space-y-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-widest text-[#045965]">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#476A4C]">
                   Colombo Operations Hub
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-[#172334] tracking-tight mt-1">
@@ -383,7 +389,7 @@ export default function ContactPage() {
               <div className="space-y-4 text-xs sm:text-sm">
                 {/* 24/7 WhatsApp Concierge Lines */}
                 <div className="space-y-2.5">
-                  <span className="block text-[11px] uppercase font-bold tracking-wider text-[#045965]">
+                  <span className="block text-[11px] uppercase font-bold tracking-wider text-[#476A4C]">
                     24/7 WhatsApp Concierge (Both Numbers Active)
                   </span>
                   
@@ -392,20 +398,20 @@ export default function ContactPage() {
                     href={getWhatsAppLink()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3.5 rounded-2xl bg-[#045965]/10 border border-[#045965]/30 hover:bg-[#045965]/20 text-[#023A42] font-bold flex items-center justify-between transition-all shadow-sm group"
+                    className="p-3.5 rounded-2xl bg-[#91B58A]/15 border border-[#91B58A]/35 hover:bg-[#91B58A]/25 text-[#476A4C] font-bold flex items-center justify-between transition-all shadow-sm group"
                   >
                     <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                      <div className="w-9 h-9 rounded-full bg-[#045965] flex items-center justify-center text-white flex-shrink-0 shadow-sm">
+                      <div className="w-9 h-9 rounded-full bg-[#476A4C] flex items-center justify-center text-white flex-shrink-0 shadow-sm">
                         <MessageCircle className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <span className="block text-[10px] uppercase font-bold text-[#045965]">Line 1 • Primary Concierge</span>
-                        <span className="text-sm font-extrabold text-[#172334] group-hover:text-[#045965] transition-colors">
+                        <span className="block text-[10px] uppercase font-bold text-[#476A4C]">Line 1 • Primary Concierge</span>
+                        <span className="text-sm font-extrabold text-[#172334] group-hover:text-[#476A4C] transition-colors">
                           {COMPANY_INFO.whatsappFormatted}
                         </span>
                       </div>
                     </div>
-                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-white text-[#045965] border border-[#045965]/30 shadow-xs">
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-white text-[#476A4C] border border-[#91B58A]/30 shadow-xs">
                       Chat Now
                     </span>
                   </a>
@@ -415,20 +421,20 @@ export default function ContactPage() {
                     href={getSecondaryWhatsAppLink()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3.5 rounded-2xl bg-[#045965]/10 border border-[#045965]/30 hover:bg-[#045965]/20 text-[#023A42] font-bold flex items-center justify-between transition-all shadow-sm group"
+                    className="p-3.5 rounded-2xl bg-[#91B58A]/15 border border-[#91B58A]/35 hover:bg-[#91B58A]/25 text-[#476A4C] font-bold flex items-center justify-between transition-all shadow-sm group"
                   >
                     <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                      <div className="w-9 h-9 rounded-full bg-[#045965] flex items-center justify-center text-white flex-shrink-0 shadow-sm">
+                      <div className="w-9 h-9 rounded-full bg-[#476A4C] flex items-center justify-center text-white flex-shrink-0 shadow-sm">
                         <MessageCircle className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <span className="block text-[10px] uppercase font-bold text-[#045965]">Line 2 • Reservations &amp; Inquiries</span>
-                        <span className="text-sm font-extrabold text-[#172334] group-hover:text-[#045965] transition-colors">
+                        <span className="block text-[10px] uppercase font-bold text-[#476A4C]">Line 2 • Reservations &amp; Inquiries</span>
+                        <span className="text-sm font-extrabold text-[#172334] group-hover:text-[#476A4C] transition-colors">
                           {COMPANY_INFO.whatsappSecondaryFormatted}
                         </span>
                       </div>
                     </div>
-                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-white text-[#045965] border border-[#045965]/30 shadow-xs">
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-white text-[#476A4C] border border-[#91B58A]/30 shadow-xs">
                       Chat Now
                     </span>
                   </a>
@@ -437,20 +443,20 @@ export default function ContactPage() {
                 {/* Direct Calling Lines */}
                 <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-200 space-y-2">
                   <div className="flex items-center space-x-2 text-[#526173]">
-                    <Phone className="w-4 h-4 text-[#045965]" />
+                    <Phone className="w-4 h-4 text-[#476A4C]" />
                     <span className="text-[10px] uppercase font-bold tracking-wider">Direct Calling Lines</span>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 border-t border-gray-200/60">
                     <a
                       href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
-                      className="p-2.5 rounded-lg bg-white border border-gray-200 hover:border-[#045965] text-xs font-bold text-[#172334] hover:text-[#045965] transition-all flex items-center justify-between"
+                      className="p-2.5 rounded-lg bg-white border border-gray-200 hover:border-[#91B58A] text-xs font-bold text-[#172334] hover:text-[#476A4C] transition-all flex items-center justify-between"
                     >
                       <span>{COMPANY_INFO.phone}</span>
                       <span className="text-[10px] text-gray-400 font-semibold">Primary</span>
                     </a>
                     <a
                       href={`tel:${COMPANY_INFO.phoneSecondary.replace(/\s+/g, '')}`}
-                      className="p-2.5 rounded-lg bg-white border border-gray-200 hover:border-[#045965] text-xs font-bold text-[#172334] hover:text-[#045965] transition-all flex items-center justify-between"
+                      className="p-2.5 rounded-lg bg-white border border-gray-200 hover:border-[#91B58A] text-xs font-bold text-[#172334] hover:text-[#476A4C] transition-all flex items-center justify-between"
                     >
                       <span>{COMPANY_INFO.phoneSecondary}</span>
                       <span className="text-[10px] text-gray-400 font-semibold">Line 2</span>
@@ -460,17 +466,17 @@ export default function ContactPage() {
 
                 {/* Official Email */}
                 <div className="flex items-center space-x-3 rtl:space-x-reverse p-3.5 rounded-xl bg-gray-50 border border-gray-200">
-                  <Mail className="w-5 h-5 text-[#045965] flex-shrink-0" />
+                  <Mail className="w-5 h-5 text-[#476A4C] flex-shrink-0" />
                   <div>
                     <span className="block text-[10px] uppercase font-bold text-[#526173]">Official Inquiries Email</span>
-                    <a href={`mailto:${COMPANY_INFO.email}`} className="font-bold text-[#172334] hover:text-[#045965] transition-colors break-all">
+                    <a href={`mailto:${COMPANY_INFO.email}`} className="font-bold text-[#172334] hover:text-[#476A4C] transition-colors break-all">
                       {COMPANY_INFO.email}
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-3 rtl:space-x-reverse p-3.5 rounded-xl bg-gray-50 border border-gray-200">
-                  <MapPin className="w-5 h-5 text-[#045965] flex-shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-[#476A4C] flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="block text-[10px] uppercase font-bold text-[#526173]">Headquarters Location</span>
                     <p className="text-[#172334] text-xs font-medium">
@@ -480,7 +486,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-center space-x-3 rtl:space-x-reverse p-3.5 rounded-xl bg-gray-50 border border-gray-200">
-                  <Clock className="w-5 h-5 text-[#045965] flex-shrink-0" />
+                  <Clock className="w-5 h-5 text-[#476A4C] flex-shrink-0" />
                   <div>
                     <span className="block text-[10px] uppercase font-bold text-[#526173]">Concierge Support Hours</span>
                     <p className="text-[#172334] text-xs font-medium">{COMPANY_INFO.officeHours}</p>
@@ -491,15 +497,15 @@ export default function ContactPage() {
 
             {/* Interactive Colombo Location Map */}
             <div className="bg-white rounded-3xl p-5 shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-200/90 space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#045965] flex items-center space-x-1.5">
-                <MapPin className="w-4 h-4 text-[#045965]" />
+              <span className="text-xs font-bold uppercase tracking-wider text-[#476A4C] flex items-center space-x-1.5">
+                <MapPin className="w-4 h-4 text-[#476A4C]" />
                 <span>Our Location: Colombo World Trade Center</span>
               </span>
               <div ref={mapContainerRef} className="w-full h-56 rounded-2xl overflow-hidden border border-gray-200 bg-gray-100 flex items-center justify-center">
                 {isMapInView ? (
                   consent === "rejected" ? (
                     <div className="flex flex-col items-center justify-center p-5 text-center space-y-2 bg-gray-50 h-full w-full">
-                      <div className="w-8 h-8 rounded-full bg-[#045965]/10 text-[#045965] flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full bg-[#91B58A]/15 text-[#476A4C] flex items-center justify-center">
                         <MapPin className="w-4 h-4" />
                       </div>
                       <p className="text-xs text-gray-600 max-w-xs leading-relaxed">
@@ -509,7 +515,7 @@ export default function ContactPage() {
                         <button
                           type="button"
                           onClick={acceptAll}
-                          className="px-3 py-1.5 rounded-lg bg-[#045965] hover:bg-[#023A42] text-white text-[11px] font-bold transition-colors"
+                          className="px-3 py-1.5 rounded-lg bg-[#476A4C] hover:bg-[#38553C] text-white text-[11px] font-bold transition-colors"
                         >
                           Enable Map
                         </button>

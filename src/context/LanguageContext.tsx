@@ -126,7 +126,7 @@ const DICTIONARIES: Record<SupportedLocale, Translations> = {
     hero: {
       tagline: "Premier Sri Lanka Destination Specialists",
       headline: "Discover the Soul of Sri Lanka",
-      subheading: "Extraordinary journeys. Timeless memories. Beautifully crafted private luxury holidays by 3C Ceylon Tours.",
+      subheading: "Extraordinary journeys. Timeless memories. Beautifully crafted private bespoke holidays by 3C Ceylon Tours.",
       exploreBtn: "Explore Tour Packages",
       planBtn: "Plan Your Bespoke Trip",
       scrollDown: "Scroll to Discover",

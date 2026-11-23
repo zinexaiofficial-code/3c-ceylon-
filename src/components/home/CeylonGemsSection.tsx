@@ -116,8 +116,8 @@ export const CeylonGemsSection: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-sm">
-            <Gem className="w-3.5 h-3.5 text-[#045965]" />
+          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/35 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-sm">
+            <Gem className="w-3.5 h-3.5 text-[#476A4C]" />
             <span>Treasures of Ratnapura & Beyond</span>
           </div>
 
@@ -146,7 +146,7 @@ export const CeylonGemsSection: React.FC = () => {
                 style={{
                   transitionDelay: `${index * 85}ms`,
                 }}
-                className={`group relative block w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-200/80 hover:border-[#045965]/60 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#045965] ${
+                className={`group relative block w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-200/80 hover:border-[#91B58A]/60 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#91B58A] ${
                   isVisible
                     ? "opacity-100 translate-y-0 scale-100"
                     : "opacity-0 translate-y-12 scale-[0.96]"
@@ -201,7 +201,7 @@ export const CeylonGemsSection: React.FC = () => {
             href={getWhatsAppLink("Hello 3C Ceylon Tours! I am interested in planning a private Gem & Jewelry Tour in Sri Lanka (Ratnapura, gem mines & workshops). Please send me more details.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(4,89,101,0.3)] hover:shadow-[0_6px_22px_rgba(217,119,6,0.45)] transform hover:-translate-y-0.5"
+            className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-xs uppercase tracking-wider border border-[#91B58A]/40 transition-all shadow-md transform hover:-translate-y-0.5"
           >
             <span>Inquire About Private Gem Tours</span>
             <ArrowRight className="w-4 h-4" />

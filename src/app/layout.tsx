@@ -163,7 +163,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }}
         />
       </head>
-      <body className="font-sans flex flex-col min-h-screen bg-[#FFF9EF] text-[#202820] antialiased selection:bg-[#045965] selection:text-white">
+      <body className="font-sans flex flex-col min-h-screen bg-[#F6F3E9] text-[#202820] antialiased selection:bg-[#91B58A] selection:text-[#172319]">
         <PageLoader />
         <CookieConsentProvider>
           <LanguageProvider>

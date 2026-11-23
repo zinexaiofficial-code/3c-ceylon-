@@ -196,8 +196,8 @@ export const WhyExploreSriLanka: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 lg:mb-14">
-          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1.5 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-xs">
-            <Compass className="w-3.5 h-3.5 text-[#045965]" />
+          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/35 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-xs">
+            <Compass className="w-3.5 h-3.5 text-[#476A4C]" />
             <span>Authentic Sri Lanka Unbound</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-[#172334] tracking-tight leading-[1.08]">
@@ -230,7 +230,7 @@ export const WhyExploreSriLanka: React.FC = () => {
                     handlePanelClick(idx);
                   }
                 }}
-                className={`relative flex-1 h-full cursor-pointer select-none border-r-[3px] last:border-r-0 border-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#045965] ${
+                className={`relative flex-1 h-full cursor-pointer select-none border-r-[3px] last:border-r-0 border-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#91B58A] ${
                   isFlipped ? "z-20" : "z-10"
                 }`}
                 style={{
@@ -392,7 +392,7 @@ export const WhyExploreSriLanka: React.FC = () => {
                 aria-label={`Go to slide ${idx + 1}`}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   activeFlippedIndex === idx
-                    ? "w-8 bg-[#045965]"
+                    ? "w-8 bg-[#476A4C]"
                     : "w-2 bg-gray-300 hover:bg-gray-400"
                 }`}
               />

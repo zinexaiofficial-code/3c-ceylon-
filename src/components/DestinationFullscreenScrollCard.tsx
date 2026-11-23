@@ -90,8 +90,8 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
     return (
       <section className="py-16 sm:py-20 bg-[#FAF8F2] text-[#172334] overflow-hidden border-b border-gray-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-xs">
-            <Compass className="w-3.5 h-3.5 text-[#045965]" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/40 text-xs font-extrabold uppercase tracking-widest mb-3 shadow-xs">
+            <Compass className="w-3.5 h-3.5 text-[#476A4C]" />
             <span>{destination.province} • Stay: {destination.idealStay}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#172334] mb-3">
@@ -121,7 +121,7 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
             <div className="flex flex-wrap gap-3">
               <Link
                 href={`/destinations/${destination.slug}`}
-                className="px-6 py-3 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-xs uppercase tracking-wider flex items-center space-x-2 shadow-lg transition-colors"
+                className="px-6 py-3 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-xs uppercase tracking-wider flex items-center space-x-2 border border-[#91B58A]/40 shadow-lg transition-colors"
               >
                 <span>Explore Destination Guide</span>
                 <ArrowRight className="w-4 h-4" />
@@ -150,8 +150,8 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
           }}
           className="w-full max-w-4xl text-center px-4 mb-3 sm:mb-5 flex-shrink-0 pointer-events-none select-none z-10"
         >
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-extrabold uppercase tracking-widest mb-2 sm:mb-3 shadow-xs">
-            <Compass className="w-3.5 h-3.5 text-[#045965]" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/40 text-xs font-extrabold uppercase tracking-widest mb-2 sm:mb-3 shadow-xs">
+            <Compass className="w-3.5 h-3.5 text-[#476A4C]" />
             <span>{destination.province} • Stay: {destination.idealStay}</span>
           </div>
 
@@ -195,7 +195,7 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
             className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-28 left-6 sm:left-12 md:left-16 lg:left-20 z-20 max-w-4xl text-white select-none pointer-events-auto pb-2"
           >
             {/* Province and Weather Pill */}
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-[#045965]/40 text-[#D97706] text-xs font-bold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-[#91B58A]/40 text-[#D97706] text-xs font-bold uppercase tracking-wider mb-3">
               <MapPin className="w-3.5 h-3.5 text-[#D97706]" />
               <span>{destination.province} • Stay: {destination.idealStay}</span>
             </div>
@@ -209,7 +209,7 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <Link
                 href={`/destinations/${destination.slug}`}
-                className="px-7 sm:px-9 py-3.5 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-[0_0_25px_rgba(4,89,101,0.45)] hover:shadow-[0_0_35px_rgba(217,119,6,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
+                className="px-7 sm:px-9 py-3.5 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase border border-[#91B58A]/40 shadow-lg hover:shadow-[0_4px_30px_rgba(145,181,138,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
               >
                 <span>Explore Destination Guide</span>
                 <ArrowRight className="w-4 h-4" />
@@ -219,7 +219,7 @@ export const DestinationFullscreenScrollCard: React.FC<DestinationFullscreenScro
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 sm:px-8 py-3.5 rounded-full bg-black/50 hover:bg-[#023A42] backdrop-blur-md text-white font-bold text-xs sm:text-sm tracking-wider border border-white/25 hover:border-[#D97706]/50 shadow-md hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
+                className="px-6 sm:px-8 py-3.5 rounded-full bg-black/50 hover:bg-[#38553C] backdrop-blur-md text-white font-bold text-xs sm:text-sm tracking-wider border border-white/25 hover:border-[#91B58A]/60 shadow-md hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4 text-[#D97706]" />
                 <span>Inquire on WhatsApp</span>

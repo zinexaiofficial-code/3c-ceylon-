@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #045965;
-  --color-primary-dark: #023A42;
+  --color-primary: #91B58A;
+  --color-primary-light: #A4C39B;
+  --color-primary-dark: #476A4C;
   --color-accent: #D97706;
   --color-accent-hover: #B85C00;
-  --color-background: #FFF9EF;
+  --color-background: #F6F3E9;
   --color-text: #202820;
   --color-white: #FFFFFF;
-  --color-neon: #045965;
+  --color-neon: #91B58A;
   --color-blue: #0023DD;
   --color-dark: #000000;
   --color-surface: #050811;
@@ -19,12 +20,12 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #FFF9EF;
+  background-color: #F6F3E9;
   color: #202820;
 }
 
 body {
-  background-color: #FFF9EF;
+  background-color: #F6F3E9;
   color: #202820;
   font-family: var(--font-jakarta), var(--font-manrope), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
@@ -47,12 +48,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(4, 89, 101, 0.5);
+  background: rgba(71, 106, 76, 0.5);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #045965;
+  background: #476A4C;
 }
 
 /* Utility to completely hide scrollbars */
@@ -94,8 +95,8 @@ body {
    - Main Black: #020407
    - Midnight Navy: #03091C
    - Dark Blue Glow: #071A35
-   - Primary Olive Green: #045965
-   - Deep Olive Green: #023A42
+   - Primary Soft Green: #91B58A
+   - Deep Muted Green: #476A4C
    ========================================================================= */
 
 .dynamic-orb {

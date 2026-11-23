@@ -21,7 +21,7 @@ export const TourismExperienceCard: React.FC<TourismExperienceCardProps> = ({
   name,
   image,
   link,
-  badgeColor = "#045965",
+  badgeColor = "#91B58A",
   icon: IconComponent,
   className = "",
   priority = false,
@@ -35,7 +35,7 @@ export const TourismExperienceCard: React.FC<TourismExperienceCardProps> = ({
       style={{
         transitionDelay: `${index * 80}ms`,
       }}
-      className={`group relative block w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-[#045965]/60 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#045965] ${
+      className={`group relative block w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-[#91B58A]/60 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#91B58A] ${
         isVisible
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-12 scale-[0.96]"

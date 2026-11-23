@@ -80,8 +80,8 @@ export const OxCartFullscreenScrollSection: React.FC = () => {
     return (
       <section className="py-16 sm:py-20 bg-[#FAF8F2] text-[#172334] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-extrabold uppercase tracking-widest mb-3">
-            <Compass className="w-3.5 h-3.5 text-[#045965]" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/35 text-xs font-extrabold uppercase tracking-widest mb-3">
+            <Compass className="w-3.5 h-3.5 text-[#476A4C]" />
             <span>Rural Village Heritage • Cultural Countryside</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#172334] mb-3">
@@ -121,8 +121,8 @@ export const OxCartFullscreenScrollSection: React.FC = () => {
           }}
           className="w-full max-w-4xl text-center px-4 mb-3 sm:mb-5 flex-shrink-0 pointer-events-none select-none z-10"
         >
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-extrabold uppercase tracking-widest mb-2 sm:mb-3 shadow-xs">
-            <Compass className="w-3.5 h-3.5 text-[#045965]" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/35 text-xs font-extrabold uppercase tracking-widest mb-2 sm:mb-3 shadow-xs">
+            <Compass className="w-3.5 h-3.5 text-[#476A4C]" />
             <span>Rural Village Heritage • Cultural Countryside</span>
           </div>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#172334] tracking-tight leading-tight">

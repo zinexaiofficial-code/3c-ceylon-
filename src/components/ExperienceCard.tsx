@@ -41,8 +41,8 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
   return (
     <div className={`group rounded-3xl overflow-hidden transition-all duration-500 flex flex-col h-full transform hover:-translate-y-1.5 ${
       isLight
-        ? "bg-white border border-gray-200/80 hover:border-[#045965]/40 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)]"
-        : "bg-[#060B14]/85 backdrop-blur-xl border border-white/10 hover:border-[#045965]/50 shadow-2xl hover:shadow-[0_10px_35px_rgba(4,89,101,0.14)]"
+        ? "bg-white border border-gray-200/80 hover:border-[#91B58A]/60 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)]"
+        : "bg-[#060B14]/85 backdrop-blur-xl border border-white/10 hover:border-[#91B58A]/50 shadow-2xl hover:shadow-[0_10px_35px_rgba(71,106,76,0.14)]"
     }`}>
       {/* Visual Header */}
       <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-black">
@@ -62,7 +62,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
         />
 
         {/* Floating Category Icon */}
-        <div className="absolute top-4 left-4 z-10 p-2.5 rounded-full bg-black/60 border border-[#045965]/40 text-[#D97706] shadow-lg backdrop-blur-md">
+        <div className="absolute top-4 left-4 z-10 p-2.5 rounded-full bg-black/60 border border-[#91B58A]/40 text-[#D97706] shadow-lg backdrop-blur-md">
           <IconComponent className="w-5 h-5 text-[#D97706]" />
         </div>
 
@@ -84,7 +84,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
       <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
         <div className="space-y-3">
           <h3 className={`text-xl sm:text-2xl font-extrabold tracking-tight leading-snug transition-colors ${
-            isLight ? "text-[#172334] group-hover:text-[#045965]" : "text-white group-hover:text-[#D97706]"
+            isLight ? "text-[#172334] group-hover:text-[#476A4C]" : "text-white group-hover:text-[#D97706]"
           }`}>
             {exp.title}
           </h3>
@@ -102,7 +102,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
                 isLight ? "text-[#526173]" : "text-gray-300"
               }`}>
                 <CheckCircle2 className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${
-                  isLight ? "text-[#045965]" : "text-[#D97706]"
+                  isLight ? "text-[#476A4C]" : "text-[#D97706]"
                 }`} />
                 <span className="line-clamp-1">{hl}</span>
               </li>
@@ -115,7 +115,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
           <Link
             href={`/packages/${exp.featuredPackageSlug}`}
             className={`text-xs font-bold flex items-center space-x-1.5 transition-colors ${
-              isLight ? "text-[#045965] hover:text-[#D97706]" : "text-gray-300 hover:text-[#D97706]"
+              isLight ? "text-[#476A4C] hover:text-[#D97706]" : "text-gray-300 hover:text-[#D97706]"
             }`}
           >
             <span>Explore Related Tour</span>
@@ -126,8 +126,8 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, variant = "
             href={`/contact?experience=${encodeURIComponent(exp.title)}`}
             className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
               isLight
-                ? "bg-gray-100 hover:bg-[#045965] text-[#023A42] hover:text-white border border-gray-200"
-                : "bg-[#045965]/20 hover:bg-[#045965] text-[#D97706] hover:text-white border border-[#045965]/30"
+                ? "bg-gray-100 hover:bg-[#476A4C] text-[#476A4C] hover:text-white border border-gray-200"
+                : "bg-[#91B58A]/20 hover:bg-[#476A4C] text-[#D97706] hover:text-white border border-[#91B58A]/30"
             }`}
           >
             Inquire

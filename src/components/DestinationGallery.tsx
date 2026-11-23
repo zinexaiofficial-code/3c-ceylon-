@@ -131,8 +131,8 @@ export const DestinationGallery: React.FC<DestinationGalleryProps> = ({ destinat
       {/* Gallery Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-gray-200 pb-4">
         <div>
-          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3 py-1 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-xs font-extrabold uppercase tracking-widest mb-2">
-            <Camera className="w-3.5 h-3.5 text-[#045965]" />
+          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3 py-1 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/35 text-xs font-extrabold uppercase tracking-widest mb-2">
+            <Camera className="w-3.5 h-3.5 text-[#476A4C]" />
             <span>High-Resolution Photo Gallery</span>
           </div>
           <h3 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#172334] tracking-tight">
@@ -140,7 +140,7 @@ export const DestinationGallery: React.FC<DestinationGalleryProps> = ({ destinat
           </h3>
         </div>
         <p className="text-xs sm:text-sm text-[#526173] font-medium">
-          Showing <span className="text-[#045965] font-bold">{images.length}</span> authentic photographs • Click any image to expand
+          Showing <span className="text-[#476A4C] font-bold">{images.length}</span> authentic photographs • Click any image to expand
         </p>
       </div>
 
@@ -152,7 +152,7 @@ export const DestinationGallery: React.FC<DestinationGalleryProps> = ({ destinat
             <div
               key={index}
               onClick={() => openLightbox(index)}
-              className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-neutral-950 cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1.5 border border-gray-200/70 hover:border-[#045965] ${layout.span} ${layout.height}`}
+              className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-neutral-950 cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1.5 border border-gray-200/70 hover:border-[#91B58A] ${layout.span} ${layout.height}`}
             >
               <Image
                 src={imgSrc}

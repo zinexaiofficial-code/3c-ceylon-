@@ -106,8 +106,8 @@ export const CinnamonExperienceSection: React.FC = () => {
         {/* Header Section matching Our Journey Categories style */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-[11px] font-extrabold uppercase tracking-widest mb-2 shadow-sm">
-              <Leaf className="w-3.5 h-3.5 text-[#045965]" />
+            <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/35 text-[11px] font-extrabold uppercase tracking-widest mb-2 shadow-sm">
+              <Leaf className="w-3.5 h-3.5 text-[#476A4C]" />
               <span>The Golden Spice of Ceylon</span>
             </div>
 
@@ -126,14 +126,14 @@ export const CinnamonExperienceSection: React.FC = () => {
               <button
                 onClick={() => handleScroll("left")}
                 aria-label="Previous categories"
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#045965] text-[#172334] hover:text-[#045965] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#91B58A] text-[#172334] hover:text-[#476A4C] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={() => handleScroll("right")}
                 aria-label="Next categories"
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#045965] text-[#172334] hover:text-[#045965] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#91B58A] text-[#172334] hover:text-[#476A4C] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -141,7 +141,7 @@ export const CinnamonExperienceSection: React.FC = () => {
 
             <Link
               href="/experiences"
-              className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#172334] hover:bg-[#045965] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all active:scale-95"
+              className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#172334] hover:bg-[#476A4C] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all active:scale-95"
             >
               <span>Explore Spice Tours</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#D97706]" />
@@ -189,7 +189,7 @@ export const CinnamonExperienceSection: React.FC = () => {
                     {/* TOP TITLE (If titlePosition === 'top') */}
                     {isTop && (
                       <div className="min-h-[46px] flex items-end mb-2.5 px-1">
-                        <h3 className="font-sans text-lg sm:text-[20px] font-bold text-[#172334] group-hover:text-[#045965] transition-colors leading-snug line-clamp-2">
+                        <h3 className="font-sans text-lg sm:text-[20px] font-bold text-[#172334] group-hover:text-[#476A4C] transition-colors leading-snug line-clamp-2">
                           {item.title}
                         </h3>
                       </div>
@@ -208,7 +208,7 @@ export const CinnamonExperienceSection: React.FC = () => {
 
                       {/* Natural image presentation without dark overlay, interactive pill badge */}
                       <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-                        <span className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                        <span className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-sans font-bold text-xs uppercase tracking-wider border border-[#91B58A]/40 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                           <span>Explore Experience</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </span>
@@ -225,7 +225,7 @@ export const CinnamonExperienceSection: React.FC = () => {
                     {/* BOTTOM TITLE (If titlePosition === 'bottom') */}
                     {!isTop && (
                       <div className="min-h-[46px] flex items-start mt-2.5 px-1">
-                        <h3 className="font-sans text-lg sm:text-[20px] font-bold text-[#172334] group-hover:text-[#045965] transition-colors leading-snug line-clamp-2">
+                        <h3 className="font-sans text-lg sm:text-[20px] font-bold text-[#172334] group-hover:text-[#476A4C] transition-colors leading-snug line-clamp-2">
                           {item.title}
                         </h3>
                       </div>

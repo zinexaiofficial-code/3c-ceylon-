@@ -21,7 +21,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({ pkg }) => {
   return (
     <Link
       href={`/packages/${pkg.slug}`}
-      className="group relative h-[460px] sm:h-[500px] md:h-[530px] rounded-3xl overflow-hidden shadow-2xl block transform hover:-translate-y-2 transition-all duration-500 border border-gray-200/40 hover:border-[#045965]/80 hover:shadow-[0_20px_45px_rgba(4,89,101,0.22)] bg-neutral-950 select-none"
+      className="group relative h-[460px] sm:h-[500px] md:h-[530px] rounded-3xl overflow-hidden shadow-2xl block transform hover:-translate-y-2 transition-all duration-500 border border-gray-200/40 hover:border-[#91B58A] hover:shadow-[0_20px_45px_rgba(71,106,76,0.22)] bg-neutral-950 select-none"
     >
       {/* Background Image - Natural brightness, vibrant colors, no dark filters */}
       <Image
@@ -42,7 +42,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({ pkg }) => {
       {/* Top Badges (Matching Destination Card brightness) */}
       <div className="absolute top-5 left-5 right-5 z-20 flex items-center justify-between">
         {/* Style / Tour Type Badge */}
-        <span className="px-3.5 py-1.5 rounded-full text-[11px] font-extrabold tracking-wider uppercase bg-black/60 text-[#D97706] border border-[#045965]/40 backdrop-blur-md flex items-center space-x-1.5 shadow-md">
+        <span className="px-3.5 py-1.5 rounded-full text-[11px] font-extrabold tracking-wider uppercase bg-black/60 text-[#D97706] border border-[#91B58A]/40 backdrop-blur-md flex items-center space-x-1.5 shadow-md">
           <Compass className="w-3.5 h-3.5 text-[#D97706]" />
           <span>{pkg.style}</span>
         </span>

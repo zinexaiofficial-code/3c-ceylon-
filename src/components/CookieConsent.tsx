@@ -31,12 +31,12 @@ export const CookieConsent: React.FC = () => {
         >
           <div className="relative overflow-hidden rounded-2xl bg-[#070B14]/95 backdrop-blur-xl border border-white/15 p-4 sm:p-5 shadow-[0_16px_50px_rgba(0,0,0,0.65)] text-white">
             {/* Subtle luxury ambient accent glow */}
-            <div className="absolute top-0 right-0 -mt-8 -mr-8 w-24 h-24 bg-[#045965]/15 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute top-0 right-0 -mt-8 -mr-8 w-24 h-24 bg-[#91B58A]/15 rounded-full blur-2xl pointer-events-none" />
 
             {/* Header: Icon, Title & Close Button */}
             <div className="flex items-start justify-between gap-3">
               <div className="flex items-center space-x-2.5 rtl:space-x-reverse">
-                <div className="w-8 h-8 rounded-xl bg-[#045965]/20 border border-[#045965]/35 flex items-center justify-center flex-shrink-0 text-[#D97706]">
+                <div className="w-8 h-8 rounded-xl bg-[#91B58A]/20 border border-[#91B58A]/35 flex items-center justify-center flex-shrink-0 text-[#D97706]">
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
@@ -76,7 +76,7 @@ export const CookieConsent: React.FC = () => {
               <button
                 type="button"
                 onClick={openPrivacyModal}
-                className="text-[#D97706] hover:text-[#B85C00] underline font-medium hover:opacity-90 transition-colors focus:outline-none focus:ring-1 focus:ring-[#045965] rounded"
+                className="text-[#D97706] hover:text-[#B85C00] underline font-medium hover:opacity-90 transition-colors focus:outline-none focus:ring-1 focus:ring-[#91B58A] rounded"
               >
                 Privacy Policy
               </button>
@@ -102,7 +102,7 @@ export const CookieConsent: React.FC = () => {
               <button
                 type="button"
                 onClick={acceptAll}
-                className="w-full px-3 py-2.5 rounded-xl bg-[#045965] hover:bg-[#D97706] text-white text-xs font-bold tracking-wide transition-all duration-150 shadow-[0_2px_14px_rgba(4,89,101,0.35)] hover:shadow-[0_4px_20px_rgba(217,119,6,0.5)] active:scale-[0.98] text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#045965]"
+                className="w-full px-3 py-2.5 rounded-xl bg-[#476A4C] hover:bg-[#38553C] text-white text-xs font-bold tracking-wide border border-[#91B58A]/40 transition-all duration-150 shadow-md active:scale-[0.98] text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#91B58A]"
               >
                 Accept All
               </button>
@@ -123,7 +123,7 @@ export const CookieConsent: React.FC = () => {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-white/10 pb-3">
               <div className="flex items-center space-x-2.5 rtl:space-x-reverse">
-                <div className="w-8 h-8 rounded-xl bg-[#045965]/20 border border-[#045965]/35 flex items-center justify-center text-[#D97706]">
+                <div className="w-8 h-8 rounded-xl bg-[#91B58A]/20 border border-[#91B58A]/35 flex items-center justify-center text-[#D97706]">
                   <Lock className="w-4 h-4" />
                 </div>
                 <h2 id="privacy-modal-title" className="font-sans text-lg font-bold text-white">

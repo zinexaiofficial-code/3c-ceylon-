@@ -31,8 +31,8 @@ export const DestinationsMovableCarouselSection: React.FC = () => {
         {/* Header Section matching Our Journey Categories format */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#045965]/15 text-[#023A42] border border-[#045965]/30 text-[11px] font-extrabold uppercase tracking-widest mb-2 shadow-sm">
-              <Compass className="w-3.5 h-3.5 text-[#023A42]" />
+            <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#91B58A]/20 text-[#476A4C] border border-[#91B58A]/40 text-[11px] font-extrabold uppercase tracking-widest mb-2 shadow-sm">
+              <Compass className="w-3.5 h-3.5 text-[#476A4C]" />
               <span>Explore Ceylon&apos;s Iconic Wonders</span>
             </div>
 
@@ -51,14 +51,14 @@ export const DestinationsMovableCarouselSection: React.FC = () => {
               <button
                 onClick={() => handleScroll("left")}
                 aria-label="Previous destinations"
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#045965] text-[#172334] hover:text-[#045965] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#91B58A] text-[#172334] hover:text-[#476A4C] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={() => handleScroll("right")}
                 aria-label="Next destinations"
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#045965] text-[#172334] hover:text-[#045965] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 hover:border-[#91B58A] text-[#172334] hover:text-[#476A4C] flex items-center justify-center shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -66,7 +66,7 @@ export const DestinationsMovableCarouselSection: React.FC = () => {
 
             <a
               href="#destinations-grid"
-              className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#172334] hover:bg-[#023A42] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer"
+              className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#172334] hover:bg-[#38553C] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer"
             >
               <span>Filter All Places</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#D97706]" />
@@ -111,7 +111,7 @@ export const DestinationsMovableCarouselSection: React.FC = () => {
                     {isTop && (
                       <div className="min-h-[52px] flex items-end mb-2.5 px-1">
                         <div>
-                          <h3 className="font-sans text-base sm:text-lg font-bold text-[#172334] group-hover:text-[#045965] transition-colors leading-snug line-clamp-1">
+                          <h3 className="font-sans text-base sm:text-lg font-bold text-[#172334] group-hover:text-[#476A4C] transition-colors leading-snug line-clamp-1">
                             {dest.name}
                           </h3>
                           <p className="text-xs text-[#526173] font-medium line-clamp-1 mt-0.5">
@@ -141,7 +141,7 @@ export const DestinationsMovableCarouselSection: React.FC = () => {
 
                         {dest.gallery && dest.gallery.length > 0 && (
                           <span className="px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#172334] text-[10px] font-bold tracking-tight shadow-sm border border-black/5 flex items-center space-x-1">
-                            <Camera className="w-3 h-3 text-[#045965]" />
+                            <Camera className="w-3 h-3 text-[#476A4C]" />
                             <span>{dest.gallery.length} Photos</span>
                           </span>
                         )}
@@ -157,7 +157,7 @@ export const DestinationsMovableCarouselSection: React.FC = () => {
 
                       {/* Interactive Hover CTA Pill - Photo stays 100% naturally bright */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 z-20 pointer-events-none">
-                        <span className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-sans font-extrabold text-xs uppercase tracking-wider shadow-2xl transform scale-95 group-hover:scale-100 transition-transform duration-300">
+                        <span className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-sans font-extrabold text-xs uppercase tracking-wider border border-[#91B58A]/40 shadow-2xl transform scale-95 group-hover:scale-100 transition-transform duration-300">
                           <span>Explore Guide</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </span>
@@ -168,7 +168,7 @@ export const DestinationsMovableCarouselSection: React.FC = () => {
                     {!isTop && (
                       <div className="min-h-[52px] flex items-start mt-2.5 px-1">
                         <div>
-                          <h3 className="font-sans text-base sm:text-lg font-bold text-[#172334] group-hover:text-[#045965] transition-colors leading-snug line-clamp-1">
+                          <h3 className="font-sans text-base sm:text-lg font-bold text-[#172334] group-hover:text-[#476A4C] transition-colors leading-snug line-clamp-1">
                             {dest.name}
                           </h3>
                           <p className="text-xs text-[#526173] font-medium line-clamp-1 mt-0.5">

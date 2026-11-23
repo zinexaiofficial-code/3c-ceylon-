@@ -6,8 +6,8 @@ export default function NotFound() {
   return (
     <div className="min-h-[80vh] flex items-center justify-center bg-transparent px-4 py-24 relative z-10 text-white">
       <div className="max-w-md w-full bg-white/[0.04] backdrop-blur-2xl rounded-3xl p-8 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-white/15 text-center space-y-6">
-        <div className="w-16 h-16 rounded-full bg-[#045965]/20 border border-[#045965]/40 text-[#045965] flex items-center justify-center mx-auto shadow-[0_0_20px_rgba(4,89,101,0.25)]">
-          <Compass className="w-8 h-8 text-[#045965] animate-spin-slow" />
+        <div className="w-16 h-16 rounded-full bg-[#91B58A]/20 border border-[#91B58A]/40 text-[#91B58A] flex items-center justify-center mx-auto shadow-sm">
+          <Compass className="w-8 h-8 text-[#91B58A] animate-spin-slow" />
         </div>
 
         <span className="text-xs uppercase font-bold tracking-widest text-[#D97706] block">
@@ -33,7 +33,7 @@ export default function NotFound() {
 
           <Link
             href="/packages"
-            className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#045965] hover:bg-[#D97706] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all shadow-[0_0_20px_rgba(4,89,101,0.35)]"
+            className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#476A4C] hover:bg-[#38553C] text-white font-bold text-xs uppercase tracking-wider border border-[#91B58A]/40 flex items-center justify-center space-x-2 transition-all shadow-md"
           >
             <span>Explore Tours</span>
             <ArrowRight className="w-4 h-4" />
