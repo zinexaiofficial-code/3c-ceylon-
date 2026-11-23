@@ -164,7 +164,7 @@ export const SigiriyaParallaxSection: React.FC = () => {
           </p>
 
           {/* Luxury Feature Badges */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 max-w-lg">
+          <div className="flex flex-wrap items-center gap-3.5 pt-2 max-w-lg">
             <div className="p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/15 flex items-center space-x-3 shadow-lg">
               <div className="w-9 h-9 rounded-full bg-[#329B38]/12 flex items-center justify-center flex-shrink-0 border border-[#329B38]/30">
                 <ShieldCheck className="w-5 h-5 text-[#329B38]" />
@@ -175,6 +175,8 @@ export const SigiriyaParallaxSection: React.FC = () => {
               </div>
             </div>
 
+            {/* Hidden SLTDA-certified guides badge as requested */}
+            {/*
             <div className="p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-white/15 flex items-center space-x-3 shadow-lg">
               <div className="w-9 h-9 rounded-full bg-[#329B38]/12 flex items-center justify-center flex-shrink-0 border border-[#329B38]/30">
                 <Compass className="w-5 h-5 text-[#329B38]" />
@@ -184,6 +186,7 @@ export const SigiriyaParallaxSection: React.FC = () => {
                 <p className="text-xs text-gray-300">SLTDA-certified experts</p>
               </div>
             </div>
+            */}
           </div>
 
           {/* Call to Action Buttons */}
