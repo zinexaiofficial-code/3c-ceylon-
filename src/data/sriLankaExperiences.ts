@@ -1,12 +1,20 @@
+export type LabelPosition = "left" | "right" | "top" | "bottom" | "top-left" | "top-right" | "bottom-left" | "bottom-right";
+
 export interface DestinationPin {
   id: string;
   name: string;
-  top: number;   // percentage from top (0-100) exactly matching Sri-Lanka-location-map-680x1100-1.jpg
-  left: number;  // percentage from left (0-100) exactly matching Sri-Lanka-location-map-680x1100-1.jpg
-  labelSide: "left" | "right";
+  lat: number;        // Verified latitude (WGS84)
+  lng: number;        // Verified longitude (WGS84)
+  province: string;   // Sri Lankan Administrative Province
+  district: string;   // Sri Lankan Administrative District
+  top: number;        // Calibrated percentage from top (0-100) on Sri-Lanka-location-map-680x1100-1.jpg
+  left: number;       // Calibrated percentage from left (0-100) on Sri-Lanka-location-map-680x1100-1.jpg
+  labelPosition: LabelPosition; // Dynamic orientation for collision avoidance
+  labelSide?: "left" | "right"; // Backward compatibility fallback
   description: string;
   link: string;
   highlightText?: string;
+  representativePointNote?: string;
 }
 
 export interface ExperienceCategory {
@@ -18,6 +26,58 @@ export interface ExperienceCategory {
   side: "left" | "right";
   destinations: DestinationPin[];
 }
+
+/**
+ * Verified Geographic Coordinates Registry (OpenStreetMap / GeoNames datum)
+ * Used as GIS reference ground truth for calibration and map audit.
+ */
+export const VERIFIED_GEOGRAPHIC_REGISTRY = {
+  jaffna: { name: "Jaffna", lat: 9.6685, lng: 80.0074, province: "Northern", district: "Jaffna" },
+  mannar: { name: "Mannar", lat: 8.9810, lng: 79.9044, province: "Northern", district: "Mannar" },
+  anuradhapura: { name: "Anuradhapura", lat: 8.3114, lng: 80.4037, province: "North Central", district: "Anuradhapura" },
+  wilpattu: { name: "Wilpattu", lat: 8.4500, lng: 80.0000, province: "North Western / North Central", district: "Puttalam/Anuradhapura" },
+  kalpitiya: { name: "Kalpitiya", lat: 8.2275, lng: 79.7610, province: "North Western", district: "Puttalam" },
+  sigiriya: { name: "Sigiriya", lat: 7.9570, lng: 80.7603, province: "Central", district: "Matale" },
+  minneriya: { name: "Minneriya", lat: 8.0333, lng: 80.9000, province: "North Central", district: "Polonnaruwa" },
+  polonnaruwa: { name: "Polonnaruwa", lat: 7.9403, lng: 81.0188, province: "North Central", district: "Polonnaruwa" },
+  riverston: { name: "Riverston", lat: 7.5250, lng: 80.7333, province: "Central", district: "Matale" },
+  maduruOya: { name: "Maduru Oya", lat: 7.6500, lng: 81.2000, province: "Eastern / Uva", district: "Polonnaruwa/Ampara" },
+  mahiyanganaya: { name: "Mahiyanganaya", lat: 7.3167, lng: 80.9828, province: "Uva", district: "Badulla" },
+  kandy: { name: "Kandy", lat: 7.2906, lng: 80.6337, province: "Central", district: "Kandy" },
+  negombo: { name: "Negombo", lat: 7.2083, lng: 79.8358, province: "Western", district: "Gampaha" },
+  colombo: { name: "Colombo", lat: 6.9355, lng: 79.8487, province: "Western", district: "Colombo" },
+  pekoeTrail: { name: "Pekoe Trail", lat: 6.9497, lng: 80.7891, province: "Central", district: "Nuwara Eliya" },
+  hortonPlains: { name: "Horton Plains", lat: 6.8028, lng: 80.8044, province: "Central", district: "Nuwara Eliya" },
+  galOya: { name: "Gal Oya", lat: 7.2100, lng: 81.5000, province: "Eastern / Uva", district: "Ampara" },
+  arugamBay: { name: "Arugam Bay", lat: 6.8425, lng: 81.8315, province: "Eastern", district: "Ampara" },
+  bentota: { name: "Bentota", lat: 6.4260, lng: 79.9958, province: "Southern", district: "Galle" },
+  sinharaja: { name: "Sinharaja", lat: 6.4167, lng: 80.4167, province: "Sabaragamuwa / Southern", district: "Ratnapura/Galle" },
+  yala: { name: "Yala", lat: 6.3700, lng: 81.5200, province: "Southern / Uva", district: "Hambantota" },
+  galle: { name: "Galle", lat: 6.0461, lng: 80.2103, province: "Southern", district: "Galle" },
+  unawatuna: { name: "Unawatuna", lat: 6.0100, lng: 80.2500, province: "Southern", district: "Galle" },
+  weligama: { name: "Weligama", lat: 5.9750, lng: 80.4297, province: "Southern", district: "Matara" },
+  mirissa: { name: "Mirissa", lat: 5.9466, lng: 80.4583, province: "Southern", district: "Matara" },
+  polhena: { name: "Polhena", lat: 5.9380, lng: 80.5280, province: "Southern", district: "Matara" }
+} as const;
+
+/**
+ * Calibrated map bounding box for Sri-Lanka-location-map-680x1100-1.jpg
+ * - Image dimensions: 680 x 1100 px (Aspect ratio: 0.61818)
+ * - Landmass X bounds: 106px (15.6%) to 604px (88.8%)
+ * - Landmass Y bounds: 76px (6.9%) to 979px (89.0%)
+ */
+export const MAP_CALIBRATION_BOUNDS = {
+  imageWidth: 680,
+  imageHeight: 1100,
+  landMinXPercent: 15.6,
+  landMaxXPercent: 88.8,
+  landMinYPercent: 6.9,
+  landMaxYPercent: 89.0,
+  geoNorthLat: 9.835,  // Point Pedro
+  geoSouthLat: 5.924,  // Dondra Head
+  geoWestLng: 79.69,   // Western coastal tip
+  geoEastLng: 81.88    // Sangamankanda Point
+};
 
 export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
   // LEFT SIDE CATEGORIES
@@ -32,8 +92,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "kalpitiya",
         name: "Kalpitiya",
+        lat: 8.2275,
+        lng: 79.7610,
+        province: "North Western",
+        district: "Puttalam",
         top: 41.5,
-        left: 26,
+        left: 23.5,
+        labelPosition: "left",
         labelSide: "left",
         description: "Premier South Asian kitesurfing lagoon with wild spinner dolphin pods and pristine sand dunes.",
         link: "/experiences",
@@ -42,8 +107,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "bentota",
         name: "Bentota",
+        lat: 6.4260,
+        lng: 79.9958,
+        province: "Southern",
+        district: "Galle",
         top: 75.5,
-        left: 26,
+        left: 26.5,
+        labelPosition: "left",
         labelSide: "left",
         description: "The gold standard of luxury beach resorts, river boat safaris, and adrenaline water sports.",
         link: "/destinations/bentota",
@@ -52,8 +122,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "unawatuna",
         name: "Unawatuna",
-        top: 84.0,
-        left: 34,
+        lat: 6.0100,
+        lng: 80.2500,
+        province: "Southern",
+        district: "Galle",
+        top: 84.5,
+        left: 33.0,
+        labelPosition: "left",
         labelSide: "left",
         description: "Protected turquoise crescent bay famous for calm swimming, snorkeling & Japanese Peace Pagoda.",
         link: "/destinations/galle",
@@ -62,8 +137,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "weligama",
         name: "Weligama",
+        lat: 5.9750,
+        lng: 80.4297,
+        province: "Southern",
+        district: "Matara",
         top: 86.8,
-        left: 38,
+        left: 39.5,
+        labelPosition: "bottom", // Positioned below with leader stem to avoid collision with Unawatuna and Mirissa
         labelSide: "left",
         description: "Legendary beginner-friendly surf beach, Taprobane Island & traditional stilt fishermen.",
         link: "/destinations/mirissa",
@@ -72,8 +152,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "mirissa",
         name: "Mirissa",
-        top: 85.0,
-        left: 51,
+        lat: 5.9466,
+        lng: 80.4583,
+        province: "Southern",
+        district: "Matara",
+        top: 87.2,
+        left: 45.0,
+        labelPosition: "right",
         labelSide: "right",
         description: "World-famous blue whale watching haven, Coconut Tree Hill & vibrant sunset beach bars.",
         link: "/destinations/mirissa",
@@ -82,9 +167,14 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "arugam-bay",
         name: "Arugam Bay",
+        lat: 6.8425,
+        lng: 81.8315,
+        province: "Eastern",
+        district: "Ampara",
         top: 70.5,
         left: 84.5,
-        labelSide: "left",
+        labelPosition: "right",
+        labelSide: "right",
         description: "Internationally renowned right-hand surf point, bohemian cafes & nearby Kumana wildlife safaris.",
         link: "/experiences",
         highlightText: "World-Class Ocean Breaks"
@@ -102,18 +192,29 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "wilpattu",
         name: "Wilpattu",
-        top: 37.5,
-        left: 39,
-        labelSide: "right",
+        lat: 8.4500,
+        lng: 80.0000,
+        province: "North Western / North Central",
+        district: "Puttalam/Anuradhapura",
+        top: 38.0,
+        left: 32.0,
+        labelPosition: "left",
+        labelSide: "left",
         description: "Sri Lanka's largest national park adorned with natural rainwater sand-rimmed lakes (villus).",
         link: "/packages/wild-sri-lanka-safari-big-four-expedition",
-        highlightText: "Ancient Wilderness of Villus"
+        highlightText: "Ancient Wilderness of Villus",
+        representativePointNote: "Central Villu basin coordinates"
       },
       {
         id: "minneriya",
         name: "Minneriya",
-        top: 44.5,
-        left: 52,
+        lat: 8.0333,
+        lng: 80.9000,
+        province: "North Central",
+        district: "Polonnaruwa",
+        top: 45.0,
+        left: 54.0,
+        labelPosition: "right",
         labelSide: "right",
         description: "Site of 'The Gathering' — up to 300 Asian elephants congregating across ancient reservoir shores.",
         link: "/experiences",
@@ -122,18 +223,29 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "gal-oya",
         name: "Gal Oya",
-        top: 72.2,
-        left: 57,
-        labelSide: "left",
+        lat: 7.2100,
+        lng: 81.5000,
+        province: "Eastern / Uva",
+        district: "Ampara",
+        top: 62.5,
+        left: 71.0,
+        labelPosition: "right",
+        labelSide: "right",
         description: "Unique boat safaris to spot swimming wild elephants crossing scenic inland lake islands.",
         link: "/experiences",
-        highlightText: "Swimming Wild Elephants Safari"
+        highlightText: "Swimming Wild Elephants Safari",
+        representativePointNote: "Senanayake Samudraya reservoir safari base"
       },
       {
         id: "horton-plains",
         name: "Horton Plains",
-        top: 67.0,
-        left: 49,
+        lat: 6.8028,
+        lng: 80.8044,
+        province: "Central",
+        district: "Nuwara Eliya",
+        top: 67.5,
+        left: 53.0,
+        labelPosition: "right",
         labelSide: "right",
         description: "Highland cloud forest plateau ending abruptly at World's End sheer 1,000m precipice.",
         link: "/destinations/nuwara-eliya",
@@ -142,22 +254,34 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "sinharaja",
         name: "Sinharaja",
-        top: 79.5,
-        left: 38,
+        lat: 6.4167,
+        lng: 80.4167,
+        province: "Sabaragamuwa / Southern",
+        district: "Ratnapura/Galle",
+        top: 77.0,
+        left: 39.0,
+        labelPosition: "left",
         labelSide: "left",
         description: "UNESCO World Heritage primary tropical rainforest teeming with endemic birds, reptiles & canopy flora.",
         link: "/packages/wild-sri-lanka-safari-big-four-expedition",
-        highlightText: "UNESCO Primary Rainforest"
+        highlightText: "UNESCO Primary Rainforest",
+        representativePointNote: "Kudawa research and trekking center"
       },
       {
         id: "yala",
         name: "Yala",
+        lat: 6.3700,
+        lng: 81.5200,
+        province: "Southern / Uva",
+        district: "Hambantota",
         top: 77.7,
-        left: 68,
+        left: 70.0,
+        labelPosition: "right",
         labelSide: "right",
         description: "Home to the world's densest wild leopard population, sloth bears & majestic Asian elephants.",
         link: "/destinations/yala",
-        highlightText: "Realm of the Sri Lankan Leopard"
+        highlightText: "Realm of the Sri Lankan Leopard",
+        representativePointNote: "Palatupana Block 1 main entrance"
       }
     ]
   },
@@ -172,48 +296,75 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "jaffna-adv",
         name: "Jaffna",
-        top: 15.0,
-        left: 38,
+        lat: 9.6685,
+        lng: 80.0074,
+        province: "Northern",
+        district: "Jaffna",
+        top: 14.5,
+        left: 41.0,
+        labelPosition: "right",
         labelSide: "right",
         description: "Historic northern expeditions, Palk Strait cycling, and coral island voyages.",
         link: "/contact?destination=jaffna",
         highlightText: "Northern Frontier Expeditions"
       },
       {
-        id: "pekoe-trail",
-        name: "Pekoe Trail",
-        top: 63.0,
-        left: 51,
-        labelSide: "right",
-        description: "World-class 300km hiking trail through historic Ceylon tea valleys and cloud forests.",
-        link: "/experiences",
-        highlightText: "Legendary Tea Trail"
-      },
-      {
-        id: "mahiyanganaya",
-        name: "Mahiyanganaya",
-        top: 62.0,
-        left: 42,
-        labelSide: "left",
-        description: "Indigenous Vedda homeland walks, ancient canal kayaking, and river valley treks.",
-        link: "/experiences",
-        highlightText: "Indigenous Heritage Treks"
-      },
-      {
         id: "negombo-adv",
         name: "Negombo",
+        lat: 7.2083,
+        lng: 79.8358,
+        province: "Western",
+        district: "Gampaha",
         top: 60.5,
-        left: 23,
-        labelSide: "right",
+        left: 23.5,
+        labelPosition: "left",
+        labelSide: "left",
         description: "Catamaran sailing, Dutch canal kayaking, and coastal cycling adventures.",
         link: "/experiences",
         highlightText: "Coastal Lagoon Expeditions"
       },
       {
+        id: "mahiyanganaya",
+        name: "Mahiyanganaya",
+        lat: 7.3167,
+        lng: 80.9828,
+        province: "Uva",
+        district: "Badulla",
+        top: 59.0,
+        left: 58.0,
+        labelPosition: "right",
+        labelSide: "right",
+        description: "Indigenous Vedda homeland walks, ancient canal kayaking, and river valley treks.",
+        link: "/experiences",
+        highlightText: "Indigenous Heritage Treks",
+        representativePointNote: "Mahaweli river valley & Dambana Vedda ancestral territory east of Kandy"
+      },
+      {
+        id: "pekoe-trail",
+        name: "Pekoe Trail",
+        lat: 6.9497,
+        lng: 80.7891,
+        province: "Central",
+        district: "Nuwara Eliya",
+        top: 65.0,
+        left: 50.0,
+        labelPosition: "right",
+        labelSide: "right",
+        description: "World-class 300km hiking trail through historic Ceylon tea valleys and cloud forests.",
+        link: "/experiences",
+        highlightText: "Legendary Tea Trail",
+        representativePointNote: "Central Highland tea estate ridge midpoint (Hatton / Nuwara Eliya)"
+      },
+      {
         id: "colombo-adv",
         name: "Colombo",
+        lat: 6.9355,
+        lng: 79.8487,
+        province: "Western",
+        district: "Colombo",
         top: 66.8,
-        left: 23.5,
+        left: 24.0,
+        labelPosition: "left",
         labelSide: "left",
         description: "Urban cycling tours, sunset coastal sailing, and heritage walks.",
         link: "/contact?destination=colombo",
@@ -222,8 +373,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "galle-adv",
         name: "Galle",
-        top: 82.7,
-        left: 30.5,
+        lat: 6.0461,
+        lng: 80.2103,
+        province: "Southern",
+        district: "Galle",
+        top: 83.5,
+        left: 31.0,
+        labelPosition: "left",
         labelSide: "left",
         description: "Surfing, ocean catamaran cruises, and cycling through southern paddy trails.",
         link: "/destinations/galle",
@@ -244,8 +400,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "anuradhapura",
         name: "Anuradhapura",
+        lat: 8.3114,
+        lng: 80.4037,
+        province: "North Central",
+        district: "Anuradhapura",
         top: 39.5,
-        left: 42,
+        left: 43.0,
+        labelPosition: "right",
         labelSide: "right",
         description: "Sri Lanka's 2,500-year-old sacred capital, home to soaring white stupas & the sacred Jaya Sri Maha Bodhi tree.",
         link: "/destinations/anuradhapura",
@@ -254,8 +415,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "sigiriya",
         name: "Sigiriya",
+        lat: 7.9570,
+        lng: 80.7603,
+        province: "Central",
+        district: "Matale",
         top: 47.3,
-        left: 47,
+        left: 48.0,
+        labelPosition: "left",
         labelSide: "left",
         description: "5th-century UNESCO palace fortress atop a 200m volcanic rock with ancient frescoes & water gardens.",
         link: "/destinations/sigiriya",
@@ -264,8 +430,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "polonnaruwa",
         name: "Polonnaruwa",
+        lat: 7.9403,
+        lng: 81.0188,
+        province: "North Central",
+        district: "Polonnaruwa",
         top: 47.0,
-        left: 58,
+        left: 58.0,
+        labelPosition: "right",
         labelSide: "right",
         description: "Medieval royal city featuring monumental stone palaces, lotus baths, and colossal Gal Vihara rock statues.",
         link: "/destinations/polonnaruwa",
@@ -274,8 +445,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "kandy",
         name: "Kandy",
+        lat: 7.2906,
+        lng: 80.6337,
+        province: "Central",
+        district: "Kandy",
         top: 59.5,
         left: 48.5,
+        labelPosition: "left",
         labelSide: "left",
         description: "Last royal stronghold sheltering the sacred Temple of the Tooth Relic amidst misty hills and serene lake.",
         link: "/destinations/kandy",
@@ -284,8 +460,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "colombo-culture",
         name: "Colombo",
+        lat: 6.9355,
+        lng: 79.8487,
+        province: "Western",
+        district: "Colombo",
         top: 66.8,
-        left: 23.5,
+        left: 24.0,
+        labelPosition: "left",
         labelSide: "left",
         description: "Dynamic capital blending British colonial architecture, Gangaramaya temple & modern coastal skyline.",
         link: "/contact?destination=colombo",
@@ -294,8 +475,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "galle",
         name: "Galle",
-        top: 82.7,
-        left: 30.5,
+        lat: 6.0461,
+        lng: 80.2103,
+        province: "Southern",
+        district: "Galle",
+        top: 83.5,
+        left: 31.0,
+        labelPosition: "left",
         labelSide: "left",
         description: "Living 17th-century UNESCO Dutch colonial ocean fortress with cobblestone alleys & boutique heritage villas.",
         link: "/destinations/galle",
@@ -314,8 +500,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "jaffna",
         name: "Jaffna",
-        top: 15.0,
-        left: 38,
+        lat: 9.6685,
+        lng: 80.0074,
+        province: "Northern",
+        district: "Jaffna",
+        top: 14.5,
+        left: 41.0,
+        labelPosition: "right",
         labelSide: "right",
         description: "Vibrant northern peninsula with historic Nallur Kandaswamy Kovil, Dutch Fort & distinct northern culture.",
         link: "/contact?destination=jaffna",
@@ -324,9 +515,14 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "mannar",
         name: "Mannar",
-        top: 33.0,
-        left: 34,
-        labelSide: "right",
+        lat: 8.9810,
+        lng: 79.9044,
+        province: "Northern",
+        district: "Mannar",
+        top: 30.5,
+        left: 27.0,
+        labelPosition: "left",
+        labelSide: "left",
         description: "Historic island bridged to mainland, ancient baobab trees, flamingo sanctuaries & Adam's Bridge dunes.",
         link: "/experiences",
         highlightText: "Baobabs & Adam's Bridge"
@@ -334,28 +530,45 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "riverston",
         name: "Riverston",
-        top: 53.0,
-        left: 51,
-        labelSide: "right",
+        lat: 7.5250,
+        lng: 80.7333,
+        province: "Central",
+        district: "Matale",
+        top: 53.5,
+        left: 51.0,
+        labelPosition: "left",
+        labelSide: "left",
         description: "The 'Little World's End' offering windswept mountain passes, serene villages & untouched waterfalls.",
         link: "/experiences",
-        highlightText: "Misty Cloud Mountain Pass"
+        highlightText: "Misty Cloud Mountain Pass",
+        representativePointNote: "Knuckles Conservation Forest Riverston ridge pass"
       },
       {
         id: "maduru-oya",
         name: "Maduru Oya",
-        top: 50.0,
-        left: 64,
+        lat: 7.6500,
+        lng: 81.2000,
+        province: "Eastern / Uva",
+        district: "Polonnaruwa/Ampara",
+        top: 51.5,
+        left: 65.0,
+        labelPosition: "right",
         labelSide: "right",
         description: "Remote sanctuary surrounding ancient reservoirs, home to indigenous Vedda heritage and untamed wildlife.",
         link: "/packages/wild-sri-lanka-safari-big-four-expedition",
-        highlightText: "Ancient Reservoirs & Vedda Lands"
+        highlightText: "Ancient Reservoirs & Vedda Lands",
+        representativePointNote: "Maduru Oya reservoir park headquarters"
       },
       {
         id: "polhena",
         name: "Polhena",
-        top: 86.8,
-        left: 42,
+        lat: 5.9380,
+        lng: 80.5280,
+        province: "Southern",
+        district: "Matara",
+        top: 87.6,
+        left: 48.0,
+        labelPosition: "right",
         labelSide: "right",
         description: "Secluded southern reef cove where travelers can swim and snorkel calmly alongside wild green sea turtles.",
         link: "/destinations/mirissa",
@@ -374,8 +587,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "jaffna-gastro",
         name: "Jaffna",
-        top: 15.0,
-        left: 38,
+        lat: 9.6685,
+        lng: 80.0074,
+        province: "Northern",
+        district: "Jaffna",
+        top: 14.5,
+        left: 41.0,
+        labelPosition: "right",
         labelSide: "right",
         description: "Famous roasted curry powder, fiery Jaffna crab curry, fresh palmyra delicacies & odiyal kool broth.",
         link: "/contact?destination=jaffna-food",
@@ -384,9 +602,14 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "negombo-gastro",
         name: "Negombo",
+        lat: 7.2083,
+        lng: 79.8358,
+        province: "Western",
+        district: "Gampaha",
         top: 60.5,
-        left: 23,
-        labelSide: "right",
+        left: 23.5,
+        labelPosition: "left",
+        labelSide: "left",
         description: "Vibrant dawn 'Lellama' seafood auction, giant lagoon prawns, and coconut-infused coastal curries.",
         link: "/contact?destination=negombo-food",
         highlightText: "Dawn Fish Auction & Lagoon Prawns"
@@ -394,8 +617,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "colombo-gastro",
         name: "Colombo",
+        lat: 6.9355,
+        lng: 79.8487,
+        province: "Western",
+        district: "Colombo",
         top: 66.8,
-        left: 23.5,
+        left: 24.0,
+        labelPosition: "left",
         labelSide: "left",
         description: "Legendary Ministry of Crab feasts, vibrant street food at Galle Face Green, and artisan hoppers.",
         link: "/contact?destination=colombo-food",
@@ -404,9 +632,14 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "kandy-gastro",
         name: "Kandy",
+        lat: 7.2906,
+        lng: 80.6337,
+        province: "Central",
+        district: "Kandy",
         top: 59.5,
         left: 48.5,
-        labelSide: "left",
+        labelPosition: "right",
+        labelSide: "right",
         description: "Matale organic spice garden tours, authentic Ceylon cinnamon tastings & traditional clay pot banquets.",
         link: "/destinations/kandy",
         highlightText: "Aromatic Spice Garden Banquets"
@@ -414,8 +647,13 @@ export const SRI_LANKA_EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
       {
         id: "galle-gastro",
         name: "Galle",
-        top: 82.7,
-        left: 30.5,
+        lat: 6.0461,
+        lng: 80.2103,
+        province: "Southern",
+        district: "Galle",
+        top: 83.5,
+        left: 31.0,
+        labelPosition: "left",
         labelSide: "left",
         description: "Fresh Indian Ocean tuna steaks, artisan gelato on cobblestone streets & colonial culinary fusion.",
         link: "/destinations/galle",

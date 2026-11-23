@@ -7,6 +7,7 @@ import { WhyExploreSriLanka } from "@/components/home/WhyExploreSriLanka";
 import { SigiriyaParallaxSection } from "@/components/home/SigiriyaParallaxSection";
 import { TourismExperienceGrid } from "@/components/TourismExperienceGrid";
 import { InteractiveSriLankaMap } from "@/components/home/InteractiveSriLankaMap";
+import { PassportMemoriesScrollSection } from "@/components/home/PassportMemoriesScrollSection";
 import { LeopardFullscreenScrollSection } from "@/components/home/LeopardFullscreenScrollSection";
 import { OurJourneyCategoriesSection } from "@/components/home/OurJourneyCategoriesSection";
 import { PackageCard } from "@/components/PackageCard";
@@ -66,8 +67,11 @@ export default function HomePage() {
       {/* 6. Premium Scroll-Triggered Fullscreen Image Expansion (The Ceylon Leopard) */}
       <LeopardFullscreenScrollSection />
 
-      {/* 7. Interactive Sri Lanka Tourism Map Section (Warm Ivory Light) */}
-      <InteractiveSriLankaMap />
+      {/* 7. Passport Memories Fullscreen Scroll Expansion Section ("popup and size up" effect) */}
+      <PassportMemoriesScrollSection />
+
+      {/* Interactive Sri Lanka Tourism Map Section (Preserved for future use) */}
+      {/* <InteractiveSriLankaMap /> */}
 
       {/* 7. Iconic Sri Lankan Destinations Section (Full-Image Gallery Mosaic with Shine & Pop-Up Transitions) */}
       <IconicDestinationsSection />
