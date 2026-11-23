@@ -105,11 +105,13 @@ export const COMPANY_INFO: CompanyInfo = {
       desc: "English-speaking, government-licensed tourist chauffeurs with deep cultural, botanical, and wildlife expertise.",
       icon: "ShieldCheck"
     },
+    /*
     {
       title: "Luxury & Eco-Friendly Fleet",
       desc: "Premium air-conditioned Mercedes, Toyota Prado SUVs, luxury vans, and hybrid vehicles with on-board Wi-Fi and chilled amenities.",
       icon: "Car"
     },
+    */
     {
       title: "24/7 Island-Wide Concierge",
       desc: "Direct round-the-clock WhatsApp support from your personal journey specialist throughout your entire stay in Sri Lanka.",
