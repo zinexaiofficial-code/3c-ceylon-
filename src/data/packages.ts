@@ -38,12 +38,12 @@ export interface TourPackage {
 
 export const TOUR_PACKAGES: TourPackage[] = [
   // ─────────────────────────────────────────────────────────────
-  // 1. Sri Lanka Highlights: 5 Nights / 6 Days
+  // 1. 3C Ceylon Highlights: 5 Nights / 6 Days
   // ─────────────────────────────────────────────────────────────
   {
     id: "pkg-1",
     slug: "sri-lanka-highlights-6-days",
-    title: "Sri Lanka Highlights: 5 Nights / 6 Days",
+    title: "3C Ceylon Highlights: 5 Nights / 6 Days",
     subtitle: "Ancient Wonders, Scenic Mountains & Tropical Beaches",
     tagline: "UNESCO heritage • Highland tea estates • Scenic train ride • Safari & southern beaches",
     brandLine: "A private journey with 3C Ceylon Tours",
